@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		33E4B7EB25D0102400A3CD36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B7EA25D0102400A3CD36 /* AppDelegate.swift */; };
 		33E4B7ED25D0102400A3CD36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B7EC25D0102400A3CD36 /* SceneDelegate.swift */; };
-		33E4B7EF25D0102400A3CD36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B7EE25D0102400A3CD36 /* ViewController.swift */; };
 		33E4B7F225D0102400A3CD36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E4B7F025D0102400A3CD36 /* Main.storyboard */; };
 		33E4B7F425D0102500A3CD36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33E4B7F325D0102500A3CD36 /* Assets.xcassets */; };
 		33E4B7F725D0102500A3CD36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E4B7F525D0102500A3CD36 /* LaunchScreen.storyboard */; };
+		33E4B80425D016F000A3CD36 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B80325D016F000A3CD36 /* MainViewController.swift */; };
+		33E4B80725D0174600A3CD36 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B80625D0174600A3CD36 /* MenuViewController.swift */; };
+		33E4B80A25D0186600A3CD36 /* BudgetSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B80925D0186600A3CD36 /* BudgetSettingViewController.swift */; };
+		33E4B80D25D01A8800A3CD36 /* BalanceBreakdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B80C25D01A8800A3CD36 /* BalanceBreakdownViewController.swift */; };
+		33E4B81025D01B8700A3CD36 /* MonthlyRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B80F25D01B8700A3CD36 /* MonthlyRecordViewController.swift */; };
+		33E4B81425D01D3300A3CD36 /* AddFixedIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B81325D01D3300A3CD36 /* AddFixedIncomeViewController.swift */; };
+		33E4B81825D01D5200A3CD36 /* AddFixedSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B81725D01D5200A3CD36 /* AddFixedSpendingViewController.swift */; };
+		33E4B81B25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B81A25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		33E4B7E725D0102300A3CD36 /* SimpleBudgetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBudgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E4B7EA25D0102400A3CD36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33E4B7EC25D0102400A3CD36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		33E4B7EE25D0102400A3CD36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33E4B7F125D0102400A3CD36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33E4B7F325D0102500A3CD36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33E4B7F625D0102500A3CD36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33E4B7F825D0102500A3CD36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33E4B80325D016F000A3CD36 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		33E4B80625D0174600A3CD36 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		33E4B80925D0186600A3CD36 /* BudgetSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetSettingViewController.swift; sourceTree = "<group>"; };
+		33E4B80C25D01A8800A3CD36 /* BalanceBreakdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceBreakdownViewController.swift; sourceTree = "<group>"; };
+		33E4B80F25D01B8700A3CD36 /* MonthlyRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyRecordViewController.swift; sourceTree = "<group>"; };
+		33E4B81325D01D3300A3CD36 /* AddFixedIncomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFixedIncomeViewController.swift; sourceTree = "<group>"; };
+		33E4B81725D01D5200A3CD36 /* AddFixedSpendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFixedSpendingViewController.swift; sourceTree = "<group>"; };
+		33E4B81A25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFixedSavingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,54 @@
 		33E4B7E925D0102300A3CD36 /* SimpleBudgetApp */ = {
 			isa = PBXGroup;
 			children = (
+				33E4B80025D016AA00A3CD36 /* Model */,
+				33E4B80125D016B100A3CD36 /* View */,
+				33E4B80225D016BE00A3CD36 /* Controller */,
 				33E4B7EA25D0102400A3CD36 /* AppDelegate.swift */,
 				33E4B7EC25D0102400A3CD36 /* SceneDelegate.swift */,
-				33E4B7EE25D0102400A3CD36 /* ViewController.swift */,
 				33E4B7F025D0102400A3CD36 /* Main.storyboard */,
 				33E4B7F325D0102500A3CD36 /* Assets.xcassets */,
 				33E4B7F525D0102500A3CD36 /* LaunchScreen.storyboard */,
 				33E4B7F825D0102500A3CD36 /* Info.plist */,
 			);
 			path = SimpleBudgetApp;
+			sourceTree = "<group>";
+		};
+		33E4B80025D016AA00A3CD36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33E4B80125D016B100A3CD36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33E4B80225D016BE00A3CD36 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				33E4B80325D016F000A3CD36 /* MainViewController.swift */,
+				33E4B80625D0174600A3CD36 /* MenuViewController.swift */,
+				33E4B80925D0186600A3CD36 /* BudgetSettingViewController.swift */,
+				33E4B80C25D01A8800A3CD36 /* BalanceBreakdownViewController.swift */,
+				33E4B80F25D01B8700A3CD36 /* MonthlyRecordViewController.swift */,
+				33E4B81225D01B9B00A3CD36 /* BudgetSetting */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		33E4B81225D01B9B00A3CD36 /* BudgetSetting */ = {
+			isa = PBXGroup;
+			children = (
+				33E4B81325D01D3300A3CD36 /* AddFixedIncomeViewController.swift */,
+				33E4B81725D01D5200A3CD36 /* AddFixedSpendingViewController.swift */,
+				33E4B81A25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift */,
+			);
+			path = BudgetSetting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +190,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33E4B7EF25D0102400A3CD36 /* ViewController.swift in Sources */,
+				33E4B81425D01D3300A3CD36 /* AddFixedIncomeViewController.swift in Sources */,
+				33E4B80425D016F000A3CD36 /* MainViewController.swift in Sources */,
 				33E4B7EB25D0102400A3CD36 /* AppDelegate.swift in Sources */,
+				33E4B81B25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift in Sources */,
 				33E4B7ED25D0102400A3CD36 /* SceneDelegate.swift in Sources */,
+				33E4B80D25D01A8800A3CD36 /* BalanceBreakdownViewController.swift in Sources */,
+				33E4B80725D0174600A3CD36 /* MenuViewController.swift in Sources */,
+				33E4B80A25D0186600A3CD36 /* BudgetSettingViewController.swift in Sources */,
+				33E4B81825D01D5200A3CD36 /* AddFixedSpendingViewController.swift in Sources */,
+				33E4B81025D01B8700A3CD36 /* MonthlyRecordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
