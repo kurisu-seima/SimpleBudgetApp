@@ -13,6 +13,18 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+      
+        guard let navigationController = self.navigationController, (!navigationController.isNavigationBarHidden) else {
+            return
+        }
+        
+        sideMenuController?.revealMenu()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     @IBAction func openSideMenu(_ sender: Any) {

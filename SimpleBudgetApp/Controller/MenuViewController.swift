@@ -42,11 +42,12 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         guard let navigationController = sideMenuController?.contentViewController as? UINavigationController else {
             return
         }
+        navigationController.setNavigationBarHidden(false, animated: false)
         
         switch Menu.allCases[indexPath.row] {
         case .yourMenoy:
-            let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
-            navigationController.pushViewController(mainVC, animated: true)
+            sideMenuController?.hideMenu()
+            navigationController.setNavigationBarHidden(true, animated: false)
         case .budgetSetting:
             let budgetVC = storyboard?.instantiateViewController(withIdentifier: "BudgetVC") as! BudgetSettingViewController
             navigationController.pushViewController(budgetVC, animated: true)
