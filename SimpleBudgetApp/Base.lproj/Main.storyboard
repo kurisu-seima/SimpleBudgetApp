@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oKh-mX-N0C">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,40 +8,141 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="GKT-pQ-1Ap">
+            <objects>
+                <viewController id="oKh-mX-N0C" customClass="SplashViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="27a-2Y-YSO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pig" translatesAutoresizingMaskIntoConstraints="NO" id="fZG-Ie-4S6">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SHo-5W-gQb"/>
+                                    <constraint firstAttribute="width" constant="50" id="ZkN-bZ-zfU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XH5-EY-poM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fZG-Ie-4S6" firstAttribute="centerY" secondItem="27a-2Y-YSO" secondAttribute="centerY" id="CrQ-wi-lGG"/>
+                            <constraint firstItem="fZG-Ie-4S6" firstAttribute="centerX" secondItem="27a-2Y-YSO" secondAttribute="centerX" id="awT-R9-Xx7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oFH-cQ-7M0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3448" y="419"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="MainViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9s-GD-gvz">
+                                <rect key="frame" x="20" y="65.5" width="40" height="26.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="67J-A1-bmR"/>
+                                    <constraint firstAttribute="width" constant="40" id="Bur-of-Dl8"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="text.justify" catalog="system"/>
+                                <connections>
+                                    <action selector="openSideMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="47U-sv-pF9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k9s-GD-gvz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="h7O-5x-t0y"/>
+                            <constraint firstItem="k9s-GD-gvz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hqu-yF-bL7"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="taB-hE-oAd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25" y="117"/>
+            <point key="canvasLocation" x="4401" y="419"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="2Kz-A6-yQn">
             <objects>
-                <viewController id="cVN-9Z-Bn0" customClass="MenuViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuVC" id="cVN-9Z-Bn0" customClass="MenuViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cvr-25-Rpj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hwb-VB-cFe">
+                                <rect key="frame" x="134" y="74" width="280" height="822"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="eSU-tw-YtK"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="60" id="0WK-az-Ere" customClass="MenuTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="280" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0WK-az-Ere" id="tYu-wv-ShJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="253" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの使えるお金" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmC-HW-pcg">
+                                                    <rect key="frame" x="65" y="0.0" width="184" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graph" translatesAutoresizingMaskIntoConstraints="NO" id="Ut9-oZ-VmG">
+                                                    <rect key="frame" x="15" y="0.0" width="40" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="CIs-Jp-tNd"/>
+                                                        <constraint firstAttribute="width" constant="40" id="mEp-2Q-gyB"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ut9-oZ-VmG" firstAttribute="leading" secondItem="tYu-wv-ShJ" secondAttribute="leading" constant="15" id="9bu-Rw-6XC"/>
+                                                <constraint firstItem="lmC-HW-pcg" firstAttribute="leading" secondItem="Ut9-oZ-VmG" secondAttribute="trailing" constant="10" id="SU5-8e-ivF"/>
+                                                <constraint firstItem="lmC-HW-pcg" firstAttribute="top" secondItem="Ut9-oZ-VmG" secondAttribute="top" id="aLQ-Mo-O8a"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ut9-oZ-VmG" secondAttribute="bottom" id="gUC-AA-jEA"/>
+                                                <constraint firstItem="lmC-HW-pcg" firstAttribute="bottom" secondItem="Ut9-oZ-VmG" secondAttribute="bottom" id="qx7-Fo-DDU"/>
+                                                <constraint firstItem="Ut9-oZ-VmG" firstAttribute="top" secondItem="tYu-wv-ShJ" secondAttribute="top" id="sV2-KV-r9r"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuListImage" destination="Ut9-oZ-VmG" id="liS-Qy-WyC"/>
+                                            <outlet property="menuListTitle" destination="lmC-HW-pcg" id="lQj-LL-r3D"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Vky-Qe-M6N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vky-Qe-M6N" firstAttribute="trailing" secondItem="hwb-VB-cFe" secondAttribute="trailing" id="AHd-gl-u42"/>
+                            <constraint firstItem="hwb-VB-cFe" firstAttribute="top" secondItem="Vky-Qe-M6N" secondAttribute="top" constant="30" id="U6S-XQ-5VP"/>
+                            <constraint firstAttribute="bottom" secondItem="hwb-VB-cFe" secondAttribute="bottom" id="fGu-9r-Uvh"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="e2E-ji-7Z0"/>
+                    <connections>
+                        <outlet property="menuTableView" destination="hwb-VB-cFe" id="WDL-oZ-1jM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TrN-4R-4bV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="117"/>
+            <point key="canvasLocation" x="5386" y="419"/>
         </scene>
         <!--Budget Setting View Controller-->
         <scene sceneID="3EZ-dn-BJh">
             <objects>
-                <viewController id="MbY-BX-J6H" customClass="BudgetSettingViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BudgetVC" id="MbY-BX-J6H" customClass="BudgetSettingViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9YR-yD-f0f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwP-Ze-b8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913" y="-354"/>
+            <point key="canvasLocation" x="6462.3188405797109" y="-354.24107142857139"/>
         </scene>
         <!--Add Fixed Income View Controller-->
         <scene sceneID="mid-YD-iYZ">
@@ -66,12 +167,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0CX-f0-JP0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2928" y="-354"/>
+            <point key="canvasLocation" x="7478.2608695652179" y="-354.24107142857139"/>
         </scene>
         <!--Balance Breakdown View Controller-->
         <scene sceneID="oFk-vH-Iov">
             <objects>
-                <viewController id="B5T-LI-SFr" customClass="BalanceBreakdownViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BalanceBreakdownVC" id="B5T-LI-SFr" customClass="BalanceBreakdownViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZhR-K0-B4a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,12 +182,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyr-AA-vkZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1914" y="388"/>
+            <point key="canvasLocation" x="6462" y="419"/>
         </scene>
         <!--Monthly Record View Controller-->
         <scene sceneID="s8n-gs-5LA">
             <objects>
-                <viewController id="JVT-rs-Zcy" customClass="MonthlyRecordViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MonthlyRecordVC" id="JVT-rs-Zcy" customClass="MonthlyRecordViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bPA-Cy-7l3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEe-4m-aSQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912" y="1128"/>
+            <point key="canvasLocation" x="6462" y="1171"/>
         </scene>
         <!--Add Fixed Spending View Controller-->
         <scene sceneID="SNQ-Lb-97K">
@@ -111,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7w2-Mt-VQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3758" y="-354"/>
+            <point key="canvasLocation" x="8308.6956521739139" y="-354.24107142857139"/>
         </scene>
         <!--Add Fixed Savings View Controller-->
         <scene sceneID="hAh-LN-dce">
@@ -126,10 +227,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtX-sL-5e7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4642" y="-354"/>
+            <point key="canvasLocation" x="9191.3043478260879" y="-354.24107142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="graph" width="64" height="64"/>
+        <image name="pig" width="128" height="128"/>
+        <image name="text.justify" catalog="system" width="128" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

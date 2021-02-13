@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3370011D25D34EA4004225FB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3370011C25D34EA4004225FB /* SplashViewController.swift */; };
+		33BA52E725D36F940095A11F /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA52E625D36F940095A11F /* Menu.swift */; };
 		33E4B7EB25D0102400A3CD36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B7EA25D0102400A3CD36 /* AppDelegate.swift */; };
 		33E4B7ED25D0102400A3CD36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B7EC25D0102400A3CD36 /* SceneDelegate.swift */; };
 		33E4B7F225D0102400A3CD36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E4B7F025D0102400A3CD36 /* Main.storyboard */; };
@@ -20,9 +22,13 @@
 		33E4B81425D01D3300A3CD36 /* AddFixedIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B81325D01D3300A3CD36 /* AddFixedIncomeViewController.swift */; };
 		33E4B81825D01D5200A3CD36 /* AddFixedSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B81725D01D5200A3CD36 /* AddFixedSpendingViewController.swift */; };
 		33E4B81B25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B81A25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift */; };
+		33E4B82225D03CE000A3CD36 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B82125D03CE000A3CD36 /* MenuTableViewCell.swift */; };
+		8233407E83E150AC8DFCCAF3 /* Pods_SimpleBudgetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C693082D34BD08C937D0898 /* Pods_SimpleBudgetApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3370011C25D34EA4004225FB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		33BA52E625D36F940095A11F /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		33E4B7E725D0102300A3CD36 /* SimpleBudgetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBudgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E4B7EA25D0102400A3CD36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33E4B7EC25D0102400A3CD36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +44,10 @@
 		33E4B81325D01D3300A3CD36 /* AddFixedIncomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFixedIncomeViewController.swift; sourceTree = "<group>"; };
 		33E4B81725D01D5200A3CD36 /* AddFixedSpendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFixedSpendingViewController.swift; sourceTree = "<group>"; };
 		33E4B81A25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFixedSavingsViewController.swift; sourceTree = "<group>"; };
+		33E4B82125D03CE000A3CD36 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		6BB2F9C0B73ACA432F6E0E9A /* Pods-SimpleBudgetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleBudgetApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7C693082D34BD08C937D0898 /* Pods_SimpleBudgetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleBudgetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFFFA5AC302987268AFC317 /* Pods-SimpleBudgetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleBudgetApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8233407E83E150AC8DFCCAF3 /* Pods_SimpleBudgetApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +67,8 @@
 			children = (
 				33E4B7E925D0102300A3CD36 /* SimpleBudgetApp */,
 				33E4B7E825D0102300A3CD36 /* Products */,
+				485CF1BD30260F0911E48462 /* Pods */,
+				40D20BBF642B21F732AB26F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +99,7 @@
 		33E4B80025D016AA00A3CD36 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				33BA52E625D36F940095A11F /* Menu.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -93,6 +107,7 @@
 		33E4B80125D016B100A3CD36 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				33E4B82125D03CE000A3CD36 /* MenuTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -100,12 +115,13 @@
 		33E4B80225D016BE00A3CD36 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3370011C25D34EA4004225FB /* SplashViewController.swift */,
 				33E4B80325D016F000A3CD36 /* MainViewController.swift */,
 				33E4B80625D0174600A3CD36 /* MenuViewController.swift */,
 				33E4B80925D0186600A3CD36 /* BudgetSettingViewController.swift */,
+				33E4B81225D01B9B00A3CD36 /* BudgetSetting */,
 				33E4B80C25D01A8800A3CD36 /* BalanceBreakdownViewController.swift */,
 				33E4B80F25D01B8700A3CD36 /* MonthlyRecordViewController.swift */,
-				33E4B81225D01B9B00A3CD36 /* BudgetSetting */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +136,23 @@
 			path = BudgetSetting;
 			sourceTree = "<group>";
 		};
+		40D20BBF642B21F732AB26F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C693082D34BD08C937D0898 /* Pods_SimpleBudgetApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		485CF1BD30260F0911E48462 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BB2F9C0B73ACA432F6E0E9A /* Pods-SimpleBudgetApp.debug.xcconfig */,
+				FAFFFA5AC302987268AFC317 /* Pods-SimpleBudgetApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33E4B7FB25D0102500A3CD36 /* Build configuration list for PBXNativeTarget "SimpleBudgetApp" */;
 			buildPhases = (
+				9B39AE2C33E0B1714CD7E079 /* [CP] Check Pods Manifest.lock */,
 				33E4B7E325D0102300A3CD36 /* Sources */,
 				33E4B7E425D0102300A3CD36 /* Frameworks */,
 				33E4B7E525D0102300A3CD36 /* Resources */,
+				2D358F7EAE6D5CA4B8DDAE96 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +220,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D358F7EAE6D5CA4B8DDAE96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B39AE2C33E0B1714CD7E079 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleBudgetApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		33E4B7E325D0102300A3CD36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -193,13 +270,16 @@
 				33E4B81425D01D3300A3CD36 /* AddFixedIncomeViewController.swift in Sources */,
 				33E4B80425D016F000A3CD36 /* MainViewController.swift in Sources */,
 				33E4B7EB25D0102400A3CD36 /* AppDelegate.swift in Sources */,
+				3370011D25D34EA4004225FB /* SplashViewController.swift in Sources */,
 				33E4B81B25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift in Sources */,
 				33E4B7ED25D0102400A3CD36 /* SceneDelegate.swift in Sources */,
 				33E4B80D25D01A8800A3CD36 /* BalanceBreakdownViewController.swift in Sources */,
 				33E4B80725D0174600A3CD36 /* MenuViewController.swift in Sources */,
 				33E4B80A25D0186600A3CD36 /* BudgetSettingViewController.swift in Sources */,
+				33BA52E725D36F940095A11F /* Menu.swift in Sources */,
 				33E4B81825D01D5200A3CD36 /* AddFixedSpendingViewController.swift in Sources */,
 				33E4B81025D01B8700A3CD36 /* MonthlyRecordViewController.swift in Sources */,
+				33E4B82225D03CE000A3CD36 /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +423,7 @@
 		};
 		33E4B7FC25D0102500A3CD36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BB2F9C0B73ACA432F6E0E9A /* Pods-SimpleBudgetApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,6 +443,7 @@
 		};
 		33E4B7FD25D0102500A3CD36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAFFFA5AC302987268AFC317 /* Pods-SimpleBudgetApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
