@@ -1,16 +1,20 @@
 PODS:
+  - DSFloatingButton (1.0.1)
   - SideMenuSwift (2.0.7)
 
 DEPENDENCIES:
+  - DSFloatingButton
   - SideMenuSwift
 
 SPEC REPOS:
   trunk:
+    - DSFloatingButton
     - SideMenuSwift
 
 SPEC CHECKSUMS:
+  DSFloatingButton: 2611b44e75736cd2f2686691ee4d2c16f2b62391
   SideMenuSwift: ffbbc88d23741932177ad1320df837cedfb3bc5e
 
-PODFILE CHECKSUM: a08f1cf0c903486a27a0135934902b3fb91cf4bc
+PODFILE CHECKSUM: 008c9715a018b0a53a6b7ad35f069816e4f4fa76
 
 COCOAPODS: 1.8.4

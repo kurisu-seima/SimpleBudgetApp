@@ -9,21 +9,25 @@ import UIKit
 
 class MonthlyRecordViewController: UIViewController {
 
+    @IBOutlet weak var monthlyRecordTableView: UITableView!
+    
+    let num = ["2020", "2021", "2022"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        monthlyRecordTableView.dataSource = self
+        monthlyRecordTableView.delegate = self
+    }
+}
+
+extension MonthlyRecordViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        num.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = monthlyRecordTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        return cell
     }
-    */
-
 }

@@ -8,22 +8,36 @@
 import UIKit
 
 class BalanceBreakdownViewController: UIViewController {
+    
+    @IBOutlet weak var balanceBreakdownTableView: UITableView!
 
+    let dateOfBreakdwon = ["2021年2月18日", "2021年2月19日", "2021年2月20日"]
+    let item = [["お小遣い", "仕事", "散財"], ["バイト", "バイト", "バイト"], ["食べ物", "飲み物", "ポテチ"]]
+    let amount = [["100", "200", "300"], ["400", "500", "600"], ["700", "800", "900"]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        balanceBreakdownTableView.dataSource = self
+        balanceBreakdownTableView.delegate = self
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension BalanceBreakdownViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        item.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return dateOfBreakdwon[section]
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return item.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = balanceBreakdownTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemTableViewCell
+        cell.setUp(item: item[indexPath.section][indexPath.row], amount: amount[indexPath.section][indexPath.row])
+        return cell
+    }
 }

@@ -23,6 +23,7 @@
 		33E4B81825D01D5200A3CD36 /* AddFixedSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B81725D01D5200A3CD36 /* AddFixedSpendingViewController.swift */; };
 		33E4B81B25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B81A25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift */; };
 		33E4B82225D03CE000A3CD36 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B82125D03CE000A3CD36 /* MenuTableViewCell.swift */; };
+		33E907F325DDEE8100786C7B /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E907F225DDEE8100786C7B /* ItemTableViewCell.swift */; };
 		8233407E83E150AC8DFCCAF3 /* Pods_SimpleBudgetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C693082D34BD08C937D0898 /* Pods_SimpleBudgetApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		33E4B81725D01D5200A3CD36 /* AddFixedSpendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFixedSpendingViewController.swift; sourceTree = "<group>"; };
 		33E4B81A25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFixedSavingsViewController.swift; sourceTree = "<group>"; };
 		33E4B82125D03CE000A3CD36 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		33E907F225DDEE8100786C7B /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		6BB2F9C0B73ACA432F6E0E9A /* Pods-SimpleBudgetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleBudgetApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7C693082D34BD08C937D0898 /* Pods_SimpleBudgetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleBudgetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFFFA5AC302987268AFC317 /* Pods-SimpleBudgetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleBudgetApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33800DEC25D7CECE002977AF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				33E4B82125D03CE000A3CD36 /* MenuTableViewCell.swift */,
+				33E907F225DDEE8100786C7B /* ItemTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		33E4B7DE25D0102300A3CD36 = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +118,7 @@
 		33E4B80125D016B100A3CD36 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				33E4B82125D03CE000A3CD36 /* MenuTableViewCell.swift */,
+				33800DEC25D7CECE002977AF /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,21 +130,13 @@
 				33E4B80325D016F000A3CD36 /* MainViewController.swift */,
 				33E4B80625D0174600A3CD36 /* MenuViewController.swift */,
 				33E4B80925D0186600A3CD36 /* BudgetSettingViewController.swift */,
-				33E4B81225D01B9B00A3CD36 /* BudgetSetting */,
+				33E4B81325D01D3300A3CD36 /* AddFixedIncomeViewController.swift */,
+				33E4B81725D01D5200A3CD36 /* AddFixedSpendingViewController.swift */,
+				33E4B81A25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift */,
 				33E4B80C25D01A8800A3CD36 /* BalanceBreakdownViewController.swift */,
 				33E4B80F25D01B8700A3CD36 /* MonthlyRecordViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		33E4B81225D01B9B00A3CD36 /* BudgetSetting */ = {
-			isa = PBXGroup;
-			children = (
-				33E4B81325D01D3300A3CD36 /* AddFixedIncomeViewController.swift */,
-				33E4B81725D01D5200A3CD36 /* AddFixedSpendingViewController.swift */,
-				33E4B81A25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift */,
-			);
-			path = BudgetSetting;
 			sourceTree = "<group>";
 		};
 		40D20BBF642B21F732AB26F5 /* Frameworks */ = {
@@ -273,6 +276,7 @@
 				3370011D25D34EA4004225FB /* SplashViewController.swift in Sources */,
 				33E4B81B25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift in Sources */,
 				33E4B7ED25D0102400A3CD36 /* SceneDelegate.swift in Sources */,
+				33E907F325DDEE8100786C7B /* ItemTableViewCell.swift in Sources */,
 				33E4B80D25D01A8800A3CD36 /* BalanceBreakdownViewController.swift in Sources */,
 				33E4B80725D0174600A3CD36 /* MenuViewController.swift in Sources */,
 				33E4B80A25D0186600A3CD36 /* BudgetSettingViewController.swift in Sources */,

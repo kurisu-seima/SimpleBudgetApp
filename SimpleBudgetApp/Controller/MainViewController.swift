@@ -22,8 +22,7 @@ class MainViewController: UIViewController {
         guard let navigationController = self.navigationController, (!navigationController.isNavigationBarHidden) else {
             return
         }
-        
-        sideMenuController?.revealMenu()
+//        sideMenuController?.revealMenu()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     

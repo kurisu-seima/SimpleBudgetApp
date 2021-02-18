@@ -11,19 +11,21 @@ class BudgetSettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func fixedButtonDidTapped(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            let fixedIncomeVC = storyboard?.instantiateViewController(withIdentifier: "FixedIncome") as! AddFixedIncomeViewController
+            self.navigationController?.pushViewController(fixedIncomeVC, animated: true)
+        case 1:
+            let fixedSpendingVC = storyboard?.instantiateViewController(withIdentifier: "FixedSpending") as! AddFixedSpendingViewController
+            self.navigationController?.pushViewController(fixedSpendingVC, animated: true)
+        case 2:
+            let fixedSavingsVC = storyboard?.instantiateViewController(withIdentifier: "FixedSavings") as! AddFixedSavingsViewController
+            self.navigationController?.pushViewController(fixedSavingsVC, animated: true)
+        default:
+            break
+        }
     }
-    */
-
 }

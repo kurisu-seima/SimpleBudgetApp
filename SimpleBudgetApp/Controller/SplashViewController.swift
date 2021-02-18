@@ -32,6 +32,7 @@ class SplashViewController: UIViewController {
             let contentViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
             let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuVC") as! MenuViewController
             let navigationController = UINavigationController(rootViewController: contentViewController)
+            navigationController.navigationBar.barTintColor = UIColor.orange
             let viewController = SideMenuController(contentViewController: navigationController, menuViewController: menuViewController)
             viewController.modalTransitionStyle = .crossDissolve
             viewController.modalPresentationStyle = .fullScreen

@@ -8,5 +8,6 @@ target 'SimpleBudgetApp' do
   # Pods for SimpleBudgetApp
 
 pod 'SideMenuSwift'
+pod 'DSFloatingButton'
 
 end

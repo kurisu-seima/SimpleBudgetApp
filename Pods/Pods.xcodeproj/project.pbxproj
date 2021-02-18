@@ -3,31 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DB327E2223491A7FF9A9A8A1FDBA67D /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75CCD00E47320CBE7959F39A4453B0 /* Delegate.swift */; };
-		207C84743FE7C82BCC63DFDC1C27D80A /* TransitionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7ABB322665A283A5BF3611ECE8E77 /* TransitionContext.swift */; };
-		23F2720A4168CAD9ADD9EDF5A6438497 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5A9A38B057080F349726671B6EE8AC /* Preferences.swift */; };
-		331E92669A5C7A8B36B4E1329E288E34 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA37B7B736DDEC7EC44D653018F1684 /* Segue.swift */; };
-		3393F2A5744BAF2A3B8E8F25F20D29AB /* SideMenuSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02BFF436608AB25AA8CCE90D459F8CFA /* SideMenuSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		467F8F1CBD7C6CA5EE431B2E01F22227 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA43C333FA7079A1C12582090699CA4 /* StatusBar.swift */; };
-		48A6A72E28762A18E4609864075FF9AC /* SideMenuSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA4118A30984EC2340CFBD40BEEED8D /* SideMenuSwift-dummy.m */; };
-		4E5BD4403829B8607F8C5777E937BA2E /* BasicTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9877D2F70C24A38303DBE4237788035 /* BasicTransitionAnimator.swift */; };
-		4EA5BA600E0520674536FC4055F9F1CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		0DB327E2223491A7FF9A9A8A1FDBA67D /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEFEDCB447D546DCC8F04644F918EED /* Delegate.swift */; };
+		207C84743FE7C82BCC63DFDC1C27D80A /* TransitionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62433D50D0B00562CBB3F7734F86693 /* TransitionContext.swift */; };
+		23F2720A4168CAD9ADD9EDF5A6438497 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55B01C8BA624913708EF0CC506009C /* Preferences.swift */; };
+		26927FBFC7F9D59AA57805DF2199714A /* DSFloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412E06703858E9A6708367F1B3A0DBDC /* DSFloatingButton.swift */; };
+		331E92669A5C7A8B36B4E1329E288E34 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1C46BE90B4184A5CDBDC13C2851C15 /* Segue.swift */; };
+		3393F2A5744BAF2A3B8E8F25F20D29AB /* SideMenuSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 014EC953D2B1BFC4350D9349317302E2 /* SideMenuSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A9F6783B771CB783D602812BF019285 /* Pods-SimpleBudgetApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6336F64653788E5D8A28BBD206EADE6 /* Pods-SimpleBudgetApp-dummy.m */; };
+		467F8F1CBD7C6CA5EE431B2E01F22227 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1CE56F70D8A8694A14AB397939CD74 /* StatusBar.swift */; };
+		48A6A72E28762A18E4609864075FF9AC /* SideMenuSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 359281443B845EE4892F6F156D5E2E8C /* SideMenuSwift-dummy.m */; };
+		4E5BD4403829B8607F8C5777E937BA2E /* BasicTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822EDAF67450E664BA8AA22D3307B34 /* BasicTransitionAnimator.swift */; };
+		6E58FACE86F1C6835BCAD8B67FAD57AD /* DSFloatingButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C7C75C804661074DA23740F886FF860 /* DSFloatingButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7405F2D7D2FE64692C43181A6F17A15A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		8B84208FF51E5F944213B1E12FD5DBCE /* Pods-SimpleBudgetApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E81CDA904F9183242D11CD3ECA79428 /* Pods-SimpleBudgetApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D7E528DC9BB42437F8ED4B2BD410FAE /* UIViewController+SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC13087921FAB377864088C690E3404 /* UIViewController+SideMenu.swift */; };
-		A54E7DB163A4617D92401B596F4487CA /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D1335BCD058233817534C1056C05A2 /* SideMenuController.swift */; };
-		B9220D02A5299E366EC0C766B062E45F /* SideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 558A08A2EC8671E635853CA334E786A8 /* SideMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9972609C67C861A78F8ADDD9D0C550E /* Pods-SimpleBudgetApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6336F64653788E5D8A28BBD206EADE6 /* Pods-SimpleBudgetApp-dummy.m */; };
-		CDD98EEA92CFC6BB90D2E33B04466811 /* UIView+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BDD655FBFA6811CEFEC1A8029168BF /* UIView+Container.swift */; };
-		D6B18C75D23CCC757E7FED786AC0480D /* UIViewController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A6C7C5AA3EBB025A7AE37B75E28CDD /* UIViewController+Container.swift */; };
+		761E2ED6F250BFC83C581740E425681A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8D7E528DC9BB42437F8ED4B2BD410FAE /* UIViewController+SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE965D4878B0545C6C3D74A280276D2C /* UIViewController+SideMenu.swift */; };
+		986B6C0069D8DBA91BDD338683DA6EB9 /* DSFloatingButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CCE81D3358CAC5C7C3346A77F5F46D /* DSFloatingButton-dummy.m */; };
+		9C28C59112EDE42CBE3EC03BE371A7D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A54E7DB163A4617D92401B596F4487CA /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57A4D8A18B2F13AB750528F02B9C68 /* SideMenuController.swift */; };
+		B9220D02A5299E366EC0C766B062E45F /* SideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 795D88913B25FAB2BEB73D9860DAEF5B /* SideMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDD98EEA92CFC6BB90D2E33B04466811 /* UIView+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436F78478DCF39E308D5F086D4127A9B /* UIView+Container.swift */; };
+		D6B18C75D23CCC757E7FED786AC0480D /* UIViewController+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373741E9A063134C1895AE1868D13617 /* UIViewController+Container.swift */; };
+		FAEBEF1D46599F6B10E816241B535216 /* Pods-SimpleBudgetApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E81CDA904F9183242D11CD3ECA79428 /* Pods-SimpleBudgetApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D448FF62CAD4AF7D623DA7B3A7855F34 /* PBXContainerItemProxy */ = {
+		4AB5C068C887692EE35C31D17ACBBAAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB08FF6211990E31D1BEC4CBDBF92874;
+			remoteInfo = DSFloatingButton;
+		};
+		D43C16B1831D5E66E0FB3A8F9147CCBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -37,44 +48,60 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02BFF436608AB25AA8CCE90D459F8CFA /* SideMenuSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuSwift-umbrella.h"; sourceTree = "<group>"; };
-		0A75CCD00E47320CBE7959F39A4453B0 /* Delegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delegate.swift; path = Sources/SideMenu/Delegate.swift; sourceTree = "<group>"; };
-		12BDD655FBFA6811CEFEC1A8029168BF /* UIView+Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Container.swift"; path = "Sources/SideMenu/UIView+Container.swift"; sourceTree = "<group>"; };
-		3CC13087921FAB377864088C690E3404 /* UIViewController+SideMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+SideMenu.swift"; path = "Sources/SideMenu/UIViewController+SideMenu.swift"; sourceTree = "<group>"; };
+		005C6723B9BB4CB702247CF4ACFD48C9 /* SideMenuSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuSwift-prefix.pch"; sourceTree = "<group>"; };
+		014EC953D2B1BFC4350D9349317302E2 /* SideMenuSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuSwift-umbrella.h"; sourceTree = "<group>"; };
+		0E1C46BE90B4184A5CDBDC13C2851C15 /* Segue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Segue.swift; path = Sources/SideMenu/Segue.swift; sourceTree = "<group>"; };
+		14C6C1A0B0175DB5C1ABDB12FBDB264A /* DSFloatingButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DSFloatingButton-prefix.pch"; sourceTree = "<group>"; };
+		1B57A4D8A18B2F13AB750528F02B9C68 /* SideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuController.swift; path = Sources/SideMenu/SideMenuController.swift; sourceTree = "<group>"; };
+		359281443B845EE4892F6F156D5E2E8C /* SideMenuSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenuSwift-dummy.m"; sourceTree = "<group>"; };
+		373741E9A063134C1895AE1868D13617 /* UIViewController+Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Container.swift"; path = "Sources/SideMenu/UIViewController+Container.swift"; sourceTree = "<group>"; };
+		3C7C75C804661074DA23740F886FF860 /* DSFloatingButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DSFloatingButton-umbrella.h"; sourceTree = "<group>"; };
 		3E81CDA904F9183242D11CD3ECA79428 /* Pods-SimpleBudgetApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleBudgetApp-umbrella.h"; sourceTree = "<group>"; };
 		3F8C4C32D74C54F37EA9926D21763EF6 /* Pods_SimpleBudgetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SimpleBudgetApp.framework; path = "Pods-SimpleBudgetApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		412E06703858E9A6708367F1B3A0DBDC /* DSFloatingButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSFloatingButton.swift; path = DSFloatingButton/Classes/DSFloatingButton.swift; sourceTree = "<group>"; };
+		436F78478DCF39E308D5F086D4127A9B /* UIView+Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Container.swift"; path = "Sources/SideMenu/UIView+Container.swift"; sourceTree = "<group>"; };
 		5266D6AB598F9CBDCA0A856E2DA9C6B2 /* Pods-SimpleBudgetApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleBudgetApp-Info.plist"; sourceTree = "<group>"; };
-		558A08A2EC8671E635853CA334E786A8 /* SideMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SideMenu.h; path = Sources/SideMenu/SideMenu.h; sourceTree = "<group>"; };
-		56A6C7C5AA3EBB025A7AE37B75E28CDD /* UIViewController+Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Container.swift"; path = "Sources/SideMenu/UIViewController+Container.swift"; sourceTree = "<group>"; };
-		5AD13D73A189B1C495B649D071AC077D /* SideMenuSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SideMenuSwift.modulemap; sourceTree = "<group>"; };
 		5BCE56F8291E1856F5CBC40BC3E17803 /* Pods-SimpleBudgetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleBudgetApp.release.xcconfig"; sourceTree = "<group>"; };
+		652CFC2D9A657266030057E99956CD55 /* DSFloatingButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DSFloatingButton-Info.plist"; sourceTree = "<group>"; };
 		6642040CCC4CD7F37093C2AA4F7FB304 /* SideMenuSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SideMenuSwift.framework; path = SideMenuSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7FA43C333FA7079A1C12582090699CA4 /* StatusBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusBar.swift; path = Sources/SideMenu/StatusBar.swift; sourceTree = "<group>"; };
+		76705E91762A5FF087EDE47AABCEC3F0 /* SideMenuSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenuSwift.xcconfig; sourceTree = "<group>"; };
+		795D88913B25FAB2BEB73D9860DAEF5B /* SideMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SideMenu.h; path = Sources/SideMenu/SideMenu.h; sourceTree = "<group>"; };
+		8463151A1A5BA603E52665F7C8D55AAC /* DSFloatingButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DSFloatingButton.xcconfig; sourceTree = "<group>"; };
 		86A61FBA82953C4298BFF643DA523BE1 /* Pods-SimpleBudgetApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleBudgetApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		97D1335BCD058233817534C1056C05A2 /* SideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideMenuController.swift; path = Sources/SideMenu/SideMenuController.swift; sourceTree = "<group>"; };
+		9435D4F539D30ABB7B3FB28871DA7A84 /* SideMenuSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SideMenuSwift-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A20750C3E2A776310E9228C1E0A9028F /* DSFloatingButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DSFloatingButton.framework; path = DSFloatingButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70E66FCCD651FC826DA0E26E1948764 /* Pods-SimpleBudgetApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleBudgetApp.modulemap"; sourceTree = "<group>"; };
-		A944205D4FA17144A342C896C15BCEA8 /* SideMenuSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SideMenuSwift-prefix.pch"; sourceTree = "<group>"; };
-		ABB7ABB322665A283A5BF3611ECE8E77 /* TransitionContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionContext.swift; path = Sources/SideMenu/TransitionContext.swift; sourceTree = "<group>"; };
+		AB554412A0DBC726063FF0C2EB9E517D /* SideMenuSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SideMenuSwift.modulemap; sourceTree = "<group>"; };
 		B03BD3861AE4B3BFDDD7CA1D2AFE777B /* Pods-SimpleBudgetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleBudgetApp.debug.xcconfig"; sourceTree = "<group>"; };
-		BCA4118A30984EC2340CFBD40BEEED8D /* SideMenuSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SideMenuSwift-dummy.m"; sourceTree = "<group>"; };
+		BE1CE56F70D8A8694A14AB397939CD74 /* StatusBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusBar.swift; path = Sources/SideMenu/StatusBar.swift; sourceTree = "<group>"; };
+		BE965D4878B0545C6C3D74A280276D2C /* UIViewController+SideMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+SideMenu.swift"; path = "Sources/SideMenu/UIViewController+SideMenu.swift"; sourceTree = "<group>"; };
 		C44AC3BB7DCB96B87890F63E1829BCB2 /* Pods-SimpleBudgetApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleBudgetApp-frameworks.sh"; sourceTree = "<group>"; };
-		CBE83E573CE70366186F1FC378FF46B5 /* SideMenuSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SideMenuSwift-Info.plist"; sourceTree = "<group>"; };
-		DCA37B7B736DDEC7EC44D653018F1684 /* Segue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Segue.swift; path = Sources/SideMenu/Segue.swift; sourceTree = "<group>"; };
+		CA55B01C8BA624913708EF0CC506009C /* Preferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = Sources/SideMenu/Preferences.swift; sourceTree = "<group>"; };
+		D822EDAF67450E664BA8AA22D3307B34 /* BasicTransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BasicTransitionAnimator.swift; path = Sources/SideMenu/BasicTransitionAnimator.swift; sourceTree = "<group>"; };
+		DEEFEDCB447D546DCC8F04644F918EED /* Delegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delegate.swift; path = Sources/SideMenu/Delegate.swift; sourceTree = "<group>"; };
 		E30CC58E6CD3360BE8E917A60B426811 /* Pods-SimpleBudgetApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleBudgetApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E53BD914E7681B095FFDCDAB3114E66C /* DSFloatingButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DSFloatingButton.modulemap; sourceTree = "<group>"; };
+		E62433D50D0B00562CBB3F7734F86693 /* TransitionContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionContext.swift; path = Sources/SideMenu/TransitionContext.swift; sourceTree = "<group>"; };
 		E6336F64653788E5D8A28BBD206EADE6 /* Pods-SimpleBudgetApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleBudgetApp-dummy.m"; sourceTree = "<group>"; };
-		E881D2464213267365DD3EBA80A7E804 /* SideMenuSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SideMenuSwift.xcconfig; sourceTree = "<group>"; };
-		EE5A9A38B057080F349726671B6EE8AC /* Preferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = Sources/SideMenu/Preferences.swift; sourceTree = "<group>"; };
-		F9877D2F70C24A38303DBE4237788035 /* BasicTransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BasicTransitionAnimator.swift; path = Sources/SideMenu/BasicTransitionAnimator.swift; sourceTree = "<group>"; };
+		F8CCE81D3358CAC5C7C3346A77F5F46D /* DSFloatingButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DSFloatingButton-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0717816A36B7267D35AADF2173E0D3C8 /* Frameworks */ = {
+		0A155F55AE1658E1C1066C0F0C1007AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EA5BA600E0520674536FC4055F9F1CC /* Foundation.framework in Frameworks */,
+				9C28C59112EDE42CBE3EC03BE371A7D0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D237CDFC56F023BB0B8ED9BA5009365 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				761E2ED6F250BFC83C581740E425681A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +133,28 @@
 			path = "Target Support Files/Pods-SimpleBudgetApp";
 			sourceTree = "<group>";
 		};
-		509FA2A4EEFA2FB7502FE01C2BE70714 /* Pods */ = {
+		3E2B59D4DFE78CB655475310BA9684D0 /* DSFloatingButton */ = {
 			isa = PBXGroup;
 			children = (
-				E3168AB04E17A994D0BC98AE42048D9F /* SideMenuSwift */,
+				412E06703858E9A6708367F1B3A0DBDC /* DSFloatingButton.swift */,
+				4E20CD82371F86A94E06C3AE57A73C2F /* Support Files */,
 			);
-			name = Pods;
+			name = DSFloatingButton;
+			path = DSFloatingButton;
+			sourceTree = "<group>";
+		};
+		4E20CD82371F86A94E06C3AE57A73C2F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E53BD914E7681B095FFDCDAB3114E66C /* DSFloatingButton.modulemap */,
+				8463151A1A5BA603E52665F7C8D55AAC /* DSFloatingButton.xcconfig */,
+				F8CCE81D3358CAC5C7C3346A77F5F46D /* DSFloatingButton-dummy.m */,
+				652CFC2D9A657266030057E99956CD55 /* DSFloatingButton-Info.plist */,
+				14C6C1A0B0175DB5C1ABDB12FBDB264A /* DSFloatingButton-prefix.pch */,
+				3C7C75C804661074DA23740F886FF860 /* DSFloatingButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DSFloatingButton";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -122,23 +165,44 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		900E5A17D66D45152BB23CC2566CA70F /* Support Files */ = {
+		583E54D076A7E4EBFF957D0DB71A8381 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5AD13D73A189B1C495B649D071AC077D /* SideMenuSwift.modulemap */,
-				E881D2464213267365DD3EBA80A7E804 /* SideMenuSwift.xcconfig */,
-				BCA4118A30984EC2340CFBD40BEEED8D /* SideMenuSwift-dummy.m */,
-				CBE83E573CE70366186F1FC378FF46B5 /* SideMenuSwift-Info.plist */,
-				A944205D4FA17144A342C896C15BCEA8 /* SideMenuSwift-prefix.pch */,
-				02BFF436608AB25AA8CCE90D459F8CFA /* SideMenuSwift-umbrella.h */,
+				AB554412A0DBC726063FF0C2EB9E517D /* SideMenuSwift.modulemap */,
+				76705E91762A5FF087EDE47AABCEC3F0 /* SideMenuSwift.xcconfig */,
+				359281443B845EE4892F6F156D5E2E8C /* SideMenuSwift-dummy.m */,
+				9435D4F539D30ABB7B3FB28871DA7A84 /* SideMenuSwift-Info.plist */,
+				005C6723B9BB4CB702247CF4ACFD48C9 /* SideMenuSwift-prefix.pch */,
+				014EC953D2B1BFC4350D9349317302E2 /* SideMenuSwift-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SideMenuSwift";
 			sourceTree = "<group>";
 		};
-		9CEF5B320877CC3BC17C4CDEED20A0BA /* Products */ = {
+		7717BC0A5C610166B53DEC0ADBB3A9BB /* SideMenuSwift */ = {
 			isa = PBXGroup;
 			children = (
+				D822EDAF67450E664BA8AA22D3307B34 /* BasicTransitionAnimator.swift */,
+				DEEFEDCB447D546DCC8F04644F918EED /* Delegate.swift */,
+				CA55B01C8BA624913708EF0CC506009C /* Preferences.swift */,
+				0E1C46BE90B4184A5CDBDC13C2851C15 /* Segue.swift */,
+				795D88913B25FAB2BEB73D9860DAEF5B /* SideMenu.h */,
+				1B57A4D8A18B2F13AB750528F02B9C68 /* SideMenuController.swift */,
+				BE1CE56F70D8A8694A14AB397939CD74 /* StatusBar.swift */,
+				E62433D50D0B00562CBB3F7734F86693 /* TransitionContext.swift */,
+				436F78478DCF39E308D5F086D4127A9B /* UIView+Container.swift */,
+				373741E9A063134C1895AE1868D13617 /* UIViewController+Container.swift */,
+				BE965D4878B0545C6C3D74A280276D2C /* UIViewController+SideMenu.swift */,
+				583E54D076A7E4EBFF957D0DB71A8381 /* Support Files */,
+			);
+			name = SideMenuSwift;
+			path = SideMenuSwift;
+			sourceTree = "<group>";
+		};
+		9067ACA9E321AFC6CB784B2409F96067 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A20750C3E2A776310E9228C1E0A9028F /* DSFloatingButton.framework */,
 				3F8C4C32D74C54F37EA9926D21763EF6 /* Pods_SimpleBudgetApp.framework */,
 				6642040CCC4CD7F37093C2AA4F7FB304 /* SideMenuSwift.framework */,
 			);
@@ -150,8 +214,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				509FA2A4EEFA2FB7502FE01C2BE70714 /* Pods */,
-				9CEF5B320877CC3BC17C4CDEED20A0BA /* Products */,
+				ECCF0C9E6433B8C547788584DFFF3E47 /* Pods */,
+				9067ACA9E321AFC6CB784B2409F96067 /* Products */,
 				ED45B026288958F2720A4511DFFD2AFE /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -164,24 +228,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E3168AB04E17A994D0BC98AE42048D9F /* SideMenuSwift */ = {
+		ECCF0C9E6433B8C547788584DFFF3E47 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F9877D2F70C24A38303DBE4237788035 /* BasicTransitionAnimator.swift */,
-				0A75CCD00E47320CBE7959F39A4453B0 /* Delegate.swift */,
-				EE5A9A38B057080F349726671B6EE8AC /* Preferences.swift */,
-				DCA37B7B736DDEC7EC44D653018F1684 /* Segue.swift */,
-				558A08A2EC8671E635853CA334E786A8 /* SideMenu.h */,
-				97D1335BCD058233817534C1056C05A2 /* SideMenuController.swift */,
-				7FA43C333FA7079A1C12582090699CA4 /* StatusBar.swift */,
-				ABB7ABB322665A283A5BF3611ECE8E77 /* TransitionContext.swift */,
-				12BDD655FBFA6811CEFEC1A8029168BF /* UIView+Container.swift */,
-				56A6C7C5AA3EBB025A7AE37B75E28CDD /* UIViewController+Container.swift */,
-				3CC13087921FAB377864088C690E3404 /* UIViewController+SideMenu.swift */,
-				900E5A17D66D45152BB23CC2566CA70F /* Support Files */,
+				3E2B59D4DFE78CB655475310BA9684D0 /* DSFloatingButton */,
+				7717BC0A5C610166B53DEC0ADBB3A9BB /* SideMenuSwift */,
 			);
-			name = SideMenuSwift;
-			path = SideMenuSwift;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		ED45B026288958F2720A4511DFFD2AFE /* Targets Support Files */ = {
@@ -195,11 +248,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		20D8E54849B761614CA654BE0FC0A4D5 /* Headers */ = {
+		7F39E3DA6F57D374F2C8C97F455464EC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B84208FF51E5F944213B1E12FD5DBCE /* Pods-SimpleBudgetApp-umbrella.h in Headers */,
+				FAEBEF1D46599F6B10E816241B535216 /* Pods-SimpleBudgetApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,22 +265,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E31D5079721E1C1EC02BD36B24E19FAB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E58FACE86F1C6835BCAD8B67FAD57AD /* DSFloatingButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		16C900E361F1521A62C194D6805D0698 /* Pods-SimpleBudgetApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 97FD1D7FD47D90032E544C71F0C62AD0 /* Build configuration list for PBXNativeTarget "Pods-SimpleBudgetApp" */;
+			buildConfigurationList = 6421CD9DCD930529F635DE098BBD9E63 /* Build configuration list for PBXNativeTarget "Pods-SimpleBudgetApp" */;
 			buildPhases = (
-				20D8E54849B761614CA654BE0FC0A4D5 /* Headers */,
-				EBC33B65728A953EA141527D8555919C /* Sources */,
-				0717816A36B7267D35AADF2173E0D3C8 /* Frameworks */,
-				55B64CDEC8DC492009B889182679EF8C /* Resources */,
+				7F39E3DA6F57D374F2C8C97F455464EC /* Headers */,
+				59CBAE1CBB668DE7663BDF52E2F0D103 /* Sources */,
+				0A155F55AE1658E1C1066C0F0C1007AF /* Frameworks */,
+				298DCF3A6CD9758DD648AF645F73AB6E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8708F6C5F311DD4D609DC5CCD056E37C /* PBXTargetDependency */,
+				F9FF69E4617E6737960A2DBA536FD8AB /* PBXTargetDependency */,
+				655E92DD19CB439A09BFB634C1B1F7A5 /* PBXTargetDependency */,
 			);
 			name = "Pods-SimpleBudgetApp";
 			productName = "Pods-SimpleBudgetApp";
@@ -252,6 +314,24 @@
 			productReference = 6642040CCC4CD7F37093C2AA4F7FB304 /* SideMenuSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		DB08FF6211990E31D1BEC4CBDBF92874 /* DSFloatingButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1747EFC3F49D24A9B173F59B99BF0631 /* Build configuration list for PBXNativeTarget "DSFloatingButton" */;
+			buildPhases = (
+				E31D5079721E1C1EC02BD36B24E19FAB /* Headers */,
+				4C02CEC1088BE1988A20A21D31F9B122 /* Sources */,
+				5D237CDFC56F023BB0B8ED9BA5009365 /* Frameworks */,
+				7C562C99B2235591EB1D701BD7859F29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DSFloatingButton;
+			productName = DSFloatingButton;
+			productReference = A20750C3E2A776310E9228C1E0A9028F /* DSFloatingButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -262,7 +342,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -270,10 +350,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 9CEF5B320877CC3BC17C4CDEED20A0BA /* Products */;
+			productRefGroup = 9067ACA9E321AFC6CB784B2409F96067 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				DB08FF6211990E31D1BEC4CBDBF92874 /* DSFloatingButton */,
 				16C900E361F1521A62C194D6805D0698 /* Pods-SimpleBudgetApp */,
 				873002DBC460B8090EFD7E391AA04141 /* SideMenuSwift */,
 			);
@@ -288,7 +369,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		55B64CDEC8DC492009B889182679EF8C /* Resources */ = {
+		298DCF3A6CD9758DD648AF645F73AB6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C562C99B2235591EB1D701BD7859F29 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,6 +386,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C02CEC1088BE1988A20A21D31F9B122 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				986B6C0069D8DBA91BDD338683DA6EB9 /* DSFloatingButton-dummy.m in Sources */,
+				26927FBFC7F9D59AA57805DF2199714A /* DSFloatingButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59CBAE1CBB668DE7663BDF52E2F0D103 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A9F6783B771CB783D602812BF019285 /* Pods-SimpleBudgetApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2CAA0A72D6350C9DCB93FCC586DBA43 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,29 +421,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EBC33B65728A953EA141527D8555919C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9972609C67C861A78F8ADDD9D0C550E /* Pods-SimpleBudgetApp-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8708F6C5F311DD4D609DC5CCD056E37C /* PBXTargetDependency */ = {
+		655E92DD19CB439A09BFB634C1B1F7A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SideMenuSwift;
 			target = 873002DBC460B8090EFD7E391AA04141 /* SideMenuSwift */;
-			targetProxy = D448FF62CAD4AF7D623DA7B3A7855F34 /* PBXContainerItemProxy */;
+			targetProxy = D43C16B1831D5E66E0FB3A8F9147CCBB /* PBXContainerItemProxy */;
+		};
+		F9FF69E4617E6737960A2DBA536FD8AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DSFloatingButton;
+			target = DB08FF6211990E31D1BEC4CBDBF92874 /* DSFloatingButton */;
+			targetProxy = 4AB5C068C887692EE35C31D17ACBBAAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0F6031DCD100ECCECFC8DF440FD8DD6B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E881D2464213267365DD3EBA80A7E804 /* SideMenuSwift.xcconfig */;
+			baseConfigurationReference = 76705E91762A5FF087EDE47AABCEC3F0 /* SideMenuSwift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -435,9 +538,81 @@
 			};
 			name = Debug;
 		};
+		424A2E0B45F38B65E2BB27FAB1BD32C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8463151A1A5BA603E52665F7C8D55AAC /* DSFloatingButton.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DSFloatingButton/DSFloatingButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DSFloatingButton/DSFloatingButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DSFloatingButton/DSFloatingButton.modulemap";
+				PRODUCT_MODULE_NAME = DSFloatingButton;
+				PRODUCT_NAME = DSFloatingButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6D85A5B649C3FB6EEA29A0DD8049F156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BCE56F8291E1856F5CBC40BC3E17803 /* Pods-SimpleBudgetApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		7129697F22BFFE7DC829C0601F41B8BC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E881D2464213267365DD3EBA80A7E804 /* SideMenuSwift.xcconfig */;
+			baseConfigurationReference = 76705E91762A5FF087EDE47AABCEC3F0 /* SideMenuSwift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -470,12 +645,10 @@
 			};
 			name = Release;
 		};
-		8A4B4F5ED45987836B95AE9A0312ADA4 /* Debug */ = {
+		980357E116B62E7DC526DFA5F6BBAF56 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B03BD3861AE4B3BFDDD7CA1D2AFE777B /* Pods-SimpleBudgetApp.debug.xcconfig */;
+			baseConfigurationReference = 8463151A1A5BA603E52665F7C8D55AAC /* DSFloatingButton.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -484,28 +657,28 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/DSFloatingButton/DSFloatingButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DSFloatingButton/DSFloatingButton-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/DSFloatingButton/DSFloatingButton.modulemap";
+				PRODUCT_MODULE_NAME = DSFloatingButton;
+				PRODUCT_NAME = DSFloatingButton;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		A3B97134147B359ACC94E1BC139242BC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -568,9 +741,9 @@
 			};
 			name = Release;
 		};
-		F33B48988E274A8838168DE1E1A06443 /* Release */ = {
+		A574845BCEB510952EB4253C6AC9D053 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BCE56F8291E1856F5CBC40BC3E17803 /* Pods-SimpleBudgetApp.release.xcconfig */;
+			baseConfigurationReference = B03BD3861AE4B3BFDDD7CA1D2AFE777B /* Pods-SimpleBudgetApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -600,15 +773,23 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1747EFC3F49D24A9B173F59B99BF0631 /* Build configuration list for PBXNativeTarget "DSFloatingButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				424A2E0B45F38B65E2BB27FAB1BD32C5 /* Debug */,
+				980357E116B62E7DC526DFA5F6BBAF56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		285C963712D29FD9C44041632F236A16 /* Build configuration list for PBXNativeTarget "SideMenuSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -627,11 +808,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97FD1D7FD47D90032E544C71F0C62AD0 /* Build configuration list for PBXNativeTarget "Pods-SimpleBudgetApp" */ = {
+		6421CD9DCD930529F635DE098BBD9E63 /* Build configuration list for PBXNativeTarget "Pods-SimpleBudgetApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8A4B4F5ED45987836B95AE9A0312ADA4 /* Debug */,
-				F33B48988E274A8838168DE1E1A06443 /* Release */,
+				A574845BCEB510952EB4253C6AC9D053 /* Debug */,
+				6D85A5B649C3FB6EEA29A0DD8049F156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
