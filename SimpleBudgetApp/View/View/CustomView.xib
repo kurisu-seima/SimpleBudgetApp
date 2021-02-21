@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="SimpleBudgetApp" customModuleProvider="target">
             <connections>
-                <outlet property="amountTextField" destination="bDW-31-3IZ" id="mT2-JH-aBR"/>
+                <outlet property="amountOfMoneyTextField" destination="bDW-31-3IZ" id="cOD-jQ-3LC"/>
                 <outlet property="detailsTextField" destination="HFN-1c-dgl" id="gSY-Ve-5Sv"/>
             </connections>
         </placeholder>
@@ -53,7 +53,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="closeInputView:" destination="-1" eventType="touchUpInside" id="WQs-Zr-8aZ"/>
+                        <action selector="doneButtonDidTapped:" destination="-1" eventType="touchUpInside" id="49B-Cx-mjW"/>
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-kN-gU7">

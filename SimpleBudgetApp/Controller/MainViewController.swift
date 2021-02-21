@@ -44,7 +44,7 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: CustomViewDelegate {
-    func closeInpurView() {
+    func closeInputView() {
         selectArea.isHidden = true
         selectAreaBottomHight.constant = 0
         selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = false

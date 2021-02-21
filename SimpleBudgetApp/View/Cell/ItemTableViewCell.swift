@@ -9,8 +9,8 @@ import UIKit
 
 class ItemTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var itemLabel: UILabel!
-    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var detailsLabel: UILabel!
+    @IBOutlet weak var amountOfMonsyLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,9 +22,9 @@ class ItemTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-    func setUp(item: String, amount: String) {
-        itemLabel.text = item
-        amountLabel.text = amount
+    
+    func setUp(index: Int) {
+        detailsLabel.text = BudgetRepository.shared.fixedIncomes[index].details
+        amountOfMonsyLabel.text = "¥\(BudgetRepository.shared.fixedIncomes[index].amountOfMoney)"
     }
 }

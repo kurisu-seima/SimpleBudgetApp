@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3321842325E00C0C003D710C /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321842225E00C0C003D710C /* CustomView.swift */; };
 		3321842725E00C24003D710C /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3321842625E00C24003D710C /* CustomView.xib */; };
+		3348BF0225E24433002324EE /* FixedIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348BF0125E24433002324EE /* FixedIncome.swift */; };
+		3348BF0625E24451002324EE /* FixedSpending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348BF0525E24451002324EE /* FixedSpending.swift */; };
+		3348BF0925E24470002324EE /* FixedSaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348BF0825E24470002324EE /* FixedSaving.swift */; };
+		3348BF0C25E26082002324EE /* BudgetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348BF0B25E26082002324EE /* BudgetRepository.swift */; };
 		3370011D25D34EA4004225FB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3370011C25D34EA4004225FB /* SplashViewController.swift */; };
 		33BA52E725D36F940095A11F /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA52E625D36F940095A11F /* Menu.swift */; };
 		33E4B7EB25D0102400A3CD36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B7EA25D0102400A3CD36 /* AppDelegate.swift */; };
@@ -32,6 +36,10 @@
 /* Begin PBXFileReference section */
 		3321842225E00C0C003D710C /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		3321842625E00C24003D710C /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		3348BF0125E24433002324EE /* FixedIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedIncome.swift; sourceTree = "<group>"; };
+		3348BF0525E24451002324EE /* FixedSpending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedSpending.swift; sourceTree = "<group>"; };
+		3348BF0825E24470002324EE /* FixedSaving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedSaving.swift; sourceTree = "<group>"; };
+		3348BF0B25E26082002324EE /* BudgetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetRepository.swift; sourceTree = "<group>"; };
 		3370011C25D34EA4004225FB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		33BA52E625D36F940095A11F /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		33E4B7E725D0102300A3CD36 /* SimpleBudgetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBudgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +83,24 @@
 				3321842625E00C24003D710C /* CustomView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3348BF0025E24413002324EE /* Fixed */ = {
+			isa = PBXGroup;
+			children = (
+				3348BF0125E24433002324EE /* FixedIncome.swift */,
+				3348BF0525E24451002324EE /* FixedSpending.swift */,
+				3348BF0825E24470002324EE /* FixedSaving.swift */,
+			);
+			path = Fixed;
+			sourceTree = "<group>";
+		};
+		3348BF0E25E26094002324EE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3348BF0B25E26082002324EE /* BudgetRepository.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		33800DEC25D7CECE002977AF /* Cell */ = {
@@ -124,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				33BA52E625D36F940095A11F /* Menu.swift */,
+				3348BF0025E24413002324EE /* Fixed */,
+				3348BF0E25E26094002324EE /* Manager */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,11 +315,15 @@
 			files = (
 				3321842325E00C0C003D710C /* CustomView.swift in Sources */,
 				33E4B81425D01D3300A3CD36 /* AddFixedIncomeViewController.swift in Sources */,
+				3348BF0925E24470002324EE /* FixedSaving.swift in Sources */,
+				3348BF0C25E26082002324EE /* BudgetRepository.swift in Sources */,
 				33E4B80425D016F000A3CD36 /* MainViewController.swift in Sources */,
+				3348BF0625E24451002324EE /* FixedSpending.swift in Sources */,
 				33E4B7EB25D0102400A3CD36 /* AppDelegate.swift in Sources */,
 				3370011D25D34EA4004225FB /* SplashViewController.swift in Sources */,
 				33E4B81B25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift in Sources */,
 				33E4B7ED25D0102400A3CD36 /* SceneDelegate.swift in Sources */,
+				3348BF0225E24433002324EE /* FixedIncome.swift in Sources */,
 				33E907F325DDEE8100786C7B /* ItemTableViewCell.swift in Sources */,
 				33E4B80D25D01A8800A3CD36 /* BalanceBreakdownViewController.swift in Sources */,
 				33E4B80725D0174600A3CD36 /* MenuViewController.swift in Sources */,

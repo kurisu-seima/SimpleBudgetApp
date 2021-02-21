@@ -37,7 +37,6 @@ extension BalanceBreakdownViewController: UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = balanceBreakdownTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemTableViewCell
-        cell.setUp(item: item[indexPath.section][indexPath.row], amount: amount[indexPath.section][indexPath.row])
         return cell
     }
 }

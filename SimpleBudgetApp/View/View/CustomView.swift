@@ -8,13 +8,13 @@
 import UIKit
 
 protocol CustomViewDelegate {
-    func closeInpurView()
+    func closeInputView()
 }
 
 class CustomView: UIView {
     
     @IBOutlet weak var detailsTextField: UITextField!
-    @IBOutlet weak var amountTextField: UITextField!
+    @IBOutlet weak var amountOfMoneyTextField: UITextField!
     
     var delegate: CustomViewDelegate?
 
@@ -28,8 +28,11 @@ class CustomView: UIView {
         loadNib()
         
         detailsTextField.delegate = self
-        amountTextField.delegate = self
-        amountTextField.keyboardType = .numberPad
+        amountOfMoneyTextField.delegate = self
+        
+        detailsTextField.returnKeyType = .done
+        amountOfMoneyTextField.returnKeyType = .done
+        amountOfMoneyTextField.keyboardType = .numberPad
     }
     
     func loadNib() {
@@ -42,9 +45,17 @@ class CustomView: UIView {
         self.endEditing(true)
     }
     
-    @IBAction func closeInputView(_ sender: Any) {
+    @IBAction func doneButtonDidTapped(_ sender: Any) {
+        if let details = detailsTextField.text, let amoutOfMoney = amountOfMoneyTextField.text, !details.isEmpty, !amoutOfMoney.isEmpty {
+            let fixedIncome = FixedIncome()
+            fixedIncome.details = details
+            fixedIncome.amountOfMoney = amoutOfMoney
+            BudgetRepository.shared.addFixedIncome(fixedIncome: fixedIncome)
+        }
+        detailsTextField.text = .none
+        amountOfMoneyTextField.text = .none
         self.endEditing(true)
-        self.delegate?.closeInpurView()
+        self.delegate?.closeInputView()
     }
 }
 

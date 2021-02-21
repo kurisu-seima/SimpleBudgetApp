@@ -1,20 +1,30 @@
 PODS:
   - DSFloatingButton (1.0.1)
+  - Realm (4.4.1):
+    - Realm/Headers (= 4.4.1)
+  - Realm/Headers (4.4.1)
+  - RealmSwift (4.4.1):
+    - Realm (= 4.4.1)
   - SideMenuSwift (2.0.7)
 
 DEPENDENCIES:
   - DSFloatingButton
+  - RealmSwift (~> 4.4.1)
   - SideMenuSwift
 
 SPEC REPOS:
   trunk:
     - DSFloatingButton
+    - Realm
+    - RealmSwift
     - SideMenuSwift
 
 SPEC CHECKSUMS:
   DSFloatingButton: 2611b44e75736cd2f2686691ee4d2c16f2b62391
+  Realm: 4eb04d7487bd43c0581256f40b424eafb711deff
+  RealmSwift: 3eb8924ff7100df5928c7602f71d0fec51e7c9c5
   SideMenuSwift: ffbbc88d23741932177ad1320df837cedfb3bc5e
 
-PODFILE CHECKSUM: 008c9715a018b0a53a6b7ad35f069816e4f4fa76
+PODFILE CHECKSUM: 665e5aa3a02dae5b65c27bd0f0a928d3f39453d6
 
 COCOAPODS: 1.8.4

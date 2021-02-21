@@ -33,7 +33,7 @@ class AddFixedSavingsViewController: UIViewController {
 }
 
 extension AddFixedSavingsViewController: CustomViewDelegate {
-    func closeInpurView() {
+    func closeInputView() {
         selectArea.isHidden = true
         selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = false
         selectAreaBottomHight.constant = 0

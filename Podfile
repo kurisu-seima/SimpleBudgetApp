@@ -9,5 +9,6 @@ target 'SimpleBudgetApp' do
 
 pod 'SideMenuSwift'
 pod 'DSFloatingButton'
+pod 'RealmSwift', '~> 4.4.1'
 
 end

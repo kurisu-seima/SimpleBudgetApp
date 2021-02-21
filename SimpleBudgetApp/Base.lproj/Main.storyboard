@@ -548,8 +548,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountLabel" destination="ai1-tD-b5V" id="4r7-TS-iZ5"/>
-                                            <outlet property="itemLabel" destination="G9k-Bi-Z1f" id="7cf-Rf-5Bc"/>
+                                            <outlet property="amountOfMonsyLabel" destination="ai1-tD-b5V" id="gRo-ek-ODf"/>
+                                            <outlet property="detailsLabel" destination="G9k-Bi-Z1f" id="CrE-1d-5DY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -699,8 +699,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountLabel" destination="tbE-qa-p5D" id="ElX-dR-uVw"/>
-                                            <outlet property="itemLabel" destination="bJB-Sz-NQ2" id="pfI-pf-LQF"/>
+                                            <outlet property="amountOfMonsyLabel" destination="tbE-qa-p5D" id="xFd-ri-0bK"/>
+                                            <outlet property="detailsLabel" destination="bJB-Sz-NQ2" id="Cj8-9U-FRw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -769,8 +769,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountLabel" destination="j5S-H4-kP0" id="frl-YN-de4"/>
-                                            <outlet property="itemLabel" destination="wc3-b0-a8n" id="pxs-Rr-bob"/>
+                                            <outlet property="amountOfMonsyLabel" destination="5Ab-mX-4Ol" id="GwK-Pg-G0s"/>
+                                            <outlet property="detailsLabel" destination="wc3-b0-a8n" id="JUA-XZ-WQf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -836,8 +836,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountLabel" destination="kGN-Iq-vJ2" id="OfA-d8-4VQ"/>
-                                            <outlet property="itemLabel" destination="ZCC-yA-fde" id="arW-HR-WJd"/>
+                                            <outlet property="amountOfMonsyLabel" destination="kGN-Iq-vJ2" id="kgR-4V-VBx"/>
+                                            <outlet property="detailsLabel" destination="ZCC-yA-fde" id="qoA-rC-Y4g"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -985,8 +985,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountLabel" destination="2It-eg-m66" id="DD9-XK-iWv"/>
-                                            <outlet property="itemLabel" destination="JxO-mK-Gn0" id="NHg-D0-Dab"/>
+                                            <outlet property="amountOfMonsyLabel" destination="2It-eg-m66" id="V2d-Mc-Am1"/>
+                                            <outlet property="detailsLabel" destination="JxO-mK-Gn0" id="ugI-lw-mhb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
