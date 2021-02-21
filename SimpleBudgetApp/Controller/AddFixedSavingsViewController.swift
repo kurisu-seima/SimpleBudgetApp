@@ -9,21 +9,37 @@ import UIKit
 
 class AddFixedSavingsViewController: UIViewController {
 
+    @IBOutlet weak var savingsTableView: UITableView!
+    @IBOutlet weak var savingsTableViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var selectArea: CustomView!
+    @IBOutlet weak var selectAreaBottomHight: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func openInputView(_ sender: Any) {
+        selectArea.delegate = self
+        selectArea.isHidden = false
+        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = true
+        selectAreaBottomHight.constant = 10
+        savingsTableViewTopConstraint.constant = 150
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
-    */
+}
 
+extension AddFixedSavingsViewController: CustomViewDelegate {
+    func closeInpurView() {
+        selectArea.isHidden = true
+        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = false
+        selectAreaBottomHight.constant = 0
+        savingsTableViewTopConstraint.constant = 80
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
 }

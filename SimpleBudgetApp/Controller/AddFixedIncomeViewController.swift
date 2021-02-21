@@ -10,6 +10,9 @@ import UIKit
 class AddFixedIncomeViewController: UIViewController {
     
     @IBOutlet weak var incomeTableView: UITableView!
+    @IBOutlet weak var incomeTableViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var selectArea: CustomView!
+    @IBOutlet weak var selectAreaBottomHight: NSLayoutConstraint!
     
     let item = ["お小遣い", "私が必死に汗水垂らして働いたお金です!!", "上司の靴なめをして稼いだお金です!!", "ギャンブル"]
     let amount = ["100", "1000000", "12000", "700000"]
@@ -19,6 +22,17 @@ class AddFixedIncomeViewController: UIViewController {
         
         incomeTableView.dataSource = self
         incomeTableView.delegate = self
+    }
+    
+    @IBAction func openInputView(_ sender: Any) {
+        selectArea.delegate = self
+        selectArea.isHidden = false
+        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = true
+        selectAreaBottomHight.constant = 10
+        incomeTableViewTopConstraint.constant = 150
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
 }
 
@@ -35,5 +49,17 @@ extension AddFixedIncomeViewController: UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension AddFixedIncomeViewController: CustomViewDelegate {
+    func closeInpurView() {
+        selectArea.isHidden = true
+        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = false
+        selectAreaBottomHight.constant = 0
+        incomeTableViewTopConstraint.constant = 80
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
 }
