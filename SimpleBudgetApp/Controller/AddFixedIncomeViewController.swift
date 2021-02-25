@@ -13,12 +13,20 @@ class AddFixedIncomeViewController: UIViewController {
     @IBOutlet weak var incomeTableViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var selectArea: CustomView!
     @IBOutlet weak var selectAreaBottomHight: NSLayoutConstraint!
+    
+    var fixedIncomesData: [FixedIncome] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         incomeTableView.dataSource = self
         incomeTableView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        fixedIncomesData = BudgetRepository.shared.fixedIncomesArray()
     }
     
     @IBAction func openInputView(_ sender: Any) {
@@ -35,12 +43,12 @@ class AddFixedIncomeViewController: UIViewController {
 
 extension AddFixedIncomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return BudgetRepository.shared.fixedIncomes.count
+        return fixedIncomesData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = incomeTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemTableViewCell
-        cell.setUp(index: indexPath.row)
+        cell.setUp(fixedIncome: fixedIncomesData[indexPath.row])
         return cell
     }
     
@@ -51,6 +59,7 @@ extension AddFixedIncomeViewController: UITableViewDataSource, UITableViewDelega
 
 extension AddFixedIncomeViewController: CustomViewDelegate {
     func closeInputView() {
+        fixedIncomesData = BudgetRepository.shared.fixedIncomesArray()
         incomeTableView.reloadData()
         selectArea.isHidden = true
         selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = false

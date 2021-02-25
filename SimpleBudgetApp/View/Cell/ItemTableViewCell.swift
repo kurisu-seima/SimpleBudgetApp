@@ -23,8 +23,8 @@ class ItemTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setUp(index: Int) {
-        detailsLabel.text = BudgetRepository.shared.fixedIncomes[index].details
-        amountOfMonsyLabel.text = "¥\(BudgetRepository.shared.fixedIncomes[index].amountOfMoney)"
+    func setUp(fixedIncome: FixedIncome) {
+        detailsLabel.text = fixedIncome.details
+        amountOfMonsyLabel.text = "¥\(fixedIncome.amountOfMoney)"
     }
 }

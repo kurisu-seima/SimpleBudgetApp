@@ -12,19 +12,30 @@ class BudgetRepository {
     
     static let shared = BudgetRepository()
     
+    var db = try! Realm()
+    
     private init() {
         fixedIncomes = {
-            let realm = try! Realm()
-            return realm.objects(FixedIncome.self)
+            return db.objects(FixedIncome.self)
         }()
     }
     
     private (set) var fixedIncomes: Results<FixedIncome>!
     
+    func fixedIncomesArray() -> [FixedIncome] {
+        return Array(BudgetRepository.shared.fixedIncomes)
+    }
+    
     func addFixedIncome(fixedIncome: FixedIncome) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(fixedIncome)
+        try! db.write {
+            db.add(fixedIncome)
         }
+    }
+    
+    func toDate(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
+        let japanDate = dateFormatter.string(from: date)
+        return japanDate
     }
 }
