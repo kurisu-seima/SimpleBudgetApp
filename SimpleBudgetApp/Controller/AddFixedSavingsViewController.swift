@@ -14,14 +14,17 @@ class AddFixedSavingsViewController: UIViewController {
     @IBOutlet weak var selectArea: CustomView!
     @IBOutlet weak var selectAreaBottomHight: NSLayoutConstraint!
     
+    var addButtonTag: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func openInputView(_ sender: Any) {
+    @IBAction func openInputView(_ sender: UIButton) {
         selectArea.delegate = self
+        addButtonTag = sender.tag
         selectArea.isHidden = false
         selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = true
         selectAreaBottomHight.constant = 10
@@ -33,6 +36,10 @@ class AddFixedSavingsViewController: UIViewController {
 }
 
 extension AddFixedSavingsViewController: CustomViewDelegate {
+    var addButtonTagCount: Int {
+        return addButtonTag
+    }
+    
     func closeInputView() {
         selectArea.isHidden = true
         selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = false

@@ -10,7 +10,7 @@ import RealmSwift
 
 class FixedSaving: Object {
     
-  @objc dynamic var details: String = ""
-  @objc dynamic var amountOfMoney: String = ""
+    @objc dynamic var details: String = ""
+    @objc dynamic var amountOfMoney: String = ""
     
 }

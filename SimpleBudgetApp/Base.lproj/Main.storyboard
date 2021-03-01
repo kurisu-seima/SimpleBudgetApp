@@ -147,7 +147,7 @@
                                     <action selector="openInputView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XIN-TF-wpq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnY-FA-BMh" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnY-FA-BMh" customClass="DSFloatingButton" customModule="DSFloatingButton">
                                 <rect key="frame" x="41.5" y="752" width="331" height="60"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
@@ -574,7 +574,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61A-ve-0gv" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61A-ve-0gv" customClass="DSFloatingButton" customModule="DSFloatingButton">
                                 <rect key="frame" x="82" y="204" width="250" height="60"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
@@ -805,7 +805,7 @@
                                 <rect key="frame" x="0.0" y="344" width="414" height="552"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="tUP-r0-WiF" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="tUP-r0-WiF" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tUP-r0-WiF" id="USW-Od-2Hv">
@@ -851,7 +851,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0R2-Se-3W6" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0R2-Se-3W6" customClass="DSFloatingButton" customModule="DSFloatingButton">
                                 <rect key="frame" x="82" y="204" width="250" height="60"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
@@ -932,6 +932,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="0R2-Se-3W6" id="haL-Ld-4jt"/>
                         <outlet property="selectArea" destination="L41-SR-SMY" id="vHs-ui-3WJ"/>
                         <outlet property="selectAreaBottomHight" destination="bJF-PY-ZmP" id="aJf-C5-YvS"/>
                         <outlet property="spendingTableView" destination="wZB-zS-h8x" id="jhh-vC-W0A"/>
@@ -1011,7 +1012,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzg-A1-vYL" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzg-A1-vYL" customClass="DSFloatingButton" customModule="DSFloatingButton">
                                 <rect key="frame" x="82" y="204" width="250" height="60"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>

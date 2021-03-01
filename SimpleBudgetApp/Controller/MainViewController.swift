@@ -13,6 +13,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var selectArea: CustomView!
     @IBOutlet weak var selectAreaBottomHight: NSLayoutConstraint!
     
+    var addButtonTag: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,8 +34,9 @@ class MainViewController: UIViewController {
         self.sideMenuController?.revealMenu()
     }
     
-    @IBAction func openInputView(_ sender: Any) {
+    @IBAction func openInputView(_ sender: UIButton) {
         selectArea.delegate = self
+        addButtonTag = sender.tag
         selectArea.isHidden = false
         selectAreaBottomHight.constant = 30
         selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = true
@@ -44,6 +47,10 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: CustomViewDelegate {
+    var addButtonTagCount: Int {
+        return addButtonTag
+    }
+    
     func closeInputView() {
         selectArea.isHidden = true
         selectAreaBottomHight.constant = 0

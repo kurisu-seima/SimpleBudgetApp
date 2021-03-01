@@ -23,8 +23,13 @@ class ItemTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setUp(fixedIncome: FixedIncome) {
+    func fixedIncomeSetUp(fixedIncome: FixedIncome) {
         detailsLabel.text = fixedIncome.details
         amountOfMonsyLabel.text = "¥\(fixedIncome.amountOfMoney)"
+    }
+    
+    func fixedSpendingSetUp(fixedSpending: FixedSpending) {
+        detailsLabel.text = fixedSpending.details
+        amountOfMonsyLabel.text = "¥\(fixedSpending.amountOfMoney)"
     }
 }

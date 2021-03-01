@@ -10,7 +10,12 @@ import RealmSwift
 
 class FixedSpending: Object {
     
-   @objc dynamic var details: String = ""
-   @objc dynamic var amountOfMoney: String = ""
+    @objc dynamic var id = NSUUID().uuidString
+    @objc dynamic var date = Date()
+    @objc dynamic var details: String = ""
+    @objc dynamic var amountOfMoney: String = ""
     
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

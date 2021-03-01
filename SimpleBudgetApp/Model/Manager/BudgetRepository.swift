@@ -18,9 +18,14 @@ class BudgetRepository {
         fixedIncomes = {
             return db.objects(FixedIncome.self)
         }()
+    
+        fixedSpendings = {
+            return db.objects(FixedSpending.self)
+        }()
     }
     
     private (set) var fixedIncomes: Results<FixedIncome>!
+    private (set) var fixedSpendings: Results<FixedSpending>!
     
     func fixedIncomesArray() -> [FixedIncome] {
         return Array(BudgetRepository.shared.fixedIncomes)
@@ -29,6 +34,16 @@ class BudgetRepository {
     func addFixedIncome(fixedIncome: FixedIncome) {
         try! db.write {
             db.add(fixedIncome)
+        }
+    }
+    
+    func fixedSpendingsArray() -> [FixedSpending]{
+        return Array(BudgetRepository.shared.fixedSpendings)
+    }
+    
+    func addFixedSpending(fixedSpeding: FixedSpending) {
+        try! db.write {
+            db.add(fixedSpeding)
         }
     }
     

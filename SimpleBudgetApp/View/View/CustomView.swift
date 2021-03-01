@@ -8,6 +8,7 @@
 import UIKit
 
 protocol CustomViewDelegate {
+    var addButtonTagCount: Int { get }
     func closeInputView()
 }
 
@@ -15,6 +16,14 @@ class CustomView: UIView {
     
     @IBOutlet weak var detailsTextField: UITextField!
     @IBOutlet weak var amountOfMoneyTextField: UITextField!
+    
+    enum delegateType: Int {
+        case extraordinarySpending
+        case extraordinaryIncome
+        case fixedIncome
+        case fixedSpending
+        case fixedSavings
+    }
     
     var delegate: CustomViewDelegate?
 
@@ -45,17 +54,42 @@ class CustomView: UIView {
         self.endEditing(true)
     }
     
-    @IBAction func doneButtonDidTapped(_ sender: Any) {
+    @IBAction func doneButtonDidTapped(_ sender: UIButton) {
         if let details = detailsTextField.text, let amoutOfMoney = amountOfMoneyTextField.text, !details.isEmpty, !amoutOfMoney.isEmpty {
-            let fixedIncome = FixedIncome()
-            fixedIncome.details = details
-            fixedIncome.amountOfMoney = amoutOfMoney
-            BudgetRepository.shared.addFixedIncome(fixedIncome: fixedIncome)
+            guard let addButtonTagCount = self.delegate?.addButtonTagCount, let delegateType = delegateType(rawValue:  addButtonTagCount) else {
+                return
+            }
+            switch delegateType {
+            case .extraordinarySpending:
+                break
+            case .extraordinaryIncome:
+                break
+            case .fixedIncome:
+                createFixedIncome(details: details, amountOfMoney: amoutOfMoney)
+            case .fixedSpending:
+                createFixedSpending(details: details, amountOfMoney: amoutOfMoney)
+            case .fixedSavings:
+                break
+            }
         }
         detailsTextField.text = .none
         amountOfMoneyTextField.text = .none
         self.endEditing(true)
         self.delegate?.closeInputView()
+    }
+    
+    func createFixedIncome(details: String, amountOfMoney: String) {
+        let fixedIncome = FixedIncome()
+        fixedIncome.details = details
+        fixedIncome.amountOfMoney = amountOfMoney
+        BudgetRepository.shared.addFixedIncome(fixedIncome: fixedIncome)
+    }
+    
+    func createFixedSpending(details: String, amountOfMoney: String) {
+        let fixedSpending = FixedSpending()
+        fixedSpending.details = details
+        fixedSpending.amountOfMoney = amountOfMoney
+        BudgetRepository.shared.addFixedSpending(fixedSpeding: fixedSpending)
     }
 }
 
