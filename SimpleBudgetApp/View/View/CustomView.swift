@@ -69,7 +69,7 @@ class CustomView: UIView {
             case .fixedSpending:
                 createFixedSpending(details: details, amountOfMoney: amoutOfMoney)
             case .fixedSavings:
-                break
+                createFixedSaving(details: details, amountOfMoney: amoutOfMoney)
             }
         }
         detailsTextField.text = .none
@@ -90,6 +90,13 @@ class CustomView: UIView {
         fixedSpending.details = details
         fixedSpending.amountOfMoney = amountOfMoney
         BudgetRepository.shared.addFixedSpending(fixedSpeding: fixedSpending)
+    }
+    
+    func createFixedSaving(details: String, amountOfMoney: String) {
+        let fixedSaving = FixedSaving()
+        fixedSaving.details = details
+        fixedSaving.amountOfMoney = amountOfMoney
+        BudgetRepository.shared.addFixedSaving(fixedSaving: fixedSaving)
     }
 }
 

@@ -32,4 +32,9 @@ class ItemTableViewCell: UITableViewCell {
         detailsLabel.text = fixedSpending.details
         amountOfMonsyLabel.text = "¥\(fixedSpending.amountOfMoney)"
     }
+    
+    func fixedSavingSetUp(fixedSaving: FixedSaving) {
+        detailsLabel.text = fixedSaving.details
+        amountOfMonsyLabel.text = "\(fixedSaving.amountOfMoney)"
+    }
 }

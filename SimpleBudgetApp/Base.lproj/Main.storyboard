@@ -514,37 +514,37 @@
                                 <rect key="frame" x="0.0" y="344" width="414" height="552"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="XGY-xr-T6S" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="XGY-xr-T6S" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XGY-xr-T6S" id="Uil-AR-5jd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9k-Bi-Z1f">
-                                                    <rect key="frame" x="20" y="21" width="40" height="18"/>
+                                                    <rect key="frame" x="20" y="10" width="40" height="40.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="39i-B1-WeZ"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ai1-tD-b5V">
-                                                    <rect key="frame" x="354" y="20" width="40" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="bUZ-9Z-eNR"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="354" y="20.5" width="40" height="20"/>
                                                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="G9k-Bi-Z1f" secondAttribute="bottom" constant="10" id="Bf9-E2-0om"/>
-                                                <constraint firstItem="ai1-tD-b5V" firstAttribute="centerY" secondItem="Uil-AR-5jd" secondAttribute="centerY" id="BfM-HF-byz"/>
-                                                <constraint firstItem="G9k-Bi-Z1f" firstAttribute="centerY" secondItem="Uil-AR-5jd" secondAttribute="centerY" id="ELq-Os-rO8"/>
-                                                <constraint firstItem="G9k-Bi-Z1f" firstAttribute="top" secondItem="Uil-AR-5jd" secondAttribute="topMargin" constant="10" id="Hp0-Hi-OWE"/>
-                                                <constraint firstItem="ai1-tD-b5V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G9k-Bi-Z1f" secondAttribute="trailing" id="J4w-Gi-g2m"/>
-                                                <constraint firstItem="ai1-tD-b5V" firstAttribute="trailing" secondItem="Uil-AR-5jd" secondAttribute="trailingMargin" id="Wy2-kC-3T9"/>
-                                                <constraint firstItem="G9k-Bi-Z1f" firstAttribute="leading" secondItem="Uil-AR-5jd" secondAttribute="leadingMargin" id="cdR-Tr-f5M"/>
+                                                <constraint firstItem="G9k-Bi-Z1f" firstAttribute="top" secondItem="Uil-AR-5jd" secondAttribute="top" constant="10" id="51T-ru-FA9"/>
+                                                <constraint firstItem="ai1-tD-b5V" firstAttribute="centerY" secondItem="Uil-AR-5jd" secondAttribute="centerY" id="7ow-KX-3UC"/>
+                                                <constraint firstItem="ai1-tD-b5V" firstAttribute="trailing" secondItem="Uil-AR-5jd" secondAttribute="trailingMargin" id="7sS-kX-ZUg"/>
+                                                <constraint firstItem="G9k-Bi-Z1f" firstAttribute="leading" secondItem="Uil-AR-5jd" secondAttribute="leadingMargin" id="MkB-l3-fdw"/>
+                                                <constraint firstAttribute="bottom" secondItem="G9k-Bi-Z1f" secondAttribute="bottom" constant="10" id="WAI-oY-lTl"/>
+                                                <constraint firstItem="G9k-Bi-Z1f" firstAttribute="centerY" secondItem="Uil-AR-5jd" secondAttribute="centerY" id="Zxi-qd-so3"/>
+                                                <constraint firstItem="ai1-tD-b5V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="G9k-Bi-Z1f" secondAttribute="trailing" id="hCw-nE-Elg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -805,34 +805,37 @@
                                 <rect key="frame" x="0.0" y="344" width="414" height="552"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="tUP-r0-WiF" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="tUP-r0-WiF" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tUP-r0-WiF" id="USW-Od-2Hv">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCC-yA-fde">
-                                                    <rect key="frame" x="20" y="21" width="40" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGN-Iq-vJ2">
+                                                    <rect key="frame" x="354" y="20.5" width="40" height="20"/>
                                                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGN-Iq-vJ2">
-                                                    <rect key="frame" x="354" y="20" width="40" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCC-yA-fde">
+                                                    <rect key="frame" x="20" y="10" width="40" height="40.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="w0o-Tt-WEk"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="kGN-Iq-vJ2" firstAttribute="trailing" secondItem="USW-Od-2Hv" secondAttribute="trailingMargin" id="AIM-VZ-mMB"/>
-                                                <constraint firstItem="kGN-Iq-vJ2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZCC-yA-fde" secondAttribute="trailing" id="IHt-a9-KDc"/>
-                                                <constraint firstItem="ZCC-yA-fde" firstAttribute="top" secondItem="USW-Od-2Hv" secondAttribute="topMargin" constant="10" id="Lg4-PT-9YJ"/>
-                                                <constraint firstItem="ZCC-yA-fde" firstAttribute="centerY" secondItem="USW-Od-2Hv" secondAttribute="centerY" id="d4j-N9-MmB"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ZCC-yA-fde" secondAttribute="bottom" constant="10" id="wki-yu-gQz"/>
-                                                <constraint firstItem="kGN-Iq-vJ2" firstAttribute="centerY" secondItem="USW-Od-2Hv" secondAttribute="centerY" id="xAe-uy-ply"/>
-                                                <constraint firstItem="ZCC-yA-fde" firstAttribute="leading" secondItem="USW-Od-2Hv" secondAttribute="leadingMargin" id="xtR-xL-9IQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZCC-yA-fde" secondAttribute="bottom" constant="10" id="7wS-TM-HNU"/>
+                                                <constraint firstItem="kGN-Iq-vJ2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZCC-yA-fde" secondAttribute="trailing" id="HXA-UQ-waM"/>
+                                                <constraint firstItem="ZCC-yA-fde" firstAttribute="leading" secondItem="USW-Od-2Hv" secondAttribute="leadingMargin" id="NuA-Ul-yJ5"/>
+                                                <constraint firstItem="kGN-Iq-vJ2" firstAttribute="trailing" secondItem="USW-Od-2Hv" secondAttribute="trailingMargin" id="VGb-vy-JEy"/>
+                                                <constraint firstItem="kGN-Iq-vJ2" firstAttribute="centerY" secondItem="USW-Od-2Hv" secondAttribute="centerY" id="Xxa-SQ-y9X"/>
+                                                <constraint firstItem="ZCC-yA-fde" firstAttribute="centerY" secondItem="USW-Od-2Hv" secondAttribute="centerY" id="gFW-V7-Uzs"/>
+                                                <constraint firstItem="ZCC-yA-fde" firstAttribute="top" secondItem="USW-Od-2Hv" secondAttribute="top" constant="10" id="quL-jE-mTp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -941,7 +944,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7w2-Mt-VQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7983" y="-354"/>
+            <point key="canvasLocation" x="7982.6086956521749" y="-354.24107142857139"/>
         </scene>
         <!--Add Fixed Savings View Controller-->
         <scene sceneID="hAh-LN-dce">
@@ -955,34 +958,37 @@
                                 <rect key="frame" x="0.0" y="344" width="414" height="552"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="1F3-iX-hUb" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="1F3-iX-hUb" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1F3-iX-hUb" id="Fbx-ee-xuE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2It-eg-m66">
-                                                    <rect key="frame" x="354" y="20" width="40" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxO-mK-Gn0">
+                                                    <rect key="frame" x="20" y="10" width="40" height="40.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="z7e-yb-N12"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxO-mK-Gn0">
-                                                    <rect key="frame" x="20" y="21" width="40" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2It-eg-m66">
+                                                    <rect key="frame" x="354" y="20.5" width="40" height="20"/>
                                                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="JxO-mK-Gn0" firstAttribute="top" secondItem="Fbx-ee-xuE" secondAttribute="topMargin" constant="10" id="2Bg-br-Sfc"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="JxO-mK-Gn0" secondAttribute="bottom" constant="10" id="DL6-vV-k1y"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="2It-eg-m66" secondAttribute="trailing" id="TJE-lQ-nHZ"/>
-                                                <constraint firstItem="JxO-mK-Gn0" firstAttribute="centerY" secondItem="Fbx-ee-xuE" secondAttribute="centerY" id="Xm6-J9-s7G"/>
-                                                <constraint firstItem="2It-eg-m66" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JxO-mK-Gn0" secondAttribute="trailing" id="fvD-lq-On0"/>
-                                                <constraint firstItem="JxO-mK-Gn0" firstAttribute="leading" secondItem="Fbx-ee-xuE" secondAttribute="leadingMargin" id="hwA-3V-rSE"/>
-                                                <constraint firstItem="2It-eg-m66" firstAttribute="centerY" secondItem="Fbx-ee-xuE" secondAttribute="centerY" id="mMz-Cs-8vN"/>
+                                                <constraint firstItem="2It-eg-m66" firstAttribute="centerY" secondItem="Fbx-ee-xuE" secondAttribute="centerY" id="A1r-O3-fkY"/>
+                                                <constraint firstItem="2It-eg-m66" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JxO-mK-Gn0" secondAttribute="trailing" id="D3B-j0-4YA"/>
+                                                <constraint firstItem="2It-eg-m66" firstAttribute="trailing" secondItem="Fbx-ee-xuE" secondAttribute="trailingMargin" id="Enm-wR-cim"/>
+                                                <constraint firstItem="JxO-mK-Gn0" firstAttribute="leading" secondItem="Fbx-ee-xuE" secondAttribute="leadingMargin" id="NeL-NO-olV"/>
+                                                <constraint firstAttribute="bottom" secondItem="JxO-mK-Gn0" secondAttribute="bottom" constant="10" id="Nqj-yy-V9N"/>
+                                                <constraint firstItem="JxO-mK-Gn0" firstAttribute="top" secondItem="Fbx-ee-xuE" secondAttribute="top" constant="10" id="gOC-tG-6IB"/>
+                                                <constraint firstItem="JxO-mK-Gn0" firstAttribute="centerY" secondItem="Fbx-ee-xuE" secondAttribute="centerY" id="nsT-Ik-cqN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1091,7 +1097,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtX-sL-5e7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8794" y="-354"/>
+            <point key="canvasLocation" x="8792.753623188406" y="-354.24107142857139"/>
         </scene>
     </scenes>
     <designables>
