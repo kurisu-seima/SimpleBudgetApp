@@ -12,7 +12,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+        
+        let isFirstLaunch = UserDefaults.standard.bool(forKey: "isFirstLaunch")
+        if !isFirstLaunch {
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyyMMdd", options: 0, locale: Locale(identifier: "ja_JP"))
+            let jpDateString = dateFormatter.string(from: date)
+            let jp_Date = dateFormatter.date(from: jpDateString)!
+            UserDefaults.standard.setValue(jp_Date, forKey: "date")
+        }
         return true
     }
 
