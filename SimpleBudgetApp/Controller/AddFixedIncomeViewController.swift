@@ -13,6 +13,7 @@ class AddFixedIncomeViewController: UIViewController {
     @IBOutlet weak var incomeTableViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var selectArea: CustomView!
     @IBOutlet weak var selectAreaBottomHight: NSLayoutConstraint!
+    @IBOutlet weak var monthlyFixedIncomeLabel: UILabel!
     
     var fixedIncomesData: [FixedIncome] = []
     
@@ -29,6 +30,7 @@ class AddFixedIncomeViewController: UIViewController {
         super.viewWillAppear(true)
         
         fixedIncomesData = BudgetRepository.shared.fixedIncomesArray()
+        labelSetUp()
     }
     
     @IBAction func openInputView(_ sender: UIButton) {
@@ -41,6 +43,10 @@ class AddFixedIncomeViewController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
+    }
+    
+    func labelSetUp() {
+        monthlyFixedIncomeLabel.text = FixedCostUseCase.shared.monthlyFixedIncome().numberWithComma()
     }
 }
 
@@ -67,6 +73,7 @@ extension AddFixedIncomeViewController: CustomViewDelegate {
     
     func closeInputView() {
         fixedIncomesData = BudgetRepository.shared.fixedIncomesArray()
+        labelSetUp()
         incomeTableView.reloadData()
         selectArea.isHidden = true
         selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = false

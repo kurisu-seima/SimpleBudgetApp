@@ -14,6 +14,7 @@ class AddFixedSpendingViewController: UIViewController {
     @IBOutlet weak var selectArea: CustomView!
     @IBOutlet weak var selectAreaBottomHight: NSLayoutConstraint!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var monthlyFixedSpendingLabel: UILabel!
     
     var fixedSpendingsData: [FixedSpending] = []
     
@@ -30,6 +31,7 @@ class AddFixedSpendingViewController: UIViewController {
         super.viewWillAppear(true)
         
         fixedSpendingsData = BudgetRepository.shared.fixedSpendingsArray()
+        labelSetUp()
     }
     
     @IBAction func openInputView(_ sender: UIButton) {
@@ -42,6 +44,10 @@ class AddFixedSpendingViewController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
+    }
+    
+    func labelSetUp() {
+        monthlyFixedSpendingLabel.text = FixedCostUseCase.shared.monthlyFixedSpending().numberWithComma()
     }
 }
 
@@ -64,6 +70,7 @@ extension AddFixedSpendingViewController: CustomViewDelegate {
     
     func closeInputView() {
         fixedSpendingsData = BudgetRepository.shared.fixedSpendingsArray()
+        labelSetUp()
         spendingTableView.reloadData()
         selectArea.isHidden = true
         selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = false

@@ -221,6 +221,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="taB-hE-oAd"/>
                     <connections>
+                        <outlet property="dailyLimitLabel" destination="h6p-ac-cXm" id="GqI-Qe-uDX"/>
+                        <outlet property="monthlyBudgetLabel" destination="wo2-eg-wxR" id="1ei-GQ-Uu5"/>
                         <outlet property="selectArea" destination="ZNn-it-dai" id="vBC-cw-tVA"/>
                         <outlet property="selectAreaBottomHight" destination="MvC-3D-CGo" id="DPu-be-CLc"/>
                     </connections>
@@ -497,6 +499,9 @@
                             <constraint firstItem="puS-LO-5L1" firstAttribute="leading" secondItem="dsq-5s-mEz" secondAttribute="leading" id="xM7-Ea-Ife"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dailyBudgetLabel" destination="5CN-c2-Ta2" id="ssn-or-5kv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwP-Ze-b8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -564,7 +569,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥123,456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htT-9m-9Wq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥123,456" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htT-9m-9Wq">
                                 <rect key="frame" x="132" y="124" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="CeV-b5-JbI"/>
@@ -644,6 +649,7 @@
                     <connections>
                         <outlet property="incomeTableView" destination="KfW-qY-Bmx" id="IOl-PC-GrK"/>
                         <outlet property="incomeTableViewTopConstraint" destination="FAg-Zf-elA" id="uvZ-Bm-Feb"/>
+                        <outlet property="monthlyFixedIncomeLabel" destination="htT-9m-9Wq" id="nVU-zt-W5n"/>
                         <outlet property="selectArea" destination="cNZ-Il-G0k" id="gcl-bx-O2E"/>
                         <outlet property="selectAreaBottomHight" destination="TjA-jM-R4P" id="rH7-zu-dFf"/>
                     </connections>
@@ -845,7 +851,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥123,456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEL-ti-bry">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥123,456" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEL-ti-bry">
                                 <rect key="frame" x="132" y="124" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="l4d-oC-c59"/>
@@ -936,6 +942,7 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="0R2-Se-3W6" id="haL-Ld-4jt"/>
+                        <outlet property="monthlyFixedSpendingLabel" destination="qEL-ti-bry" id="DsB-O3-ehj"/>
                         <outlet property="selectArea" destination="L41-SR-SMY" id="vHs-ui-3WJ"/>
                         <outlet property="selectAreaBottomHight" destination="bJF-PY-ZmP" id="aJf-C5-YvS"/>
                         <outlet property="spendingTableView" destination="wZB-zS-h8x" id="jhh-vC-W0A"/>
@@ -1008,7 +1015,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥123,456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4l-cJ-P4Z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥123,456" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4l-cJ-P4Z">
                                 <rect key="frame" x="132" y="124" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Q1v-Zi-w2q"/>
@@ -1089,10 +1096,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="monthlyFixedSavingsLabel" destination="h4l-cJ-P4Z" id="f1M-4a-EZA"/>
                         <outlet property="savingsTableView" destination="yBL-54-Gbc" id="lwx-18-KsJ"/>
                         <outlet property="savingsTableViewTopConstraint" destination="5e4-Wk-JgH" id="1aA-Kk-4ih"/>
                         <outlet property="selectArea" destination="YxD-yS-m73" id="1H9-Fz-utw"/>
-                        <outlet property="selectAreaBottomHight" destination="O18-PE-Wsd" id="606-rj-nOI"/>
+                        <outlet property="selectAreaBottomHight" destination="O18-PE-Wsd" id="lnP-jC-bHW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtX-sL-5e7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

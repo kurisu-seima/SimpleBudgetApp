@@ -10,6 +10,8 @@ import SideMenuSwift
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var monthlyBudgetLabel: UILabel!
+    @IBOutlet weak var dailyLimitLabel: UILabel!
     @IBOutlet weak var selectArea: CustomView!
     @IBOutlet weak var selectAreaBottomHight: NSLayoutConstraint!
     
@@ -24,6 +26,7 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
       
+        labelSetUp()
         guard let navigationController = self.navigationController, (!navigationController.isNavigationBarHidden) else {
             return
         }
@@ -43,6 +46,10 @@ class MainViewController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
+    }
+    
+    func labelSetUp() {
+        monthlyBudgetLabel.text = "¥\(FixedCostUseCase.shared.monthlyBudget().numberWithComma())"
     }
 }
 

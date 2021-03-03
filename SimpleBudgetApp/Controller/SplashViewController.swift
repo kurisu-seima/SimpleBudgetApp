@@ -40,3 +40,17 @@ class SplashViewController: UIViewController {
         }
     }
 }
+
+extension Int {
+    func numberWithComma() -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = NumberFormatter.Style.decimal
+        formatter.groupingSeparator = ","
+        formatter.groupingSize = 3
+        if let result = formatter.string(from: NSNumber(value: self)) {
+            return result
+        } else {
+            return ""
+        }
+    }
+}

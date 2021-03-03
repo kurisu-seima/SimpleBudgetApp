@@ -13,7 +13,7 @@ class AddFixedSavingsViewController: UIViewController {
     @IBOutlet weak var savingsTableViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var selectArea: CustomView!
     @IBOutlet weak var selectAreaBottomHight: NSLayoutConstraint!
-    
+    @IBOutlet weak var monthlyFixedSavingsLabel: UILabel!
     var fixedSavingsData: [FixedSaving] = []
     
     var addButtonTag: Int = 0
@@ -29,6 +29,7 @@ class AddFixedSavingsViewController: UIViewController {
         super.viewWillAppear(true)
         
         fixedSavingsData = BudgetRepository.shared.fixedSavingsArray()
+        labelSetUp()
     }
     
     @IBAction func openInputView(_ sender: UIButton) {
@@ -41,6 +42,10 @@ class AddFixedSavingsViewController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
+    }
+    
+    func labelSetUp() {
+        monthlyFixedSavingsLabel.text = FixedCostUseCase.shared.monthlyFixedSaving().numberWithComma()
     }
 }
 
@@ -63,6 +68,7 @@ extension AddFixedSavingsViewController: CustomViewDelegate {
     
     func closeInputView() {
         fixedSavingsData = BudgetRepository.shared.fixedSavingsArray()
+        labelSetUp()
         savingsTableView.reloadData()
         selectArea.isHidden = true
         selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = false

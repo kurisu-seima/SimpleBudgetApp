@@ -9,8 +9,17 @@ import UIKit
 
 class BudgetSettingViewController: UIViewController {
 
+    @IBOutlet weak var dailyBudgetLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        labelSetUp()
     }
     
     @IBAction func fixedButtonDidTapped(_ sender: UIButton) {
@@ -27,5 +36,9 @@ class BudgetSettingViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    func labelSetUp() {
+        dailyBudgetLabel.text = "¥\(FixedCostUseCase.shared.dailyBudget().numberWithComma())"
     }
 }

@@ -25,16 +25,16 @@ class ItemTableViewCell: UITableViewCell {
     
     func fixedIncomeSetUp(fixedIncome: FixedIncome) {
         detailsLabel.text = fixedIncome.details
-        amountOfMonsyLabel.text = "¥\(fixedIncome.amountOfMoney)"
+        amountOfMonsyLabel.text = "¥\(Int(fixedIncome.amountOfMoney)!.numberWithComma())"
     }
     
     func fixedSpendingSetUp(fixedSpending: FixedSpending) {
         detailsLabel.text = fixedSpending.details
-        amountOfMonsyLabel.text = "¥\(fixedSpending.amountOfMoney)"
+        amountOfMonsyLabel.text = "¥\(Int(fixedSpending.amountOfMoney)!.numberWithComma())"
     }
     
     func fixedSavingSetUp(fixedSaving: FixedSaving) {
         detailsLabel.text = fixedSaving.details
-        amountOfMonsyLabel.text = "\(fixedSaving.amountOfMoney)"
+        amountOfMonsyLabel.text = "¥\(Int(fixedSaving.amountOfMoney)!.numberWithComma())"
     }
 }

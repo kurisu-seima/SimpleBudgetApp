@@ -65,7 +65,6 @@ class BudgetRepository {
     func toDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
-        let japanDate = dateFormatter.string(from: date)
-        return japanDate
+        return dateFormatter.string(from: date)
     }
 }
