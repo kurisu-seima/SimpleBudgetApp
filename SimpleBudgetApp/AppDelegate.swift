@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let jpDateString = dateFormatter.string(from: date)
             let jp_Date = dateFormatter.date(from: jpDateString)!
             UserDefaults.standard.setValue(jp_Date, forKey: "date")
+            UserDefaults.standard.setValue(!isFirstLaunch, forKey: "isFirstLaunch")
         }
         return true
     }
