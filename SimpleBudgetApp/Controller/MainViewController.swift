@@ -13,7 +13,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var monthlyBudgetLabel: UILabel!
     @IBOutlet weak var dailyLimitLabel: UILabel!
     @IBOutlet weak var selectArea: CustomView!
-    @IBOutlet weak var selectAreaBottomHight: NSLayoutConstraint!
     
     var addButtonTag: Int = 0
     
@@ -21,12 +20,14 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        backgroundSetUp()
+        labelSetUp()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
       
-        labelSetUp()
         guard let navigationController = self.navigationController, (!navigationController.isNavigationBarHidden) else {
             return
         }
@@ -41,8 +42,7 @@ class MainViewController: UIViewController {
         selectArea.delegate = self
         addButtonTag = sender.tag
         selectArea.isHidden = false
-        selectAreaBottomHight.constant = 30
-        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = true
+        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1).isActive = true
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
@@ -50,6 +50,15 @@ class MainViewController: UIViewController {
     
     func labelSetUp() {
         monthlyBudgetLabel.text = "¥\(FixedCostUseCase.shared.monthlyBudget().numberWithComma())"
+    }
+    
+    func backgroundSetUp() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        gradientLayer.colors = [UIColor(red: 1, green: 220 / 255, blue: 50 / 255, alpha: 1).cgColor, UIColor.systemOrange.cgColor ]
+        gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint.init(x: 1, y: 1)
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
 
@@ -60,8 +69,7 @@ extension MainViewController: CustomViewDelegate {
     
     func closeInputView() {
         selectArea.isHidden = true
-        selectAreaBottomHight.constant = 0
-        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = false
+        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0).isActive = false
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }

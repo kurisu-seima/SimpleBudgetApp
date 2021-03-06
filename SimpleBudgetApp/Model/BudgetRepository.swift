@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import RealmSwift 
+import RealmSwift
 
 class BudgetRepository {
     
@@ -60,11 +60,5 @@ class BudgetRepository {
         try! db.write {
             db.add(fixedSaving)
         }
-    }
-    
-    func toDate(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
-        return dateFormatter.string(from: date)
     }
 }

@@ -60,10 +60,10 @@ class CustomView: UIView {
                 return
             }
             switch delegateType {
-            case .extraordinarySpending:
-                break
-            case .extraordinaryIncome:
-                break
+            case .extraordinarySpending: break
+//                createExtraordinarySpending(details: details, amountOfMoney: amoutOfMoney)
+            case .extraordinaryIncome: break
+//                createExtraordinaryIncome(details: details, amountOfMoney: amoutOfMoney)
             case .fixedIncome:
                 createFixedIncome(details: details, amountOfMoney: amoutOfMoney)
             case .fixedSpending:
@@ -77,6 +77,20 @@ class CustomView: UIView {
         self.endEditing(true)
         self.delegate?.closeInputView()
     }
+    
+//    func createExtraordinarySpending(details: String, amountOfMoney: String) {
+//        var extraordinarySpending = DailyBalanceOfPayments.BalanceOfPayments()
+//        extraordinarySpending.details = details
+//        extraordinarySpending.amountOfMoney = amountOfMoney
+//        extraordinarySpending.plusOrMinus = 0
+//    }
+//
+//    func createExtraordinaryIncome(details: String, amountOfMoney: String) {
+//        var extraordinaryIncome = DailyBalanceOfPayments.BalanceOfPayments()
+//        extraordinaryIncome.details = details
+//        extraordinaryIncome.amountOfMoney = amountOfMoney
+//        extraordinaryIncome.plusOrMinus = 1
+//    }
     
     func createFixedIncome(details: String, amountOfMoney: String) {
         let fixedIncome = FixedIncome()

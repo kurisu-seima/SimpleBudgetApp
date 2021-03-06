@@ -46,7 +46,7 @@ class AddFixedIncomeViewController: UIViewController {
     }
     
     func labelSetUp() {
-        monthlyFixedIncomeLabel.text = FixedCostUseCase.shared.monthlyFixedIncome().numberWithComma()
+        monthlyFixedIncomeLabel.text = "¥\(FixedCostUseCase.shared.monthlyFixedIncome().numberWithComma())"
     }
 }
 

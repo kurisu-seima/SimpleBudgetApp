@@ -94,7 +94,7 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
-                                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                     <constraints>
                                         <constraint firstItem="51k-Ba-417" firstAttribute="leading" secondItem="nZN-hb-XbC" secondAttribute="leading" constant="10" id="2OS-K3-JFv"/>
                                         <constraint firstItem="g17-yz-dRZ" firstAttribute="leading" secondItem="nZN-hb-XbC" secondAttribute="leading" id="5pX-bq-zSQ"/>
@@ -140,7 +140,7 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
-                                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                     <constraints>
                                         <constraint firstItem="ZVs-7t-PVx" firstAttribute="top" secondItem="Men-OG-OwE" secondAttribute="top" id="16P-wK-QdC"/>
                                         <constraint firstAttribute="trailing" secondItem="yKM-g4-zWc" secondAttribute="trailing" id="4es-tZ-q4l"/>
@@ -159,6 +159,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="nZN-hb-XbC" secondAttribute="trailing" id="1uC-6c-XsF"/>
                                 <constraint firstItem="Men-OG-OwE" firstAttribute="leading" secondItem="ZM0-T6-4Tg" secondAttribute="leading" id="2EW-Ia-Y1g"/>

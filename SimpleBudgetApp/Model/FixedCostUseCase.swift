@@ -11,11 +11,11 @@ import RealmSwift
 class FixedCostUseCase {
     
     static let shared = FixedCostUseCase()
-    
+
     var db = try! Realm()
-    
+
     private init() {
-        
+
         dayCount = {
             let dateNow = Date()
             let calendar = Calendar(identifier: .gregorian)
@@ -27,15 +27,15 @@ class FixedCostUseCase {
             let dayCount = calendar.component(.day, from: date)
             return dayCount
         }()
-        
+
         fixedIncomes = {
             return db.objects(FixedIncome.self)
         }()
-    
+
         fixedSpendings = {
             return db.objects(FixedSpending.self)
         }()
-        
+
         fixedSavings = {
             return db.objects(FixedSaving.self)
         }()
