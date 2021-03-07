@@ -55,11 +55,20 @@ class MainViewController: UIViewController {
     func backgroundSetUp() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-        gradientLayer.colors = [UIColor(red: 1, green: 220 / 255, blue: 50 / 255, alpha: 1).cgColor, UIColor.systemOrange.cgColor ]
+        gradientLayer.colors = [UIColor(red: 1, green: 190 / 255, blue: 90 / 255, alpha: 1).cgColor, UIColor(red: 1, green: 180 / 255, blue: 0, alpha: 1).cgColor, UIColor(red: 1, green: 150 / 255, blue: 0, alpha: 1).cgColor, UIColor(red: 1, green: 130 / 255, blue: 0, alpha: 1).cgColor]
         gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint.init(x: 1, y: 1)
         self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
+    
+//    func backgroundSetUp() {
+//        let gradientLayer = CAGradientLayer()
+//        gradientLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+//        gradientLayer.colors = [UIColor.systemOrange.cgColor, UIColor(red: 1, green: 220 / 255, blue: 50 / 255, alpha: 1).cgColor, UIColor(red: 1, green: 220 / 255, blue: 50 / 255, alpha: 1).cgColor, UIColor.systemOrange.cgColor, UIColor(red: 1, green: 220 / 255, blue: 50 / 255, alpha: 1).cgColor, UIColor.systemOrange.cgColor]
+//        gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
+//        gradientLayer.endPoint = CGPoint.init(x: 1, y: 1)
+//        self.view.layer.insertSublayer(gradientLayer, at: 0)
+//    }
 }
 
 extension MainViewController: CustomViewDelegate {

@@ -18,8 +18,10 @@ class BudgetSettingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
+
         labelSetUp()
+        self.view.backgroundColor = UIColor.systemOrange
+        self.navigationController?.navigationBar.barTintColor = self.view.backgroundColor
     }
     
     @IBAction func fixedButtonDidTapped(_ sender: UIButton) {

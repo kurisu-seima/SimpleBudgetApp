@@ -30,6 +30,8 @@ class AddFixedSavingsViewController: UIViewController {
         
         fixedSavingsData = BudgetRepository.shared.fixedSavingsArray()
         labelSetUp()
+        self.view.backgroundColor = UIColor(red: 1, green: 234 / 255, blue: 80 / 255, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = self.view.backgroundColor
     }
     
     @IBAction func openInputView(_ sender: UIButton) {

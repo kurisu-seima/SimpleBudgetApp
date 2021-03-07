@@ -25,7 +25,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XH5-EY-poM"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fZG-Ie-4S6" firstAttribute="centerY" secondItem="27a-2Y-YSO" secondAttribute="centerY" id="CrQ-wi-lGG"/>
                             <constraint firstItem="fZG-Ie-4S6" firstAttribute="centerX" secondItem="27a-2Y-YSO" secondAttribute="centerX" id="awT-R9-Xx7"/>
@@ -109,9 +109,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="VeL-ul-4hZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="31"/>
                                 <size key="titleShadowOffset" width="0.0" height="-2"/>
-                                <state key="normal" title="つかう">
+                                <state key="normal" title="使う">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -119,28 +119,28 @@
                                         <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.0" green="0.51121367515905369" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.20000000000000001" green="0.8944178989955357" blue="0.98122507333755493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
-                                        <point key="value" x="1" y="0.0"/>
+                                        <point key="value" x="1" y="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
-                                        <point key="value" x="1" y="0.5"/>
+                                        <point key="value" x="0.0" y="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="0.0" height="0.0"/>
+                                        <size key="value" width="0.0" height="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -153,8 +153,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="NOv-qW-zNp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="いれる">
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <state key="normal" title="入れる">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -165,22 +165,25 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.0" green="0.50980392156862742" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.20000000000000001" green="0.89411764705882346" blue="0.98122507333755493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
-                                        <point key="value" x="1" y="0.5"/>
+                                        <point key="value" x="0.0" y="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
-                                        <point key="value" x="1" y="0.0"/>
+                                        <point key="value" x="1" y="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -196,7 +199,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZNn-it-dai" secondAttribute="trailing" id="08z-cG-h0O"/>
                             <constraint firstItem="ePM-JZ-GSS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="4:5" id="0MZ-iH-Y30"/>
@@ -325,177 +328,150 @@
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
                                 <nil key="textColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsq-5s-mEz">
-                                <rect key="frame" x="41.5" y="324" width="331" height="149.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DR9-Pe-MgH" customClass="DSFloatingButton" customModule="DSFloatingButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="149.5"/>
-                                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
-                                        <state key="normal" title="　固定収入" image="income">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="50"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                                <color key="value" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                                <color key="value" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
-                                                <point key="value" x="1" y="0.5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
-                                                <point key="value" x="1" y="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="fixedButtonDidTapped:" destination="MbY-BX-J6H" eventType="touchUpInside" id="blH-uX-Ed7"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstItem="DR9-Pe-MgH" firstAttribute="top" secondItem="dsq-5s-mEz" secondAttribute="top" id="0CG-JI-kcw"/>
-                                    <constraint firstAttribute="bottom" secondItem="DR9-Pe-MgH" secondAttribute="bottom" id="G5H-g2-e3d"/>
-                                    <constraint firstAttribute="trailing" secondItem="DR9-Pe-MgH" secondAttribute="trailing" id="hNc-rR-63k"/>
-                                    <constraint firstItem="DR9-Pe-MgH" firstAttribute="leading" secondItem="dsq-5s-mEz" secondAttribute="leading" id="uBY-x9-Icl"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="puS-LO-5L1">
-                                <rect key="frame" x="41.5" y="503.5" width="331" height="149"/>
-                                <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlB-aJ-Fmu" customClass="DSFloatingButton" customModule="DSFloatingButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="149"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
-                                        <state key="normal" title="　固定支出" image="pay">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="50"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
-                                                <point key="value" x="1" y="0.5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
-                                                <point key="value" x="1" y="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                                <color key="value" red="1" green="0.079910589724170922" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                                <color key="value" red="1" green="0.39301917666480657" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="fixedButtonDidTapped:" destination="MbY-BX-J6H" eventType="touchUpInside" id="pJG-XN-gbf"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstItem="hlB-aJ-Fmu" firstAttribute="top" secondItem="puS-LO-5L1" secondAttribute="top" id="2tx-Js-qZe"/>
-                                    <constraint firstItem="hlB-aJ-Fmu" firstAttribute="leading" secondItem="puS-LO-5L1" secondAttribute="leading" id="XHn-QJ-Mwq"/>
-                                    <constraint firstAttribute="bottom" secondItem="hlB-aJ-Fmu" secondAttribute="bottom" id="ZON-Cg-BzQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="hlB-aJ-Fmu" secondAttribute="trailing" id="sRJ-yN-FNT"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pnq-ny-2cE">
-                                <rect key="frame" x="41.5" y="682.5" width="331" height="149.5"/>
-                                <subviews>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fu6-8X-jex" customClass="DSFloatingButton" customModule="DSFloatingButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="149.5"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
-                                        <state key="normal" title="　固定貯金" image="pig">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="50"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
-                                                <point key="value" x="1" y="0.5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
-                                                <point key="value" x="1" y="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                                <color key="value" red="1" green="0.78431372549019607" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                                <color key="value" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="fixedButtonDidTapped:" destination="MbY-BX-J6H" eventType="touchUpInside" id="IXS-1L-2q2"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstItem="fu6-8X-jex" firstAttribute="leading" secondItem="pnq-ny-2cE" secondAttribute="leading" id="cNf-KF-EkK"/>
-                                    <constraint firstAttribute="bottom" secondItem="fu6-8X-jex" secondAttribute="bottom" id="ket-Rm-hWk"/>
-                                    <constraint firstItem="fu6-8X-jex" firstAttribute="top" secondItem="pnq-ny-2cE" secondAttribute="top" id="l2L-Jz-gMF"/>
-                                    <constraint firstAttribute="trailing" secondItem="fu6-8X-jex" secondAttribute="trailing" id="sbR-er-0xn"/>
-                                </constraints>
-                            </view>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fu6-8X-jex" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="41.5" y="720" width="331" height="112"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <state key="normal" title="　固定貯金" image="pig">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="1" green="1" blue="0.45321032465720673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                                        <point key="value" x="0.0" y="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                                        <point key="value" x="1" y="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" red="1" green="0.94117647058823528" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" red="0.92143100499999997" green="0.92145264149999995" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useCornerRadius" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="fixedButtonDidTapped:" destination="MbY-BX-J6H" eventType="touchUpInside" id="IXS-1L-2q2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlB-aJ-Fmu" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="41.5" y="578" width="331" height="112"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <state key="normal" title="　固定支出" image="pay">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                                        <point key="value" x="0.0" y="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                                        <point key="value" x="1" y="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" red="1" green="0.58823529411764708" blue="0.45321032465720673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useCornerRadius" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="fixedButtonDidTapped:" destination="MbY-BX-J6H" eventType="touchUpInside" id="pJG-XN-gbf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DR9-Pe-MgH" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="41.5" y="436" width="331" height="112"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <state key="normal" title="　固定収入" image="income">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.29019607843137252" green="0.88627450980392153" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" red="0.28913972815688777" green="0.88627450980392153" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" red="0.78431372549019607" green="0.88627450980392153" blue="0.84177787325867848" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                                        <point key="value" x="0.0" y="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                                        <point key="value" x="1" y="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useCornerRadius" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="fixedButtonDidTapped:" destination="MbY-BX-J6H" eventType="touchUpInside" id="blH-uX-Ed7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6rZ-5w-979"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6rZ-5w-979" firstAttribute="bottom" secondItem="pnq-ny-2cE" secondAttribute="bottom" constant="30" id="2Vw-6r-yPh"/>
-                            <constraint firstItem="dsq-5s-mEz" firstAttribute="height" secondItem="9YR-yD-f0f" secondAttribute="height" multiplier="1:6" id="9y1-vc-swL"/>
-                            <constraint firstItem="pnq-ny-2cE" firstAttribute="trailing" secondItem="dsq-5s-mEz" secondAttribute="trailing" id="FHp-MQ-cjg"/>
-                            <constraint firstItem="dsq-5s-mEz" firstAttribute="centerX" secondItem="9YR-yD-f0f" secondAttribute="centerX" id="FnH-eL-88G"/>
+                            <constraint firstItem="hlB-aJ-Fmu" firstAttribute="height" secondItem="9YR-yD-f0f" secondAttribute="height" multiplier="1:8" id="440-bx-9mq"/>
+                            <constraint firstItem="DR9-Pe-MgH" firstAttribute="centerX" secondItem="9YR-yD-f0f" secondAttribute="centerX" id="84i-nc-4BA"/>
+                            <constraint firstItem="fu6-8X-jex" firstAttribute="centerX" secondItem="9YR-yD-f0f" secondAttribute="centerX" id="9OR-rt-V7d"/>
+                            <constraint firstItem="hlB-aJ-Fmu" firstAttribute="width" secondItem="9YR-yD-f0f" secondAttribute="width" multiplier="4:5" id="E0l-xV-T65"/>
                             <constraint firstItem="5CN-c2-Ta2" firstAttribute="top" secondItem="X6N-H5-cBj" secondAttribute="bottom" id="G72-nj-xxa"/>
-                            <constraint firstItem="puS-LO-5L1" firstAttribute="top" secondItem="dsq-5s-mEz" secondAttribute="bottom" constant="30" id="GwP-Qf-B3p"/>
-                            <constraint firstItem="pnq-ny-2cE" firstAttribute="top" secondItem="puS-LO-5L1" secondAttribute="bottom" constant="30" id="IVr-uu-V93"/>
-                            <constraint firstItem="pnq-ny-2cE" firstAttribute="centerX" secondItem="9YR-yD-f0f" secondAttribute="centerX" id="NGa-JE-D86"/>
-                            <constraint firstItem="dsq-5s-mEz" firstAttribute="centerX" secondItem="9YR-yD-f0f" secondAttribute="centerX" id="Slg-eg-Oba"/>
+                            <constraint firstItem="fu6-8X-jex" firstAttribute="width" secondItem="9YR-yD-f0f" secondAttribute="width" multiplier="4:5" id="KPK-VM-8qW"/>
+                            <constraint firstItem="DR9-Pe-MgH" firstAttribute="height" secondItem="9YR-yD-f0f" secondAttribute="height" multiplier="1:8" id="O5Y-v5-ude"/>
                             <constraint firstItem="5CN-c2-Ta2" firstAttribute="centerX" secondItem="9YR-yD-f0f" secondAttribute="centerX" id="XnD-HS-cad"/>
-                            <constraint firstItem="puS-LO-5L1" firstAttribute="trailing" secondItem="dsq-5s-mEz" secondAttribute="trailing" id="buX-uV-Snf"/>
+                            <constraint firstItem="6rZ-5w-979" firstAttribute="bottom" secondItem="fu6-8X-jex" secondAttribute="bottom" constant="30" id="Y8i-i7-L9a"/>
+                            <constraint firstItem="fu6-8X-jex" firstAttribute="height" secondItem="9YR-yD-f0f" secondAttribute="height" multiplier="1:8" id="bOM-El-0Pa"/>
                             <constraint firstItem="X6N-H5-cBj" firstAttribute="centerX" secondItem="9YR-yD-f0f" secondAttribute="centerX" id="c9a-Ii-HAY"/>
-                            <constraint firstItem="pnq-ny-2cE" firstAttribute="leading" secondItem="dsq-5s-mEz" secondAttribute="leading" id="eCl-Mw-Xop"/>
-                            <constraint firstItem="puS-LO-5L1" firstAttribute="height" secondItem="9YR-yD-f0f" secondAttribute="height" multiplier="1:6" id="gRW-Fi-zUK"/>
-                            <constraint firstItem="puS-LO-5L1" firstAttribute="centerX" secondItem="9YR-yD-f0f" secondAttribute="centerX" id="hP2-FS-gW9"/>
-                            <constraint firstItem="dsq-5s-mEz" firstAttribute="width" secondItem="9YR-yD-f0f" secondAttribute="width" multiplier="4:5" id="i4s-kr-pqO"/>
-                            <constraint firstItem="pnq-ny-2cE" firstAttribute="height" secondItem="9YR-yD-f0f" secondAttribute="height" multiplier="1:6" id="raU-QS-Sp2"/>
+                            <constraint firstItem="DR9-Pe-MgH" firstAttribute="width" secondItem="9YR-yD-f0f" secondAttribute="width" multiplier="4:5" id="cUw-rs-mwl"/>
+                            <constraint firstItem="hlB-aJ-Fmu" firstAttribute="top" secondItem="DR9-Pe-MgH" secondAttribute="bottom" constant="30" id="fqP-rn-Tci"/>
+                            <constraint firstItem="fu6-8X-jex" firstAttribute="top" secondItem="hlB-aJ-Fmu" secondAttribute="bottom" constant="30" id="nsm-ED-wsl"/>
                             <constraint firstItem="X6N-H5-cBj" firstAttribute="top" secondItem="6rZ-5w-979" secondAttribute="top" constant="80" id="uvo-dl-nAT"/>
-                            <constraint firstItem="puS-LO-5L1" firstAttribute="leading" secondItem="dsq-5s-mEz" secondAttribute="leading" id="xM7-Ea-Ife"/>
+                            <constraint firstItem="hlB-aJ-Fmu" firstAttribute="centerX" secondItem="9YR-yD-f0f" secondAttribute="centerX" id="yOX-se-QAS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -504,7 +480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwP-Ze-b8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6533" y="-354"/>
+            <point key="canvasLocation" x="6531.884057971015" y="-354.24107142857139"/>
         </scene>
         <!--Add Fixed Income View Controller-->
         <scene sceneID="mid-YD-iYZ">
@@ -594,13 +570,13 @@
                                         <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="0.80000000000000004"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.28235294117647058" green="0.93725490196078431" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.28037553972734863" green="0.75592463087777684" blue="0.8905879429408482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
                                         <point key="value" x="1" y="0.5"/>
@@ -609,10 +585,14 @@
                                         <point key="value" x="1" y="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" red="0.43961796144238946" green="0.94117647058823528" blue="0.8905879429408482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useCornerRadius" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -628,7 +608,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IH7-X0-rFn"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KfW-qY-Bmx" firstAttribute="trailing" secondItem="IH7-X0-rFn" secondAttribute="trailing" id="076-9S-BkT"/>
                             <constraint firstItem="cNZ-Il-G0k" firstAttribute="leading" secondItem="IH7-X0-rFn" secondAttribute="leading" id="0N0-Z6-JX6"/>
@@ -875,13 +855,13 @@
                                         <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="0.80000000000000004"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="1" green="0.33917028725552723" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="1" green="0.78874243667193444" blue="0.74252835045150878" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
                                         <point key="value" x="1" y="0.5"/>
@@ -890,10 +870,13 @@
                                         <point key="value" x="1" y="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" red="1" green="0.33725490196078434" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -919,7 +902,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vUi-A2-A17"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0R2-Se-3W6" firstAttribute="centerX" secondItem="XNH-hp-vyk" secondAttribute="centerX" id="2Fg-Tv-l7y"/>
                             <constraint firstItem="wZB-zS-h8x" firstAttribute="top" secondItem="0R2-Se-3W6" secondAttribute="bottom" constant="80" id="7VZ-Yt-wxv"/>
@@ -1040,13 +1023,13 @@
                                         <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="0.80000000000000004"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="1" green="0.84254951721728011" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.97343991336834856" green="1" blue="0.78821249039919761" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
                                         <point key="value" x="1" y="0.5"/>
@@ -1055,10 +1038,13 @@
                                         <point key="value" x="1" y="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" red="1" green="0.88011618976880179" blue="0.0631040459942801" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -1074,7 +1060,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bFl-zv-7hd"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="yBL-54-Gbc" secondAttribute="bottom" id="47Q-XC-EBS"/>
                             <constraint firstItem="yBL-54-Gbc" firstAttribute="top" secondItem="Zzg-A1-vYL" secondAttribute="bottom" constant="80" id="5e4-Wk-JgH"/>
@@ -1104,7 +1090,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtX-sL-5e7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8792.753623188406" y="-354.24107142857139"/>
+            <point key="canvasLocation" x="8699" y="-354"/>
         </scene>
     </scenes>
     <designables>
@@ -1121,7 +1107,7 @@
             <size key="intrinsicContentSize" width="60" height="42"/>
         </designable>
         <designable name="ePM-JZ-GSS">
-            <size key="intrinsicContentSize" width="91" height="48"/>
+            <size key="intrinsicContentSize" width="62" height="43"/>
         </designable>
         <designable name="fu6-8X-jex">
             <size key="intrinsicContentSize" width="214" height="64"/>
@@ -1133,7 +1119,7 @@
             <size key="intrinsicContentSize" width="21" height="21.5"/>
         </designable>
         <designable name="wnY-FA-BMh">
-            <size key="intrinsicContentSize" width="91" height="48"/>
+            <size key="intrinsicContentSize" width="90" height="42"/>
         </designable>
     </designables>
     <resources>

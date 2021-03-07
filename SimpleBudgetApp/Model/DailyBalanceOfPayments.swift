@@ -11,7 +11,7 @@ import RealmSwift
 class DailyBalanceOfPayments: Object {
 
     @objc dynamic var date = dateSetUp()
-//    let dailyBalanceOfPayments = List<BalanceOfPayments>()
+//    let dailyBalanceOfPayments: List<BalanceOfPayments> = List<BalanceOfPayments>()
 
     static func dateSetUp() -> Date {
         let date = Date()

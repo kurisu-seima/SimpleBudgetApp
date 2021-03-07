@@ -31,7 +31,9 @@ class AddFixedSpendingViewController: UIViewController {
         super.viewWillAppear(true)
         
         fixedSpendingsData = BudgetRepository.shared.fixedSpendingsArray()
+        backgroundSetUp()
         labelSetUp()
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 1, green: 113 / 255, blue: 116 / 255, alpha: 0.9)
     }
     
     @IBAction func openInputView(_ sender: UIButton) {
@@ -48,6 +50,15 @@ class AddFixedSpendingViewController: UIViewController {
     
     func labelSetUp() {
         monthlyFixedSpendingLabel.text = "¥\(FixedCostUseCase.shared.monthlyFixedSpending().numberWithComma())"
+    }
+    
+    func backgroundSetUp() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        gradientLayer.colors = [UIColor(red: 1, green: 113 / 255, blue: 116 / 255, alpha: 0.9).cgColor, UIColor(red: 1, green: 120 / 255, blue: 105 / 255, alpha: 0.9).cgColor]
+        gradientLayer.startPoint = CGPoint.init(x: 0, y: 1)
+        gradientLayer.endPoint = CGPoint.init(x: 1, y: 0.5)
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
 
