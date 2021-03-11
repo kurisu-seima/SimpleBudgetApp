@@ -10,14 +10,15 @@ import UIKit
 class AddFixedIncomeViewController: UIViewController {
     
     @IBOutlet weak var incomeTableView: UITableView!
-    @IBOutlet weak var incomeTableViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var selectArea: CustomView!
-    @IBOutlet weak var selectAreaBottomHight: NSLayoutConstraint!
+    @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
     @IBOutlet weak var monthlyFixedIncomeLabel: UILabel!
+    @IBOutlet weak var tableViewTop: NSLayoutConstraint!
+    @IBOutlet weak var selectAreabottom: NSLayoutConstraint!
     
     var fixedIncomesData: [FixedIncome] = []
     
-    var addButtonTag: Int = 0
+    private var inputType: InputType?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,33 +32,30 @@ class AddFixedIncomeViewController: UIViewController {
         
         fixedIncomesData = BudgetRepository.shared.fixedIncomesArray()
         labelSetUp()
-        backgroundSetUp()
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 170 / 255, green: 226 / 255, blue: 215 / 255, alpha: 1)
+        layerColorSetUp()
     }
     
     @IBAction func openInputView(_ sender: UIButton) {
+        inputType = .fixedIncome
         selectArea.delegate = self
-        addButtonTag = sender.tag
         selectArea.isHidden = false
-        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = true
-        selectAreaBottomHight.constant = 10
-        incomeTableViewTopConstraint.constant = 150
-        UIView.animate(withDuration: 0.3) {
+        tableViewTop.constant = 130
+        selectAreabottom.constant = 0
+        selectAreaHight.constant = 400
+        UIView.animate(withDuration: 0.3) { [self] in
+            guard let view = selectArea.subviews.first else { return }
+            view.alpha = 1
             self.view.layoutIfNeeded()
         }
     }
     
-    func labelSetUp() {
+    private func labelSetUp() {
         monthlyFixedIncomeLabel.text = "¥\(FixedCostUseCase.shared.monthlyFixedIncome().numberWithComma())"
     }
     
-    func backgroundSetUp() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-        gradientLayer.colors = [UIColor(red: 74 / 255, green: 226 / 255, blue: 215 / 255, alpha: 1).cgColor, UIColor(red: 170 / 255, green: 226 / 255, blue: 215 / 255, alpha: 1).cgColor]
-        gradientLayer.startPoint = CGPoint.init(x: 0, y: 1)
-        gradientLayer.endPoint = CGPoint.init(x: 1, y: 0.5)
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
+    private func layerColorSetUp() {
+        self.navigationController?.navigationBar.barTintColor = UIColor().fixedIncomeVCNavigationColor
+        self.view.layer.insertSublayer(CAGradientLayer().fixedIncomeVCLayer(frame: self.view.frame), at: 0)
     }
 }
 
@@ -78,19 +76,32 @@ extension AddFixedIncomeViewController: UITableViewDataSource, UITableViewDelega
 }
 
 extension AddFixedIncomeViewController: CustomViewDelegate {
-    var addButtonTagCount: Int {
-        return addButtonTag
+    
+    func InputDidFinish(details: String, amount: String) {
+        switch inputType {
+        case .fixedIncome:
+            let fixedIncome = FixedIncome()
+            fixedIncome.details = details
+            fixedIncome.amountOfMoney = amount
+            BudgetRepository.shared.add(fixedIncome)
+        case .none: break
+        case .some(_): break
+        }
+        
+        inputType = nil
+        fixedIncomesData = BudgetRepository.shared.fixedIncomesArray()
+        incomeTableView.reloadData()
+        labelSetUp()
     }
     
     func closeInputView() {
-        fixedIncomesData = BudgetRepository.shared.fixedIncomesArray()
-        labelSetUp()
-        incomeTableView.reloadData()
-        selectArea.isHidden = true
-        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = false
-        selectAreaBottomHight.constant = 0
-        incomeTableViewTopConstraint.constant = 80
-        UIView.animate(withDuration: 0.3) {
+        selectArea.isHidden = false
+        selectAreaHight.constant = 0
+        selectAreabottom.constant = -550
+        tableViewTop.constant = 80
+        UIView.animate(withDuration: 0.3) { [self] in
+            guard let view = selectArea.subviews.first else { return }
+            view.alpha = 0
             self.view.layoutIfNeeded()
         }
     }

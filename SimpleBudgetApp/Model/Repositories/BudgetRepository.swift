@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 class BudgetRepository {
-    
+     
     static let shared = BudgetRepository()
     
     var db = try! Realm()
@@ -24,13 +24,13 @@ class BudgetRepository {
         }()
         
         fixedSavings = {
-            return db.objects(FixedSaving.self)
+            return db.objects(FixedSavings.self)
         }()
     }
     
     private (set) var fixedIncomes: Results<FixedIncome>!
     private (set) var fixedSpendings: Results<FixedSpending>!
-    private (set) var fixedSavings: Results<FixedSaving>!
+    private (set) var fixedSavings: Results<FixedSavings>!
     
     func fixedIncomesArray() -> [FixedIncome] {
         return Array(BudgetRepository.shared.fixedIncomes)
@@ -40,25 +40,15 @@ class BudgetRepository {
         return Array(BudgetRepository.shared.fixedSpendings)
     }
     
-    func fixedSavingsArray() -> [FixedSaving] {
+    func fixedSavingsArray() -> [FixedSavings] {
         return Array(BudgetRepository.shared.fixedSavings)
     }
     
-    func addFixedIncome(fixedIncome: FixedIncome) {
+    func add<T: Object>(_ object: T) {
         try! db.write {
-            db.add(fixedIncome)
+            db.add(object)
         }
     }
     
-    func addFixedSpending(fixedSpeding: FixedSpending) {
-        try! db.write {
-            db.add(fixedSpeding)
-        }
-    }
     
-    func addFixedSaving(fixedSaving: FixedSaving) {
-        try! db.write {
-            db.add(fixedSaving)
-        }
-    }
 }

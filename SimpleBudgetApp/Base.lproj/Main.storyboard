@@ -119,25 +119,25 @@
                                         <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" red="0.0" green="0.51121367515905369" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="value" red="0.0" green="0.58823529411764708" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.20000000000000001" green="0.8944178989955357" blue="0.98122507333755493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="value" red="0.45098039215686275" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
-                                        <point key="value" x="1" y="1"/>
+                                        <point key="value" x="1" y="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
-                                        <point key="value" x="0.0" y="0.0"/>
+                                        <point key="value" x="1" y="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="0.69999999999999996"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                         <size key="value" width="0.0" height="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                         <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -162,25 +162,25 @@
                                         <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="0.69999999999999996"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" red="0.0" green="0.50980392156862742" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="value" red="0.0" green="0.58823529411764708" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.20000000000000001" green="0.89411764705882346" blue="0.98122507333755493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="value" red="0.45098039215686275" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
-                                        <point key="value" x="0.0" y="0.0"/>
+                                        <point key="value" x="1" y="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
-                                        <point key="value" x="1" y="1"/>
+                                        <point key="value" x="1" y="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                         <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="10"/>
+                                        <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                         <size key="value" width="0.0" height="3"/>
@@ -191,10 +191,10 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNn-it-dai" customClass="CustomView" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="896" width="414" height="0.0"/>
+                                <rect key="frame" x="0.0" y="894" width="414" height="0.0"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" id="m02-RM-zxL"/>
+                                    <constraint firstAttribute="height" id="sxh-zb-wNE"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -207,8 +207,8 @@
                             <constraint firstItem="h6p-ac-cXm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8g8-hS-XBe"/>
                             <constraint firstItem="wnY-FA-BMh" firstAttribute="top" secondItem="ePM-JZ-GSS" secondAttribute="bottom" constant="50" id="Arv-8W-OdQ"/>
                             <constraint firstItem="a4G-B5-MwA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="F4E-4e-Gui"/>
-                            <constraint firstAttribute="bottom" secondItem="ZNn-it-dai" secondAttribute="bottom" id="MvC-3D-CGo"/>
                             <constraint firstItem="ZNn-it-dai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NDn-Th-A5v"/>
+                            <constraint firstItem="ZNn-it-dai" firstAttribute="top" secondItem="k9s-GD-gvz" secondAttribute="bottom" constant="800" id="QtB-59-8XI"/>
                             <constraint firstItem="wnY-FA-BMh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ytg-nf-S9A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wnY-FA-BMh" secondAttribute="bottom" constant="50" id="ZzB-nh-fE1"/>
                             <constraint firstItem="bnZ-zO-PWp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aep-d2-UwB"/>
@@ -227,6 +227,8 @@
                         <outlet property="dailyLimitLabel" destination="h6p-ac-cXm" id="GqI-Qe-uDX"/>
                         <outlet property="monthlyBudgetLabel" destination="wo2-eg-wxR" id="1ei-GQ-Uu5"/>
                         <outlet property="selectArea" destination="ZNn-it-dai" id="vBC-cw-tVA"/>
+                        <outlet property="selectAreaHight" destination="sxh-zb-wNE" id="xrW-h8-tWv"/>
+                        <outlet property="selectAreaTop" destination="QtB-59-8XI" id="f3w-p1-QvM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -394,7 +396,7 @@
                                         <point key="value" x="1" y="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="value" red="1" green="0.23432486397879465" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
                                         <color key="value" red="1" green="0.58823529411764708" blue="0.45321032465720673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -600,8 +602,8 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNZ-Il-G0k" userLabel="Select Area" customClass="CustomView" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="344" width="414" height="0.0"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="894" width="414" height="0.0"/>
+                                <color key="backgroundColor" red="0.39215686274509803" green="0.88627450980392153" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="EP8-r9-GGb"/>
                                 </constraints>
@@ -613,10 +615,10 @@
                             <constraint firstItem="KfW-qY-Bmx" firstAttribute="trailing" secondItem="IH7-X0-rFn" secondAttribute="trailing" id="076-9S-BkT"/>
                             <constraint firstItem="cNZ-Il-G0k" firstAttribute="leading" secondItem="IH7-X0-rFn" secondAttribute="leading" id="0N0-Z6-JX6"/>
                             <constraint firstItem="htT-9m-9Wq" firstAttribute="top" secondItem="sny-6c-xqK" secondAttribute="bottom" constant="10" id="4p1-CN-tOc"/>
-                            <constraint firstItem="KfW-qY-Bmx" firstAttribute="top" secondItem="61A-ve-0gv" secondAttribute="bottom" constant="80" id="FAg-Zf-elA"/>
+                            <constraint firstItem="KfW-qY-Bmx" firstAttribute="top" secondItem="cNZ-Il-G0k" secondAttribute="bottom" constant="-550" id="7Fm-hm-he8"/>
+                            <constraint firstItem="KfW-qY-Bmx" firstAttribute="top" secondItem="61A-ve-0gv" secondAttribute="bottom" constant="80" id="Cta-3n-h3c"/>
                             <constraint firstAttribute="bottom" secondItem="KfW-qY-Bmx" secondAttribute="bottom" id="SLu-1k-qqm"/>
                             <constraint firstItem="sny-6c-xqK" firstAttribute="top" secondItem="IH7-X0-rFn" secondAttribute="top" constant="50" id="SwT-92-LZp"/>
-                            <constraint firstItem="KfW-qY-Bmx" firstAttribute="top" secondItem="cNZ-Il-G0k" secondAttribute="bottom" id="TjA-jM-R4P"/>
                             <constraint firstItem="61A-ve-0gv" firstAttribute="top" secondItem="htT-9m-9Wq" secondAttribute="bottom" constant="50" id="Vtd-MH-CaG"/>
                             <constraint firstItem="sny-6c-xqK" firstAttribute="centerX" secondItem="b4Q-pt-dh6" secondAttribute="centerX" id="WWn-BQ-S9N"/>
                             <constraint firstItem="KfW-qY-Bmx" firstAttribute="leading" secondItem="IH7-X0-rFn" secondAttribute="leading" id="hkX-RG-E01"/>
@@ -627,10 +629,11 @@
                     </view>
                     <connections>
                         <outlet property="incomeTableView" destination="KfW-qY-Bmx" id="IOl-PC-GrK"/>
-                        <outlet property="incomeTableViewTopConstraint" destination="FAg-Zf-elA" id="uvZ-Bm-Feb"/>
                         <outlet property="monthlyFixedIncomeLabel" destination="htT-9m-9Wq" id="nVU-zt-W5n"/>
                         <outlet property="selectArea" destination="cNZ-Il-G0k" id="gcl-bx-O2E"/>
-                        <outlet property="selectAreaBottomHight" destination="TjA-jM-R4P" id="rH7-zu-dFf"/>
+                        <outlet property="selectAreaHight" destination="EP8-r9-GGb" id="lZa-6p-nO4"/>
+                        <outlet property="selectAreabottom" destination="7Fm-hm-he8" id="0iH-rp-LYd"/>
+                        <outlet property="tableViewTop" destination="Cta-3n-h3c" id="mwn-Hc-4tU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0CX-f0-JP0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -894,8 +897,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L41-SR-SMY" customClass="CustomView" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="344" width="414" height="0.0"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="894" width="414" height="0.0"/>
+                                <color key="backgroundColor" red="1" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="zqo-Lt-9hf"/>
                                 </constraints>
@@ -913,7 +916,7 @@
                             <constraint firstItem="wZB-zS-h8x" firstAttribute="trailing" secondItem="vUi-A2-A17" secondAttribute="trailing" id="VFh-YG-aAh"/>
                             <constraint firstItem="0R2-Se-3W6" firstAttribute="top" secondItem="qEL-ti-bry" secondAttribute="bottom" constant="50" id="ZV4-ku-OfZ"/>
                             <constraint firstItem="vUi-A2-A17" firstAttribute="trailing" secondItem="L41-SR-SMY" secondAttribute="trailing" id="ZoQ-0M-hrW"/>
-                            <constraint firstItem="wZB-zS-h8x" firstAttribute="top" secondItem="L41-SR-SMY" secondAttribute="bottom" id="bJF-PY-ZmP"/>
+                            <constraint firstItem="wZB-zS-h8x" firstAttribute="top" secondItem="L41-SR-SMY" secondAttribute="bottom" constant="-550" id="bJF-PY-ZmP"/>
                             <constraint firstItem="qEL-ti-bry" firstAttribute="top" secondItem="x5V-Bq-QI3" secondAttribute="bottom" constant="10" id="ijE-tw-HIQ"/>
                             <constraint firstItem="x5V-Bq-QI3" firstAttribute="centerX" secondItem="XNH-hp-vyk" secondAttribute="centerX" id="mh2-ZF-1x7"/>
                             <constraint firstAttribute="bottom" secondItem="wZB-zS-h8x" secondAttribute="bottom" id="osg-nf-wUy"/>
@@ -923,12 +926,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addButton" destination="0R2-Se-3W6" id="haL-Ld-4jt"/>
                         <outlet property="monthlyFixedSpendingLabel" destination="qEL-ti-bry" id="DsB-O3-ehj"/>
                         <outlet property="selectArea" destination="L41-SR-SMY" id="vHs-ui-3WJ"/>
-                        <outlet property="selectAreaBottomHight" destination="bJF-PY-ZmP" id="aJf-C5-YvS"/>
+                        <outlet property="selectAreaBottom" destination="bJF-PY-ZmP" id="auk-0e-ACV"/>
+                        <outlet property="selectAreaHight" destination="zqo-Lt-9hf" id="6Iv-5F-pF4"/>
                         <outlet property="spendingTableView" destination="wZB-zS-h8x" id="jhh-vC-W0A"/>
-                        <outlet property="spendingTableViewTopConstraint" destination="7VZ-Yt-wxv" id="MPk-BR-AI3"/>
+                        <outlet property="spendingTableViewTop" destination="7VZ-Yt-wxv" id="bMU-mN-nXp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7w2-Mt-VQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1052,8 +1055,8 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YxD-yS-m73" customClass="CustomView" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="344" width="414" height="0.0"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="894" width="414" height="0.0"/>
+                                <color key="backgroundColor" red="1" green="0.94117647058823528" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="yA2-tx-65G"/>
                                 </constraints>
@@ -1066,7 +1069,7 @@
                             <constraint firstItem="yBL-54-Gbc" firstAttribute="top" secondItem="Zzg-A1-vYL" secondAttribute="bottom" constant="80" id="5e4-Wk-JgH"/>
                             <constraint firstItem="1bV-ow-bqg" firstAttribute="centerX" secondItem="lxK-38-FOM" secondAttribute="centerX" id="I4b-ot-KaX"/>
                             <constraint firstItem="Zzg-A1-vYL" firstAttribute="top" secondItem="h4l-cJ-P4Z" secondAttribute="bottom" constant="50" id="KRI-uk-TMB"/>
-                            <constraint firstItem="yBL-54-Gbc" firstAttribute="top" secondItem="YxD-yS-m73" secondAttribute="bottom" id="O18-PE-Wsd"/>
+                            <constraint firstItem="yBL-54-Gbc" firstAttribute="top" secondItem="YxD-yS-m73" secondAttribute="bottom" constant="-550" id="O18-PE-Wsd"/>
                             <constraint firstItem="h4l-cJ-P4Z" firstAttribute="centerX" secondItem="lxK-38-FOM" secondAttribute="centerX" id="PYj-t4-fSb"/>
                             <constraint firstItem="h4l-cJ-P4Z" firstAttribute="top" secondItem="1bV-ow-bqg" secondAttribute="bottom" constant="10" id="Rvo-II-TBN"/>
                             <constraint firstItem="1bV-ow-bqg" firstAttribute="top" secondItem="bFl-zv-7hd" secondAttribute="top" constant="50" id="SgM-ZY-cSY"/>
@@ -1083,9 +1086,10 @@
                     <connections>
                         <outlet property="monthlyFixedSavingsLabel" destination="h4l-cJ-P4Z" id="f1M-4a-EZA"/>
                         <outlet property="savingsTableView" destination="yBL-54-Gbc" id="lwx-18-KsJ"/>
-                        <outlet property="savingsTableViewTopConstraint" destination="5e4-Wk-JgH" id="1aA-Kk-4ih"/>
+                        <outlet property="savingsTableViewTop" destination="5e4-Wk-JgH" id="qRZ-rw-d8k"/>
                         <outlet property="selectArea" destination="YxD-yS-m73" id="1H9-Fz-utw"/>
-                        <outlet property="selectAreaBottomHight" destination="O18-PE-Wsd" id="lnP-jC-bHW"/>
+                        <outlet property="selectAreaBottom" destination="O18-PE-Wsd" id="aO2-rO-RLH"/>
+                        <outlet property="selectAreaHight" destination="yA2-tx-65G" id="V9X-Cf-bhC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtX-sL-5e7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

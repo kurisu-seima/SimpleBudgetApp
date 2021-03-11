@@ -37,13 +37,13 @@ class FixedCostUseCase {
         }()
 
         fixedSavings = {
-            return db.objects(FixedSaving.self)
+            return db.objects(FixedSavings.self)
         }()
     }
     
     private (set) var fixedIncomes: Results<FixedIncome>!
     private (set) var fixedSpendings: Results<FixedSpending>!
-    private (set) var fixedSavings: Results<FixedSaving>!
+    private (set) var fixedSavings: Results<FixedSavings>!
     
     private (set) var dayCount: Int
        
@@ -68,7 +68,7 @@ class FixedCostUseCase {
     }
     
     func monthlyFixedSaving() -> Int {
-        let amountOfMoneyArray = FixedCostUseCase.shared.fixedSavings.map({ (fixedSaving: FixedSaving) -> Int in
+        let amountOfMoneyArray = FixedCostUseCase.shared.fixedSavings.map({ (fixedSaving: FixedSavings) -> Int in
             if let amountOfMoney = Int(fixedSaving.amountOfMoney) {
                 return amountOfMoney
             }

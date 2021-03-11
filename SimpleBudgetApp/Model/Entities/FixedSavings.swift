@@ -1,14 +1,14 @@
 //
-//  FixedSaving.swift
+//  FixedSavings.swift
 //  SimpleBudgetApp
 //
-//  Created by 栗須星舞 on 2021/02/21.
+//  Created by 栗須星舞 on 2021/03/09.
 //
 
 import Foundation
 import RealmSwift
 
-class FixedSaving: Object {
+class FixedSavings: Object {
     
     @objc dynamic var id = NSUUID().uuidString
     @objc dynamic var date = Date()

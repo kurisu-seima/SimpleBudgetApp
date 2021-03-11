@@ -13,16 +13,16 @@ class MainViewController: UIViewController {
     @IBOutlet weak var monthlyBudgetLabel: UILabel!
     @IBOutlet weak var dailyLimitLabel: UILabel!
     @IBOutlet weak var selectArea: CustomView!
-    
-    var addButtonTag: Int = 0
+    @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
+    @IBOutlet weak var selectAreaTop: NSLayoutConstraint!
+
+    private var inputType: InputType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        backgroundSetUp()
         labelSetUp()
-
+        layerColorSetUp()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,47 +39,54 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func openInputView(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            inputType = .spending
+        case 1:
+            inputType = .income
+        default: break
+        }
         selectArea.delegate = self
-        addButtonTag = sender.tag
         selectArea.isHidden = false
-        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 1).isActive = true
-        UIView.animate(withDuration: 0.3) {
+        selectAreaHight.constant = 900
+        selectAreaTop.constant = 10
+        UIView.animate(withDuration: 0.3) { [self] in
+            guard let view = selectArea.subviews.first else { return }
+            view.alpha = 1
             self.view.layoutIfNeeded()
         }
     }
     
-    func labelSetUp() {
+    private func labelSetUp() {
         monthlyBudgetLabel.text = "¥\(FixedCostUseCase.shared.monthlyBudget().numberWithComma())"
     }
     
-    func backgroundSetUp() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-        gradientLayer.colors = [UIColor(red: 1, green: 190 / 255, blue: 90 / 255, alpha: 1).cgColor, UIColor(red: 1, green: 180 / 255, blue: 0, alpha: 1).cgColor, UIColor(red: 1, green: 150 / 255, blue: 0, alpha: 1).cgColor, UIColor(red: 1, green: 130 / 255, blue: 0, alpha: 1).cgColor]
-        gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint.init(x: 1, y: 1)
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
+    private func layerColorSetUp() {
+        self.view.layer.insertSublayer(CAGradientLayer().mainLayer(frame: self.view.frame), at: 0)
+        selectArea.layer.insertSublayer(CAGradientLayer().mainLayer(frame: self.view.frame), at: 0)
     }
-    
-//    func backgroundSetUp() {
-//        let gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-//        gradientLayer.colors = [UIColor.systemOrange.cgColor, UIColor(red: 1, green: 220 / 255, blue: 50 / 255, alpha: 1).cgColor, UIColor(red: 1, green: 220 / 255, blue: 50 / 255, alpha: 1).cgColor, UIColor.systemOrange.cgColor, UIColor(red: 1, green: 220 / 255, blue: 50 / 255, alpha: 1).cgColor, UIColor.systemOrange.cgColor]
-//        gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
-//        gradientLayer.endPoint = CGPoint.init(x: 1, y: 1)
-//        self.view.layer.insertSublayer(gradientLayer, at: 0)
-//    }
 }
 
 extension MainViewController: CustomViewDelegate {
-    var addButtonTagCount: Int {
-        return addButtonTag
+    
+    func InputDidFinish(details: String, amount: String) {
+        switch inputType {
+        case .spending: break
+        case .income: break
+        case .none: break
+        case .some(_): break
+        }
+        inputType = nil
+        labelSetUp()
     }
     
     func closeInputView() {
-        selectArea.isHidden = true
-        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0).isActive = false
-        UIView.animate(withDuration: 0.3) {
+        selectArea.isHidden = false
+        selectAreaHight.constant = 0
+        selectAreaTop.constant = 800
+        UIView.animate(withDuration: 0.3) { [self] in
+            guard let view = selectArea.subviews.first else { return }
+            view.alpha = 0
             self.view.layoutIfNeeded()
         }
     }

@@ -10,8 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="SimpleBudgetApp" customModuleProvider="target">
             <connections>
+                <outlet property="amountContentView" destination="Men-OG-OwE" id="uC2-wm-R8F"/>
                 <outlet property="amountOfMoneyTextField" destination="bDW-31-3IZ" id="cOD-jQ-3LC"/>
                 <outlet property="detailsTextField" destination="HFN-1c-dgl" id="gSY-Ve-5Sv"/>
+                <outlet property="detalsContentView" destination="nZN-hb-XbC" id="bxc-1k-cHs"/>
+                <outlet property="doneButton" destination="mXh-rs-5nb" id="sqv-yC-X5g"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -31,10 +34,10 @@
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                            <real key="value" value="1"/>
+                            <real key="value" value="0.0"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                            <real key="value" value="5"/>
+                            <real key="value" value="0.0"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
                             <color key="value" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,8 +51,8 @@
                         <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
                             <point key="value" x="1" y="0.0"/>
                         </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="0.0"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -62,14 +65,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZM0-T6-4Tg">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHO-u6-xIp">
-                                    <rect key="frame" x="0.0" y="99" width="414" height="2"/>
-                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="2" id="HOB-Ds-DPM"/>
-                                    </constraints>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZN-hb-XbC">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZN-hb-XbC" userLabel="details ContentView">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g17-yz-dRZ">
@@ -94,7 +90,6 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                     <constraints>
                                         <constraint firstItem="51k-Ba-417" firstAttribute="leading" secondItem="nZN-hb-XbC" secondAttribute="leading" constant="10" id="2OS-K3-JFv"/>
                                         <constraint firstItem="g17-yz-dRZ" firstAttribute="leading" secondItem="nZN-hb-XbC" secondAttribute="leading" id="5pX-bq-zSQ"/>
@@ -115,7 +110,14 @@
                                         <constraint firstItem="GzN-My-Buh" firstAttribute="top" secondItem="nZN-hb-XbC" secondAttribute="top" id="xju-lt-cPy"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Men-OG-OwE">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHO-u6-xIp" userLabel="Center Line">
+                                    <rect key="frame" x="0.0" y="99" width="414" height="2"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="HOB-Ds-DPM"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Men-OG-OwE" userLabel="Amount ContentView">
                                     <rect key="frame" x="0.0" y="101" width="414" height="99"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVs-7t-PVx">
@@ -140,7 +142,6 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                     <constraints>
                                         <constraint firstItem="ZVs-7t-PVx" firstAttribute="top" secondItem="Men-OG-OwE" secondAttribute="top" id="16P-wK-QdC"/>
                                         <constraint firstAttribute="trailing" secondItem="yKM-g4-zWc" secondAttribute="trailing" id="4es-tZ-q4l"/>
@@ -159,7 +160,6 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="nZN-hb-XbC" secondAttribute="trailing" id="1uC-6c-XsF"/>
                                 <constraint firstItem="Men-OG-OwE" firstAttribute="leading" secondItem="ZM0-T6-4Tg" secondAttribute="leading" id="2EW-Ia-Y1g"/>
@@ -180,7 +180,6 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemOrangeColor"/>
             <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="mqe-kN-gU7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="3L4-BO-iFg"/>
@@ -210,9 +209,6 @@
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

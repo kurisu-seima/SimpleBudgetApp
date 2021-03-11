@@ -10,13 +10,14 @@ import UIKit
 class AddFixedSavingsViewController: UIViewController {
 
     @IBOutlet weak var savingsTableView: UITableView!
-    @IBOutlet weak var savingsTableViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var savingsTableViewTop: NSLayoutConstraint!
     @IBOutlet weak var selectArea: CustomView!
-    @IBOutlet weak var selectAreaBottomHight: NSLayoutConstraint!
+    @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
+    @IBOutlet weak var selectAreaBottom: NSLayoutConstraint!
     @IBOutlet weak var monthlyFixedSavingsLabel: UILabel!
-    var fixedSavingsData: [FixedSaving] = []
+    var fixedSavingsData: [FixedSavings] = []
     
-    var addButtonTag: Int = 0
+    private var inputType: InputType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,24 +31,30 @@ class AddFixedSavingsViewController: UIViewController {
         
         fixedSavingsData = BudgetRepository.shared.fixedSavingsArray()
         labelSetUp()
-        self.view.backgroundColor = UIColor(red: 1, green: 234 / 255, blue: 80 / 255, alpha: 1)
-        self.navigationController?.navigationBar.barTintColor = self.view.backgroundColor
+        layerColorSetUp()
     }
     
     @IBAction func openInputView(_ sender: UIButton) {
+        inputType = .fixedSavings
         selectArea.delegate = self
-        addButtonTag = sender.tag
         selectArea.isHidden = false
-        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = true
-        selectAreaBottomHight.constant = 10
-        savingsTableViewTopConstraint.constant = 150
-        UIView.animate(withDuration: 0.3) {
+        savingsTableViewTop.constant = 130
+        selectAreaBottom.constant = 0
+        selectAreaHight.constant = 400
+        UIView.animate(withDuration: 0.3) { [self] in
+            guard let view = selectArea.subviews.first else { return }
+            view.alpha = 1
             self.view.layoutIfNeeded()
         }
     }
     
-    func labelSetUp() {
+    private func labelSetUp() {
         monthlyFixedSavingsLabel.text = "¥\(FixedCostUseCase.shared.monthlyFixedSaving().numberWithComma())"
+    }
+    
+    private func layerColorSetUp() {
+        self.navigationController?.navigationBar.barTintColor = UIColor().fixedSavingsVCNavigationColor
+        self.view.layer.insertSublayer(CAGradientLayer().fixedSavingsVCLayer(frame: self.view.frame), at: 0)
     }
 }
 
@@ -64,19 +71,31 @@ extension AddFixedSavingsViewController: UITableViewDelegate, UITableViewDataSou
 }
 
 extension AddFixedSavingsViewController: CustomViewDelegate {
-    var addButtonTagCount: Int {
-        return addButtonTag
+    func InputDidFinish(details: String, amount: String) {
+        switch inputType {
+        case .fixedSavings:
+            let fixedSavings = FixedSavings()
+            fixedSavings.details = details
+            fixedSavings.amountOfMoney = amount
+            BudgetRepository.shared.add(fixedSavings)
+        case .none: break
+        case .some(_): break
+        }
+        inputType = nil
+        
+        fixedSavingsData = BudgetRepository.shared.fixedSavingsArray()
+        savingsTableView.reloadData()
+        labelSetUp()
     }
     
     func closeInputView() {
-        fixedSavingsData = BudgetRepository.shared.fixedSavingsArray()
-        labelSetUp()
-        savingsTableView.reloadData()
-        selectArea.isHidden = true
-        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = false
-        selectAreaBottomHight.constant = 0
-        savingsTableViewTopConstraint.constant = 80
-        UIView.animate(withDuration: 0.3) {
+        selectArea.isHidden = false
+        selectAreaHight.constant = 0
+        selectAreaBottom.constant = -550
+        savingsTableViewTop.constant = 80
+        UIView.animate(withDuration: 0.3) { [self] in
+            guard let view = selectArea.subviews.first else { return }
+            view.alpha = 1
             self.view.layoutIfNeeded()
         }
     }

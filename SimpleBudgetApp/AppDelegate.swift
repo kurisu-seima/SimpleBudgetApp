@@ -16,11 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let isFirstLaunch = UserDefaults.standard.bool(forKey: "isFirstLaunch")
         if !isFirstLaunch {
             let date = Date()
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyyMMdd", options: 0, locale: Locale(identifier: "ja_JP"))
-            let jpDateString = dateFormatter.string(from: date)
-            let jp_Date = dateFormatter.date(from: jpDateString)!
-            UserDefaults.standard.setValue(jp_Date, forKey: "date")
+            UserDefaults.standard.setValue(date, forKey: "date")
             UserDefaults.standard.setValue(!isFirstLaunch, forKey: "isFirstLaunch")
         }
         return true

@@ -20,8 +20,7 @@ class BudgetSettingViewController: UIViewController {
         super.viewWillAppear(true)
 
         labelSetUp()
-        self.view.backgroundColor = UIColor.systemOrange
-        self.navigationController?.navigationBar.barTintColor = self.view.backgroundColor
+        layerColorSetUp()
     }
     
     @IBAction func fixedButtonDidTapped(_ sender: UIButton) {
@@ -40,7 +39,12 @@ class BudgetSettingViewController: UIViewController {
         }
     }
     
-    func labelSetUp() {
+     private func labelSetUp() {
         dailyBudgetLabel.text = "¥\(FixedCostUseCase.shared.dailyBudget().numberWithComma())"
+    }
+    
+    private func layerColorSetUp() {
+        self.view.backgroundColor = UIColor.systemOrange
+        self.navigationController?.navigationBar.barTintColor = self.view.backgroundColor
     }
 }

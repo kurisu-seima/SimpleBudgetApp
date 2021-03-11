@@ -10,15 +10,15 @@ import UIKit
 class AddFixedSpendingViewController: UIViewController {
     
     @IBOutlet weak var spendingTableView: UITableView!
-    @IBOutlet weak var spendingTableViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var spendingTableViewTop: NSLayoutConstraint!
     @IBOutlet weak var selectArea: CustomView!
-    @IBOutlet weak var selectAreaBottomHight: NSLayoutConstraint!
-    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
+    @IBOutlet weak var selectAreaBottom: NSLayoutConstraint!
     @IBOutlet weak var monthlyFixedSpendingLabel: UILabel!
     
     var fixedSpendingsData: [FixedSpending] = []
     
-    var addButtonTag: Int = 0
+    private var inputType: InputType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,34 +31,32 @@ class AddFixedSpendingViewController: UIViewController {
         super.viewWillAppear(true)
         
         fixedSpendingsData = BudgetRepository.shared.fixedSpendingsArray()
-        backgroundSetUp()
+
         labelSetUp()
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 1, green: 113 / 255, blue: 116 / 255, alpha: 0.9)
+        layerColorSetUp()
     }
     
     @IBAction func openInputView(_ sender: UIButton) {
+        inputType = .fixedSpending
         selectArea.delegate = self
-        addButtonTag = sender.tag
         selectArea.isHidden = false
-        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = true
-        selectAreaBottomHight.constant = 10
-        spendingTableViewTopConstraint.constant = 150
-        UIView.animate(withDuration: 0.3) {
+        spendingTableViewTop.constant = 130
+        selectAreaBottom.constant = 0
+        selectAreaHight.constant = 400
+        UIView.animate(withDuration: 0.3) { [self] in
+            guard let view = selectArea.subviews.first else { return }
+            view.alpha = 1
             self.view.layoutIfNeeded()
         }
     }
     
-    func labelSetUp() {
+    private func labelSetUp() {
         monthlyFixedSpendingLabel.text = "¥\(FixedCostUseCase.shared.monthlyFixedSpending().numberWithComma())"
     }
     
-    func backgroundSetUp() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-        gradientLayer.colors = [UIColor(red: 1, green: 113 / 255, blue: 116 / 255, alpha: 0.9).cgColor, UIColor(red: 1, green: 120 / 255, blue: 105 / 255, alpha: 0.9).cgColor]
-        gradientLayer.startPoint = CGPoint.init(x: 0, y: 1)
-        gradientLayer.endPoint = CGPoint.init(x: 1, y: 0.5)
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
+    private func layerColorSetUp() {
+        self.navigationController?.navigationBar.barTintColor = UIColor().fixedSpendingVCNavigationColor
+        self.view.layer.insertSublayer(CAGradientLayer().fixedSpendingVCLayer(frame: self.view.frame), at: 0)
     }
 }
 
@@ -75,19 +73,32 @@ extension AddFixedSpendingViewController: UITableViewDelegate, UITableViewDataSo
 }
 
 extension AddFixedSpendingViewController: CustomViewDelegate {
-    var addButtonTagCount: Int {
-        return addButtonTag
+    func InputDidFinish(details: String, amount: String) {
+        switch inputType {
+        case .fixedSpending:
+            let fixedSpending = FixedSpending()
+            fixedSpending.details = details
+            fixedSpending.amountOfMoney = amount
+            BudgetRepository.shared.add(fixedSpending)
+        case .none: break
+        case .some: break
+        }
+        
+        inputType = nil
+        fixedSpendingsData = BudgetRepository.shared.fixedSpendingsArray()
+        spendingTableView.reloadData()
+        labelSetUp()
+        
     }
     
     func closeInputView() {
-        fixedSpendingsData = BudgetRepository.shared.fixedSpendingsArray()
-        labelSetUp()
-        spendingTableView.reloadData()
-        selectArea.isHidden = true
-        selectArea.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5).isActive = false
-        selectAreaBottomHight.constant = 0
-        spendingTableViewTopConstraint.constant = 80
-        UIView.animate(withDuration: 0.3) {
+        selectArea.isHidden = false
+        selectAreaHight.constant = 0
+        selectAreaBottom.constant = -550
+        spendingTableViewTop.constant = 80
+        UIView.animate(withDuration: 0.3) { [self] in
+            guard let view = selectArea.subviews.first else { return }
+            view.alpha = 0
             self.view.layoutIfNeeded()
         }
     }
