@@ -62,10 +62,6 @@ class CustomView: UIView {
         amountOfMoneyTextField.keyboardType = .numberPad
     }
     
-    private func layerColorSetUp() {
-        //ここに色分ける処理
-    }
-    
     private func closeInputView() {
         detailsTextField.text = .none
         amountOfMoneyTextField.text = .none

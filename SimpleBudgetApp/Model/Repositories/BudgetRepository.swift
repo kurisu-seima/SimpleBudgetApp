@@ -26,29 +26,24 @@ class BudgetRepository {
         fixedSavings = {
             return db.objects(FixedSavings.self)
         }()
+        
+        dailyIncomeAndExpenditures = {
+            return db.objects(DailyIncomeAndExpenditure.self)
+        }()
     }
     
     private (set) var fixedIncomes: Results<FixedIncome>!
     private (set) var fixedSpendings: Results<FixedSpending>!
     private (set) var fixedSavings: Results<FixedSavings>!
+    private (set) var dailyIncomeAndExpenditures: Results<DailyIncomeAndExpenditure>!
     
-    func fixedIncomesArray() -> [FixedIncome] {
-        return Array(BudgetRepository.shared.fixedIncomes)
+    func convertArray<T: Object>(type: Results<T>) -> [T] {
+        return Array(type)
     }
-    
-    func fixedSpendingsArray() -> [FixedSpending] {
-        return Array(BudgetRepository.shared.fixedSpendings)
-    }
-    
-    func fixedSavingsArray() -> [FixedSavings] {
-        return Array(BudgetRepository.shared.fixedSavings)
-    }
-    
+
     func add<T: Object>(_ object: T) {
         try! db.write {
             db.add(object)
         }
     }
-    
-    
 }

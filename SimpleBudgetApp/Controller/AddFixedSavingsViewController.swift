@@ -29,8 +29,8 @@ class AddFixedSavingsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        fixedSavingsData = BudgetRepository.shared.fixedSavingsArray()
-        labelSetUp()
+        fixedSavingsData = MoneyManagementUseCase.shared.fixedSavings
+        amountSetUp()
         layerColorSetUp()
     }
     
@@ -48,8 +48,8 @@ class AddFixedSavingsViewController: UIViewController {
         }
     }
     
-    private func labelSetUp() {
-        monthlyFixedSavingsLabel.text = "¥\(FixedCostUseCase.shared.monthlyFixedSaving().numberWithComma())"
+    private func amountSetUp() {
+        monthlyFixedSavingsLabel.text = "¥\(MoneyManagementUseCase.shared.getTotalAmountOfFixedSavings().numberWithComma())"
     }
     
     private func layerColorSetUp() {
@@ -83,9 +83,9 @@ extension AddFixedSavingsViewController: CustomViewDelegate {
         }
         inputType = nil
         
-        fixedSavingsData = BudgetRepository.shared.fixedSavingsArray()
+        fixedSavingsData = MoneyManagementUseCase.shared.fixedSavings
         savingsTableView.reloadData()
-        labelSetUp()
+        amountSetUp()
     }
     
     func closeInputView() {

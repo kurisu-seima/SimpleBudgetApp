@@ -21,7 +21,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        labelSetUp()
         layerColorSetUp()
     }
     
@@ -32,6 +31,7 @@ class MainViewController: UIViewController {
             return
         }
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        amountSetUp()
     }
     
     @IBAction func openSideMenu(_ sender: Any) {
@@ -57,8 +57,8 @@ class MainViewController: UIViewController {
         }
     }
     
-    private func labelSetUp() {
-        monthlyBudgetLabel.text = "¥\(FixedCostUseCase.shared.monthlyBudget().numberWithComma())"
+    private func amountSetUp() {
+        monthlyBudgetLabel.text = "¥\(MoneyManagementUseCase.shared.getMonthlyBudget().numberWithComma())"
     }
     
     private func layerColorSetUp() {
@@ -77,7 +77,7 @@ extension MainViewController: CustomViewDelegate {
         case .some(_): break
         }
         inputType = nil
-        labelSetUp()
+        amountSetUp()
     }
     
     func closeInputView() {

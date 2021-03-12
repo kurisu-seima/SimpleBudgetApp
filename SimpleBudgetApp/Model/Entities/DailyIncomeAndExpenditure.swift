@@ -12,14 +12,14 @@ class DailyIncomeAndExpenditure: Object {
 
     @objc dynamic var primaryDate: String = ""
     @objc dynamic var date = Date()
-    let incomeAndExpenditures = List<incomeAndExpenditure>()
+    let incomeAndExpenditures = List<IncomeAndExpenditure>()
 
     override class func primaryKey() -> String? {
         return "primaryDate"
     }
 }
 
-class incomeAndExpenditure: Object {
+class IncomeAndExpenditure: Object {
 
     enum PlusOrMinus: Int {
         case plus = 0

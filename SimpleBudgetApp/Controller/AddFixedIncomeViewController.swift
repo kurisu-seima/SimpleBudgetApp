@@ -30,8 +30,8 @@ class AddFixedIncomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        fixedIncomesData = BudgetRepository.shared.fixedIncomesArray()
-        labelSetUp()
+        fixedIncomesData = MoneyManagementUseCase.shared.fixedIncomes
+        amountSetUp()
         layerColorSetUp()
     }
     
@@ -49,8 +49,8 @@ class AddFixedIncomeViewController: UIViewController {
         }
     }
     
-    private func labelSetUp() {
-        monthlyFixedIncomeLabel.text = "¥\(FixedCostUseCase.shared.monthlyFixedIncome().numberWithComma())"
+    private func amountSetUp() {
+        monthlyFixedIncomeLabel.text = "¥\(MoneyManagementUseCase.shared.getTotalAmountOfIncome().numberWithComma())"
     }
     
     private func layerColorSetUp() {
@@ -89,9 +89,9 @@ extension AddFixedIncomeViewController: CustomViewDelegate {
         }
         
         inputType = nil
-        fixedIncomesData = BudgetRepository.shared.fixedIncomesArray()
+        fixedIncomesData = MoneyManagementUseCase.shared.fixedIncomes
         incomeTableView.reloadData()
-        labelSetUp()
+        amountSetUp()
     }
     
     func closeInputView() {
