@@ -13,12 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let isFirstLaunch = UserDefaults.standard.bool(forKey: "isFirstLaunch")
-        if !isFirstLaunch {
-            let date = Date()
-            UserDefaults.standard.setValue(date, forKey: "date")
-            UserDefaults.standard.setValue(!isFirstLaunch, forKey: "isFirstLaunch")
-        }
         return true
     }
 

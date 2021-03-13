@@ -16,15 +16,26 @@ class MoneyManagementUseCase {
     private init() {}
 
     var fixedIncomes: [FixedIncome] {
-        return repository.convertArray(type: repository.fixedIncomes)
+        return Array(repository.fixedIncomes)
     }
     
     var fixedSpendings: [FixedSpending] {
-        return repository.convertArray(type: repository.fixedSpendings)
+        return Array(repository.fixedSpendings)
     }
     
     var fixedSavings: [FixedSavings] {
-        return repository.convertArray(type: repository.fixedSavings)
+        return Array(repository.fixedSavings)
+    }
+    
+    var dailyIncomeAndExpenditures: [DailyIncomeAndExpenditure] {
+        return Array(repository.dailyIncomeAndExpenditures)
+    }
+    
+    var todayIncomeAndExpenditures: [IncomeAndExpenditure] {
+        guard let dailyIncomeAndExpenditures = repository.getDailyIncomeAndExpenditure(primaryKey: Date().toString) else {
+            return []
+        }
+        return Array(dailyIncomeAndExpenditures.incomeAndExpenditures)
     }
     
     func getTotalAmountOfIncome() -> Int {
@@ -55,12 +66,36 @@ class MoneyManagementUseCase {
     }
     
     func getDailyBudget() -> Int {
-        let totalMonthlyBudget = getTotalAmountOfIncome() - (getTotalAmountOfSpending() - getTotalAmountOfFixedSavings())
-        return totalMonthlyBudget / Int().dayCount
+        let totalMonthlyBudget = getTotalAmountOfIncome() - (getTotalAmountOfSpending() + getTotalAmountOfFixedSavings())
+        return totalMonthlyBudget / Date().dayCount
     }
     
     func getMonthlyBudget() -> Int {
         return getTotalAmountOfIncome() - (getTotalAmountOfSpending() - getTotalAmountOfFixedSavings())
+    }
+
+    func getTodayBudget() -> Int {
+        var totalAmount: Int = 0
+        dailyIncomeAndExpenditures.forEach { daily in
+         let dailyAmount = daily.incomeAndExpenditures.map {(element: IncomeAndExpenditure) -> Int in
+                guard let incomeAndExpenditure = IncomeAndExpenditure.PlusOrMinus(rawValue: element.plusOrMinus) else {
+                    return 0
+                }
+                switch incomeAndExpenditure {
+                case .plus:
+                    guard let income = Int(element.amountOfMoney) else {
+                        return 0
+                    }
+                    return income
+                case .minus:
+                    guard let spending = Int(element.amountOfMoney) else {
+                        return 0
+                    }
+                    return spending * -1
+                }}.reduce(0) {$0 + $1}
+            totalAmount += dailyAmount
+        }
+        return getDailyBudget() * Date().currentday + totalAmount
     }
 }
 

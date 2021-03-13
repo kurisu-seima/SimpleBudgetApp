@@ -30,7 +30,7 @@ class AddFixedSpendingViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-//        fixedSpendingsData = MoneyManagementUseCase.shared.fixedSpendings
+        fixedSpendingsData = MoneyManagementUseCase.shared.fixedSpendings
 
         amountSetUp()
         layerColorSetUp()

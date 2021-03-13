@@ -19,6 +19,7 @@ class SplashViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        AppSettingUseCase.shared.sonfigure()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             showMainView()
         }

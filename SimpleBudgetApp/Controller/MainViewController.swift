@@ -59,6 +59,7 @@ class MainViewController: UIViewController {
     
     private func amountSetUp() {
         monthlyBudgetLabel.text = "¥\(MoneyManagementUseCase.shared.getMonthlyBudget().numberWithComma())"
+        dailyLimitLabel.text = "¥\(MoneyManagementUseCase.shared.getTodayBudget().numberWithComma())"
     }
     
     private func layerColorSetUp() {
@@ -71,8 +72,10 @@ extension MainViewController: CustomViewDelegate {
     
     func InputDidFinish(details: String, amount: String) {
         switch inputType {
-        case .spending: break
-        case .income: break
+        case .spending:
+            IncomeAndExpenditureUseCase.shared.addToday(IncomeAndExpenditure(details: details, amount: amount, plusOrMinus: .minus))
+        case .income:
+            IncomeAndExpenditureUseCase.shared.addToday(IncomeAndExpenditure(details: details, amount: amount, plusOrMinus: .plus)) 
         case .none: break
         case .some(_): break
         }

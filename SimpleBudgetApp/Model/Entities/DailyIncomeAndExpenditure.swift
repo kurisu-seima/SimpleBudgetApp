@@ -13,6 +13,14 @@ class DailyIncomeAndExpenditure: Object {
     @objc dynamic var primaryDate: String = ""
     @objc dynamic var date = Date()
     let incomeAndExpenditures = List<IncomeAndExpenditure>()
+    
+    convenience init(date: Date? = nil) {
+        self.init()
+        if let date = date {
+            self.date = date
+        }
+        primaryDate = self.date.toString
+    }
 
     override class func primaryKey() -> String? {
         return "primaryDate"
@@ -33,5 +41,12 @@ class IncomeAndExpenditure: Object {
 
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    convenience init(details: String, amount: String, plusOrMinus: PlusOrMinus) {
+        self.init()
+        self.details = details
+        self.amountOfMoney = amount
+        self.plusOrMinus = plusOrMinus.rawValue
     }
 }
