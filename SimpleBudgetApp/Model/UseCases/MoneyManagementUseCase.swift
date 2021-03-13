@@ -64,7 +64,7 @@ class MoneyManagementUseCase {
     }
     
     func getMonthlyBudget() -> Int {
-        return getTotalAmountOfIncome() - (getTotalAmountOfSpending() - getTotalAmountOfFixedSavings())
+        return getTotalAmountOfIncome() - (getTotalAmountOfSpending() + getTotalAmountOfFixedSavings())
     }
 
     func getTodayBudget() -> Int {
