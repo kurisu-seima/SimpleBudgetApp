@@ -31,13 +31,6 @@ class MoneyManagementUseCase {
         return Array(repository.dailyIncomeAndExpenditures)
     }
     
-    var todayIncomeAndExpenditures: [IncomeAndExpenditure] {
-        guard let dailyIncomeAndExpenditures = repository.getDailyIncomeAndExpenditure(primaryKey: Date().toString) else {
-            return []
-        }
-        return Array(dailyIncomeAndExpenditures.incomeAndExpenditures)
-    }
-    
     func getTotalAmountOfIncome() -> Int {
         return fixedIncomes.map {(element) -> Int in
             guard let amountArray = Int(element.amountOfMoney) else {
