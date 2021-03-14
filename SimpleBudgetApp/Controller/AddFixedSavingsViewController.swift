@@ -48,6 +48,7 @@ class AddFixedSavingsViewController: UIViewController {
     
     private func openInputView() {
         selectArea.delegate = self
+        inputType = .fixedSavings
         selectArea.isHidden = false
         savingsTableViewTop.constant = 130
         selectAreaBottom.constant = 0

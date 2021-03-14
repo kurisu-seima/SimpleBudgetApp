@@ -86,7 +86,7 @@ extension MainViewController: CustomViewDelegate {
     func closeInputView() {
         selectArea.isHidden = false
         selectAreaHight.constant = 0
-        selectAreaTop.constant = 800
+        selectAreaTop.constant = 900
         UIView.animate(withDuration: 0.3) { [self] in
             guard let view = selectArea.subviews.first else { return }
             view.alpha = 0
