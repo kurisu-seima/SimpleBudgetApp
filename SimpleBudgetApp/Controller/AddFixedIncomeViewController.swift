@@ -18,6 +18,8 @@ class AddFixedIncomeViewController: UIViewController {
     
     var fixedIncomesData: [FixedIncome] = []
     
+//    private var addType: AddContentsType?
+    
     private var inputType: InputType?
 
     override func viewDidLoad() {
@@ -35,7 +37,21 @@ class AddFixedIncomeViewController: UIViewController {
         layerColorSetUp()
     }
     
-    @IBAction func openInputView(_ sender: UIButton) {
+    @IBAction func addButtonDidTapped(_ sender: UIButton) {
+        openInputView()
+    }
+    
+    
+    private func amountSetUp() {
+        monthlyFixedIncomeLabel.text = "¥\(MoneyManagementUseCase.shared.getTotalAmountOfIncome().numberWithComma())"
+    }
+    
+    private func layerColorSetUp() {
+        self.navigationController?.navigationBar.barTintColor = UIColor().fixedIncomeVCNavigationColor
+        self.view.layer.insertSublayer(CAGradientLayer().fixedIncomeVCLayer(frame: self.view.frame), at: 0)
+    }
+    
+    private func openInputView() {
         inputType = .fixedIncome
         selectArea.delegate = self
         selectArea.isHidden = false
@@ -47,15 +63,6 @@ class AddFixedIncomeViewController: UIViewController {
             view.alpha = 1
             self.view.layoutIfNeeded()
         }
-    }
-    
-    private func amountSetUp() {
-        monthlyFixedIncomeLabel.text = "¥\(MoneyManagementUseCase.shared.getTotalAmountOfIncome().numberWithComma())"
-    }
-    
-    private func layerColorSetUp() {
-        self.navigationController?.navigationBar.barTintColor = UIColor().fixedIncomeVCNavigationColor
-        self.view.layer.insertSublayer(CAGradientLayer().fixedIncomeVCLayer(frame: self.view.frame), at: 0)
     }
 }
 
@@ -72,6 +79,7 @@ extension AddFixedIncomeViewController: UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        openInputView()
     }
 }
 

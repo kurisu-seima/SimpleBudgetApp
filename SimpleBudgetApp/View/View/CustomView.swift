@@ -20,8 +20,8 @@ class CustomView: UIView {
     @IBOutlet weak var amountContentView: UIView!
     @IBOutlet weak var doneButton: UIButton!
     
-    var delegate: CustomViewDelegate? 
-
+    var delegate: CustomViewDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadNib()

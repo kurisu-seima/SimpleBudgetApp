@@ -9,7 +9,7 @@ import UIKit
 
 class BudgetSettingViewController: UIViewController {
 
-    @IBOutlet weak var dailyBudgetLabel: UILabel!
+    @IBOutlet weak var dailyBudgetLabel: CustomLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,7 @@ class BudgetSettingViewController: UIViewController {
     }
     
      private func amountSetUp() {
-        dailyBudgetLabel.text = "¥\(MoneyManagementUseCase.shared.getDailyBudget().numberWithComma())"
+        dailyBudgetLabel.animate(from: 0, to: MoneyManagementUseCase.shared.getDailyBudget(), duration: 0.7)
     }
     
     private func layerColorSetUp() {

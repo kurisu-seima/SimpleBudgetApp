@@ -85,7 +85,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥12,345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo2-eg-wxR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥12,345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo2-eg-wxR" customClass="CustomLabel" customModule="SimpleBudgetApp" customModuleProvider="target">
                                 <rect key="frame" x="143.5" y="239" width="127" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3S6-dC-kZ6"/>
@@ -94,7 +94,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥12,345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6p-ac-cXm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥12,345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6p-ac-cXm" customClass="CustomLabel" customModule="SimpleBudgetApp" customModuleProvider="target">
                                 <rect key="frame" x="143.5" y="364" width="127" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="l9W-kd-r51"/>
@@ -322,7 +322,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥1,234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CN-c2-Ta2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥1,234" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CN-c2-Ta2" customClass="CustomLabel" customModule="SimpleBudgetApp" customModuleProvider="target">
                                 <rect key="frame" x="153.5" y="164" width="107.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aop-ha-37a"/>
@@ -598,7 +598,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="openInputView:" destination="EJ4-NA-Yaq" eventType="touchUpInside" id="7rD-dD-b2B"/>
+                                    <action selector="addButtonDidTapped:" destination="EJ4-NA-Yaq" eventType="touchUpInside" id="ryX-Cf-UKu"/>
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNZ-Il-G0k" userLabel="Select Area" customClass="CustomView" customModule="SimpleBudgetApp" customModuleProvider="target">
@@ -883,7 +883,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="openInputView:" destination="8MD-N5-Pee" eventType="touchUpInside" id="wSj-Vd-UdM"/>
+                                    <action selector="addButtonDidTapped:" destination="8MD-N5-Pee" eventType="touchUpInside" id="Ok1-Iz-ItW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一ヶ月の固定支出額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5V-Bq-QI3">
@@ -1051,7 +1051,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="openInputView:" destination="yWJ-IK-QfP" eventType="touchUpInside" id="z2i-DH-DKB"/>
+                                    <action selector="addButtonDidTapped:" destination="yWJ-IK-QfP" eventType="touchUpInside" id="C1b-QL-ELc"/>
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YxD-yS-m73" customClass="CustomView" customModule="SimpleBudgetApp" customModuleProvider="target">

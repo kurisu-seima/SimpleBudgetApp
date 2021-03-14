@@ -10,8 +10,8 @@ import SideMenuSwift
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var monthlyBudgetLabel: UILabel!
-    @IBOutlet weak var dailyLimitLabel: UILabel!
+    @IBOutlet weak var monthlyBudgetLabel: CustomLabel!
+    @IBOutlet weak var dailyLimitLabel: CustomLabel!
     @IBOutlet weak var selectArea: CustomView!
     @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
     @IBOutlet weak var selectAreaTop: NSLayoutConstraint!
@@ -58,8 +58,8 @@ class MainViewController: UIViewController {
     }
     
     private func amountSetUp() {
-        monthlyBudgetLabel.text = "¥\(MoneyManagementUseCase.shared.getMonthlyBudget().numberWithComma())"
-        dailyLimitLabel.text = "¥\(MoneyManagementUseCase.shared.getTodayBudget().numberWithComma())"
+        monthlyBudgetLabel.animate(from: 0, to: MoneyManagementUseCase.shared.getMonthlyBudget(), duration: 1.0)
+        dailyLimitLabel.animate(from: 0, to: MoneyManagementUseCase.shared.getTodayBudget(), duration: 1.0)
     }
     
     private func layerColorSetUp() {

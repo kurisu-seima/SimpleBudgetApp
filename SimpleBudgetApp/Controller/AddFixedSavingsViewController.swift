@@ -33,9 +33,20 @@ class AddFixedSavingsViewController: UIViewController {
         amountSetUp()
         layerColorSetUp()
     }
+    @IBAction func addButtonDidTapped(_ sender: UIButton) {
+        openInputView()
+    }
     
-    @IBAction func openInputView(_ sender: UIButton) {
-        inputType = .fixedSavings
+    private func amountSetUp() {
+        monthlyFixedSavingsLabel.text = "¥\(MoneyManagementUseCase.shared.getTotalAmountOfFixedSavings().numberWithComma())"
+    }
+    
+    private func layerColorSetUp() {
+        self.navigationController?.navigationBar.barTintColor = UIColor().fixedSavingsVCNavigationColor
+        self.view.layer.insertSublayer(CAGradientLayer().fixedSavingsVCLayer(frame: self.view.frame), at: 0)
+    }
+    
+    private func openInputView() {
         selectArea.delegate = self
         selectArea.isHidden = false
         savingsTableViewTop.constant = 130
@@ -46,15 +57,6 @@ class AddFixedSavingsViewController: UIViewController {
             view.alpha = 1
             self.view.layoutIfNeeded()
         }
-    }
-    
-    private func amountSetUp() {
-        monthlyFixedSavingsLabel.text = "¥\(MoneyManagementUseCase.shared.getTotalAmountOfFixedSavings().numberWithComma())"
-    }
-    
-    private func layerColorSetUp() {
-        self.navigationController?.navigationBar.barTintColor = UIColor().fixedSavingsVCNavigationColor
-        self.view.layer.insertSublayer(CAGradientLayer().fixedSavingsVCLayer(frame: self.view.frame), at: 0)
     }
 }
 

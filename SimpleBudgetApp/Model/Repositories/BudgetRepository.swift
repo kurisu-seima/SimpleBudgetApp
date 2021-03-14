@@ -52,4 +52,8 @@ class BudgetRepository {
     func getDailyIncomeAndExpenditure(primaryKey: String) -> DailyIncomeAndExpenditure? {
         return db.object(ofType: DailyIncomeAndExpenditure.self, forPrimaryKey: primaryKey)
     }
+    
+    func update() {
+        
+    }
 }

@@ -16,3 +16,4 @@ enum InputType {
     case fixedSavings
         
 }
+

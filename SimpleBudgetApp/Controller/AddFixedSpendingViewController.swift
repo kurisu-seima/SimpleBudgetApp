@@ -36,7 +36,20 @@ class AddFixedSpendingViewController: UIViewController {
         layerColorSetUp()
     }
     
-    @IBAction func openInputView(_ sender: UIButton) {
+    @IBAction func addButtonDidTapped(_ sender: UIButton) {
+        openInputView()
+    }
+    
+    private func amountSetUp() {
+        monthlyFixedSpendingLabel.text = "¥\(MoneyManagementUseCase.shared.getTotalAmountOfSpending().numberWithComma())"
+    }
+    
+    private func layerColorSetUp() {
+        self.navigationController?.navigationBar.barTintColor = UIColor().fixedSpendingVCNavigationColor
+        self.view.layer.insertSublayer(CAGradientLayer().fixedSpendingVCLayer(frame: self.view.frame), at: 0)
+    }
+    
+    private func openInputView() {
         inputType = .fixedSpending
         selectArea.delegate = self
         selectArea.isHidden = false
@@ -48,15 +61,6 @@ class AddFixedSpendingViewController: UIViewController {
             view.alpha = 1
             self.view.layoutIfNeeded()
         }
-    }
-    
-    private func amountSetUp() {
-        monthlyFixedSpendingLabel.text = "¥\(MoneyManagementUseCase.shared.getTotalAmountOfSpending().numberWithComma())"
-    }
-    
-    private func layerColorSetUp() {
-        self.navigationController?.navigationBar.barTintColor = UIColor().fixedSpendingVCNavigationColor
-        self.view.layer.insertSublayer(CAGradientLayer().fixedSpendingVCLayer(frame: self.view.frame), at: 0)
     }
 }
 

@@ -23,6 +23,8 @@
 		33D3B24425F7569800AD2FD2 /* FixedSavings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3B24325F7569800AD2FD2 /* FixedSavings.swift */; };
 		33DCB5B125FB4FE600ACD12E /* AppSettingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB5B025FB4FE600ACD12E /* AppSettingUseCase.swift */; };
 		33DCB5B425FB999F00ACD12E /* IncomeAndExpenditureUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB5B325FB999F00ACD12E /* IncomeAndExpenditureUseCase.swift */; };
+		33DCB5B825FD3A1500ACD12E /* AddContentsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB5B725FD3A1500ACD12E /* AddContentsType.swift */; };
+		33DCB5BF25FDED1800ACD12E /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB5BE25FDED1800ACD12E /* CustomLabel.swift */; };
 		33E4B7EB25D0102400A3CD36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B7EA25D0102400A3CD36 /* AppDelegate.swift */; };
 		33E4B7ED25D0102400A3CD36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B7EC25D0102400A3CD36 /* SceneDelegate.swift */; };
 		33E4B7F225D0102400A3CD36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33E4B7F025D0102400A3CD36 /* Main.storyboard */; };
@@ -59,6 +61,8 @@
 		33D3B24325F7569800AD2FD2 /* FixedSavings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedSavings.swift; sourceTree = "<group>"; };
 		33DCB5B025FB4FE600ACD12E /* AppSettingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingUseCase.swift; sourceTree = "<group>"; };
 		33DCB5B325FB999F00ACD12E /* IncomeAndExpenditureUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeAndExpenditureUseCase.swift; sourceTree = "<group>"; };
+		33DCB5B725FD3A1500ACD12E /* AddContentsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContentsType.swift; sourceTree = "<group>"; };
+		33DCB5BE25FDED1800ACD12E /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		33E4B7E725D0102300A3CD36 /* SimpleBudgetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBudgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E4B7EA25D0102400A3CD36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33E4B7EC25D0102400A3CD36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		33043E3D25F73E34001868D5 /* InputType */ = {
 			isa = PBXGroup;
 			children = (
+				33DCB5B725FD3A1500ACD12E /* AddContentsType.swift */,
 				33043E3E25F73E64001868D5 /* InputType.swift */,
 			);
 			path = InputType;
@@ -105,6 +110,7 @@
 		3321842125E00BF2003D710C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				33DCB5BE25FDED1800ACD12E /* CustomLabel.swift */,
 				3321842225E00C0C003D710C /* CustomView.swift */,
 				3321842625E00C24003D710C /* CustomView.xib */,
 			);
@@ -403,6 +409,8 @@
 				33DCB5B425FB999F00ACD12E /* IncomeAndExpenditureUseCase.swift in Sources */,
 				3348BF0225E24433002324EE /* FixedIncome.swift in Sources */,
 				33E907F325DDEE8100786C7B /* ItemTableViewCell.swift in Sources */,
+				33DCB5B825FD3A1500ACD12E /* AddContentsType.swift in Sources */,
+				33DCB5BF25FDED1800ACD12E /* CustomLabel.swift in Sources */,
 				33E4B80D25D01A8800A3CD36 /* BalanceBreakdownViewController.swift in Sources */,
 				33043E3F25F73E64001868D5 /* InputType.swift in Sources */,
 				33E4B80725D0174600A3CD36 /* MenuViewController.swift in Sources */,
