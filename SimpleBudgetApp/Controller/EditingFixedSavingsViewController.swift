@@ -18,7 +18,7 @@ class EditingFixedSavingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        textFieldSetUp()
+        setupView()
     }
     
     @IBAction func doneButtonDidTapped(_ sender: Any) {
@@ -33,7 +33,7 @@ class EditingFixedSavingsViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    private func textFieldSetUp() {
+    private func setupView() {
         detailsTextField.text = fixedSavings?.details
         amountTextField.text = fixedSavings?.amountOfMoney
     }
