@@ -781,6 +781,104 @@
             </objects>
             <point key="canvasLocation" x="6531.884057971015" y="987.72321428571422"/>
         </scene>
+        <!--Editing Fixed Income View Controller-->
+        <scene sceneID="8Mg-8T-fKB">
+            <objects>
+                <viewController storyboardIdentifier="EditingIncome" id="eP6-2C-ZxP" customClass="EditingFixedIncomeViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aC5-2D-hzo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nh-pB-Emn" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="82" y="337.5" width="250" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="YPf-TF-bBf"/>
+                                    <constraint firstAttribute="width" constant="250" id="ovA-U3-ZGu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <state key="normal" title="完了">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" red="0.28235294119999998" green="0.93725490199999995" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" red="0.28037553970000001" green="0.75592463089999995" blue="0.89058794289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                                        <point key="value" x="1" y="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                                        <point key="value" x="1" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.43961796139999998" green="0.94117647059999998" blue="0.89058794289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useCornerRadius" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButtonDidTapped:" destination="EJ4-NA-Yaq" eventType="touchUpInside" id="GIF-NU-cCU"/>
+                                    <action selector="doneButtonDidTapped:" destination="eP6-2C-ZxP" eventType="touchUpInside" id="DPS-yP-bm3"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="income" translatesAutoresizingMaskIntoConstraints="NO" id="Vrp-wF-aa1">
+                                <rect key="frame" x="169.5" y="74" width="75" height="74.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vrp-wF-aa1" secondAttribute="height" id="ON8-KF-0oT"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="詳細を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nsi-bp-tHi">
+                                <rect key="frame" x="82" y="178.5" width="250" height="39.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Z2r-Pd-4rn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="金額を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esh-IC-U57">
+                                <rect key="frame" x="82" y="248" width="250" height="39.5"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="84p-Yd-mqf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vrp-wF-aa1" firstAttribute="height" secondItem="aC5-2D-hzo" secondAttribute="height" multiplier="1:12" id="4Eu-Po-udb"/>
+                            <constraint firstItem="0Nh-pB-Emn" firstAttribute="centerX" secondItem="aC5-2D-hzo" secondAttribute="centerX" id="FBC-nN-U7a"/>
+                            <constraint firstItem="Vrp-wF-aa1" firstAttribute="top" secondItem="84p-Yd-mqf" secondAttribute="top" constant="30" id="JVV-JZ-nI7"/>
+                            <constraint firstItem="esh-IC-U57" firstAttribute="trailing" secondItem="Nsi-bp-tHi" secondAttribute="trailing" id="O32-FA-oBR"/>
+                            <constraint firstItem="esh-IC-U57" firstAttribute="leading" secondItem="Nsi-bp-tHi" secondAttribute="leading" id="Q7W-IH-Ohg"/>
+                            <constraint firstItem="Vrp-wF-aa1" firstAttribute="centerX" secondItem="aC5-2D-hzo" secondAttribute="centerX" id="WEb-gH-j4c"/>
+                            <constraint firstItem="0Nh-pB-Emn" firstAttribute="top" secondItem="esh-IC-U57" secondAttribute="bottom" constant="50" id="fc2-Vi-n5z"/>
+                            <constraint firstItem="Nsi-bp-tHi" firstAttribute="centerX" secondItem="aC5-2D-hzo" secondAttribute="centerX" id="gtw-GS-efr"/>
+                            <constraint firstItem="Nsi-bp-tHi" firstAttribute="top" secondItem="Vrp-wF-aa1" secondAttribute="bottom" constant="30" id="myj-SH-tGN"/>
+                            <constraint firstItem="esh-IC-U57" firstAttribute="top" secondItem="Nsi-bp-tHi" secondAttribute="bottom" constant="30" id="tgE-yX-4KL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="esh-IC-U57" id="taN-gY-J6M"/>
+                        <outlet property="detailsTextField" destination="Nsi-bp-tHi" id="Zsw-sK-hG4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dHi-2R-4vf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7257" y="-1043"/>
+        </scene>
         <!--Add Fixed Spending View Controller-->
         <scene sceneID="SNQ-Lb-97K">
             <objects>
@@ -1096,18 +1194,223 @@
             </objects>
             <point key="canvasLocation" x="8699" y="-354"/>
         </scene>
+        <!--Editing Fixed Spending View Controller-->
+        <scene sceneID="DNn-5Z-uXF">
+            <objects>
+                <viewController storyboardIdentifier="EditingSpending" id="rI9-le-GMM" customClass="EditingFixedSpendingViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0WG-bc-ve8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72q-8c-QmA" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="82" y="337.5" width="250" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="80X-Nm-qHm"/>
+                                    <constraint firstAttribute="height" constant="60" id="g4L-T5-WRv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <state key="normal" title="完了">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" red="0.28235294119999998" green="0.93725490199999995" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" red="0.28037553970000001" green="0.75592463089999995" blue="0.89058794289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                                        <point key="value" x="1" y="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                                        <point key="value" x="1" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.43961796139999998" green="0.94117647059999998" blue="0.89058794289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useCornerRadius" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButtonDidTapped:" destination="EJ4-NA-Yaq" eventType="touchUpInside" id="nuQ-ha-19k"/>
+                                    <action selector="doneButtonDidTapped:" destination="rI9-le-GMM" eventType="touchUpInside" id="2tJ-na-lbx"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pay" translatesAutoresizingMaskIntoConstraints="NO" id="C45-sg-zt6">
+                                <rect key="frame" x="169.5" y="74" width="75" height="74.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="C45-sg-zt6" secondAttribute="height" id="sXL-hW-mg8"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="詳細を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="App-9Z-vCc">
+                                <rect key="frame" x="82" y="178.5" width="250" height="39.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="ILg-mh-YBZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="金額を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mm9-X5-kfc">
+                                <rect key="frame" x="82" y="248" width="250" height="39.5"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Ki-0f-XD5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mm9-X5-kfc" firstAttribute="top" secondItem="App-9Z-vCc" secondAttribute="bottom" constant="30" id="9Vg-dh-Vi0"/>
+                            <constraint firstItem="mm9-X5-kfc" firstAttribute="trailing" secondItem="App-9Z-vCc" secondAttribute="trailing" id="9jW-3K-z0S"/>
+                            <constraint firstItem="C45-sg-zt6" firstAttribute="top" secondItem="6Ki-0f-XD5" secondAttribute="top" constant="30" id="CsM-HE-fTy"/>
+                            <constraint firstItem="App-9Z-vCc" firstAttribute="centerX" secondItem="0WG-bc-ve8" secondAttribute="centerX" id="IRc-PD-xLD"/>
+                            <constraint firstItem="C45-sg-zt6" firstAttribute="height" secondItem="0WG-bc-ve8" secondAttribute="height" multiplier="1:12" id="U9N-kN-QQW"/>
+                            <constraint firstItem="mm9-X5-kfc" firstAttribute="leading" secondItem="App-9Z-vCc" secondAttribute="leading" id="biK-7X-A3f"/>
+                            <constraint firstItem="App-9Z-vCc" firstAttribute="top" secondItem="C45-sg-zt6" secondAttribute="bottom" constant="30" id="e8V-ZA-nQ2"/>
+                            <constraint firstItem="C45-sg-zt6" firstAttribute="centerX" secondItem="0WG-bc-ve8" secondAttribute="centerX" id="v2Q-jL-wOG"/>
+                            <constraint firstItem="72q-8c-QmA" firstAttribute="top" secondItem="mm9-X5-kfc" secondAttribute="bottom" constant="50" id="yyx-8V-35y"/>
+                            <constraint firstItem="72q-8c-QmA" firstAttribute="centerX" secondItem="0WG-bc-ve8" secondAttribute="centerX" id="zZI-TU-4Nb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="mm9-X5-kfc" id="Lmv-mL-T2h"/>
+                        <outlet property="detailsTextField" destination="App-9Z-vCc" id="cCj-TL-Ibo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rdf-Js-pNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7983" y="-1043"/>
+        </scene>
+        <!--Editing Fixed Savings View Controller-->
+        <scene sceneID="H3w-mf-feV">
+            <objects>
+                <viewController storyboardIdentifier="EditingSavings" id="nYL-jp-gZf" customClass="EditingFixedSavingsViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n3K-sm-CiD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKf-je-6da" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="82" y="337.5" width="250" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1WU-pF-TpV"/>
+                                    <constraint firstAttribute="width" constant="250" id="NuW-mL-IKQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <state key="normal" title="完了">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" red="0.28235294119999998" green="0.93725490199999995" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" red="0.28037553970000001" green="0.75592463089999995" blue="0.89058794289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                                        <point key="value" x="1" y="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                                        <point key="value" x="1" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.43961796139999998" green="0.94117647059999998" blue="0.89058794289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useCornerRadius" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButtonDidTapped:" destination="EJ4-NA-Yaq" eventType="touchUpInside" id="TgL-QS-PXo"/>
+                                    <action selector="doneButtonDidTapped:" destination="nYL-jp-gZf" eventType="touchUpInside" id="fa3-sx-U5J"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pig" translatesAutoresizingMaskIntoConstraints="NO" id="U8O-6T-Q8d">
+                                <rect key="frame" x="169.5" y="74" width="75" height="74.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="U8O-6T-Q8d" secondAttribute="height" id="Vxj-y1-HKT"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="詳細を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-aK-oe8">
+                                <rect key="frame" x="82" y="178.5" width="250" height="39.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="5OC-PI-ReX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="金額を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qik-as-Yzb">
+                                <rect key="frame" x="82" y="248" width="250" height="39.5"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="COH-Mh-cJt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cKf-je-6da" firstAttribute="centerX" secondItem="n3K-sm-CiD" secondAttribute="centerX" id="12k-Bo-Tgn"/>
+                            <constraint firstItem="Qik-as-Yzb" firstAttribute="top" secondItem="a6d-aK-oe8" secondAttribute="bottom" constant="30" id="TmB-rT-b9M"/>
+                            <constraint firstItem="U8O-6T-Q8d" firstAttribute="top" secondItem="COH-Mh-cJt" secondAttribute="top" constant="30" id="WeY-vD-Lib"/>
+                            <constraint firstItem="a6d-aK-oe8" firstAttribute="centerX" secondItem="n3K-sm-CiD" secondAttribute="centerX" id="XNU-q0-xAG"/>
+                            <constraint firstItem="cKf-je-6da" firstAttribute="top" secondItem="Qik-as-Yzb" secondAttribute="bottom" constant="50" id="ZCC-mX-qS8"/>
+                            <constraint firstItem="U8O-6T-Q8d" firstAttribute="height" secondItem="n3K-sm-CiD" secondAttribute="height" multiplier="1:12" id="fkt-Bl-SmM"/>
+                            <constraint firstItem="U8O-6T-Q8d" firstAttribute="centerX" secondItem="n3K-sm-CiD" secondAttribute="centerX" id="lac-mV-3U7"/>
+                            <constraint firstItem="a6d-aK-oe8" firstAttribute="top" secondItem="U8O-6T-Q8d" secondAttribute="bottom" constant="30" id="mHl-HU-r11"/>
+                            <constraint firstItem="Qik-as-Yzb" firstAttribute="trailing" secondItem="a6d-aK-oe8" secondAttribute="trailing" id="sYS-Xm-rTY"/>
+                            <constraint firstItem="Qik-as-Yzb" firstAttribute="leading" secondItem="a6d-aK-oe8" secondAttribute="leading" id="wie-30-n2y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="Qik-as-Yzb" id="yhK-NY-dRZ"/>
+                        <outlet property="detailsTextField" destination="a6d-aK-oe8" id="Ziw-Rw-0hP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXV-C8-RTG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8699" y="-1043"/>
+        </scene>
     </scenes>
     <designables>
+        <designable name="0Nh-pB-Emn">
+            <size key="intrinsicContentSize" width="60" height="42"/>
+        </designable>
         <designable name="0R2-Se-3W6">
             <size key="intrinsicContentSize" width="60" height="42"/>
         </designable>
         <designable name="61A-ve-0gv">
             <size key="intrinsicContentSize" width="60" height="42"/>
         </designable>
+        <designable name="72q-8c-QmA">
+            <size key="intrinsicContentSize" width="60" height="42"/>
+        </designable>
         <designable name="DR9-Pe-MgH">
             <size key="intrinsicContentSize" width="214" height="64"/>
         </designable>
         <designable name="Zzg-A1-vYL">
+            <size key="intrinsicContentSize" width="60" height="42"/>
+        </designable>
+        <designable name="cKf-je-6da">
             <size key="intrinsicContentSize" width="60" height="42"/>
         </designable>
         <designable name="ePM-JZ-GSS">

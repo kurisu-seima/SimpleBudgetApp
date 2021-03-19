@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 protocol CustomViewDelegate {
     func InputDidFinish(details: String, amount: String)

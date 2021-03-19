@@ -34,6 +34,12 @@ class AddFixedSpendingViewController: UIViewController {
 
         amountSetUp()
         layerColorSetUp()
+        spendingTableView.reloadData()
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        spendingTableView.isEditing = editing
     }
     
     @IBAction func addButtonDidTapped(_ sender: UIButton) {
@@ -73,6 +79,23 @@ extension AddFixedSpendingViewController: UITableViewDelegate, UITableViewDataSo
         let cell = spendingTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemTableViewCell
         cell.fixedSpendingSetUp(fixedSpending: fixedSpendingsData[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "EditingSpending") as! EditingFixedSpendingViewController
+        nextVC.fixedSpending = fixedSpendingsData[indexPath.row]
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        BudgetRepository.shared.delete(model: fixedSpendingsData[indexPath.row], id: fixedSpendingsData[indexPath.row].id)
+        fixedSpendingsData = MoneyManagementUseCase.shared.fixedSpendings
+        spendingTableView.reloadData()
+        amountSetUp()
     }
 }
 

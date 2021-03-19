@@ -32,7 +32,14 @@ class AddFixedSavingsViewController: UIViewController {
         fixedSavingsData = MoneyManagementUseCase.shared.fixedSavings
         amountSetUp()
         layerColorSetUp()
+        savingsTableView.reloadData()
     }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        savingsTableView.isEditing = editing
+    }
+    
     @IBAction func addButtonDidTapped(_ sender: UIButton) {
         openInputView()
     }
@@ -70,6 +77,23 @@ extension AddFixedSavingsViewController: UITableViewDelegate, UITableViewDataSou
         let cell = savingsTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemTableViewCell
         cell.fixedSavingSetUp(fixedSaving: fixedSavingsData[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "EditingSavings") as! EditingFixedSavingsViewController
+        nextVC.fixedSavings = fixedSavingsData[indexPath.row]
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        BudgetRepository.shared.delete(model: fixedSavingsData[indexPath.row], id: fixedSavingsData[indexPath.row].id)
+        fixedSavingsData = MoneyManagementUseCase.shared.fixedSavings
+        savingsTableView.reloadData()
+        amountSetUp()
     }
 }
 

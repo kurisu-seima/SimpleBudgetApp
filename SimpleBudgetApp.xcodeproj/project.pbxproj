@@ -16,6 +16,9 @@
 		334B69FF25F7199F0046A4CE /* CAGradientLayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334B69FE25F7199F0046A4CE /* CAGradientLayer+Extension.swift */; };
 		334B6A0225F72C2D0046A4CE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334B6A0125F72C2C0046A4CE /* UIColor+Extension.swift */; };
 		3370011D25D34EA4004225FB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3370011C25D34EA4004225FB /* SplashViewController.swift */; };
+		3370414426035292003FC9CB /* EditingFixedIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3370414326035292003FC9CB /* EditingFixedIncomeViewController.swift */; };
+		33704147260352B3003FC9CB /* EditingFixedSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33704146260352B3003FC9CB /* EditingFixedSpendingViewController.swift */; };
+		3370414A260352C6003FC9CB /* EditingFixedSavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33704149260352C6003FC9CB /* EditingFixedSavingsViewController.swift */; };
 		338570B425FA3C45008624C8 /* MoneyManagementUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338570B325FA3C45008624C8 /* MoneyManagementUseCase.swift */; };
 		33A3FC3C25F64C1D007F00A1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FC3B25F64C1D007F00A1 /* Date+Extension.swift */; };
 		33A3FC4025F64D36007F00A1 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FC3F25F64D36007F00A1 /* Int+Extension.swift */; };
@@ -23,7 +26,6 @@
 		33D3B24425F7569800AD2FD2 /* FixedSavings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3B24325F7569800AD2FD2 /* FixedSavings.swift */; };
 		33DCB5B125FB4FE600ACD12E /* AppSettingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB5B025FB4FE600ACD12E /* AppSettingUseCase.swift */; };
 		33DCB5B425FB999F00ACD12E /* IncomeAndExpenditureUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB5B325FB999F00ACD12E /* IncomeAndExpenditureUseCase.swift */; };
-		33DCB5B825FD3A1500ACD12E /* AddContentsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB5B725FD3A1500ACD12E /* AddContentsType.swift */; };
 		33DCB5BF25FDED1800ACD12E /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB5BE25FDED1800ACD12E /* CustomLabel.swift */; };
 		33E4B7EB25D0102400A3CD36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B7EA25D0102400A3CD36 /* AppDelegate.swift */; };
 		33E4B7ED25D0102400A3CD36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B7EC25D0102400A3CD36 /* SceneDelegate.swift */; };
@@ -54,6 +56,9 @@
 		334B69FE25F7199F0046A4CE /* CAGradientLayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Extension.swift"; sourceTree = "<group>"; };
 		334B6A0125F72C2C0046A4CE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3370011C25D34EA4004225FB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3370414326035292003FC9CB /* EditingFixedIncomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingFixedIncomeViewController.swift; sourceTree = "<group>"; };
+		33704146260352B3003FC9CB /* EditingFixedSpendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingFixedSpendingViewController.swift; sourceTree = "<group>"; };
+		33704149260352C6003FC9CB /* EditingFixedSavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingFixedSavingsViewController.swift; sourceTree = "<group>"; };
 		338570B325FA3C45008624C8 /* MoneyManagementUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyManagementUseCase.swift; sourceTree = "<group>"; };
 		33A3FC3B25F64C1D007F00A1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		33A3FC3F25F64D36007F00A1 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
@@ -61,7 +66,6 @@
 		33D3B24325F7569800AD2FD2 /* FixedSavings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedSavings.swift; sourceTree = "<group>"; };
 		33DCB5B025FB4FE600ACD12E /* AppSettingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingUseCase.swift; sourceTree = "<group>"; };
 		33DCB5B325FB999F00ACD12E /* IncomeAndExpenditureUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeAndExpenditureUseCase.swift; sourceTree = "<group>"; };
-		33DCB5B725FD3A1500ACD12E /* AddContentsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContentsType.swift; sourceTree = "<group>"; };
 		33DCB5BE25FDED1800ACD12E /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		33E4B7E725D0102300A3CD36 /* SimpleBudgetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleBudgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E4B7EA25D0102400A3CD36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +105,6 @@
 		33043E3D25F73E34001868D5 /* InputType */ = {
 			isa = PBXGroup;
 			children = (
-				33DCB5B725FD3A1500ACD12E /* AddContentsType.swift */,
 				33043E3E25F73E64001868D5 /* InputType.swift */,
 			);
 			path = InputType;
@@ -256,6 +259,9 @@
 				33E4B81325D01D3300A3CD36 /* AddFixedIncomeViewController.swift */,
 				33E4B81725D01D5200A3CD36 /* AddFixedSpendingViewController.swift */,
 				33E4B81A25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift */,
+				3370414326035292003FC9CB /* EditingFixedIncomeViewController.swift */,
+				33704146260352B3003FC9CB /* EditingFixedSpendingViewController.swift */,
+				33704149260352C6003FC9CB /* EditingFixedSavingsViewController.swift */,
 				33E4B80C25D01A8800A3CD36 /* BalanceBreakdownViewController.swift */,
 				33E4B80F25D01B8700A3CD36 /* MonthlyRecordViewController.swift */,
 			);
@@ -400,6 +406,7 @@
 				33E4B81425D01D3300A3CD36 /* AddFixedIncomeViewController.swift in Sources */,
 				3348BF0C25E26082002324EE /* BudgetRepository.swift in Sources */,
 				33E4B80425D016F000A3CD36 /* MainViewController.swift in Sources */,
+				3370414426035292003FC9CB /* EditingFixedIncomeViewController.swift in Sources */,
 				3348BF0625E24451002324EE /* FixedSpending.swift in Sources */,
 				33E4B7EB25D0102400A3CD36 /* AppDelegate.swift in Sources */,
 				334B6A0225F72C2D0046A4CE /* UIColor+Extension.swift in Sources */,
@@ -407,12 +414,13 @@
 				33E4B81B25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift in Sources */,
 				33E4B7ED25D0102400A3CD36 /* SceneDelegate.swift in Sources */,
 				33DCB5B425FB999F00ACD12E /* IncomeAndExpenditureUseCase.swift in Sources */,
+				33704147260352B3003FC9CB /* EditingFixedSpendingViewController.swift in Sources */,
 				3348BF0225E24433002324EE /* FixedIncome.swift in Sources */,
 				33E907F325DDEE8100786C7B /* ItemTableViewCell.swift in Sources */,
-				33DCB5B825FD3A1500ACD12E /* AddContentsType.swift in Sources */,
 				33DCB5BF25FDED1800ACD12E /* CustomLabel.swift in Sources */,
 				33E4B80D25D01A8800A3CD36 /* BalanceBreakdownViewController.swift in Sources */,
 				33043E3F25F73E64001868D5 /* InputType.swift in Sources */,
+				3370414A260352C6003FC9CB /* EditingFixedSavingsViewController.swift in Sources */,
 				33E4B80725D0174600A3CD36 /* MenuViewController.swift in Sources */,
 				33E4B80A25D0186600A3CD36 /* BudgetSettingViewController.swift in Sources */,
 				334B69FF25F7199F0046A4CE /* CAGradientLayer+Extension.swift in Sources */,

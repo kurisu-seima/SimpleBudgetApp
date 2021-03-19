@@ -18,8 +18,6 @@ class AddFixedIncomeViewController: UIViewController {
     
     var fixedIncomesData: [FixedIncome] = []
     
-//    private var addType: AddContentsType?
-    
     private var inputType: InputType?
 
     override func viewDidLoad() {
@@ -35,10 +33,17 @@ class AddFixedIncomeViewController: UIViewController {
         fixedIncomesData = MoneyManagementUseCase.shared.fixedIncomes
         amountSetUp()
         layerColorSetUp()
+        incomeTableView.reloadData()
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        incomeTableView.isEditing = editing
     }
     
     @IBAction func addButtonDidTapped(_ sender: UIButton) {
         openInputView()
+        inputType = .fixedIncome
     }
     
     
@@ -52,7 +57,6 @@ class AddFixedIncomeViewController: UIViewController {
     }
     
     private func openInputView() {
-        inputType = .fixedIncome
         selectArea.delegate = self
         selectArea.isHidden = false
         tableViewTop.constant = 130
@@ -79,12 +83,24 @@ extension AddFixedIncomeViewController: UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        openInputView()
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "EditingIncome") as! EditingFixedIncomeViewController
+        nextVC.fixedIncome = fixedIncomesData[indexPath.row]
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        BudgetRepository.shared.delete(model: fixedIncomesData[indexPath.row], id: fixedIncomesData[indexPath.row].id)
+        fixedIncomesData = MoneyManagementUseCase.shared.fixedIncomes
+        incomeTableView.reloadData()
+        amountSetUp()
     }
 }
 
 extension AddFixedIncomeViewController: CustomViewDelegate {
-    
     func InputDidFinish(details: String, amount: String) {
         switch inputType {
         case .fixedIncome:

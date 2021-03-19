@@ -40,7 +40,7 @@ class BudgetSettingViewController: UIViewController {
     }
     
      private func amountSetUp() {
-        dailyBudgetLabel.animate(from: 0, to: MoneyManagementUseCase.shared.getDailyBudget(), duration: 0.7)
+        dailyBudgetLabel.text = "¥\(MoneyManagementUseCase.shared.getDailyBudget().numberWithComma())"
     }
     
     private func layerColorSetUp() {

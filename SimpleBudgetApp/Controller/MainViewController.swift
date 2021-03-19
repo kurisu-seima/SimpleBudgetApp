@@ -58,8 +58,8 @@ class MainViewController: UIViewController {
     }
     
     private func amountSetUp() {
-        monthlyBudgetLabel.animate(from: 0, to: MoneyManagementUseCase.shared.getMonthlyBudget(), duration: 1.0)
-        dailyLimitLabel.animate(from: 0, to: MoneyManagementUseCase.shared.getTodayBudget(), duration: 1.0)
+        monthlyBudgetLabel.animate(from: 0, to: MoneyManagementUseCase.shared.getMonthlyBudget(), duration: 0.9)
+        dailyLimitLabel.animate(from: 0, to: MoneyManagementUseCase.shared.getTodayBudget(), duration: 0.9)
     }
     
     private func layerColorSetUp() {
