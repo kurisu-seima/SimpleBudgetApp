@@ -250,7 +250,7 @@
                                     <constraint firstAttribute="width" constant="280" id="eSU-tw-YtK"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="60" id="0WK-az-Ere" customClass="MenuTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="60" id="0WK-az-Ere" customClass="SideMenuCell" customModule="SimpleBudgetApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="280" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0WK-az-Ere" id="tYu-wv-ShJ">
@@ -281,8 +281,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="menuListImage" destination="Ut9-oZ-VmG" id="liS-Qy-WyC"/>
-                                            <outlet property="menuListTitle" destination="lmC-HW-pcg" id="lQj-LL-r3D"/>
+                                            <outlet property="menuImage" destination="Ut9-oZ-VmG" id="ZgC-7O-Gj9"/>
+                                            <outlet property="menuLabel" destination="lmC-HW-pcg" id="PaC-UP-2TK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -298,7 +298,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="e2E-ji-7Z0"/>
                     <connections>
-                        <outlet property="menuTableView" destination="hwb-VB-cFe" id="WDL-oZ-1jM"/>
+                        <outlet property="menuTableView" destination="hwb-VB-cFe" id="Ulu-S3-EIn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TrN-4R-4bV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -496,7 +496,7 @@
                                 <rect key="frame" x="0.0" y="344" width="414" height="552"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="XGY-xr-T6S" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="XGY-xr-T6S" customClass="ContentsModelTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XGY-xr-T6S" id="Uil-AR-5jd">
@@ -530,7 +530,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountOfMonsyLabel" destination="ai1-tD-b5V" id="gRo-ek-ODf"/>
+                                            <outlet property="amountLabel" destination="ai1-tD-b5V" id="AeQ-oc-UIV"/>
                                             <outlet property="detailsLabel" destination="G9k-Bi-Z1f" id="CrE-1d-5DY"/>
                                         </connections>
                                     </tableViewCell>
@@ -648,47 +648,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AZ1-O8-n8W">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AZ1-O8-n8W">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="wRr-SB-nXg" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="44" id="wRr-SB-nXg" customClass="ContentsModelTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wRr-SB-nXg" id="0eV-Rv-Ugb" customClass="FixedCostTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJB-Sz-NQ2">
-                                                    <rect key="frame" x="20" y="21" width="40" height="18"/>
+                                                    <rect key="frame" x="20" y="11" width="40" height="22"/>
                                                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbE-qa-p5D">
-                                                    <rect key="frame" x="354" y="21" width="40" height="18"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="FoD-XG-TO9"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="359" y="12" width="40" height="20"/>
                                                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="tbE-qa-p5D" firstAttribute="centerY" secondItem="0eV-Rv-Ugb" secondAttribute="centerY" id="0Ki-mW-gbp"/>
-                                                <constraint firstItem="tbE-qa-p5D" firstAttribute="top" secondItem="0eV-Rv-Ugb" secondAttribute="topMargin" constant="10" id="8g5-ER-r1f"/>
+                                                <constraint firstAttribute="trailing" secondItem="tbE-qa-p5D" secondAttribute="trailing" constant="15" id="6b2-bE-95b"/>
                                                 <constraint firstItem="bJB-Sz-NQ2" firstAttribute="leading" secondItem="0eV-Rv-Ugb" secondAttribute="leadingMargin" id="KkU-Q4-d94"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="tbE-qa-p5D" secondAttribute="trailing" id="Y7C-MQ-qJt"/>
+                                                <constraint firstItem="tbE-qa-p5D" firstAttribute="centerY" secondItem="0eV-Rv-Ugb" secondAttribute="centerY" id="Y8S-Wq-Oqo"/>
                                                 <constraint firstItem="bJB-Sz-NQ2" firstAttribute="centerY" secondItem="0eV-Rv-Ugb" secondAttribute="centerY" id="p6O-E3-SUM"/>
-                                                <constraint firstItem="bJB-Sz-NQ2" firstAttribute="top" secondItem="0eV-Rv-Ugb" secondAttribute="topMargin" constant="10" id="pnu-qe-wrg"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="bJB-Sz-NQ2" secondAttribute="bottom" constant="10" id="sJ7-7k-PRG"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="tbE-qa-p5D" secondAttribute="bottom" constant="10" id="utP-68-mhL"/>
+                                                <constraint firstItem="bJB-Sz-NQ2" firstAttribute="top" secondItem="0eV-Rv-Ugb" secondAttribute="topMargin" id="pnu-qe-wrg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="bJB-Sz-NQ2" secondAttribute="bottom" id="sJ7-7k-PRG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountOfMonsyLabel" destination="tbE-qa-p5D" id="xFd-ri-0bK"/>
-                                            <outlet property="detailsLabel" destination="bJB-Sz-NQ2" id="Cj8-9U-FRw"/>
+                                            <outlet property="amountLabel" destination="tbE-qa-p5D" id="cTb-cN-CcM"/>
+                                            <outlet property="detailsLabel" destination="bJB-Sz-NQ2" id="7Yg-q9-RWB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -711,6 +706,73 @@
             </objects>
             <point key="canvasLocation" x="6531.884057971015" y="318.75"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="9ki-Kl-aJZ">
+            <objects>
+                <viewController id="ZPQ-mL-e4A" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PMv-PG-Tof">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q6n-zu-Lyk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XZE-yF-MS1">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XZE-yF-MS1" id="vaI-RM-heT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11R-Y7-sQ8">
+                                                    <rect key="frame" x="20" y="12" width="40" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADR-zf-rJp">
+                                                    <rect key="frame" x="65" y="12" width="13" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NY-l4-zA0">
+                                                    <rect key="frame" x="83" y="12" width="40" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2NY-l4-zA0" firstAttribute="bottom" secondItem="ADR-zf-rJp" secondAttribute="bottom" id="Gjz-cG-H9C"/>
+                                                <constraint firstItem="ADR-zf-rJp" firstAttribute="top" secondItem="11R-Y7-sQ8" secondAttribute="top" id="HNh-BH-c8V"/>
+                                                <constraint firstItem="2NY-l4-zA0" firstAttribute="top" secondItem="ADR-zf-rJp" secondAttribute="top" id="Mem-G0-lNp"/>
+                                                <constraint firstItem="ADR-zf-rJp" firstAttribute="bottom" secondItem="11R-Y7-sQ8" secondAttribute="bottom" id="g5R-eW-qMD"/>
+                                                <constraint firstItem="ADR-zf-rJp" firstAttribute="leading" secondItem="11R-Y7-sQ8" secondAttribute="trailing" constant="5" id="je6-NW-qPr"/>
+                                                <constraint firstItem="11R-Y7-sQ8" firstAttribute="centerY" secondItem="vaI-RM-heT" secondAttribute="centerY" id="oH7-tB-fRe"/>
+                                                <constraint firstItem="11R-Y7-sQ8" firstAttribute="leading" secondItem="vaI-RM-heT" secondAttribute="leadingMargin" id="x8T-3x-5m2"/>
+                                                <constraint firstItem="2NY-l4-zA0" firstAttribute="leading" secondItem="ADR-zf-rJp" secondAttribute="trailing" constant="5" id="xeX-hA-ul9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="09H-do-2XV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="q6n-zu-Lyk" firstAttribute="trailing" secondItem="09H-do-2XV" secondAttribute="trailing" id="1Vl-QZ-oQF"/>
+                            <constraint firstItem="q6n-zu-Lyk" firstAttribute="top" secondItem="PMv-PG-Tof" secondAttribute="top" id="6zZ-2t-tsk"/>
+                            <constraint firstAttribute="bottom" secondItem="q6n-zu-Lyk" secondAttribute="bottom" id="G5n-h4-UQt"/>
+                            <constraint firstItem="q6n-zu-Lyk" firstAttribute="leading" secondItem="09H-do-2XV" secondAttribute="leading" id="Wg7-G9-Ucc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8he-jR-iRN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7289.8550724637689" y="318.75"/>
+        </scene>
         <!--Monthly Record View Controller-->
         <scene sceneID="s8n-gs-5LA">
             <objects>
@@ -723,7 +785,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="lz8-fh-duZ" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="lz8-fh-duZ" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lz8-fh-duZ" id="5Ab-mX-4Ol" customClass="FixedCostTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
@@ -891,7 +953,7 @@
                                 <rect key="frame" x="0.0" y="344" width="414" height="552"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="tUP-r0-WiF" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="tUP-r0-WiF" customClass="ContentsModelTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tUP-r0-WiF" id="USW-Od-2Hv">
@@ -925,7 +987,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountOfMonsyLabel" destination="kGN-Iq-vJ2" id="kgR-4V-VBx"/>
+                                            <outlet property="amountLabel" destination="kGN-Iq-vJ2" id="A5b-s5-J1B"/>
                                             <outlet property="detailsLabel" destination="ZCC-yA-fde" id="qoA-rC-Y4g"/>
                                         </connections>
                                     </tableViewCell>
@@ -1048,7 +1110,7 @@
                                 <rect key="frame" x="0.0" y="344" width="414" height="552"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="1F3-iX-hUb" customClass="ItemTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="1F3-iX-hUb" customClass="ContentsModelTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1F3-iX-hUb" id="Fbx-ee-xuE">
@@ -1082,7 +1144,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="amountOfMonsyLabel" destination="2It-eg-m66" id="V2d-Mc-Am1"/>
+                                            <outlet property="amountLabel" destination="2It-eg-m66" id="HoP-r9-hj4"/>
                                             <outlet property="detailsLabel" destination="JxO-mK-Gn0" id="ugI-lw-mhb"/>
                                         </connections>
                                     </tableViewCell>

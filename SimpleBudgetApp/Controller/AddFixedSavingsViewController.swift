@@ -74,7 +74,7 @@ extension AddFixedSavingsViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = savingsTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemTableViewCell
+        let cell = savingsTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ContentsModelTableViewCell
         cell.fixedSavingSetUp(fixedSaving: fixedSavingsData[indexPath.row])
         return cell
     }

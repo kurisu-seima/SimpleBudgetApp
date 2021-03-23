@@ -9,10 +9,23 @@ import Foundation
 
 extension Date {
     
-    var currentday: Int {
-        let date = Date()
-        let calender = Calendar.current
-        return calender.component(.day, from: date)
+    var toString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ja_JP")
+        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyyMMddEEEE", options: 0, locale: nil)
+        return dateFormatter.string(from: self)
+    }
+    
+    var year: Int {
+        Calendar(identifier: .japanese).component(.year, from: Date())
+    }
+    
+    var month: Int {
+        Calendar(identifier: .japanese).component(.month, from: self)
+    }
+    
+    var day: Int {
+        Calendar(identifier: .japanese).component(.day, from: self)
     }
     
     var dayCount: Int {
@@ -25,13 +38,6 @@ extension Date {
         let date = calendar.date(from: components)!
         let dayCount = calendar.component(.day, from: date)
         return dayCount
-    }
-    
-    var toString: String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "ja_JP")
-        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyyMMddEEEE", options: 0, locale: nil)
-        return dateFormatter.string(from: self)
     }
 }
 

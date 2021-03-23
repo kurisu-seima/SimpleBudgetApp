@@ -12,6 +12,9 @@ class DailyIncomeAndExpenditure: Object {
 
     @objc dynamic var primaryDate: String = ""
     @objc dynamic var date = Date()
+    @objc dynamic var year: Int = 0
+    @objc dynamic var month: Int = 0
+    @objc dynamic var day: Int = 0
     let incomeAndExpenditures = List<IncomeAndExpenditure>()
     
     convenience init(date: Date? = nil) {
@@ -20,6 +23,9 @@ class DailyIncomeAndExpenditure: Object {
             self.date = date
         }
         primaryDate = self.date.toString
+        year = self.date.year
+        month = self.date.month
+        day = self.date.day
     }
 
     override class func primaryKey() -> String? {

@@ -10,33 +10,87 @@ import UIKit
 class BalanceBreakdownViewController: UIViewController {
     
     @IBOutlet weak var balanceBreakdownTableView: UITableView!
-
-    let dateOfBreakdwon = ["2021年2月18日", "2021年2月19日", "2021年2月20日"]
-    let item = [["お小遣い", "仕事", "散財"], ["バイト", "バイト", "バイト"], ["食べ物", "飲み物", "ポテチ"]]
-    let amount = [["100", "200", "300"], ["400", "500", "600"], ["700", "800", "900"]]
+    
+    var dailyIncomeAndExpenditures: [DailyIncomeAndExpenditure] = []
+    
+    enum MonthlyType {
+        case now
+        case selected
+    }
+    
+    var monthlyType: MonthlyType = .now
+    
+    var selectYear: Int = 0
+    
+    var selectMonth: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         balanceBreakdownTableView.dataSource = self
         balanceBreakdownTableView.delegate = self
+        
+        let headerXib = UINib(nibName: "HeaderView", bundle: nil)
+        balanceBreakdownTableView.register(headerXib, forHeaderFooterViewReuseIdentifier: "HeaderView")
+        
+        let footerXib = UINib(nibName: "FooterView", bundle: nil)
+        balanceBreakdownTableView.register(footerXib, forHeaderFooterViewReuseIdentifier: "FooterView")
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        switch monthlyType {
+        case .now:
+            dailyIncomeAndExpenditures = BalanceBreakdownUseCase.shared.getSelectedMonthDailyIncomeAndExpenditures(year: Date().year, month: Date().month)
+        case .selected:
+            dailyIncomeAndExpenditures = BalanceBreakdownUseCase.shared.getSelectedMonthDailyIncomeAndExpenditures(year: selectYear, month: selectMonth)
+        }
+        setupView()
+    }
+    
+    private func setupView() {
+        self.navigationController?.navigationBar.barTintColor = UIColor.systemGray5
     }
 }
 
 extension BalanceBreakdownViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        item.count
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return dateOfBreakdwon[section]
+        return dailyIncomeAndExpenditures.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return item.count
+        return dailyIncomeAndExpenditures[section].incomeAndExpenditures.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = balanceBreakdownTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemTableViewCell
+        let cell = balanceBreakdownTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ContentsModelTableViewCell
+        cell.balanceBreakdownSetup(incomeAndExpenditure: dailyIncomeAndExpenditures[indexPath.section].incomeAndExpenditures[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = balanceBreakdownTableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as! HeaderView
+        headerView.setupHeaderView(dailyIncomeAndExpenditure: dailyIncomeAndExpenditures[section])
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = balanceBreakdownTableView.dequeueReusableHeaderFooterView(withIdentifier: "FooterView") as! FooterView
+        footerView.setupFooterView(total: MoneyManagementUseCase.shared.getDailyTotalAmounts(dailyIncomeAndExpenditures: dailyIncomeAndExpenditures)[section])
+        return footerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

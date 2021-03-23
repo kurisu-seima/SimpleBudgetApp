@@ -76,7 +76,7 @@ extension AddFixedSpendingViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = spendingTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemTableViewCell
+        let cell = spendingTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ContentsModelTableViewCell
         cell.fixedSpendingSetUp(fixedSpending: fixedSpendingsData[indexPath.row])
         return cell
     }

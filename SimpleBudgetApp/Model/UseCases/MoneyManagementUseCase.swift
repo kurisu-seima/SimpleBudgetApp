@@ -88,7 +88,32 @@ class MoneyManagementUseCase {
                 }}.reduce(0) {$0 + $1}
             totalAmount += dailyAmount
         }
-        return getDailyBudget() * Date().currentday + totalAmount
+        return totalAmount
+    }
+    
+    func getDailyTotalAmounts(dailyIncomeAndExpenditures: [DailyIncomeAndExpenditure]) -> [Int] {
+        var dailyTotalAmounts: [Int] = []
+        dailyIncomeAndExpenditures.forEach { daily in
+            let total = daily.incomeAndExpenditures.map { (element: IncomeAndExpenditure) -> Int in
+                guard let incomeAndExpenditure = IncomeAndExpenditure.PlusOrMinus(rawValue: element.plusOrMinus) else {
+                    return 0
+                }
+                switch incomeAndExpenditure {
+                case .plus:
+                    guard let income = Int(element.amountOfMoney) else {
+                        return 0
+                    }
+                    return income
+                case .minus:
+                    guard let spending = Int(element.amountOfMoney) else {
+                        return 0
+                    }
+                    return spending * -1
+                }
+            }.reduce(0) {$0 + $1}
+            dailyTotalAmounts.append(total)
+        }
+        return dailyTotalAmounts
     }
 }
 

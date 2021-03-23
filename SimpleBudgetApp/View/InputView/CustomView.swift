@@ -52,6 +52,7 @@ class CustomView: UIView {
     @IBAction func doneButtonDidTapped(_ sender: UIButton) {
         if let details = detailsTextField.text, let amount = amountOfMoneyTextField.text,
            !details.isEmpty, !amount.isEmpty {
+            //ここに数字であれば進む処理
             self.delegate?.InputDidFinish(details: details, amount: amount)
         }
         closeInputView()

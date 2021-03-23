@@ -76,7 +76,7 @@ extension AddFixedIncomeViewController: UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = incomeTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ItemTableViewCell
+        let cell = incomeTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ContentsModelTableViewCell
         cell.fixedIncomeSetUp(fixedIncome: fixedIncomesData[indexPath.row])
         return cell
     }
