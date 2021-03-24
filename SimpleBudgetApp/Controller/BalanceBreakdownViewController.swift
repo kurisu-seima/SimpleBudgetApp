@@ -21,7 +21,6 @@ class BalanceBreakdownViewController: UIViewController {
     var monthlyType: MonthlyType = .now
     
     var selectYear: Int = 0
-    
     var selectMonth: Int = 0
     
     override func viewDidLoad() {
@@ -43,7 +42,7 @@ class BalanceBreakdownViewController: UIViewController {
         
         switch monthlyType {
         case .now:
-            dailyIncomeAndExpenditures = BalanceBreakdownUseCase.shared.getSelectedMonthDailyIncomeAndExpenditures(year: Date().year, month: Date().month)
+            dailyIncomeAndExpenditures = BalanceBreakdownUseCase.shared.thisMonthDailyIncomeAndExpenditures
         case .selected:
             dailyIncomeAndExpenditures = BalanceBreakdownUseCase.shared.getSelectedMonthDailyIncomeAndExpenditures(year: selectYear, month: selectMonth)
         }
@@ -52,6 +51,12 @@ class BalanceBreakdownViewController: UIViewController {
     
     private func setupView() {
         self.navigationController?.navigationBar.barTintColor = UIColor.systemGray5
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(goSelectVC))
+    }
+    
+    @objc func goSelectVC() {
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "SelectVC") as! SelectDailyIncomeAndExpendituresViewController
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 

@@ -91,6 +91,7 @@ class MoneyManagementUseCase {
         return totalAmount
     }
     
+    //指定された月の一日の収支の合計を計算する
     func getDailyTotalAmounts(dailyIncomeAndExpenditures: [DailyIncomeAndExpenditure]) -> [Int] {
         var dailyTotalAmounts: [Int] = []
         dailyIncomeAndExpenditures.forEach { daily in
