@@ -60,7 +60,7 @@ class MoneyManagementUseCase {
     
     func getDailyBudget() -> Int {
         let totalMonthlyBudget = getTotalAmountOfIncome() - (getTotalAmountOfSpending() + getTotalAmountOfFixedSavings())
-        return totalMonthlyBudget / Date().dayCount
+        return totalMonthlyBudget / Date().lastDay
     }
     
     func getMonthlyBudget() -> Int {

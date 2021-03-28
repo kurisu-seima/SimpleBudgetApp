@@ -23,4 +23,13 @@ class IncomeAndExpenditureUseCase {
             daily.incomeAndExpenditures.append(data)
         }
     }
+    
+    func addSelected(_ data: IncomeAndExpenditure, date: Date) {
+        guard let daily = repository.getSelectedDailyIncomeAndExpenditure(primaryKey: date.toString) else {
+            return
+        }
+        try! repository.db.write {
+            daily.incomeAndExpenditures.append(data)
+        }
+    }
 }

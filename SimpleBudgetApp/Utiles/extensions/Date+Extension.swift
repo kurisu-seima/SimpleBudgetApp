@@ -17,18 +17,18 @@ extension Date {
     }
     
     var year: Int {
-        Calendar(identifier: .japanese).component(.year, from: Date())
+        Calendar.current.component(.year, from: self)
     }
     
     var month: Int {
-        Calendar(identifier: .japanese).component(.month, from: self)
+        Calendar.current.component(.month, from: self)
     }
     
     var day: Int {
         Calendar(identifier: .japanese).component(.day, from: self)
     }
     
-    var dayCount: Int {
+    var lastDay: Int {
         let dateNow = Date()
         let calendar = Calendar(identifier: .gregorian)
         var components = DateComponents()

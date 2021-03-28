@@ -714,47 +714,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q6n-zu-Lyk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q6n-zu-Lyk">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XZE-yF-MS1">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="XZE-yF-MS1" customClass="SelectMonthlyTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XZE-yF-MS1" id="vaI-RM-heT">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11R-Y7-sQ8">
-                                                    <rect key="frame" x="20" y="12" width="40" height="20"/>
-                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADR-zf-rJp">
-                                                    <rect key="frame" x="65" y="12" width="13" height="20"/>
-                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NY-l4-zA0">
-                                                    <rect key="frame" x="83" y="12" width="40" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11R-Y7-sQ8">
+                                                    <rect key="frame" x="187" y="12" width="40" height="20"/>
                                                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="2NY-l4-zA0" firstAttribute="bottom" secondItem="ADR-zf-rJp" secondAttribute="bottom" id="Gjz-cG-H9C"/>
-                                                <constraint firstItem="ADR-zf-rJp" firstAttribute="top" secondItem="11R-Y7-sQ8" secondAttribute="top" id="HNh-BH-c8V"/>
-                                                <constraint firstItem="2NY-l4-zA0" firstAttribute="top" secondItem="ADR-zf-rJp" secondAttribute="top" id="Mem-G0-lNp"/>
-                                                <constraint firstItem="ADR-zf-rJp" firstAttribute="bottom" secondItem="11R-Y7-sQ8" secondAttribute="bottom" id="g5R-eW-qMD"/>
-                                                <constraint firstItem="ADR-zf-rJp" firstAttribute="leading" secondItem="11R-Y7-sQ8" secondAttribute="trailing" constant="5" id="je6-NW-qPr"/>
+                                                <constraint firstItem="11R-Y7-sQ8" firstAttribute="centerX" secondItem="vaI-RM-heT" secondAttribute="centerX" id="RRI-O3-a0F"/>
                                                 <constraint firstItem="11R-Y7-sQ8" firstAttribute="centerY" secondItem="vaI-RM-heT" secondAttribute="centerY" id="oH7-tB-fRe"/>
-                                                <constraint firstItem="11R-Y7-sQ8" firstAttribute="leading" secondItem="vaI-RM-heT" secondAttribute="leadingMargin" id="x8T-3x-5m2"/>
-                                                <constraint firstItem="2NY-l4-zA0" firstAttribute="leading" secondItem="ADR-zf-rJp" secondAttribute="trailing" constant="5" id="xeX-hA-ul9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="11R-Y7-sQ8" id="h6m-9J-VET"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -774,7 +759,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8he-jR-iRN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7289.8550724637689" y="318.75"/>
+            <point key="canvasLocation" x="8749" y="319"/>
+        </scene>
+        <!--Add Income And Expenditure View Controller-->
+        <scene sceneID="ek6-hz-Y2J">
+            <objects>
+                <viewController storyboardIdentifier="IncomeAndExpenditure" id="e6R-8M-n0x" customClass="AddIncomeAndExpenditureViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qPo-SU-lmL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHY-xl-syv" customClass="CustomView" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="74" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="3Mu-Y6-0zU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Mz-cQ-Gki"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="ZHY-xl-syv" firstAttribute="leading" secondItem="8Mz-cQ-Gki" secondAttribute="leading" id="1wE-dW-QTR"/>
+                            <constraint firstItem="ZHY-xl-syv" firstAttribute="top" secondItem="8Mz-cQ-Gki" secondAttribute="top" constant="30" id="Gl8-fN-lik"/>
+                            <constraint firstItem="ZHY-xl-syv" firstAttribute="trailing" secondItem="8Mz-cQ-Gki" secondAttribute="trailing" id="qov-6q-DNT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customView" destination="ZHY-xl-syv" id="MjN-Tg-Htf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whz-Td-CDC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7256.521739130435" y="318.75"/>
         </scene>
         <!--Monthly Record View Controller-->
         <scene sceneID="s8n-gs-5LA">
@@ -845,104 +861,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEe-4m-aSQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6531.884057971015" y="987.72321428571422"/>
-        </scene>
-        <!--Editing Fixed Income View Controller-->
-        <scene sceneID="8Mg-8T-fKB">
-            <objects>
-                <viewController storyboardIdentifier="EditingIncome" id="eP6-2C-ZxP" customClass="EditingFixedIncomeViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aC5-2D-hzo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nh-pB-Emn" customClass="DSFloatingButton" customModule="DSFloatingButton">
-                                <rect key="frame" x="82" y="337.5" width="250" height="60"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="YPf-TF-bBf"/>
-                                    <constraint firstAttribute="width" constant="250" id="ovA-U3-ZGu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
-                                <state key="normal" title="完了">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.80000000000000004"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.28235294119999998" green="0.93725490199999995" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" red="0.28037553970000001" green="0.75592463089999995" blue="0.89058794289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
-                                        <point key="value" x="1" y="0.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
-                                        <point key="value" x="1" y="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" red="0.43961796139999998" green="0.94117647059999998" blue="0.89058794289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useCornerRadius" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="0.0" height="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="addButtonDidTapped:" destination="EJ4-NA-Yaq" eventType="touchUpInside" id="GIF-NU-cCU"/>
-                                    <action selector="doneButtonDidTapped:" destination="eP6-2C-ZxP" eventType="touchUpInside" id="DPS-yP-bm3"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="income" translatesAutoresizingMaskIntoConstraints="NO" id="Vrp-wF-aa1">
-                                <rect key="frame" x="169.5" y="74" width="75" height="74.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Vrp-wF-aa1" secondAttribute="height" id="ON8-KF-0oT"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="詳細を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nsi-bp-tHi">
-                                <rect key="frame" x="82" y="178.5" width="250" height="39.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="Z2r-Pd-4rn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="金額を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esh-IC-U57">
-                                <rect key="frame" x="82" y="248" width="250" height="39.5"/>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="84p-Yd-mqf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Vrp-wF-aa1" firstAttribute="height" secondItem="aC5-2D-hzo" secondAttribute="height" multiplier="1:12" id="4Eu-Po-udb"/>
-                            <constraint firstItem="0Nh-pB-Emn" firstAttribute="centerX" secondItem="aC5-2D-hzo" secondAttribute="centerX" id="FBC-nN-U7a"/>
-                            <constraint firstItem="Vrp-wF-aa1" firstAttribute="top" secondItem="84p-Yd-mqf" secondAttribute="top" constant="30" id="JVV-JZ-nI7"/>
-                            <constraint firstItem="esh-IC-U57" firstAttribute="trailing" secondItem="Nsi-bp-tHi" secondAttribute="trailing" id="O32-FA-oBR"/>
-                            <constraint firstItem="esh-IC-U57" firstAttribute="leading" secondItem="Nsi-bp-tHi" secondAttribute="leading" id="Q7W-IH-Ohg"/>
-                            <constraint firstItem="Vrp-wF-aa1" firstAttribute="centerX" secondItem="aC5-2D-hzo" secondAttribute="centerX" id="WEb-gH-j4c"/>
-                            <constraint firstItem="0Nh-pB-Emn" firstAttribute="top" secondItem="esh-IC-U57" secondAttribute="bottom" constant="50" id="fc2-Vi-n5z"/>
-                            <constraint firstItem="Nsi-bp-tHi" firstAttribute="centerX" secondItem="aC5-2D-hzo" secondAttribute="centerX" id="gtw-GS-efr"/>
-                            <constraint firstItem="Nsi-bp-tHi" firstAttribute="top" secondItem="Vrp-wF-aa1" secondAttribute="bottom" constant="30" id="myj-SH-tGN"/>
-                            <constraint firstItem="esh-IC-U57" firstAttribute="top" secondItem="Nsi-bp-tHi" secondAttribute="bottom" constant="30" id="tgE-yX-4KL"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="amountTextField" destination="esh-IC-U57" id="taN-gY-J6M"/>
-                        <outlet property="detailsTextField" destination="Nsi-bp-tHi" id="Zsw-sK-hG4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dHi-2R-4vf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7257" y="-1043"/>
         </scene>
         <!--Add Fixed Spending View Controller-->
         <scene sceneID="SNQ-Lb-97K">
@@ -1455,11 +1373,195 @@
             </objects>
             <point key="canvasLocation" x="8699" y="-1043"/>
         </scene>
+        <!--Editing Fixed Income View Controller-->
+        <scene sceneID="RTK-Vd-wCu">
+            <objects>
+                <viewController storyboardIdentifier="EditingIncome" id="gye-qS-3hR" customClass="EditingFixedIncomeViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Au2-SX-A9H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VU5-tZ-Mby" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="82" y="337.5" width="250" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="UDo-Vt-7Yb"/>
+                                    <constraint firstAttribute="width" constant="250" id="dHQ-FT-WHf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <state key="normal" title="完了">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" red="0.28235294119999998" green="0.93725490199999995" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" red="0.28037553970000001" green="0.75592463089999995" blue="0.89058794289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                                        <point key="value" x="1" y="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                                        <point key="value" x="1" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.43961796139999998" green="0.94117647059999998" blue="0.89058794289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useCornerRadius" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButtonDidTapped:" destination="EJ4-NA-Yaq" eventType="touchUpInside" id="Be9-zl-g4x"/>
+                                    <action selector="doneButtonDidTapped:" destination="gye-qS-3hR" eventType="touchUpInside" id="4cH-67-kjO"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="income" translatesAutoresizingMaskIntoConstraints="NO" id="oBa-gc-aSl">
+                                <rect key="frame" x="169.5" y="74" width="75" height="74.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oBa-gc-aSl" secondAttribute="height" id="96q-fQ-EK8"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="詳細を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1nY-Zt-2qY">
+                                <rect key="frame" x="82" y="178.5" width="250" height="39.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="TwI-ms-C2h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="金額を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="isa-1I-CYC">
+                                <rect key="frame" x="82" y="248" width="250" height="39.5"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wnb-2C-oG0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1nY-Zt-2qY" firstAttribute="centerX" secondItem="Au2-SX-A9H" secondAttribute="centerX" id="1i8-NR-hMA"/>
+                            <constraint firstItem="oBa-gc-aSl" firstAttribute="height" secondItem="Au2-SX-A9H" secondAttribute="height" multiplier="1:12" id="1s3-xo-bY3"/>
+                            <constraint firstItem="isa-1I-CYC" firstAttribute="top" secondItem="1nY-Zt-2qY" secondAttribute="bottom" constant="30" id="B14-PA-Q43"/>
+                            <constraint firstItem="isa-1I-CYC" firstAttribute="leading" secondItem="1nY-Zt-2qY" secondAttribute="leading" id="BJs-Mg-SsL"/>
+                            <constraint firstItem="oBa-gc-aSl" firstAttribute="centerX" secondItem="Au2-SX-A9H" secondAttribute="centerX" id="Ddz-yj-1gw"/>
+                            <constraint firstItem="isa-1I-CYC" firstAttribute="trailing" secondItem="1nY-Zt-2qY" secondAttribute="trailing" id="E8I-Te-5GM"/>
+                            <constraint firstItem="VU5-tZ-Mby" firstAttribute="centerX" secondItem="Au2-SX-A9H" secondAttribute="centerX" id="GQC-SC-PfF"/>
+                            <constraint firstItem="VU5-tZ-Mby" firstAttribute="top" secondItem="isa-1I-CYC" secondAttribute="bottom" constant="50" id="kt0-23-M6N"/>
+                            <constraint firstItem="1nY-Zt-2qY" firstAttribute="top" secondItem="oBa-gc-aSl" secondAttribute="bottom" constant="30" id="quM-Oj-XQe"/>
+                            <constraint firstItem="oBa-gc-aSl" firstAttribute="top" secondItem="Wnb-2C-oG0" secondAttribute="top" constant="30" id="y1e-fe-0GR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="isa-1I-CYC" id="EjH-8W-JNt"/>
+                        <outlet property="detailsTextField" destination="1nY-Zt-2qY" id="nOL-no-2Wm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xn9-WO-Lcr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7257" y="-1043"/>
+        </scene>
+        <!--Editing Income And Expenditure View Controller-->
+        <scene sceneID="4z0-Wa-Mbs">
+            <objects>
+                <viewController storyboardIdentifier="EditingIncomeAndExpenditure" id="OvK-UN-ZCN" customClass="EditingIncomeAndExpenditureViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4BI-te-cic">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLZ-Uk-ng0" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="82" y="337.5" width="250" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="jyY-03-82O"/>
+                                    <constraint firstAttribute="height" constant="60" id="xsh-GV-Hth"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <state key="normal" title="完了">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" red="0.28235294119999998" green="0.93725490199999995" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" red="0.28037553970000001" green="0.75592463089999995" blue="0.89058794289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                                        <point key="value" x="1" y="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                                        <point key="value" x="1" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.43961796139999998" green="0.94117647059999998" blue="0.89058794289999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useCornerRadius" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButtonDidTapped:" destination="EJ4-NA-Yaq" eventType="touchUpInside" id="foB-WC-7Cl"/>
+                                    <action selector="doneButtonDidTapped:" destination="OvK-UN-ZCN" eventType="touchUpInside" id="szd-H2-mgW"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="詳細を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEh-sk-dJc">
+                                <rect key="frame" x="82" y="178.5" width="250" height="39.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="JKi-2S-Pdr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="金額を入力してください" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-4v-9j2">
+                                <rect key="frame" x="82" y="248" width="250" height="39.5"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4FE-cq-Ye7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8eG-4v-9j2" firstAttribute="trailing" secondItem="zEh-sk-dJc" secondAttribute="trailing" id="2TQ-jz-T6Q"/>
+                            <constraint firstItem="zEh-sk-dJc" firstAttribute="centerX" secondItem="4BI-te-cic" secondAttribute="centerX" id="Du6-1P-gUe"/>
+                            <constraint firstItem="8eG-4v-9j2" firstAttribute="top" secondItem="zEh-sk-dJc" secondAttribute="bottom" constant="30" id="JhY-iJ-5Zq"/>
+                            <constraint firstItem="zEh-sk-dJc" firstAttribute="top" secondItem="4FE-cq-Ye7" secondAttribute="top" constant="134.5" id="N7r-6C-0wJ"/>
+                            <constraint firstItem="8eG-4v-9j2" firstAttribute="leading" secondItem="zEh-sk-dJc" secondAttribute="leading" id="Y0A-0X-S9w"/>
+                            <constraint firstItem="dLZ-Uk-ng0" firstAttribute="centerX" secondItem="4BI-te-cic" secondAttribute="centerX" id="bCD-tI-e3E"/>
+                            <constraint firstItem="dLZ-Uk-ng0" firstAttribute="top" secondItem="8eG-4v-9j2" secondAttribute="bottom" constant="50" id="svv-tH-8dR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="8eG-4v-9j2" id="MsR-m8-hIx"/>
+                        <outlet property="detailsTextField" destination="zEh-sk-dJc" id="yEA-FK-JBv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="blx-vD-6Jx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8039" y="319"/>
+        </scene>
     </scenes>
     <designables>
-        <designable name="0Nh-pB-Emn">
-            <size key="intrinsicContentSize" width="60" height="42"/>
-        </designable>
         <designable name="0R2-Se-3W6">
             <size key="intrinsicContentSize" width="60" height="42"/>
         </designable>
@@ -1472,10 +1574,16 @@
         <designable name="DR9-Pe-MgH">
             <size key="intrinsicContentSize" width="214" height="64"/>
         </designable>
+        <designable name="VU5-tZ-Mby">
+            <size key="intrinsicContentSize" width="60" height="42"/>
+        </designable>
         <designable name="Zzg-A1-vYL">
             <size key="intrinsicContentSize" width="60" height="42"/>
         </designable>
         <designable name="cKf-je-6da">
+            <size key="intrinsicContentSize" width="60" height="42"/>
+        </designable>
+        <designable name="dLZ-Uk-ng0">
             <size key="intrinsicContentSize" width="60" height="42"/>
         </designable>
         <designable name="ePM-JZ-GSS">

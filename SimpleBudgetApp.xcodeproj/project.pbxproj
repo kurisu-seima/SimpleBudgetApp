@@ -16,8 +16,8 @@
 		3348BF0C25E26082002324EE /* BudgetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348BF0B25E26082002324EE /* BudgetRepository.swift */; };
 		334B69FF25F7199F0046A4CE /* CAGradientLayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334B69FE25F7199F0046A4CE /* CAGradientLayer+Extension.swift */; };
 		334B6A0225F72C2D0046A4CE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334B6A0125F72C2C0046A4CE /* UIColor+Extension.swift */; };
-		3360469D2608703F00E683D0 /* BalanceBreakdownUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3360469C2608703F00E683D0 /* BalanceBreakdownUseCase.swift */; };
 		336C67FD2609C4D70065AB6C /* SelectDailyIncomeAndExpendituresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336C67FC2609C4D70065AB6C /* SelectDailyIncomeAndExpendituresViewController.swift */; };
+		336C6800260B7A370065AB6C /* BalanceBreakdownManagementUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336C67FF260B7A370065AB6C /* BalanceBreakdownManagementUseCase.swift */; };
 		3370011D25D34EA4004225FB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3370011C25D34EA4004225FB /* SplashViewController.swift */; };
 		3370414426035292003FC9CB /* EditingFixedIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3370414326035292003FC9CB /* EditingFixedIncomeViewController.swift */; };
 		33704147260352B3003FC9CB /* EditingFixedSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33704146260352B3003FC9CB /* EditingFixedSpendingViewController.swift */; };
@@ -30,7 +30,11 @@
 		338D7F8F26066AE700C00668 /* ContentsModelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D7F8E26066AE700C00668 /* ContentsModelTableViewCell.swift */; };
 		33A3FC3C25F64C1D007F00A1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FC3B25F64C1D007F00A1 /* Date+Extension.swift */; };
 		33A3FC4025F64D36007F00A1 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A3FC3F25F64D36007F00A1 /* Int+Extension.swift */; };
+		33AF6E6E260F4C4C005E7D1C /* AddIncomeAndExpenditureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF6E6D260F4C4C005E7D1C /* AddIncomeAndExpenditureViewController.swift */; };
+		33AF6E71260F4E86005E7D1C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF6E70260F4E86005E7D1C /* UIView+Extension.swift */; };
+		33AF6E74260FA83E005E7D1C /* EditingIncomeAndExpenditureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AF6E73260FA83E005E7D1C /* EditingIncomeAndExpenditureViewController.swift */; };
 		33BA52E725D36F940095A11F /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA52E625D36F940095A11F /* Menu.swift */; };
+		33BFFCFA260BD3DA0090AD93 /* SelectMonthlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BFFCF9260BD3DA0090AD93 /* SelectMonthlyTableViewCell.swift */; };
 		33D3B24425F7569800AD2FD2 /* FixedSavings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3B24325F7569800AD2FD2 /* FixedSavings.swift */; };
 		33DCB5B125FB4FE600ACD12E /* AppSettingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB5B025FB4FE600ACD12E /* AppSettingUseCase.swift */; };
 		33DCB5B425FB999F00ACD12E /* IncomeAndExpenditureUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCB5B325FB999F00ACD12E /* IncomeAndExpenditureUseCase.swift */; };
@@ -62,8 +66,8 @@
 		3348BF0B25E26082002324EE /* BudgetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetRepository.swift; sourceTree = "<group>"; };
 		334B69FE25F7199F0046A4CE /* CAGradientLayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Extension.swift"; sourceTree = "<group>"; };
 		334B6A0125F72C2C0046A4CE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		3360469C2608703F00E683D0 /* BalanceBreakdownUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceBreakdownUseCase.swift; sourceTree = "<group>"; };
 		336C67FC2609C4D70065AB6C /* SelectDailyIncomeAndExpendituresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDailyIncomeAndExpendituresViewController.swift; sourceTree = "<group>"; };
+		336C67FF260B7A370065AB6C /* BalanceBreakdownManagementUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceBreakdownManagementUseCase.swift; sourceTree = "<group>"; };
 		3370011C25D34EA4004225FB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		3370414326035292003FC9CB /* EditingFixedIncomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingFixedIncomeViewController.swift; sourceTree = "<group>"; };
 		33704146260352B3003FC9CB /* EditingFixedSpendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingFixedSpendingViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +80,11 @@
 		338D7F8E26066AE700C00668 /* ContentsModelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsModelTableViewCell.swift; sourceTree = "<group>"; };
 		33A3FC3B25F64C1D007F00A1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		33A3FC3F25F64D36007F00A1 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		33AF6E6D260F4C4C005E7D1C /* AddIncomeAndExpenditureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIncomeAndExpenditureViewController.swift; sourceTree = "<group>"; };
+		33AF6E70260F4E86005E7D1C /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		33AF6E73260FA83E005E7D1C /* EditingIncomeAndExpenditureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingIncomeAndExpenditureViewController.swift; sourceTree = "<group>"; };
 		33BA52E625D36F940095A11F /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		33BFFCF9260BD3DA0090AD93 /* SelectMonthlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMonthlyTableViewCell.swift; sourceTree = "<group>"; };
 		33D3B24325F7569800AD2FD2 /* FixedSavings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedSavings.swift; sourceTree = "<group>"; };
 		33DCB5B025FB4FE600ACD12E /* AppSettingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingUseCase.swift; sourceTree = "<group>"; };
 		33DCB5B325FB999F00ACD12E /* IncomeAndExpenditureUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeAndExpenditureUseCase.swift; sourceTree = "<group>"; };
@@ -172,19 +180,12 @@
 			isa = PBXGroup;
 			children = (
 				3328227F260666C6007A487A /* SideMenu */,
-				338D7F9226066C4700C00668 /* Common */,
+				338D7F8E26066AE700C00668 /* ContentsModelTableViewCell.swift */,
+				33BFFCF9260BD3DA0090AD93 /* SelectMonthlyTableViewCell.swift */,
 				3328227D2606668D007A487A /* Header */,
 				3328227E26066695007A487A /* Footer */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		338D7F9226066C4700C00668 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				338D7F8E26066AE700C00668 /* ContentsModelTableViewCell.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		33A3FC3925F64BD0007F00A1 /* Utiles */ = {
@@ -202,6 +203,7 @@
 				33A3FC3F25F64D36007F00A1 /* Int+Extension.swift */,
 				334B69FE25F7199F0046A4CE /* CAGradientLayer+Extension.swift */,
 				334B6A0125F72C2C0046A4CE /* UIColor+Extension.swift */,
+				33AF6E70260F4E86005E7D1C /* UIView+Extension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -227,7 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				338570B325FA3C45008624C8 /* MoneyManagementUseCase.swift */,
-				3360469C2608703F00E683D0 /* BalanceBreakdownUseCase.swift */,
+				336C67FF260B7A370065AB6C /* BalanceBreakdownManagementUseCase.swift */,
 				33DCB5B325FB999F00ACD12E /* IncomeAndExpenditureUseCase.swift */,
 				33DCB5B025FB4FE600ACD12E /* AppSettingUseCase.swift */,
 			);
@@ -303,7 +305,9 @@
 				3370414326035292003FC9CB /* EditingFixedIncomeViewController.swift */,
 				33704146260352B3003FC9CB /* EditingFixedSpendingViewController.swift */,
 				33704149260352C6003FC9CB /* EditingFixedSavingsViewController.swift */,
+				33AF6E73260FA83E005E7D1C /* EditingIncomeAndExpenditureViewController.swift */,
 				33E4B80C25D01A8800A3CD36 /* BalanceBreakdownViewController.swift */,
+				33AF6E6D260F4C4C005E7D1C /* AddIncomeAndExpenditureViewController.swift */,
 				336C67FC2609C4D70065AB6C /* SelectDailyIncomeAndExpendituresViewController.swift */,
 				33E4B80F25D01B8700A3CD36 /* MonthlyRecordViewController.swift */,
 			);
@@ -445,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33D3B24425F7569800AD2FD2 /* FixedSavings.swift in Sources */,
+				33BFFCFA260BD3DA0090AD93 /* SelectMonthlyTableViewCell.swift in Sources */,
 				3321842325E00C0C003D710C /* CustomView.swift in Sources */,
 				33A3FC3C25F64C1D007F00A1 /* Date+Extension.swift in Sources */,
 				33E4B81425D01D3300A3CD36 /* AddFixedIncomeViewController.swift in Sources */,
@@ -452,12 +457,14 @@
 				33E4B80425D016F000A3CD36 /* MainViewController.swift in Sources */,
 				338585CD2606459B00BE86BB /* FooterView.swift in Sources */,
 				3370414426035292003FC9CB /* EditingFixedIncomeViewController.swift in Sources */,
+				336C6800260B7A370065AB6C /* BalanceBreakdownManagementUseCase.swift in Sources */,
 				3348BF0625E24451002324EE /* FixedSpending.swift in Sources */,
 				33E4B7EB25D0102400A3CD36 /* AppDelegate.swift in Sources */,
 				334B6A0225F72C2D0046A4CE /* UIColor+Extension.swift in Sources */,
 				338D7F8F26066AE700C00668 /* ContentsModelTableViewCell.swift in Sources */,
 				3370011D25D34EA4004225FB /* SplashViewController.swift in Sources */,
 				33E4B81B25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift in Sources */,
+				33AF6E74260FA83E005E7D1C /* EditingIncomeAndExpenditureViewController.swift in Sources */,
 				33E4B7ED25D0102400A3CD36 /* SceneDelegate.swift in Sources */,
 				33DCB5B425FB999F00ACD12E /* IncomeAndExpenditureUseCase.swift in Sources */,
 				33704147260352B3003FC9CB /* EditingFixedSpendingViewController.swift in Sources */,
@@ -469,11 +476,12 @@
 				33E4B80725D0174600A3CD36 /* MenuViewController.swift in Sources */,
 				338585D426064CAF00BE86BB /* HeaderView.swift in Sources */,
 				33E4B80A25D0186600A3CD36 /* BudgetSettingViewController.swift in Sources */,
+				33AF6E71260F4E86005E7D1C /* UIView+Extension.swift in Sources */,
 				334B69FF25F7199F0046A4CE /* CAGradientLayer+Extension.swift in Sources */,
 				338570B425FA3C45008624C8 /* MoneyManagementUseCase.swift in Sources */,
 				336C67FD2609C4D70065AB6C /* SelectDailyIncomeAndExpendituresViewController.swift in Sources */,
 				3316E41A260611A7007E8385 /* SideMenuCell.swift in Sources */,
-				3360469D2608703F00E683D0 /* BalanceBreakdownUseCase.swift in Sources */,
+				33AF6E6E260F4C4C005E7D1C /* AddIncomeAndExpenditureViewController.swift in Sources */,
 				33A3FC4025F64D36007F00A1 /* Int+Extension.swift in Sources */,
 				33F47A5F25F0149800E720F9 /* DailyIncomeAndExpenditure.swift in Sources */,
 				33DCB5B125FB4FE600ACD12E /* AppSettingUseCase.swift in Sources */,

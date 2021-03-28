@@ -1,39 +1,38 @@
 //
-//  BalanceBreakdownUseCase.swift
+//  BalanceBreakdownManagementUseCase.swift
 //  SimpleBudgetApp
 //
-//  Created by 栗須星舞 on 2021/03/22.
+//  Created by 栗須星舞 on 2021/03/24.
 //
 
 import Foundation
 import RealmSwift
 
-class BalanceBreakdownUseCase {
-
-    static let shared = BalanceBreakdownUseCase()
+class BalanceBreakdownManagementUseCase {
+    
+    static let shared = BalanceBreakdownManagementUseCase()
     private let repository = BudgetRepository.shared
 
     private init() {}
     
     //すべてのDailyIncomeAndExpenditureを取得する
-   private var dailyIncomeAndExpenditures: Results<DailyIncomeAndExpenditure> {
-        return repository.dailyIncomeAndExpenditures
+   private var dailyIncomeAndExpenditures: [DailyIncomeAndExpenditure] {
+        return Array(repository.dailyIncomeAndExpenditures)
     }
     
     //今月のDailyIncomeAndExpenditureを取得する
     var thisMonthDailyIncomeAndExpenditures: [DailyIncomeAndExpenditure] {
-        return Array(dailyIncomeAndExpenditures
-                        .filter(NSPredicate(format: "year = 3"))
-//                        .filter(NSPredicate(format: "year = %@", Date().year))
-//                        .filter(NSPredicate(format: "month = %@", Date().month))
+        return Array(repository.dailyIncomeAndExpenditures
+                        .filter(NSPredicate(format: "year = %d", Date().year))
+                        .filter(NSPredicate(format: "month = %d", Date().month))
                         .sorted(byKeyPath: "date", ascending: false))
     }
     
     //指定された月のDailyIncomeAndExpenditureを取得する
-    func getSelectedMonthDailyIncomeAndExpenditures(year: Int, month: Int) -> [DailyIncomeAndExpenditure] {
-        let monthly = dailyIncomeAndExpenditures
-            .filter(NSPredicate(format: "year = %@", year))
-            .filter(NSPredicate(format: "month = %@", month))
+    func getSelectedDailyIncomeAndExpenditures(year: Int, month: Int) -> [DailyIncomeAndExpenditure] {
+        let monthly = repository.dailyIncomeAndExpenditures
+            .filter(NSPredicate(format: "year = %d", year))
+            .filter(NSPredicate(format: "month = %d", month))
             .sorted(byKeyPath: "date", ascending: false)
         return Array(monthly)
     }

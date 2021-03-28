@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
       
-        BalanceBreakdownUseCase.shared.changeDailyBudget()
+        BalanceBreakdownManagementUseCase.shared.changeDailyBudget()
         guard let navigationController = self.navigationController, (!navigationController.isNavigationBarHidden) else {
             return
         }

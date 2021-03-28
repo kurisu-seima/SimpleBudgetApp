@@ -20,17 +20,32 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNj-6H-82o">
-                    <rect key="frame" x="361" y="6.5" width="30" height="27"/>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNj-6H-82o">
+                    <rect key="frame" x="346" y="6.5" width="45" height="27"/>
                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
-                    <state key="normal" title="追加"/>
+                    <state key="normal" title="いれる"/>
+                    <connections>
+                        <action selector="addButtonDidTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="lFc-yP-KgV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naL-IM-aCR">
+                    <rect key="frame" x="281" y="6.5" width="45" height="27"/>
+                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                    <state key="normal" title="つかう"/>
+                    <connections>
+                        <action selector="addButtonDidTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="TJy-el-tFP"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="wNj-6H-82o" firstAttribute="bottom" secondItem="naL-IM-aCR" secondAttribute="bottom" id="0AQ-Hj-bCH"/>
+                <constraint firstItem="wNj-6H-82o" firstAttribute="leading" secondItem="naL-IM-aCR" secondAttribute="trailing" constant="20" id="AEY-mX-NMD"/>
                 <constraint firstItem="wNj-6H-82o" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Aze-F9-xta"/>
+                <constraint firstItem="wNj-6H-82o" firstAttribute="top" secondItem="naL-IM-aCR" secondAttribute="top" id="VCJ-Gb-2d7"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wNj-6H-82o" secondAttribute="trailing" constant="15" id="VF2-nK-aaT"/>
+                <constraint firstItem="naL-IM-aCR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="d6q-u3-1WL"/>
                 <constraint firstItem="Wmz-ju-yLW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="wX4-1F-euX"/>
                 <constraint firstItem="Wmz-ju-yLW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xYB-GL-y9N"/>
             </constraints>

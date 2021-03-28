@@ -13,15 +13,14 @@ class BalanceBreakdownViewController: UIViewController {
     
     var dailyIncomeAndExpenditures: [DailyIncomeAndExpenditure] = []
     
-    enum MonthlyType {
+    enum DateType {
         case now
         case selected
     }
     
-    var monthlyType: MonthlyType = .now
-    
-    var selectYear: Int = 0
-    var selectMonth: Int = 0
+    var dateType: DateType = .now
+    var selectedYear: Int = 0
+    var selectedMonth: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,13 +39,14 @@ class BalanceBreakdownViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        switch monthlyType {
-        case .now:
-            dailyIncomeAndExpenditures = BalanceBreakdownUseCase.shared.thisMonthDailyIncomeAndExpenditures
-        case .selected:
-            dailyIncomeAndExpenditures = BalanceBreakdownUseCase.shared.getSelectedMonthDailyIncomeAndExpenditures(year: selectYear, month: selectMonth)
-        }
+        setupData()
+        balanceBreakdownTableView.reloadData()
         setupView()
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        balanceBreakdownTableView.isEditing = editing
     }
     
     private func setupView() {
@@ -57,6 +57,15 @@ class BalanceBreakdownViewController: UIViewController {
     @objc func goSelectVC() {
         let nextVC = storyboard?.instantiateViewController(withIdentifier: "SelectVC") as! SelectDailyIncomeAndExpendituresViewController
         self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func setupData() {
+        switch dateType {
+        case .now:
+            dailyIncomeAndExpenditures = BalanceBreakdownManagementUseCase.shared.thisMonthDailyIncomeAndExpenditures
+        case .selected:
+            dailyIncomeAndExpenditures = BalanceBreakdownManagementUseCase.shared.getSelectedDailyIncomeAndExpenditures(year: selectedYear, month: selectedMonth)
+        }
     }
 }
 
@@ -97,5 +106,18 @@ extension BalanceBreakdownViewController: UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "EditingIncomeAndExpenditure") as! EditingIncomeAndExpenditureViewController
+        nextVC.incomeAndExpenditure = dailyIncomeAndExpenditures[indexPath.section].incomeAndExpenditures[indexPath.row]
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        BudgetRepository.shared.delete(model: dailyIncomeAndExpenditures[indexPath.section].incomeAndExpenditures[indexPath.row], id: dailyIncomeAndExpenditures[indexPath.section].incomeAndExpenditures[indexPath.row].id)
+        setupData()
+        balanceBreakdownTableView.reloadData()
     }
 }
