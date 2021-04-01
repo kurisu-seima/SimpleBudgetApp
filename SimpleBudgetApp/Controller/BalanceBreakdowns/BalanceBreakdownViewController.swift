@@ -28,11 +28,11 @@ class BalanceBreakdownViewController: UIViewController {
         balanceBreakdownTableView.dataSource = self
         balanceBreakdownTableView.delegate = self
         
-        let headerXib = UINib(nibName: "HeaderView", bundle: nil)
-        balanceBreakdownTableView.register(headerXib, forHeaderFooterViewReuseIdentifier: "HeaderView")
+        let headerXib = UINib(nibName: "BalanceBreakdownHeaderView", bundle: nil)
+        balanceBreakdownTableView.register(headerXib, forHeaderFooterViewReuseIdentifier: "BalanceBreakdownHeaderView")
         
-        let footerXib = UINib(nibName: "FooterView", bundle: nil)
-        balanceBreakdownTableView.register(footerXib, forHeaderFooterViewReuseIdentifier: "FooterView")
+        let footerXib = UINib(nibName: "TotalAmountFooterView", bundle: nil)
+        balanceBreakdownTableView.register(footerXib, forHeaderFooterViewReuseIdentifier: "TotalAmountFooterView")
         
     }
     
@@ -55,11 +55,11 @@ class BalanceBreakdownViewController: UIViewController {
     }
     
     @objc func goSelectVC() {
-        let nextVC = storyboard?.instantiateViewController(withIdentifier: "SelectVC") as! SelectDailyIncomeAndExpendituresViewController
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "SelectVC") as! SelectMonthlyViewController
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
-    func setupData() {
+    private func setupData() {
         switch dateType {
         case .now:
             dailyIncomeAndExpenditures = BalanceBreakdownManagementUseCase.shared.thisMonthDailyIncomeAndExpenditures
@@ -80,19 +80,29 @@ extension BalanceBreakdownViewController: UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = balanceBreakdownTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ContentsModelTableViewCell
-        cell.balanceBreakdownSetup(incomeAndExpenditure: dailyIncomeAndExpenditures[indexPath.section].incomeAndExpenditures[indexPath.row])
+        cell.setupBalanceBreakdownVCCell(incomeAndExpenditure: dailyIncomeAndExpenditures[indexPath.section].incomeAndExpenditures[indexPath.row])
+        if indexPath.row == 0 {
+            cell.selectionStyle = .none
+        }
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if indexPath.row == 0 {
+            return nil
+        }
+        return indexPath
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = balanceBreakdownTableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as! HeaderView
+        let headerView = balanceBreakdownTableView.dequeueReusableHeaderFooterView(withIdentifier: "BalanceBreakdownHeaderView") as! BalanceBreakdownHeaderView
         headerView.setupHeaderView(dailyIncomeAndExpenditure: dailyIncomeAndExpenditures[section])
         return headerView
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footerView = balanceBreakdownTableView.dequeueReusableHeaderFooterView(withIdentifier: "FooterView") as! FooterView
-        footerView.setupFooterView(total: MoneyManagementUseCase.shared.getDailyTotalAmounts(dailyIncomeAndExpenditures: dailyIncomeAndExpenditures)[section])
+        let footerView = balanceBreakdownTableView.dequeueReusableHeaderFooterView(withIdentifier: "TotalAmountFooterView") as! TotalAmountFooterView
+        footerView.setupBalanceBreakdownFooterView(total: MoneyManagementUseCase.shared.getDailyTotalAmounts(dailyIncomeAndExpenditures: dailyIncomeAndExpenditures)[section])
         return footerView
     }
     

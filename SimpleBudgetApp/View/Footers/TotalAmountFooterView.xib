@@ -9,37 +9,37 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" restorationIdentifier="FooterView" id="iN0-l3-epB" customClass="FooterView" customModule="SimpleBudgetApp" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="FooterView" id="CeJ-j2-cOm" customClass="TotalAmountFooterView" customModule="SimpleBudgetApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合計金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ET-p3-8Y0">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合計金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPP-yS-hvS">
                     <rect key="frame" x="319" y="15" width="80" height="20"/>
                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4w9-Db-57B">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ka-vg-S4X">
                     <rect key="frame" x="15" y="5" width="384" height="1"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="1" id="XIp-c1-5Ux"/>
+                        <constraint firstAttribute="height" constant="1" id="Bds-gc-M2O"/>
                     </constraints>
                 </view>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <viewLayoutGuide key="safeArea" id="quE-a6-Eoc"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="7ET-p3-8Y0" secondAttribute="trailing" constant="15" id="3I1-Xq-MWh"/>
-                <constraint firstAttribute="trailing" secondItem="4w9-Db-57B" secondAttribute="trailing" constant="15" id="CsK-0x-0DT"/>
-                <constraint firstAttribute="bottom" secondItem="7ET-p3-8Y0" secondAttribute="bottom" constant="15" id="HeM-6u-Prh"/>
-                <constraint firstItem="4w9-Db-57B" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="SSn-R9-BC7"/>
-                <constraint firstItem="4w9-Db-57B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="a8s-Jx-H7L"/>
-                <constraint firstItem="4w9-Db-57B" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lkB-E0-uBV"/>
+                <constraint firstItem="6ka-vg-S4X" firstAttribute="top" secondItem="CeJ-j2-cOm" secondAttribute="top" constant="5" id="NOo-KA-vJS"/>
+                <constraint firstAttribute="trailing" secondItem="6ka-vg-S4X" secondAttribute="trailing" constant="15" id="V6b-8Q-MkO"/>
+                <constraint firstAttribute="bottom" secondItem="oPP-yS-hvS" secondAttribute="bottom" constant="15" id="VOx-wN-F1H"/>
+                <constraint firstItem="6ka-vg-S4X" firstAttribute="leading" secondItem="CeJ-j2-cOm" secondAttribute="leading" constant="15" id="hn4-hh-jTe"/>
+                <constraint firstAttribute="trailing" secondItem="oPP-yS-hvS" secondAttribute="trailing" constant="15" id="wRC-a7-LM9"/>
+                <constraint firstItem="6ka-vg-S4X" firstAttribute="centerX" secondItem="CeJ-j2-cOm" secondAttribute="centerX" id="xsn-uU-U7U"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="totalAmountLabel" destination="7ET-p3-8Y0" id="ZD2-69-jRZ"/>
+                <outlet property="totalAmountLabel" destination="oPP-yS-hvS" id="LIB-x2-sBO"/>
             </connections>
             <point key="canvasLocation" x="134.05797101449275" y="-442.63392857142856"/>
         </view>

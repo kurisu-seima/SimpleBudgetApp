@@ -37,18 +37,14 @@ class BudgetRepository {
     private (set) var fixedSavings: Results<FixedSavings>!
     private (set) var dailyIncomeAndExpenditures: Results<DailyIncomeAndExpenditure>!
     
-    func addDailyIncomeAndExpenditure(data: DailyIncomeAndExpenditure) {
-        try! db.write {
-            db.add(data)
-        }
-    }
-    
     func getDailyIncomeAndExpenditure(primaryKey: String) -> DailyIncomeAndExpenditure? {
         return db.object(ofType: DailyIncomeAndExpenditure.self, forPrimaryKey: primaryKey)
     }
     
-    func getSelectedDailyIncomeAndExpenditure(primaryKey: String) -> DailyIncomeAndExpenditure? {
-        return db.object(ofType: DailyIncomeAndExpenditure.self, forPrimaryKey: primaryKey)
+    func addDailyIncomeAndExpenditure(data: DailyIncomeAndExpenditure) {
+        try! db.write {
+            db.add(data)
+        }
     }
 
     func add<T: Object>(_ object: T) {

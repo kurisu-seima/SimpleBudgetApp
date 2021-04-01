@@ -1,5 +1,5 @@
 //
-//  AddFixedSpendingViewController.swift
+//  AddFixedSavingsViewController.swift
 //  SimpleBudgetApp
 //
 //  Created by 栗須星舞 on 2021/02/07.
@@ -7,39 +7,37 @@
 
 import UIKit
 
-class AddFixedSpendingViewController: UIViewController {
-    
-    @IBOutlet weak var spendingTableView: UITableView!
-    @IBOutlet weak var spendingTableViewTop: NSLayoutConstraint!
+class AddFixedSavingsViewController: UIViewController {
+
+    @IBOutlet weak var savingsTableView: UITableView!
+    @IBOutlet weak var savingsTableViewTop: NSLayoutConstraint!
     @IBOutlet weak var selectArea: CustomView!
     @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
     @IBOutlet weak var selectAreaBottom: NSLayoutConstraint!
-    @IBOutlet weak var monthlyFixedSpendingLabel: UILabel!
-    
-    var fixedSpendingsData: [FixedSpending] = []
+    @IBOutlet weak var monthlyFixedSavingsLabel: UILabel!
+    var fixedSavingsData: [FixedSavings] = []
     
     private var inputType: InputType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        spendingTableView.delegate = self
-        spendingTableView.dataSource = self
+        savingsTableView.delegate = self
+        savingsTableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        fixedSpendingsData = MoneyManagementUseCase.shared.fixedSpendings
-
+        fixedSavingsData = MoneyManagementUseCase.shared.fixedSavings
         amountSetUp()
         layerColorSetUp()
-        spendingTableView.reloadData()
+        savingsTableView.reloadData()
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
-        spendingTableView.isEditing = editing
+        savingsTableView.isEditing = editing
     }
     
     @IBAction func addButtonDidTapped(_ sender: UIButton) {
@@ -47,19 +45,19 @@ class AddFixedSpendingViewController: UIViewController {
     }
     
     private func amountSetUp() {
-        monthlyFixedSpendingLabel.text = "¥\(MoneyManagementUseCase.shared.getTotalAmountOfSpending().numberWithComma())"
+        monthlyFixedSavingsLabel.text = "¥\(MoneyManagementUseCase.shared.getTotalAmountOfFixedSavings().numberWithComma())"
     }
     
     private func layerColorSetUp() {
-        self.navigationController?.navigationBar.barTintColor = UIColor().fixedSpendingVCNavigationColor
-        self.view.layer.insertSublayer(CAGradientLayer().fixedSpendingVCLayer(frame: self.view.frame), at: 0)
+        self.navigationController?.navigationBar.barTintColor = UIColor().fixedSavingsVCNavigationColor
+        self.view.layer.insertSublayer(CAGradientLayer().fixedSavingsVCLayer(frame: self.view.frame), at: 0)
     }
     
     private func openInputView() {
-        inputType = .fixedSpending
         selectArea.delegate = self
+        inputType = .fixedSavings
         selectArea.isHidden = false
-        spendingTableViewTop.constant = 130
+        savingsTableViewTop.constant = 130
         selectAreaBottom.constant = 0
         selectAreaHight.constant = 400
         UIView.animate(withDuration: 0.3) { [self] in
@@ -70,20 +68,20 @@ class AddFixedSpendingViewController: UIViewController {
     }
 }
 
-extension AddFixedSpendingViewController: UITableViewDelegate, UITableViewDataSource {
+extension AddFixedSavingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fixedSpendingsData.count
+        return fixedSavingsData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = spendingTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ContentsModelTableViewCell
-        cell.fixedSpendingSetUp(fixedSpending: fixedSpendingsData[indexPath.row])
+        let cell = savingsTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ContentsModelTableViewCell
+        cell.setupFixedSavingsVCCell(fixedSaving: fixedSavingsData[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let nextVC = storyboard?.instantiateViewController(withIdentifier: "EditingSpending") as! EditingFixedSpendingViewController
-        nextVC.fixedSpending = fixedSpendingsData[indexPath.row]
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "EditingSavings") as! EditingFixedSavingsViewController
+        nextVC.fixedSavings = fixedSavingsData[indexPath.row]
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
@@ -92,40 +90,39 @@ extension AddFixedSpendingViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        BudgetRepository.shared.delete(model: fixedSpendingsData[indexPath.row], id: fixedSpendingsData[indexPath.row].id)
-        fixedSpendingsData = MoneyManagementUseCase.shared.fixedSpendings
-        spendingTableView.reloadData()
+        BudgetRepository.shared.delete(model: fixedSavingsData[indexPath.row], id: fixedSavingsData[indexPath.row].id)
+        fixedSavingsData = MoneyManagementUseCase.shared.fixedSavings
+        savingsTableView.reloadData()
         amountSetUp()
     }
 }
 
-extension AddFixedSpendingViewController: CustomViewDelegate {
+extension AddFixedSavingsViewController: CustomViewDelegate {
     func InputDidFinish(details: String, amount: String) {
         switch inputType {
-        case .fixedSpending:
-            let fixedSpending = FixedSpending()
-            fixedSpending.details = details
-            fixedSpending.amountOfMoney = amount
-            BudgetRepository.shared.add(fixedSpending)
+        case .fixedSavings:
+            let fixedSavings = FixedSavings()
+            fixedSavings.details = details
+            fixedSavings.amountOfMoney = amount
+            BudgetRepository.shared.add(fixedSavings)
         case .none: break
-        case .some: break
+        case .some(_): break
         }
-        
         inputType = nil
-        fixedSpendingsData = MoneyManagementUseCase.shared.fixedSpendings
-        spendingTableView.reloadData()
-        amountSetUp()
         
+        fixedSavingsData = MoneyManagementUseCase.shared.fixedSavings
+        savingsTableView.reloadData()
+        amountSetUp()
     }
     
     func closeInputView() {
         selectArea.isHidden = false
         selectAreaHight.constant = 0
         selectAreaBottom.constant = -550
-        spendingTableViewTop.constant = 80
+        savingsTableViewTop.constant = 80
         UIView.animate(withDuration: 0.3) { [self] in
             guard let view = selectArea.subviews.first else { return }
-            view.alpha = 0
+            view.alpha = 1
             self.view.layoutIfNeeded()
         }
     }

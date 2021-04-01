@@ -23,7 +23,7 @@ class SideMenuCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setUp(index: Int) {
+    func setupView(index: Int) {
         menuLabel.text = Menu.allCases[index].label
         menuImage.image = UIImage(named: Menu.allCases[index].image)
     }

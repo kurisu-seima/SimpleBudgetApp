@@ -21,7 +21,7 @@ class SelectMonthlyTableViewCell: UITableViewCell {
 
     }
     
-    func setupDateLabel(date: Date) {
+    func setupSelectMonthlyVCCell(date: Date) {
         dateLabel.text = "\(date.year)年\(date.month)月1日〜\(date.year)年\(date.month)月\(date.lastDay)日"
     }
 }

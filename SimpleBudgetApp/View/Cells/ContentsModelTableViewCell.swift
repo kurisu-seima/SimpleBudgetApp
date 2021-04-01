@@ -23,22 +23,22 @@ class ContentsModelTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func fixedIncomeSetUp(fixedIncome: FixedIncome) {
+    func setupFixedIncomeVCCell(fixedIncome: FixedIncome) {
         detailsLabel.text = fixedIncome.details
         amountLabel.text = "¥\(Int(fixedIncome.amountOfMoney)!.numberWithComma())"
     }
     
-    func fixedSpendingSetUp(fixedSpending: FixedSpending) {
+    func setupFixedSpendingVCCell(fixedSpending: FixedSpending) {
         detailsLabel.text = fixedSpending.details
         amountLabel.text = "¥\(Int(fixedSpending.amountOfMoney)!.numberWithComma())"
     }
     
-    func fixedSavingSetUp(fixedSaving: FixedSavings) {
+    func setupFixedSavingsVCCell(fixedSaving: FixedSavings) {
         detailsLabel.text = fixedSaving.details
         amountLabel.text = "¥\(Int(fixedSaving.amountOfMoney)!.numberWithComma())"
     }
     
-    func balanceBreakdownSetup(incomeAndExpenditure: IncomeAndExpenditure) {
+    func setupBalanceBreakdownVCCell(incomeAndExpenditure: IncomeAndExpenditure) {
         detailsLabel.text = incomeAndExpenditure.details
         guard let plusOrMinus = IncomeAndExpenditure.PlusOrMinus(rawValue: incomeAndExpenditure.plusOrMinus) else {
             return

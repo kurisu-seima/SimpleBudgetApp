@@ -12,6 +12,9 @@ class FixedIncome: Object {
     
     @objc dynamic var id = NSUUID().uuidString
     @objc dynamic var date = Date()
+    @objc dynamic var year = Date().year
+    @objc dynamic var month = Date().month
+    @objc dynamic var day = Date().day
     @objc dynamic var details: String = ""
     @objc dynamic var amountOfMoney: String = ""
     

@@ -30,6 +30,7 @@ class SplashViewController: UIViewController {
             }
             SideMenuController.preferences.basic.direction = .left
             SideMenuController.preferences.basic.menuWidth = 280
+            
             let contentViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
             let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuVC") as! MenuViewController
             let navigationController = UINavigationController(rootViewController: contentViewController)
@@ -37,6 +38,7 @@ class SplashViewController: UIViewController {
             let viewController = SideMenuController(contentViewController: navigationController, menuViewController: menuViewController)
             viewController.modalTransitionStyle = .crossDissolve
             viewController.modalPresentationStyle = .fullScreen
+            
             present(viewController, animated: true, completion: nil)
         }
     }

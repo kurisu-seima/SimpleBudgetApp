@@ -15,16 +15,14 @@ class AppSettingUseCase {
     private let saveDateKey = "SaveDateKey"
     var startDate: String!
     
-    var saveDates: [Date] {
-        guard let dates = UserDefaults.standard.object(forKey: saveDateKey) as? [Date] else {
-            return []
-        }
-        return dates
+    var savedDates: [Date] {
+        return UserDefaults.standard.object(forKey: saveDateKey) as! [Date]
     }
     
     func sonfigure() {
-        saveStartDateIfNeed()
         createDailyIncomeAndExpenditureIfNeed()
+        saveStartDateIfNeed()
+        saveDateIfNeed()
     }
     
     private func saveStartDateIfNeed() {
@@ -36,25 +34,21 @@ class AppSettingUseCase {
         }
     }
     
-    private func createDailyIncomeAndExpenditureIfNeed() {
-        if BudgetRepository.shared.getDailyIncomeAndExpenditure(primaryKey: Date().toString) == nil {
-            let dailyAndExpenditure = DailyIncomeAndExpenditure(date: Date())
-            saveDateIfNeed(dailyIncomeAndExpenditure: dailyAndExpenditure)
-            BudgetRepository.shared.add(dailyAndExpenditure)
-            IncomeAndExpenditureUseCase.shared.addToday(IncomeAndExpenditure(details: "一日の予算", amount: "\(MoneyManagementUseCase.shared.getDailyBudget())", plusOrMinus: .plus))
+    private func saveDateIfNeed() {
+        if var saveDates = UserDefaults.standard.object(forKey: saveDateKey) as? [Date] {
+            if !(saveDates.last?.year == Date().year && saveDates.last?.month == Date().month) {
+                saveDates.append(Date())
+                UserDefaults.standard.setValue(saveDates, forKey: saveDateKey)
+            }
+        } else {
+            UserDefaults.standard.setValue([Date()], forKey: saveDateKey)
         }
     }
     
-    private func saveDateIfNeed(dailyIncomeAndExpenditure: DailyIncomeAndExpenditure) {
-        if var dates = UserDefaults.standard.object(forKey: saveDateKey) as? [Date] {
-            for date in dates {
-                if !(date.year == dailyIncomeAndExpenditure.year && date.month == dailyIncomeAndExpenditure.month) {
-                    dates.append(dailyIncomeAndExpenditure.date)
-                    UserDefaults.standard.setValue(dates, forKey: saveDateKey)
-                }
-            }
-        } else {
-            UserDefaults.standard.setValue([dailyIncomeAndExpenditure.date], forKey: saveDateKey)
+    private func createDailyIncomeAndExpenditureIfNeed() {
+        if BudgetRepository.shared.getDailyIncomeAndExpenditure(primaryKey: Date().toString) == nil {
+            BudgetRepository.shared.add(DailyIncomeAndExpenditure(date: Date()))
+            IncomeAndExpenditureUseCase.shared.addToday(IncomeAndExpenditure(details: "一日の予算", amount: "\(MoneyManagementUseCase.shared.getDailyBudget())", plusOrMinus: .plus))
         }
     }
 }

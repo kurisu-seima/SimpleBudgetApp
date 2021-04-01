@@ -1,14 +1,14 @@
 //
-//  CustomLabel.swift
+//  CountupLabel.swift
 //  SimpleBudgetApp
 //
-//  Created by 栗須星舞 on 2021/03/14.
+//  Created by 栗須星舞 on 2021/04/01.
 //
 
 import UIKit
 
-class CustomLabel: UILabel {
-    
+class CountupLabel: UILabel {
+
     var startTime: CFTimeInterval!
     
     var fromValue: Int!

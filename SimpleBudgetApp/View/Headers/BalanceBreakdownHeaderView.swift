@@ -1,18 +1,18 @@
 //
-//  HeaderView.swift
+//  BalanceBreakdownHeaderView.swift
 //  SimpleBudgetApp
 //
-//  Created by 栗須星舞 on 2021/03/21.
+//  Created by 栗須星舞 on 2021/04/01.
 //
 
 import UIKit
 
-class HeaderView: UITableViewHeaderFooterView {
-    
+class BalanceBreakdownHeaderView: UITableViewHeaderFooterView {
+
     @IBOutlet weak var dateLabel: UILabel!
     
     var date: Date?
-     
+    
     @IBAction func addButtonDidTapped(_ sender: UIButton) {
         switch sender.tag {
         case 0:

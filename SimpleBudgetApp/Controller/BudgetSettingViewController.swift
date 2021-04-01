@@ -9,7 +9,7 @@ import UIKit
 
 class BudgetSettingViewController: UIViewController {
 
-    @IBOutlet weak var dailyBudgetLabel: CustomLabel!
+    @IBOutlet weak var dailyBudgetLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

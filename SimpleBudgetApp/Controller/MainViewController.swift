@@ -10,8 +10,8 @@ import SideMenuSwift
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var monthlyBudgetLabel: CustomLabel!
-    @IBOutlet weak var dailyLimitLabel: CustomLabel!
+    @IBOutlet weak var monthlyBudgetLabel: CountupLabel!
+    @IBOutlet weak var dailyLimitLabel: CountupLabel!
     @IBOutlet weak var selectArea: CustomView!
     @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
     @IBOutlet weak var selectAreaTop: NSLayoutConstraint!
@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
       
-        BalanceBreakdownManagementUseCase.shared.changeDailyBudget()
+        BalanceBreakdownManagementUseCase.shared.saveDailyBudget()
         guard let navigationController = self.navigationController, (!navigationController.isNavigationBarHidden) else {
             return
         }
