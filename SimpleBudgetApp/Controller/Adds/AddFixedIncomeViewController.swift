@@ -10,7 +10,7 @@ import UIKit
 class AddFixedIncomeViewController: UIViewController {
     
     @IBOutlet weak var incomeTableView: UITableView!
-    @IBOutlet weak var selectArea: CustomView!
+    @IBOutlet weak var selectArea: InputView!
     @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
     @IBOutlet weak var monthlyFixedIncomeLabel: UILabel!
     @IBOutlet weak var tableViewTop: NSLayoutConstraint!
@@ -100,8 +100,8 @@ extension AddFixedIncomeViewController: UITableViewDataSource, UITableViewDelega
     }
 }
 
-extension AddFixedIncomeViewController: CustomViewDelegate {
-    func InputDidFinish(details: String, amount: String) {
+extension AddFixedIncomeViewController: InputViewDelegate {
+    func didFinish(details: String, amount: String) {
         switch inputType {
         case .fixedIncome:
             let fixedIncome = FixedIncome()

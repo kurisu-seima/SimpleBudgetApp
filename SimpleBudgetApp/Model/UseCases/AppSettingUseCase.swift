@@ -45,9 +45,9 @@ class AppSettingUseCase {
         }
     }
     
-    private func createDailyIncomeAndExpenditureIfNeed() {
+    func createDailyIncomeAndExpenditureIfNeed() {
         if BudgetRepository.shared.getDailyIncomeAndExpenditure(primaryKey: Date().toString) == nil {
-            BudgetRepository.shared.add(DailyIncomeAndExpenditure(date: Date()))
+            BudgetRepository.shared.addDailyIncomeAndExpenditure(data: DailyIncomeAndExpenditure(date: Date()))
             IncomeAndExpenditureUseCase.shared.addToday(IncomeAndExpenditure(details: "一日の予算", amount: "\(MoneyManagementUseCase.shared.getDailyBudget())", plusOrMinus: .plus))
         }
     }

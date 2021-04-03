@@ -11,7 +11,7 @@ class AddFixedSpendingViewController: UIViewController {
     
     @IBOutlet weak var spendingTableView: UITableView!
     @IBOutlet weak var spendingTableViewTop: NSLayoutConstraint!
-    @IBOutlet weak var selectArea: CustomView!
+    @IBOutlet weak var selectArea: InputView!
     @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
     @IBOutlet weak var selectAreaBottom: NSLayoutConstraint!
     @IBOutlet weak var monthlyFixedSpendingLabel: UILabel!
@@ -99,8 +99,8 @@ extension AddFixedSpendingViewController: UITableViewDelegate, UITableViewDataSo
     }
 }
 
-extension AddFixedSpendingViewController: CustomViewDelegate {
-    func InputDidFinish(details: String, amount: String) {
+extension AddFixedSpendingViewController: InputViewDelegate {
+    func didFinish(details: String, amount: String) {
         switch inputType {
         case .fixedSpending:
             let fixedSpending = FixedSpending()

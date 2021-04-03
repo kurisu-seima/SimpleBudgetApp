@@ -130,4 +130,8 @@ extension BalanceBreakdownViewController: UITableViewDataSource, UITableViewDele
         setupData()
         balanceBreakdownTableView.reloadData()
     }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        indexPath.row == 0 ? .none : .delete
+    }
 }

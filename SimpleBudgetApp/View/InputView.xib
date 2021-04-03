@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputView" customModule="SimpleBudgetApp" customModuleProvider="target">
+            <connections>
+                <outlet property="amountTextField" destination="3iS-Qv-ozx" id="L0Y-su-3Cz"/>
+                <outlet property="detailsTextField" destination="TTL-d5-GDm" id="sCD-uf-RFa"/>
+                <outlet property="doneButton" destination="zw2-bT-Q4F" id="lk2-t9-ZxX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="cFd-WQ-UAP">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zw2-bT-Q4F" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                    <rect key="frame" x="82" y="294" width="250" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="2zJ-K3-mBJ"/>
+                        <constraint firstAttribute="width" constant="250" id="Wty-ds-rOw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                    <state key="normal" title="完了">
+                        <color key="titleColor" systemColor="labelColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.80000000000000004"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                            <color key="value" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                            <color key="value" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                            <point key="value" x="1" y="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                            <point key="value" x="1" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="doneButtonDidTapped:" destination="-1" eventType="touchUpInside" id="FZ3-Un-ehX"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2XK-fU-Ahf">
+                    <rect key="frame" x="0.0" y="64" width="414" height="200"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRa-bh-Xp2">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5o-1Z-la2" userLabel="details ContentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGC-L6-d4B">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JC-7T-k8P">
+                                            <rect key="frame" x="10" y="39.5" width="40" height="20"/>
+                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0I-o5-rli" userLabel="上ライン">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="2"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="2" id="Wi1-bf-jo3"/>
+                                            </constraints>
+                                        </view>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="詳細を入力してください" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TTL-d5-GDm">
+                                            <rect key="frame" x="60" y="32" width="344" height="37"/>
+                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="V0I-o5-rli" firstAttribute="top" secondItem="o5o-1Z-la2" secondAttribute="top" id="2fQ-CB-hmO"/>
+                                        <constraint firstAttribute="bottom" secondItem="MGC-L6-d4B" secondAttribute="bottom" id="44o-Km-vxu"/>
+                                        <constraint firstItem="3JC-7T-k8P" firstAttribute="leading" secondItem="o5o-1Z-la2" secondAttribute="leading" constant="10" id="6I7-RM-PZ6"/>
+                                        <constraint firstAttribute="height" constant="99" id="8If-nv-nUK"/>
+                                        <constraint firstItem="3JC-7T-k8P" firstAttribute="centerY" secondItem="o5o-1Z-la2" secondAttribute="centerY" id="Jqo-hE-v9a"/>
+                                        <constraint firstAttribute="trailing" secondItem="V0I-o5-rli" secondAttribute="trailing" id="KAW-Mj-H9O"/>
+                                        <constraint firstAttribute="trailing" secondItem="TTL-d5-GDm" secondAttribute="trailing" constant="10" id="SGq-yt-svv"/>
+                                        <constraint firstAttribute="bottom" secondItem="TTL-d5-GDm" secondAttribute="bottom" constant="30" id="YND-Wl-7DA"/>
+                                        <constraint firstAttribute="trailing" secondItem="V0I-o5-rli" secondAttribute="trailing" id="ZqH-YX-cSw"/>
+                                        <constraint firstItem="TTL-d5-GDm" firstAttribute="top" secondItem="V0I-o5-rli" secondAttribute="bottom" constant="30" id="b47-zX-9B1"/>
+                                        <constraint firstItem="MGC-L6-d4B" firstAttribute="leading" secondItem="o5o-1Z-la2" secondAttribute="leading" id="eW5-y7-Zcp"/>
+                                        <constraint firstItem="V0I-o5-rli" firstAttribute="top" secondItem="o5o-1Z-la2" secondAttribute="top" id="mjJ-zn-fa7"/>
+                                        <constraint firstItem="TTL-d5-GDm" firstAttribute="leading" secondItem="3JC-7T-k8P" secondAttribute="trailing" constant="10" id="rSR-kW-qyD"/>
+                                        <constraint firstItem="V0I-o5-rli" firstAttribute="leading" secondItem="o5o-1Z-la2" secondAttribute="leading" id="rZo-PE-OnN"/>
+                                        <constraint firstItem="V0I-o5-rli" firstAttribute="leading" secondItem="o5o-1Z-la2" secondAttribute="leading" id="sxZ-VG-lDI"/>
+                                        <constraint firstItem="MGC-L6-d4B" firstAttribute="top" secondItem="o5o-1Z-la2" secondAttribute="top" id="tu1-cP-oIV"/>
+                                        <constraint firstAttribute="trailing" secondItem="MGC-L6-d4B" secondAttribute="trailing" id="xQI-WW-ciR"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbN-FF-yLa" userLabel="Center Line">
+                                    <rect key="frame" x="0.0" y="99" width="414" height="2"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="4Oz-wk-tx2"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM9-uy-H5M" userLabel="Amount ContentView">
+                                    <rect key="frame" x="0.0" y="101" width="414" height="99"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8G-zY-cze">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SML-82-ggu">
+                                            <rect key="frame" x="10" y="39.5" width="40" height="20"/>
+                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scB-Q5-3rh" userLabel="下ライン">
+                                            <rect key="frame" x="0.0" y="97" width="414" height="2"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="2" id="WAQ-jk-x2h"/>
+                                            </constraints>
+                                        </view>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="金額を入力してください" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3iS-Qv-ozx">
+                                            <rect key="frame" x="60" y="30" width="344" height="37"/>
+                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="scB-Q5-3rh" firstAttribute="leading" secondItem="aM9-uy-H5M" secondAttribute="leading" id="78P-ZP-Gwi"/>
+                                        <constraint firstAttribute="trailing" secondItem="A8G-zY-cze" secondAttribute="trailing" id="GPB-Ba-7d3"/>
+                                        <constraint firstAttribute="bottom" secondItem="A8G-zY-cze" secondAttribute="bottom" id="IRf-NM-Kfo"/>
+                                        <constraint firstAttribute="height" constant="99" id="P0Z-sx-Xj1"/>
+                                        <constraint firstItem="3iS-Qv-ozx" firstAttribute="leading" secondItem="SML-82-ggu" secondAttribute="trailing" constant="10" id="Rc4-0G-Bth"/>
+                                        <constraint firstItem="SML-82-ggu" firstAttribute="centerY" secondItem="aM9-uy-H5M" secondAttribute="centerY" id="Us8-oX-BWS"/>
+                                        <constraint firstItem="scB-Q5-3rh" firstAttribute="top" secondItem="3iS-Qv-ozx" secondAttribute="bottom" constant="30" id="Wcl-CP-hl4"/>
+                                        <constraint firstAttribute="trailing" secondItem="3iS-Qv-ozx" secondAttribute="trailing" constant="10" id="cr9-Zc-iBw"/>
+                                        <constraint firstItem="A8G-zY-cze" firstAttribute="top" secondItem="aM9-uy-H5M" secondAttribute="top" id="jt0-Gv-7Rk"/>
+                                        <constraint firstItem="A8G-zY-cze" firstAttribute="leading" secondItem="aM9-uy-H5M" secondAttribute="leading" id="lFt-4j-4pj"/>
+                                        <constraint firstItem="3iS-Qv-ozx" firstAttribute="top" secondItem="aM9-uy-H5M" secondAttribute="top" constant="30" id="psZ-iS-8Nr"/>
+                                        <constraint firstAttribute="bottom" secondItem="scB-Q5-3rh" secondAttribute="bottom" id="rqC-gQ-Mxy"/>
+                                        <constraint firstAttribute="trailing" secondItem="scB-Q5-3rh" secondAttribute="trailing" id="txv-aT-yVd"/>
+                                        <constraint firstItem="SML-82-ggu" firstAttribute="leading" secondItem="aM9-uy-H5M" secondAttribute="leading" constant="10" id="xWy-IP-3a2"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="aM9-uy-H5M" firstAttribute="top" secondItem="YbN-FF-yLa" secondAttribute="bottom" id="25i-oy-cj4"/>
+                                <constraint firstItem="YbN-FF-yLa" firstAttribute="top" secondItem="o5o-1Z-la2" secondAttribute="bottom" id="8zv-Bh-88W"/>
+                                <constraint firstAttribute="trailing" secondItem="o5o-1Z-la2" secondAttribute="trailing" id="9Uf-AT-CK2"/>
+                                <constraint firstAttribute="bottom" secondItem="aM9-uy-H5M" secondAttribute="bottom" id="Gwb-QR-XqO"/>
+                                <constraint firstItem="o5o-1Z-la2" firstAttribute="top" secondItem="sRa-bh-Xp2" secondAttribute="top" id="Zf5-lm-RbP"/>
+                                <constraint firstItem="YbN-FF-yLa" firstAttribute="leading" secondItem="sRa-bh-Xp2" secondAttribute="leading" id="ZsL-Do-M1L"/>
+                                <constraint firstAttribute="trailing" secondItem="YbN-FF-yLa" secondAttribute="trailing" id="hQI-lJ-Pbc"/>
+                                <constraint firstItem="o5o-1Z-la2" firstAttribute="leading" secondItem="sRa-bh-Xp2" secondAttribute="leading" id="jKV-6h-wrU"/>
+                                <constraint firstAttribute="trailing" secondItem="aM9-uy-H5M" secondAttribute="trailing" id="tFg-FI-2Pf"/>
+                                <constraint firstItem="aM9-uy-H5M" firstAttribute="leading" secondItem="sRa-bh-Xp2" secondAttribute="leading" id="umm-Y7-ScO"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="z5M-km-5iZ"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="sGk-GV-gJF"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="zw2-bT-Q4F" firstAttribute="centerX" secondItem="cFd-WQ-UAP" secondAttribute="centerX" id="14g-Do-hBh"/>
+                <constraint firstItem="2XK-fU-Ahf" firstAttribute="top" secondItem="sGk-GV-gJF" secondAttribute="top" constant="20" id="4xb-bF-5tq"/>
+                <constraint firstItem="2XK-fU-Ahf" firstAttribute="leading" secondItem="sGk-GV-gJF" secondAttribute="leading" id="SK0-5w-ewr"/>
+                <constraint firstItem="zw2-bT-Q4F" firstAttribute="top" secondItem="2XK-fU-Ahf" secondAttribute="bottom" constant="30" id="h8s-uF-tzS"/>
+                <constraint firstItem="sGk-GV-gJF" firstAttribute="trailing" secondItem="2XK-fU-Ahf" secondAttribute="trailing" id="ihK-NG-MgD"/>
+                <constraint firstItem="2XK-fU-Ahf" firstAttribute="centerX" secondItem="cFd-WQ-UAP" secondAttribute="centerX" id="w9A-Yp-L6K"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="31.884057971014496" y="51.5625"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="zw2-bT-Q4F">
+            <size key="intrinsicContentSize" width="60" height="42"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

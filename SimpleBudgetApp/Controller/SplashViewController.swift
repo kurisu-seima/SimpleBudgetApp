@@ -20,27 +20,28 @@ class SplashViewController: UIViewController {
         super.viewDidAppear(animated)
         
         AppSettingUseCase.shared.sonfigure()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
             showMainView()
         }
-        
-        func showMainView() {
-            guard let storyboard = storyboard else {
-                return
-            }
-            SideMenuController.preferences.basic.direction = .left
-            SideMenuController.preferences.basic.menuWidth = 280
-            
-            let contentViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
-            let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuVC") as! MenuViewController
-            let navigationController = UINavigationController(rootViewController: contentViewController)
-            navigationController.navigationBar.barTintColor = UIColor.orange
-            let viewController = SideMenuController(contentViewController: navigationController, menuViewController: menuViewController)
-            viewController.modalTransitionStyle = .crossDissolve
-            viewController.modalPresentationStyle = .fullScreen
-            
-            present(viewController, animated: true, completion: nil)
+    }
+    
+    private func showMainView() {
+        guard let storyboard = storyboard else {
+            return
         }
+        SideMenuController.preferences.basic.direction = .left
+        SideMenuController.preferences.basic.menuWidth = 280
+        
+        let contentViewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
+        let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuVC") as! MenuViewController
+        let navigationController = UINavigationController(rootViewController: contentViewController)
+        navigationController.navigationBar.barTintColor = UIColor.orange
+        let viewController = SideMenuController(contentViewController: navigationController, menuViewController: menuViewController)
+        viewController.modalTransitionStyle = .crossDissolve
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.navigationController?.isNavigationBarHidden = true
+        
+        present(viewController, animated: true, completion: nil)
     }
     
     private func layerColorSetUp() {

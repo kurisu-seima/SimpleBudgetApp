@@ -11,7 +11,7 @@ class AddFixedSavingsViewController: UIViewController {
 
     @IBOutlet weak var savingsTableView: UITableView!
     @IBOutlet weak var savingsTableViewTop: NSLayoutConstraint!
-    @IBOutlet weak var selectArea: CustomView!
+    @IBOutlet weak var selectArea: InputView!
     @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
     @IBOutlet weak var selectAreaBottom: NSLayoutConstraint!
     @IBOutlet weak var monthlyFixedSavingsLabel: UILabel!
@@ -97,8 +97,8 @@ extension AddFixedSavingsViewController: UITableViewDelegate, UITableViewDataSou
     }
 }
 
-extension AddFixedSavingsViewController: CustomViewDelegate {
-    func InputDidFinish(details: String, amount: String) {
+extension AddFixedSavingsViewController: InputViewDelegate {
+    func didFinish(details: String, amount: String) {
         switch inputType {
         case .fixedSavings:
             let fixedSavings = FixedSavings()

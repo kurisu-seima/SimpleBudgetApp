@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var monthlyBudgetLabel: CountupLabel!
     @IBOutlet weak var dailyLimitLabel: CountupLabel!
-    @IBOutlet weak var selectArea: CustomView!
+    @IBOutlet weak var selectArea: InputView!
     @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
     @IBOutlet weak var selectAreaTop: NSLayoutConstraint!
 
@@ -28,10 +28,7 @@ class MainViewController: UIViewController {
         super.viewWillAppear(true)
       
         BalanceBreakdownManagementUseCase.shared.saveDailyBudget()
-        guard let navigationController = self.navigationController, (!navigationController.isNavigationBarHidden) else {
-            return
-        }
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.isNavigationBarHidden = true
         amountSetUp()
     }
     
@@ -69,9 +66,9 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: CustomViewDelegate {
+extension MainViewController: InputViewDelegate {
     
-    func InputDidFinish(details: String, amount: String) {
+    func didFinish(details: String, amount: String) {
         switch inputType {
         case .spending:
             IncomeAndExpenditureUseCase.shared.addToday(IncomeAndExpenditure(details: details, amount: amount, plusOrMinus: .minus))

@@ -17,7 +17,7 @@ class IncomeAndExpenditureUseCase {
     
     func addToday(_ data: IncomeAndExpenditure) {
         guard let daily = repository.getDailyIncomeAndExpenditure(primaryKey: Date().toString) else {
-            return
+            return 
         }
         try! repository.db.write {
             daily.incomeAndExpenditures.append(data)

@@ -9,7 +9,7 @@ import UIKit
 
 class AddIncomeAndExpenditureViewController: UIViewController {
     
-    @IBOutlet weak var customView: CustomView!
+    @IBOutlet weak var customView: InputView!
     
     var inputType: InputType?
     
@@ -22,8 +22,8 @@ class AddIncomeAndExpenditureViewController: UIViewController {
     }
 }
 
-extension AddIncomeAndExpenditureViewController: CustomViewDelegate {
-    func InputDidFinish(details: String, amount: String) {
+extension AddIncomeAndExpenditureViewController: InputViewDelegate {
+    func didFinish(details: String, amount: String) {
         switch inputType {
         case .spending:
             guard let date = date else {
