@@ -19,7 +19,7 @@ class BudgetSettingViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
 
-        amountSetUp()
+        setupView()
         layerColorSetUp()
     }
     
@@ -39,7 +39,7 @@ class BudgetSettingViewController: UIViewController {
         }
     }
     
-     private func amountSetUp() {
+     private func setupView() {
         dailyBudgetLabel.text = "¥\(MoneyManagementUseCase.shared.getDailyBudget().numberWithComma())"
     }
     

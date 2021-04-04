@@ -32,7 +32,7 @@ class TotalAmountFooterView: UITableViewHeaderFooterView {
             totalAmountLabel.text = "¥\(total.numberWithComma())"
         case let total where total < 0:
             totalAmountLabel.textColor = .red
-            totalAmountLabel.text = "-¥\((total * -1).numberWithComma())"
+            totalAmountLabel.text = "¥-\((total * -1).numberWithComma())"
         default: break
         }
     }
