@@ -33,7 +33,7 @@ enum Menu: CaseIterable {
         case .budgetSetting:
             return "money"
         case .balanceBreakDown:
-            return "documents"
+            return "menu-documents"
         case .monthlyRecord:
             return "book"
         }
