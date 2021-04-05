@@ -14,7 +14,7 @@ protocol InputViewDelegate {
 }
 
 class InputView: UIView {
-
+    
     @IBOutlet weak var detailsTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var doneButton: DSFloatingButton!
@@ -34,6 +34,9 @@ class InputView: UIView {
                 doneButton.gradientStartColor = UIColor().savingsStartColor
                 doneButton.gradientEndColor = UIColor().savingsEndColor
                 doneButton.shadowColor = UIColor().savingsStartColor
+            case is EditingIncomeAndExpenditureViewController:
+                //ここに色を入れる
+            break
             default:
                 break
             }

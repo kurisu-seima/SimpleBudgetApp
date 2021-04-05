@@ -25,6 +25,8 @@ class SideMenuCell: UITableViewCell {
     
     func setupView(index: Int) {
         menuLabel.text = Menu.allCases[index].label
-        menuImage.image = UIImage(named: Menu.allCases[index].image)
+        
+        let image = UIImage(named: Menu.allCases[index].image)
+        menuImage.image = image
     }
 }
