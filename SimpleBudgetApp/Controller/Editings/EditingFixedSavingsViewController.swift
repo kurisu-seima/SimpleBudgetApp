@@ -36,5 +36,8 @@ class EditingFixedSavingsViewController: UIViewController {
     private func setupView() {
         detailsTextField.text = fixedSavings?.details
         amountTextField.text = fixedSavings?.amountOfMoney
+        self.view.layer.insertSublayer(CAGradientLayer().fixedSavingsVCLayer(frame: self.view.frame), at: 0)
+        detailsTextField.backgroundColor = UIColor.clear
+        amountTextField.backgroundColor = UIColor.clear
     }
 }

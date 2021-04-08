@@ -37,7 +37,7 @@ class BalanceBreakdownHeaderView: UITableViewHeaderFooterView {
     
     func setupHeaderView(dailyIncomeAndExpenditure: DailyIncomeAndExpenditure) {
         dateLabel.text = dailyIncomeAndExpenditure.primaryDate
-        self.backgroundColor = UIColor.systemGray5
+        self.tintColor = UIColor.clear
         self.date = dailyIncomeAndExpenditure.date
     }
 }

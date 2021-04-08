@@ -18,9 +18,8 @@ class BudgetSettingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-
+        
         setupView()
-        layerColorSetUp()
     }
     
     @IBAction func fixedButtonDidTapped(_ sender: UIButton) {
@@ -39,12 +38,11 @@ class BudgetSettingViewController: UIViewController {
         }
     }
     
-     private func setupView() {
+    private func setupView() {
         dailyBudgetLabel.text = "¥\(MoneyManagementUseCase.shared.getDailyBudget().numberWithComma())"
-    }
-    
-    private func layerColorSetUp() {
-        self.view.backgroundColor = UIColor.systemOrange
-        self.navigationController?.navigationBar.barTintColor = self.view.backgroundColor
+        self.view.layer.insertSublayer(CAGradientLayer().budgetVCLayer(frame: self.view.frame), at: 0)
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 }

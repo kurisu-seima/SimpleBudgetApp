@@ -13,11 +13,15 @@ class EditingIncomeAndExpenditureViewController: UIViewController {
     
     @IBOutlet weak var amountTextField: UITextField!
     
-    var incomeAndExpenditure: IncomeAndExpenditure?
+    @IBOutlet weak var topLabel: UILabel!
+    
+    var incomeAndExpenditure: IncomeAndExpenditure!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        detailsTextField.delegate = self
+        amountTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,5 +45,24 @@ class EditingIncomeAndExpenditureViewController: UIViewController {
     func setupView() {
         detailsTextField.text = incomeAndExpenditure?.details
         amountTextField.text = incomeAndExpenditure?.amountOfMoney
+        self.view.layer.insertSublayer(CAGradientLayer().balanceBreakdoenLayer(frame: self.view.frame), at: 0)
+        detailsTextField.backgroundColor = .clear
+        amountTextField.backgroundColor = .clear
+        guard let type = IncomeAndExpenditure.PlusOrMinus(rawValue: incomeAndExpenditure!.plusOrMinus) else {
+            return
+        }
+        switch type {
+        case .plus:
+            topLabel.text = "臨時収入を編集できます"
+        case .minus:
+            topLabel.text = "臨時支出を編集できます"
+        }
+    }
+}
+
+extension EditingIncomeAndExpenditureViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }

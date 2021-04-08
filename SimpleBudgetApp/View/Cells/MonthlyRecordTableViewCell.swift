@@ -27,6 +27,7 @@ class MonthlyRecordTableViewCell: UITableViewCell {
     }
 
     func setupMonthlyRecordView(fixedIncome: Int, fixedSpending: Int, fixedSavings: Int, extraordinaryIncome: Int, extraordinarySpending: Int) {
+        self.backgroundColor = UIColor.clear
         fixedIncomeAmountLabel.text = "¥\(fixedIncome.numberWithComma())"
         extraordinaryIncomeAmountLabel.text = "¥\(extraordinaryIncome.numberWithComma())"
         fixedSpendingAmountLabel.text = "¥\(fixedSpending.numberWithComma())"

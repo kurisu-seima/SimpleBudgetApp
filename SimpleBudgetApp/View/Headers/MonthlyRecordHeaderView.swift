@@ -13,6 +13,7 @@ class MonthlyRecordHeaderView: UITableViewHeaderFooterView {
     
 
     func setupMonthlyRecrdHooterView(date: Date) {
+        self.tintColor = UIColor.clear
         dateLabel.text = "\(date.year)年\(date.month)月1日〜\(date.year)年\(date.month)月\(date.lastDay)日"
     }
 }

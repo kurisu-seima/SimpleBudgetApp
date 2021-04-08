@@ -15,6 +15,8 @@ class AddFixedSpendingViewController: UIViewController {
     @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
     @IBOutlet weak var selectAreaBottom: NSLayoutConstraint!
     @IBOutlet weak var monthlyFixedSpendingLabel: UILabel!
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var addButton: UIButton!
     
     var fixedSpendingsData: [FixedSpending] = []
     
@@ -53,6 +55,7 @@ class AddFixedSpendingViewController: UIViewController {
     private func layerColorSetUp() {
         self.navigationController?.navigationBar.barTintColor = UIColor().fixedSpendingVCNavigationColor
         self.view.layer.insertSublayer(CAGradientLayer().fixedSpendingVCLayer(frame: self.view.frame), at: 0)
+        spendingTableView.backgroundColor = UIColor.clear
     }
     
     private func openInputView() {
@@ -64,6 +67,9 @@ class AddFixedSpendingViewController: UIViewController {
         selectAreaHight.constant = 400
         UIView.animate(withDuration: 0.3) { [self] in
             guard let view = selectArea.subviews.first else { return }
+            topLabel.alpha = 0
+            monthlyFixedSpendingLabel.alpha = 0
+            addButton.alpha = 0
             view.alpha = 1
             self.view.layoutIfNeeded()
         }
@@ -125,6 +131,9 @@ extension AddFixedSpendingViewController: InputViewDelegate {
         spendingTableViewTop.constant = 80
         UIView.animate(withDuration: 0.3) { [self] in
             guard let view = selectArea.subviews.first else { return }
+            topLabel.alpha = 1
+            monthlyFixedSpendingLabel.alpha = 1
+            addButton.alpha = 1
             view.alpha = 0
             self.view.layoutIfNeeded()
         }

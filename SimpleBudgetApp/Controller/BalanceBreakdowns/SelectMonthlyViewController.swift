@@ -23,9 +23,15 @@ class SelectMonthlyViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        savedDates = AppSettingUseCase.shared.savedDates
+        savedDates = AppSettingUseCase.shared.savedDates.sorted(by: >)
+        setupView()
     }
     
+    private func setupView() {
+        self.view.layer.insertSublayer(CAGradientLayer().balanceBreakdoenLayer(frame: self.view.frame), at: 0)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 240 / 255, green: 234 / 255, blue: 220 / 255, alpha: 1)
+        selectMonthlyTableView.backgroundColor = UIColor.clear
+    }
 }
 
 extension SelectMonthlyViewController: UITableViewDelegate, UITableViewDataSource {

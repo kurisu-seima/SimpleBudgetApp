@@ -10,6 +10,7 @@ import UIKit
 class AddIncomeAndExpenditureViewController: UIViewController {
     
     @IBOutlet weak var customView: InputView!
+    @IBOutlet weak var topLabel: UILabel!
     
     var inputType: InputType?
     
@@ -19,6 +20,24 @@ class AddIncomeAndExpenditureViewController: UIViewController {
         super.viewDidLoad()
 
         customView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        setupView()
+    }
+    
+    private func setupView() {
+        self.view.layer.insertSublayer(CAGradientLayer().balanceBreakdoenLayer(frame: self.view.frame), at: 0)
+        switch inputType {
+        case .income:
+            topLabel.text = "臨時収入を追加できます"
+        case .spending:
+            topLabel.text = "臨時支出を追加できます"
+        default:
+            break
+        }
     }
 }
 

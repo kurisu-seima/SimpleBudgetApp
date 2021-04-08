@@ -36,5 +36,8 @@ class EditingFixedIncomeViewController: UIViewController {
     private func setupView() {
         detailsTextField.text = fixedIncome?.details
         amountTextField.text = fixedIncome?.amountOfMoney
+        self.view.layer.insertSublayer(CAGradientLayer().fixedIncomeVCLayer(frame: self.view.frame), at: 0)
+        detailsTextField.backgroundColor = UIColor.clear
+        amountTextField.backgroundColor = UIColor.clear
     }
 }

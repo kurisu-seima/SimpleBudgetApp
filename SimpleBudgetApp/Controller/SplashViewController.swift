@@ -45,6 +45,6 @@ class SplashViewController: UIViewController {
     }
     
     private func layerColorSetUp() {
-        self.view.layer.insertSublayer(CAGradientLayer().mainLayer(frame: self.view.frame), at: 0)
+        self.view.layer.insertSublayer(CAGradientLayer().splashLayer(frame: self.view.frame), at: 0)
     }
 }

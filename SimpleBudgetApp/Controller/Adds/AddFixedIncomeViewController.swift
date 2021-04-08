@@ -15,6 +15,8 @@ class AddFixedIncomeViewController: UIViewController {
     @IBOutlet weak var monthlyFixedIncomeLabel: UILabel!
     @IBOutlet weak var tableViewTop: NSLayoutConstraint!
     @IBOutlet weak var selectAreabottom: NSLayoutConstraint!
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var addButton: UIButton!
     
     var fixedIncomesData: [FixedIncome] = []
     
@@ -54,6 +56,7 @@ class AddFixedIncomeViewController: UIViewController {
     private func layerColorSetUp() {
         self.navigationController?.navigationBar.barTintColor = UIColor().fixedIncomeVCNavigationColor
         self.view.layer.insertSublayer(CAGradientLayer().fixedIncomeVCLayer(frame: self.view.frame), at: 0)
+        incomeTableView.backgroundColor = UIColor.clear
     }
     
     private func openInputView() {
@@ -64,6 +67,9 @@ class AddFixedIncomeViewController: UIViewController {
         selectAreaHight.constant = 400
         UIView.animate(withDuration: 0.3) { [self] in
             guard let view = selectArea.subviews.first else { return }
+            topLabel.alpha = 0
+            monthlyFixedIncomeLabel.alpha = 0
+            addButton.alpha = 0
             view.alpha = 1
             self.view.layoutIfNeeded()
         }
@@ -125,6 +131,9 @@ extension AddFixedIncomeViewController: InputViewDelegate {
         tableViewTop.constant = 80
         UIView.animate(withDuration: 0.3) { [self] in
             guard let view = selectArea.subviews.first else { return }
+            topLabel.alpha = 1
+            monthlyFixedIncomeLabel.alpha = 1
+            addButton.alpha = 1
             view.alpha = 0
             self.view.layoutIfNeeded()
         }

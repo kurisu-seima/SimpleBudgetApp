@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputView" customModule="SimpleBudgetApp" customModuleProvider="target">
             <connections>
                 <outlet property="amountTextField" destination="3iS-Qv-ozx" id="L0Y-su-3Cz"/>
+                <outlet property="closeButton" destination="pPR-1A-aq2" id="FUC-8S-QlZ"/>
                 <outlet property="detailsTextField" destination="TTL-d5-GDm" id="sCD-uf-RFa"/>
                 <outlet property="doneButton" destination="zw2-bT-Q4F" id="lk2-t9-ZxX"/>
             </connections>
@@ -21,10 +22,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zw2-bT-Q4F" customClass="DSFloatingButton" customModule="DSFloatingButton">
-                    <rect key="frame" x="82" y="294" width="250" height="60"/>
+                    <rect key="frame" x="223.5" y="294" width="165.5" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="2zJ-K3-mBJ"/>
-                        <constraint firstAttribute="width" constant="250" id="Wty-ds-rOw"/>
+                        <constraint firstAttribute="height" constant="60" id="Sjf-De-Mhj"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
                     <state key="normal" title="完了">
@@ -32,28 +32,22 @@
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                            <real key="value" value="0.80000000000000004"/>
+                            <real key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                            <real key="value" value="7"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                            <color key="value" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                            <color key="value" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <real key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
-                            <point key="value" x="1" y="0.5"/>
+                            <point key="value" x="0.0" y="0.0"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
-                            <point key="value" x="1" y="0.0"/>
+                            <point key="value" x="1" y="1"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                            <size key="value" width="0.0" height="3"/>
+                            <size key="value" width="0.0" height="0.10000000000000001"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                            <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -179,22 +173,62 @@
                         <constraint firstAttribute="height" constant="200" id="z5M-km-5iZ"/>
                     </constraints>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPR-1A-aq2" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                    <rect key="frame" x="25" y="294" width="165.5" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="T5v-Uz-8ns"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                    <state key="normal" title="閉じる">
+                        <color key="titleColor" systemColor="labelColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                            <point key="value" x="0.0" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                            <point key="value" x="1" y="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="0.10000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="closeButtonDidTapped:" destination="-1" eventType="touchUpInside" id="fsE-M2-Urp"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="sGk-GV-gJF"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="zw2-bT-Q4F" firstAttribute="centerX" secondItem="cFd-WQ-UAP" secondAttribute="centerX" id="14g-Do-hBh"/>
                 <constraint firstItem="2XK-fU-Ahf" firstAttribute="top" secondItem="sGk-GV-gJF" secondAttribute="top" constant="20" id="4xb-bF-5tq"/>
+                <constraint firstItem="sGk-GV-gJF" firstAttribute="trailing" secondItem="zw2-bT-Q4F" secondAttribute="trailing" constant="25" id="C2G-ut-Qhm"/>
                 <constraint firstItem="2XK-fU-Ahf" firstAttribute="leading" secondItem="sGk-GV-gJF" secondAttribute="leading" id="SK0-5w-ewr"/>
+                <constraint firstItem="zw2-bT-Q4F" firstAttribute="width" secondItem="cFd-WQ-UAP" secondAttribute="width" multiplier="1:2.5" id="fsd-Tn-JTn"/>
                 <constraint firstItem="zw2-bT-Q4F" firstAttribute="top" secondItem="2XK-fU-Ahf" secondAttribute="bottom" constant="30" id="h8s-uF-tzS"/>
+                <constraint firstItem="pPR-1A-aq2" firstAttribute="top" secondItem="2XK-fU-Ahf" secondAttribute="bottom" constant="30" id="hbd-hY-eG8"/>
                 <constraint firstItem="sGk-GV-gJF" firstAttribute="trailing" secondItem="2XK-fU-Ahf" secondAttribute="trailing" id="ihK-NG-MgD"/>
+                <constraint firstItem="pPR-1A-aq2" firstAttribute="leading" secondItem="sGk-GV-gJF" secondAttribute="leading" constant="25" id="pKk-Jl-Wrd"/>
                 <constraint firstItem="2XK-fU-Ahf" firstAttribute="centerX" secondItem="cFd-WQ-UAP" secondAttribute="centerX" id="w9A-Yp-L6K"/>
+                <constraint firstItem="pPR-1A-aq2" firstAttribute="width" secondItem="cFd-WQ-UAP" secondAttribute="width" multiplier="1:2.5" id="yYH-XH-RDj"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="31.884057971014496" y="51.5625"/>
         </view>
     </objects>
     <designables>
+        <designable name="pPR-1A-aq2">
+            <size key="intrinsicContentSize" width="90" height="42"/>
+        </designable>
         <designable name="zw2-bT-Q4F">
             <size key="intrinsicContentSize" width="60" height="42"/>
         </designable>

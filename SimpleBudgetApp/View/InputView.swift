@@ -18,28 +18,11 @@ class InputView: UIView {
     @IBOutlet weak var detailsTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var doneButton: DSFloatingButton!
+    @IBOutlet weak var closeButton: DSFloatingButton!
     
     var delegate: InputViewDelegate? {
         didSet {
-            switch delegate {
-            case is AddFixedIncomeViewController:
-                doneButton.gradientStartColor = UIColor().incomeStartColor
-                doneButton.gradientEndColor = UIColor().incomeEndColor
-                doneButton.shadowColor = UIColor().incomeEndColor
-            case is AddFixedSpendingViewController:
-                doneButton.gradientStartColor = UIColor().spendingStartColor
-                doneButton.gradientEndColor = UIColor().spendingEndColor
-                doneButton.shadowColor = UIColor().spendingStartColor
-            case is AddFixedSavingsViewController:
-                doneButton.gradientStartColor = UIColor().savingsStartColor
-                doneButton.gradientEndColor = UIColor().savingsEndColor
-                doneButton.shadowColor = UIColor().savingsStartColor
-            case is EditingIncomeAndExpenditureViewController:
-                //ここに色を入れる
-            break
-            default:
-                break
-            }
+            setupDoneButton(delegate: delegate)
         }
     }
     
@@ -69,10 +52,14 @@ class InputView: UIView {
         if let details = detailsTextField.text, let amount = amountTextField.text,
            !details.isEmpty, !amount.isEmpty, let _ = Int(amount) {
             self.delegate?.didFinish(details: details, amount: amount)
+            closeInputView()
         }
-        closeInputView()
     }
 
+    @IBAction func closeButtonDidTapped(_ sender: Any) {
+        closeInputView()
+    }
+    
     private func textFieldSetUp() {
         detailsTextField.returnKeyType = .done
         amountTextField.returnKeyType = .done
@@ -84,6 +71,46 @@ class InputView: UIView {
         amountTextField.text = .none
         self.endEditing(true)
         self.delegate?.closeInputView()
+    }
+    
+    private func setupDoneButton(delegate: InputViewDelegate?) {
+        switch delegate {
+        case is MainViewController:
+            doneButton.gradientStartColor = UIColor().mainStartColor
+            doneButton.gradientEndColor = UIColor().mainEndColor
+            doneButton.gradientStartPoint = CGPoint(x: 1, y: 0.5)
+            doneButton.gradientEndPoint = CGPoint(x: 1, y: 0)
+            closeButton.gradientStartColor = UIColor().mainStartColor
+            closeButton.gradientEndColor = UIColor().mainEndColor
+            closeButton.gradientStartPoint = CGPoint(x: 1, y: 0.5)
+            closeButton.gradientEndPoint = CGPoint(x: 1, y: 0)
+            
+        case is AddFixedIncomeViewController:
+            doneButton.gradientStartColor = UIColor().incomeStartColor
+            doneButton.gradientEndColor = UIColor().incomeEndColor
+            closeButton.gradientStartColor = UIColor().incomeStartColor
+            closeButton.gradientEndColor = UIColor().incomeEndColor
+            
+        case is AddFixedSpendingViewController:
+            doneButton.gradientStartColor = UIColor().spendingStartColor
+            doneButton.gradientEndColor = UIColor().spendingEndColor
+            closeButton.gradientStartColor = UIColor().spendingStartColor
+            closeButton.gradientEndColor = UIColor().spendingEndColor
+            
+        case is AddFixedSavingsViewController:
+            doneButton.gradientStartColor = UIColor().savingsStartColor
+            doneButton.gradientEndColor = UIColor().savingsEndColor
+            closeButton.gradientStartColor = UIColor().savingsStartColor
+            closeButton.gradientEndColor = UIColor().savingsEndColor
+            
+        case is AddIncomeAndExpenditureViewController:
+            doneButton.gradientStartColor = UIColor().balanceBreakdownStartColor
+            doneButton.gradientEndColor = UIColor().balanceBreakdownEndColor
+            closeButton.gradientStartColor = UIColor().balanceBreakdownStartColor
+            closeButton.gradientEndColor = UIColor().balanceBreakdownEndColor
+        default:
+            break
+        }
     }
 }
 

@@ -11,58 +11,128 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="HeaderView" id="SHd-in-uSw" customClass="BalanceBreakdownHeaderView" customModule="SimpleBudgetApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="406" height="40"/>
+            <rect key="frame" x="0.0" y="0.0" width="406" height="45"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPh-iy-lOi">
-                    <rect key="frame" x="15" y="12.5" width="30" height="15"/>
-                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                    <rect key="frame" x="15" y="16" width="36" height="18"/>
+                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Po-pW-yfP">
-                    <rect key="frame" x="346" y="3" width="45" height="34"/>
-                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
-                    <state key="normal" title="いれる"/>
-                    <connections>
-                        <action selector="addButtonDidTapped:" destination="SHd-in-uSw" eventType="touchUpInside" id="jEh-1Z-shU"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3im-ek-fZQ">
-                    <rect key="frame" x="270" y="3" width="56" height="34"/>
-                    <state key="normal" title="つかう">
-                        <color key="titleColor" systemColor="systemBlueColor"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3im-ek-fZQ" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                    <rect key="frame" x="251" y="10" width="60" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="O1Y-ue-Ff8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="使う">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                            <point key="value" x="0.0" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                            <point key="value" x="1" y="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                            <color key="value" red="1" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                            <color key="value" red="0.8666666666666667" green="0.93725490196078431" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="addButtonDidTapped:" destination="SHd-in-uSw" eventType="touchUpInside" id="B3c-PB-pyR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Po-pW-yfP" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                    <rect key="frame" x="331" y="10" width="60" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="kbC-3Q-wmH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="入れる">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                            <color key="value" red="1" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                            <color key="value" red="0.8666666666666667" green="0.93725490196078431" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                            <point key="value" x="0.0" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                            <point key="value" x="1" y="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="addButtonDidTapped:" destination="SHd-in-uSw" eventType="touchUpInside" id="jEh-1Z-shU"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="ibG-zg-2xH"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="ibG-zg-2xH" firstAttribute="trailing" secondItem="1Po-pW-yfP" secondAttribute="trailing" constant="15" id="5rr-Vh-896"/>
-                <constraint firstItem="aPh-iy-lOi" firstAttribute="centerY" secondItem="SHd-in-uSw" secondAttribute="centerY" id="7eq-Iz-H0c"/>
-                <constraint firstItem="1Po-pW-yfP" firstAttribute="centerY" secondItem="SHd-in-uSw" secondAttribute="centerY" id="Az2-Qj-fmq"/>
+                <constraint firstItem="ibG-zg-2xH" firstAttribute="bottom" secondItem="3im-ek-fZQ" secondAttribute="bottom" constant="5" id="1KI-nN-I0f"/>
+                <constraint firstAttribute="trailing" secondItem="1Po-pW-yfP" secondAttribute="trailing" constant="15" id="CeO-gM-lGz"/>
+                <constraint firstItem="ibG-zg-2xH" firstAttribute="bottom" secondItem="aPh-iy-lOi" secondAttribute="bottom" constant="11" id="EU0-A8-UR3"/>
                 <constraint firstItem="aPh-iy-lOi" firstAttribute="leading" secondItem="ibG-zg-2xH" secondAttribute="leading" constant="15" id="Ebj-gG-VFb"/>
-                <constraint firstItem="1Po-pW-yfP" firstAttribute="leading" secondItem="3im-ek-fZQ" secondAttribute="trailing" constant="20" id="JbA-vB-5QC"/>
-                <constraint firstItem="1Po-pW-yfP" firstAttribute="bottom" secondItem="3im-ek-fZQ" secondAttribute="bottom" id="NKe-kb-LSi"/>
-                <constraint firstItem="1Po-pW-yfP" firstAttribute="top" secondItem="3im-ek-fZQ" secondAttribute="top" id="Zhi-Jy-yfb"/>
-                <constraint firstItem="3im-ek-fZQ" firstAttribute="centerY" secondItem="SHd-in-uSw" secondAttribute="centerY" id="rWh-IG-j8m"/>
+                <constraint firstItem="ibG-zg-2xH" firstAttribute="bottom" secondItem="1Po-pW-yfP" secondAttribute="bottom" constant="5" id="dZx-d8-mlA"/>
+                <constraint firstItem="1Po-pW-yfP" firstAttribute="leading" secondItem="3im-ek-fZQ" secondAttribute="trailing" constant="20" id="wIw-im-WGp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="dateLabel" destination="aPh-iy-lOi" id="SfN-Tl-uCP"/>
             </connections>
-            <point key="canvasLocation" x="94.400000000000006" y="-590.10494752623697"/>
+            <point key="canvasLocation" x="55" y="-608"/>
         </view>
     </objects>
+    <designables>
+        <designable name="1Po-pW-yfP">
+            <size key="intrinsicContentSize" width="45" height="30"/>
+        </designable>
+        <designable name="3im-ek-fZQ">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

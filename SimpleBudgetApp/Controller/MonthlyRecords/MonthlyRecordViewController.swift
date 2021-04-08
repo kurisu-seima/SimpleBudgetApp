@@ -29,7 +29,17 @@ class MonthlyRecordViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        savedDates = AppSettingUseCase.shared.savedDates
+        savedDates = AppSettingUseCase.shared.savedDates.sorted(by: >)
+        setupView()
+    }
+    
+    private func setupView() {
+        self.view.layer.insertSublayer(CAGradientLayer().monthlyRecordVCLayer(frame: self.view.frame), at: 0)
+        monthlyRecordTableView.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 240 / 255, green: 222 / 255, blue: 220 / 255, alpha: 1)
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 }
 
@@ -77,6 +87,6 @@ extension MonthlyRecordViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return 50
     }
 }

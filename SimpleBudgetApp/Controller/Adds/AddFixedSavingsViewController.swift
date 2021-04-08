@@ -15,6 +15,10 @@ class AddFixedSavingsViewController: UIViewController {
     @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
     @IBOutlet weak var selectAreaBottom: NSLayoutConstraint!
     @IBOutlet weak var monthlyFixedSavingsLabel: UILabel!
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var addButton: UIButton!
+    
+    
     var fixedSavingsData: [FixedSavings] = []
     
     private var inputType: InputType?
@@ -51,6 +55,7 @@ class AddFixedSavingsViewController: UIViewController {
     private func layerColorSetUp() {
         self.navigationController?.navigationBar.barTintColor = UIColor().fixedSavingsVCNavigationColor
         self.view.layer.insertSublayer(CAGradientLayer().fixedSavingsVCLayer(frame: self.view.frame), at: 0)
+        savingsTableView.backgroundColor = UIColor.clear
     }
     
     private func openInputView() {
@@ -62,6 +67,9 @@ class AddFixedSavingsViewController: UIViewController {
         selectAreaHight.constant = 400
         UIView.animate(withDuration: 0.3) { [self] in
             guard let view = selectArea.subviews.first else { return }
+            topLabel.alpha = 0
+            monthlyFixedSavingsLabel.alpha = 0
+            addButton.alpha = 0
             view.alpha = 1
             self.view.layoutIfNeeded()
         }
@@ -122,6 +130,9 @@ extension AddFixedSavingsViewController: InputViewDelegate {
         savingsTableViewTop.constant = 80
         UIView.animate(withDuration: 0.3) { [self] in
             guard let view = selectArea.subviews.first else { return }
+            topLabel.alpha = 1
+            monthlyFixedSavingsLabel.alpha = 1
+            addButton.alpha = 1
             view.alpha = 1
             self.view.layoutIfNeeded()
         }
