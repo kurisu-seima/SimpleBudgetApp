@@ -37,6 +37,7 @@ class MonthlyRecordViewController: UIViewController {
         self.view.layer.insertSublayer(CAGradientLayer().monthlyRecordVCLayer(frame: self.view.frame), at: 0)
         monthlyRecordTableView.backgroundColor = UIColor.clear
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 240 / 255, green: 222 / 255, blue: 220 / 255, alpha: 1)
+        self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()

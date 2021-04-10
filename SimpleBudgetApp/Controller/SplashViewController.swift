@@ -38,9 +38,7 @@ class SplashViewController: UIViewController {
         navigationController.navigationBar.barTintColor = UIColor.orange
         let viewController = SideMenuController(contentViewController: navigationController, menuViewController: menuViewController)
         viewController.modalTransitionStyle = .crossDissolve
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.navigationController?.isNavigationBarHidden = true
-        
+        viewController.modalPresentationStyle = .fullScreen        
         present(viewController, animated: true, completion: nil)
     }
     

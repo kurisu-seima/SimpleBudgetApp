@@ -41,6 +41,7 @@ class BudgetSettingViewController: UIViewController {
     private func setupView() {
         dailyBudgetLabel.text = "¥\(MoneyManagementUseCase.shared.getDailyBudget().numberWithComma())"
         self.view.layer.insertSublayer(CAGradientLayer().budgetVCLayer(frame: self.view.frame), at: 0)
+        self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()

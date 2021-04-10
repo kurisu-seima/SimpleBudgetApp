@@ -22,13 +22,14 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         layerColorSetUp()
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
       
-        BalanceBreakdownManagementUseCase.shared.saveDailyBudget()
         self.navigationController?.isNavigationBarHidden = true
+        BalanceBreakdownManagementUseCase.shared.saveDailyBudget()
         amountSetUp()
     }
     
