@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -21,11 +22,8 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3im-ek-fZQ" customClass="DSFloatingButton" customModule="DSFloatingButton">
-                    <rect key="frame" x="251" y="10" width="60" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="60" id="O1Y-ue-Ff8"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <rect key="frame" x="260" y="13" width="58" height="27"/>
+                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
                     <state key="normal" title="使う">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
@@ -63,11 +61,8 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Po-pW-yfP" customClass="DSFloatingButton" customModule="DSFloatingButton">
-                    <rect key="frame" x="331" y="10" width="60" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="60" id="kbC-3Q-wmH"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <rect key="frame" x="333" y="13" width="58" height="27"/>
+                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
                     <state key="normal" title="入れる">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
@@ -109,11 +104,13 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="ibG-zg-2xH" firstAttribute="bottom" secondItem="3im-ek-fZQ" secondAttribute="bottom" constant="5" id="1KI-nN-I0f"/>
+                <constraint firstItem="3im-ek-fZQ" firstAttribute="width" secondItem="SHd-in-uSw" secondAttribute="width" multiplier="1:7" id="Ac1-gG-coX"/>
                 <constraint firstAttribute="trailing" secondItem="1Po-pW-yfP" secondAttribute="trailing" constant="15" id="CeO-gM-lGz"/>
                 <constraint firstItem="ibG-zg-2xH" firstAttribute="bottom" secondItem="aPh-iy-lOi" secondAttribute="bottom" constant="11" id="EU0-A8-UR3"/>
                 <constraint firstItem="aPh-iy-lOi" firstAttribute="leading" secondItem="ibG-zg-2xH" secondAttribute="leading" constant="15" id="Ebj-gG-VFb"/>
                 <constraint firstItem="ibG-zg-2xH" firstAttribute="bottom" secondItem="1Po-pW-yfP" secondAttribute="bottom" constant="5" id="dZx-d8-mlA"/>
-                <constraint firstItem="1Po-pW-yfP" firstAttribute="leading" secondItem="3im-ek-fZQ" secondAttribute="trailing" constant="20" id="wIw-im-WGp"/>
+                <constraint firstItem="1Po-pW-yfP" firstAttribute="width" secondItem="SHd-in-uSw" secondAttribute="width" multiplier="1:7" id="rKX-mT-Day"/>
+                <constraint firstItem="1Po-pW-yfP" firstAttribute="leading" secondItem="3im-ek-fZQ" secondAttribute="trailing" constant="15" id="wIw-im-WGp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
@@ -124,10 +121,10 @@
     </objects>
     <designables>
         <designable name="1Po-pW-yfP">
-            <size key="intrinsicContentSize" width="45" height="30"/>
+            <size key="intrinsicContentSize" width="45" height="27"/>
         </designable>
         <designable name="3im-ek-fZQ">
-            <size key="intrinsicContentSize" width="30" height="30"/>
+            <size key="intrinsicContentSize" width="30" height="27"/>
         </designable>
     </designables>
     <resources>

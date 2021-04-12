@@ -53,7 +53,6 @@ class AddFixedSavingsViewController: UIViewController {
     }
     
     private func layerColorSetUp() {
-        self.navigationController?.navigationBar.barTintColor = UIColor().fixedSavingsVCNavigationColor
         self.view.layer.insertSublayer(CAGradientLayer().fixedSavingsVCLayer(frame: self.view.frame), at: 0)
         savingsTableView.backgroundColor = UIColor.clear
     }

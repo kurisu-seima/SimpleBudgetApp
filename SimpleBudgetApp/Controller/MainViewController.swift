@@ -11,7 +11,9 @@ import SideMenuSwift
 class MainViewController: UIViewController {
 
     @IBOutlet weak var monthlyBudgetLabel: CountupLabel!
+    @IBOutlet weak var monthlyTextLabel: UILabel!
     @IBOutlet weak var dailyLimitLabel: CountupLabel!
+    @IBOutlet weak var dailyTextLabel: UILabel!
     @IBOutlet weak var selectArea: InputView!
     @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
     @IBOutlet weak var selectAreaTop: NSLayoutConstraint!
@@ -51,6 +53,10 @@ class MainViewController: UIViewController {
         selectAreaTop.constant = 10
         UIView.animate(withDuration: 0.3) { [self] in
             guard let view = selectArea.subviews.first else { return }
+            monthlyBudgetLabel.alpha = 0
+            dailyLimitLabel.alpha = 0
+            monthlyTextLabel.alpha = 0
+            dailyTextLabel.alpha = 0
             view.alpha = 1
             self.view.layoutIfNeeded()
         }
@@ -89,6 +95,10 @@ extension MainViewController: InputViewDelegate {
         UIView.animate(withDuration: 0.3) { [self] in
             guard let view = selectArea.subviews.first else { return }
             view.alpha = 0
+            monthlyBudgetLabel.alpha = 1
+            dailyLimitLabel.alpha = 1
+            monthlyTextLabel.alpha = 1
+            dailyTextLabel.alpha = 1
             self.view.layoutIfNeeded()
         }
     }

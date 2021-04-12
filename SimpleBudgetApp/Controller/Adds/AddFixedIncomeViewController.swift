@@ -54,7 +54,6 @@ class AddFixedIncomeViewController: UIViewController {
     }
     
     private func layerColorSetUp() {
-        self.navigationController?.navigationBar.barTintColor = UIColor().fixedIncomeVCNavigationColor
         self.view.layer.insertSublayer(CAGradientLayer().fixedIncomeVCLayer(frame: self.view.frame), at: 0)
         incomeTableView.backgroundColor = UIColor.clear
     }

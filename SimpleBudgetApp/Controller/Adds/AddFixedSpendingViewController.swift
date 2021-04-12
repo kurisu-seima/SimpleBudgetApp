@@ -53,7 +53,6 @@ class AddFixedSpendingViewController: UIViewController {
     }
     
     private func layerColorSetUp() {
-        self.navigationController?.navigationBar.barTintColor = UIColor().fixedSpendingVCNavigationColor
         self.view.layer.insertSublayer(CAGradientLayer().fixedSpendingVCLayer(frame: self.view.frame), at: 0)
         spendingTableView.backgroundColor = UIColor.clear
     }
