@@ -33,6 +33,7 @@ class MainViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         BalanceBreakdownManagementUseCase.shared.saveDailyBudget()
         amountSetUp()
+        setupView()
     }
     
     @IBAction func openSideMenu(_ sender: Any) {
@@ -70,6 +71,13 @@ class MainViewController: UIViewController {
     private func layerColorSetUp() {
         self.view.layer.insertSublayer(CAGradientLayer().mainLayer(frame: self.view.frame), at: 0)
         selectArea.layer.insertSublayer(CAGradientLayer().mainLayer(frame: self.view.frame), at: 0)
+    }
+    
+    private func setupView() {
+        monthlyTextLabel.adjustsFontSizeToFitWidth = true
+        monthlyBudgetLabel.adjustsFontSizeToFitWidth = true
+        dailyTextLabel.adjustsFontSizeToFitWidth = true
+        dailyLimitLabel.adjustsFontSizeToFitWidth = true
     }
 }
 
