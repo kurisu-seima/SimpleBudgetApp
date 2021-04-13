@@ -94,11 +94,13 @@ extension CAGradientLayer {
     
     func monthlyRecordVCLayer(frame: CGRect) -> CAGradientLayer {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [
-            UIColor(red: 1, green: 238 / 255, blue: 238 / 255, alpha: 1).cgColor,
-            UIColor(red: 248 / 255, green: 235 / 255, blue: 159 / 255, alpha: 1).cgColor]
-        gradientLayer.startPoint = CGPoint.init(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint.init(x: 1, y: 1)
+            gradientLayer.colors = [
+                UIColor(red: 1, green: 190 / 255, blue: 90 / 255, alpha: 1).cgColor,
+                UIColor(red: 1, green: 180 / 255, blue: 0, alpha: 1).cgColor,
+                UIColor(red: 1, green: 150 / 255, blue: 0, alpha: 1).cgColor,
+                UIColor(red: 1, green: 130 / 255, blue: 0, alpha: 1).cgColor]
+        gradientLayer.startPoint = CGPoint.init(x: 0, y: 0.5)
+        gradientLayer.endPoint = CGPoint.init(x: 1, y: 0.5)
         gradientLayer.frame = frame
         return gradientLayer
     }
