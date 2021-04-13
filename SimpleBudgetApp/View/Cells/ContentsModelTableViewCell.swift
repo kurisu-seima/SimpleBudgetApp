@@ -57,7 +57,7 @@ class ContentsModelTableViewCell: UITableViewCell {
         case .plus:
             amountLabel.text = "¥\(Int(incomeAndExpenditure.amountOfMoney)!.numberWithComma())"
         case .minus:
-            amountLabel.text = "-¥\(Int(incomeAndExpenditure.amountOfMoney)!.numberWithComma())"
+            amountLabel.text = "¥-\(Int(incomeAndExpenditure.amountOfMoney)!.numberWithComma())"
         }
     }
 }

@@ -45,7 +45,7 @@ class EditingIncomeAndExpenditureViewController: UIViewController {
     func setupView() {
         detailsTextField.text = incomeAndExpenditure?.details
         amountTextField.text = incomeAndExpenditure?.amountOfMoney
-        self.view.layer.insertSublayer(CAGradientLayer().balanceBreakdoenLayer(frame: self.view.frame), at: 0)
+        self.view.layer.insertSublayer(CAGradientLayer().mainLayer(frame: self.view.frame), at: 0)
         detailsTextField.backgroundColor = .clear
         amountTextField.backgroundColor = .clear
         guard let type = IncomeAndExpenditure.PlusOrMinus(rawValue: incomeAndExpenditure!.plusOrMinus) else {

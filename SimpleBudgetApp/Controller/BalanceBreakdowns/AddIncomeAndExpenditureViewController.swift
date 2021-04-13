@@ -29,7 +29,7 @@ class AddIncomeAndExpenditureViewController: UIViewController {
     }
     
     private func setupView() {
-        self.view.layer.insertSublayer(CAGradientLayer().balanceBreakdoenLayer(frame: self.view.frame), at: 0)
+        self.view.layer.insertSublayer(CAGradientLayer().mainLayer(frame: self.view.frame), at: 0)
         switch inputType {
         case .income:
             topLabel.text = "臨時収入を追加できます"

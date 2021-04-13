@@ -104,10 +104,10 @@ class InputView: UIView {
             closeButton.gradientEndColor = UIColor().savingsEndColor
             
         case is AddIncomeAndExpenditureViewController:
-            doneButton.gradientStartColor = UIColor().balanceBreakdownStartColor
-            doneButton.gradientEndColor = UIColor().balanceBreakdownEndColor
-            closeButton.gradientStartColor = UIColor().balanceBreakdownStartColor
-            closeButton.gradientEndColor = UIColor().balanceBreakdownEndColor
+            doneButton.gradientStartColor = UIColor().orangeStartColor
+            doneButton.gradientEndColor = UIColor().orangeEndColor
+            closeButton.gradientStartColor = UIColor().orangeStartColor
+            closeButton.gradientEndColor = UIColor().orangeEndColor
         default:
             break
         }

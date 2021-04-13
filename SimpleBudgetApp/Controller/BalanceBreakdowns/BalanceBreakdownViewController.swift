@@ -52,7 +52,7 @@ class BalanceBreakdownViewController: UIViewController {
     private func setupView() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(goSelectVC))
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 240 / 255, green: 234 / 255, blue: 220 / 255, alpha: 1)
-        self.view.layer.insertSublayer(CAGradientLayer().balanceBreakdoenLayer(frame: self.view.frame), at: 0)
+        self.view.layer.insertSublayer(CAGradientLayer().mainLayer(frame: self.view.frame), at: 0)
         balanceBreakdownTableView.backgroundColor = UIColor.clear
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.isTranslucent = true

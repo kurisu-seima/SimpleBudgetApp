@@ -28,7 +28,7 @@ class SelectMonthlyViewController: UIViewController {
     }
     
     private func setupView() {
-        self.view.layer.insertSublayer(CAGradientLayer().balanceBreakdoenLayer(frame: self.view.frame), at: 0)
+        self.view.layer.insertSublayer(CAGradientLayer().mainLayer(frame: self.view.frame), at: 0)
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 240 / 255, green: 234 / 255, blue: 220 / 255, alpha: 1)
         selectMonthlyTableView.backgroundColor = UIColor.clear
     }

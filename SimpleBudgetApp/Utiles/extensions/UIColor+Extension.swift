@@ -61,4 +61,12 @@ extension UIColor {
     var balanceBreakdownEndColor: UIColor {
         return UIColor(red: 221 / 255, green: 239 / 255, blue: 187 / 255, alpha: 1)
     }
+    
+    var orangeStartColor: UIColor {
+        return UIColor(red: 255 / 255, green: 190 / 255, blue: 90 / 255, alpha: 1)
+    }
+    
+    var orangeEndColor: UIColor {
+        return UIColor(red: 255 / 255, green: 130 / 255, blue: 0, alpha: 1)
+    }
 }
