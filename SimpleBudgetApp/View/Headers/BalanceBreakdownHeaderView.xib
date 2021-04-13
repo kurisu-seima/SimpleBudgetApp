@@ -22,7 +22,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3im-ek-fZQ" customClass="DSFloatingButton" customModule="DSFloatingButton">
-                    <rect key="frame" x="260" y="13" width="58" height="27"/>
+                    <rect key="frame" x="240.5" y="13" width="68" height="27"/>
                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
                     <state key="normal" title="使う">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,7 +61,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Po-pW-yfP" customClass="DSFloatingButton" customModule="DSFloatingButton">
-                    <rect key="frame" x="333" y="13" width="58" height="27"/>
+                    <rect key="frame" x="323.5" y="13" width="67.5" height="27"/>
                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
                     <state key="normal" title="入れる">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -104,12 +104,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="ibG-zg-2xH" firstAttribute="bottom" secondItem="3im-ek-fZQ" secondAttribute="bottom" constant="5" id="1KI-nN-I0f"/>
-                <constraint firstItem="3im-ek-fZQ" firstAttribute="width" secondItem="SHd-in-uSw" secondAttribute="width" multiplier="1:7" id="Ac1-gG-coX"/>
+                <constraint firstItem="3im-ek-fZQ" firstAttribute="width" secondItem="SHd-in-uSw" secondAttribute="width" multiplier="1:6" id="Ac1-gG-coX"/>
                 <constraint firstAttribute="trailing" secondItem="1Po-pW-yfP" secondAttribute="trailing" constant="15" id="CeO-gM-lGz"/>
                 <constraint firstItem="ibG-zg-2xH" firstAttribute="bottom" secondItem="aPh-iy-lOi" secondAttribute="bottom" constant="11" id="EU0-A8-UR3"/>
                 <constraint firstItem="aPh-iy-lOi" firstAttribute="leading" secondItem="ibG-zg-2xH" secondAttribute="leading" constant="15" id="Ebj-gG-VFb"/>
                 <constraint firstItem="ibG-zg-2xH" firstAttribute="bottom" secondItem="1Po-pW-yfP" secondAttribute="bottom" constant="5" id="dZx-d8-mlA"/>
-                <constraint firstItem="1Po-pW-yfP" firstAttribute="width" secondItem="SHd-in-uSw" secondAttribute="width" multiplier="1:7" id="rKX-mT-Day"/>
+                <constraint firstItem="1Po-pW-yfP" firstAttribute="width" secondItem="SHd-in-uSw" secondAttribute="width" multiplier="1:6" id="rKX-mT-Day"/>
                 <constraint firstItem="1Po-pW-yfP" firstAttribute="leading" secondItem="3im-ek-fZQ" secondAttribute="trailing" constant="15" id="wIw-im-WGp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
