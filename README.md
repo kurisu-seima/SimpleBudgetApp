@@ -44,7 +44,7 @@
 
 ＜難しかったところ＞
 
-Modelの設計でどのように責務を分担してクラスを作るか
+どのように責務を分担してクラスを作るか
 
 ＜アプリ全画面＞
 ![SimpleBudgetAppScreenShot](https://user-images.githubusercontent.com/74137008/115136299-e3d73f00-a059-11eb-8d86-ebfbc2b9b813.png)
