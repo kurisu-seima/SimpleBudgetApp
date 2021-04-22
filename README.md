@@ -46,6 +46,18 @@
 
 どのように責務を分担してクラスを作るか
 
+＜学んだこと＞
+
+・ジェネリック関数
+
+・CAGradientLayer
+
+・map、reduce、forEachメソッド
+
+・テーブルビューのヘッダー・フッター
+
+・フェードインアニメーション
+
 ＜アプリ全画面＞
 ![SimpleBudgetAppScreenShot](https://user-images.githubusercontent.com/74137008/115136299-e3d73f00-a059-11eb-8d86-ebfbc2b9b813.png)
 
