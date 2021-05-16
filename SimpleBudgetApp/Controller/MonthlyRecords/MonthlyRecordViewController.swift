@@ -55,11 +55,11 @@ extension MonthlyRecordViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = monthlyRecordTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MonthlyRecordTableViewCell
-        cell.setupMonthlyRecordView(fixedIncome: MoneyManagementUseCase.shared.getMonthlyFixedIncomesAmounts[indexPath.row],
-                                    fixedSpending: MoneyManagementUseCase.shared.getMonthlyFixedSpendingsAmounts[indexPath.row],
-                                    fixedSavings: MoneyManagementUseCase.shared.getMonthlyFixedSavingsAmounts[indexPath.row],
-                                    extraordinaryIncome: MoneyManagementUseCase.shared.getMonthlyExtraordinaryIncomeAmounts[indexPath.row],
-                                    extraordinarySpending: MoneyManagementUseCase.shared.getMonthlyExtraordinarySpendingAmounts[indexPath.row])
+        cell.setupMonthlyRecordView(fixedIncome: MoneyManagementUseCase.shared.getMonthlyFixedIncomesAmounts[indexPath.section],
+                                    fixedSpending: MoneyManagementUseCase.shared.getMonthlyFixedSpendingsAmounts[indexPath.section],
+                                    fixedSavings: MoneyManagementUseCase.shared.getMonthlyFixedSavingsAmounts[indexPath.section],
+                                    extraordinaryIncome: MoneyManagementUseCase.shared.getMonthlyExtraordinaryIncomeAmounts[indexPath.section],
+                                    extraordinarySpending: MoneyManagementUseCase.shared.getMonthlyExtraordinarySpendingAmounts[indexPath.section])
         return cell
     }
     

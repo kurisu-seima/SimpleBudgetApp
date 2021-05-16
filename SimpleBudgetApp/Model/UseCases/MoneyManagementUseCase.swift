@@ -131,7 +131,7 @@ class MoneyManagementUseCase {
     //月別の固定収入の合計を保持
     var getMonthlyFixedIncomesAmounts: [Int] {
         var totals: [Int] = []
-        for date in AppSettingUseCase.shared.savedDates {
+        for date in AppSettingUseCase.shared.savedDates.sorted(by: >) {
             let fixedIncomes = Array(repository.fixedIncomes
                                         .filter(NSPredicate(format: "year = %d", date.year))
                                         .filter(NSPredicate(format: "month = %d", date.month)))
@@ -149,7 +149,7 @@ class MoneyManagementUseCase {
     //月別の固定支出の合計を保持
     var getMonthlyFixedSpendingsAmounts: [Int] {
         var totals: [Int] = []
-        for date in AppSettingUseCase.shared.savedDates {
+        for date in AppSettingUseCase.shared.savedDates.sorted(by: >) {
             let fixedSpendings = Array(repository.fixedSpendings
                                         .filter(NSPredicate(format: "year = %d", date.year))
                                         .filter(NSPredicate(format: "month = %d", date.month)))
@@ -167,7 +167,7 @@ class MoneyManagementUseCase {
     //月別の固定貯金の合計を保持
     var getMonthlyFixedSavingsAmounts: [Int] {
         var totals: [Int] = []
-        for date in AppSettingUseCase.shared.savedDates {
+        for date in AppSettingUseCase.shared.savedDates.sorted(by: >) {
             let fixedSavings = Array(repository.fixedSavings
                                         .filter(NSPredicate(format: "year = %d", date.year))
                                         .filter(NSPredicate(format: "month = %d", date.month)))
@@ -185,7 +185,7 @@ class MoneyManagementUseCase {
     //月別の臨時収入の合計を保持
     var getMonthlyExtraordinaryIncomeAmounts: [Int] {
         var totals: [Int] = []
-        for date in AppSettingUseCase.shared.savedDates {
+        for date in AppSettingUseCase.shared.savedDates.sorted(by: >) {
             var monthly: [Int] = []
             let dailyIncomeAndExpenditures = Array(repository.dailyIncomeAndExpenditures
                                                     .filter(NSPredicate(format: "year = %d", date.year))
@@ -220,7 +220,7 @@ class MoneyManagementUseCase {
     //月別の臨時支出の合計を保持
     var getMonthlyExtraordinarySpendingAmounts: [Int] {
         var totals: [Int] = []
-        for date in AppSettingUseCase.shared.savedDates {
+        for date in AppSettingUseCase.shared.savedDates.sorted(by: >) {
             var monthly: [Int] = []
             let dailyIncomeAndExpenditures = Array(repository.dailyIncomeAndExpenditures
                                                     .filter(NSPredicate(format: "year = %d", date.year))

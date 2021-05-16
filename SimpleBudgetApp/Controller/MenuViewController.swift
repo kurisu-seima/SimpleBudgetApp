@@ -17,6 +17,7 @@ class MenuViewController: UIViewController {
         
         menuTableView.dataSource = self
         menuTableView.delegate = self
+        self.overrideUserInterfaceStyle = .light
     }
 }
 
