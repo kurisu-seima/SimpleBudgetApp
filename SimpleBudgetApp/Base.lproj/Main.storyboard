@@ -817,6 +817,41 @@
             </objects>
             <point key="canvasLocation" x="7256.521739130435" y="318.75"/>
         </scene>
+        <!--Pay Day Setting View Controller-->
+        <scene sceneID="xe2-Yj-YE7">
+            <objects>
+                <viewController storyboardIdentifier="PayDayVC" id="vKm-au-1Sl" customClass="PayDaySettingViewController" customModule="SimpleBudgetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NOp-Vc-lA8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjF-1i-4Hh">
+                                <rect key="frame" x="180.5" y="159" width="53" height="40"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="給料日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpn-kb-1tU">
+                                <rect key="frame" x="169.5" y="104" width="75" height="25"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c1u-Ab-hCg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wpn-kb-1tU" firstAttribute="centerX" secondItem="NOp-Vc-lA8" secondAttribute="centerX" id="42L-0e-uVW"/>
+                            <constraint firstItem="rjF-1i-4Hh" firstAttribute="top" secondItem="Wpn-kb-1tU" secondAttribute="bottom" constant="30" id="Wxm-if-w57"/>
+                            <constraint firstItem="rjF-1i-4Hh" firstAttribute="centerX" secondItem="NOp-Vc-lA8" secondAttribute="centerX" id="cgF-WE-lz9"/>
+                            <constraint firstItem="Wpn-kb-1tU" firstAttribute="top" secondItem="c1u-Ab-hCg" secondAttribute="top" constant="60" id="x67-ii-HkQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MSX-O1-l2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5805.7971014492759" y="987.72321428571422"/>
+        </scene>
         <!--Monthly Record View Controller-->
         <scene sceneID="s8n-gs-5LA">
             <objects>

@@ -56,6 +56,7 @@
 		33E4B81825D01D5200A3CD36 /* AddFixedSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B81725D01D5200A3CD36 /* AddFixedSpendingViewController.swift */; };
 		33E4B81B25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E4B81A25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift */; };
 		33F47A5F25F0149800E720F9 /* DailyIncomeAndExpenditure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F47A5E25F0149700E720F9 /* DailyIncomeAndExpenditure.swift */; };
+		33FDBA9926553451002FE27C /* PayDaySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDBA9826553451002FE27C /* PayDaySettingViewController.swift */; };
 		8233407E83E150AC8DFCCAF3 /* Pods_SimpleBudgetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C693082D34BD08C937D0898 /* Pods_SimpleBudgetApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		33E4B81725D01D5200A3CD36 /* AddFixedSpendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFixedSpendingViewController.swift; sourceTree = "<group>"; };
 		33E4B81A25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFixedSavingsViewController.swift; sourceTree = "<group>"; };
 		33F47A5E25F0149700E720F9 /* DailyIncomeAndExpenditure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyIncomeAndExpenditure.swift; sourceTree = "<group>"; };
+		33FDBA9826553451002FE27C /* PayDaySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayDaySettingViewController.swift; sourceTree = "<group>"; };
 		6BB2F9C0B73ACA432F6E0E9A /* Pods-SimpleBudgetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleBudgetApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7C693082D34BD08C937D0898 /* Pods_SimpleBudgetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleBudgetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFFFA5AC302987268AFC317 /* Pods-SimpleBudgetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleBudgetApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				33E4B80325D016F000A3CD36 /* MainViewController.swift */,
 				33E4B80625D0174600A3CD36 /* MenuViewController.swift */,
 				33E4B80925D0186600A3CD36 /* BudgetSettingViewController.swift */,
+				33FDBA9826553451002FE27C /* PayDaySettingViewController.swift */,
 				33AF6E9A2615916B005E7D1C /* Adds */,
 				33AF6E9B2615918A005E7D1C /* Editings */,
 				33AF6E9C261591FE005E7D1C /* BalanceBreakdowns */,
@@ -490,6 +493,7 @@
 				33E4B80425D016F000A3CD36 /* MainViewController.swift in Sources */,
 				3370414426035292003FC9CB /* EditingFixedIncomeViewController.swift in Sources */,
 				336C6800260B7A370065AB6C /* BalanceBreakdownManagementUseCase.swift in Sources */,
+				33FDBA9926553451002FE27C /* PayDaySettingViewController.swift in Sources */,
 				3348BF0625E24451002324EE /* FixedSpending.swift in Sources */,
 				33E4B7EB25D0102400A3CD36 /* AppDelegate.swift in Sources */,
 				33AF6EA02615A449005E7D1C /* BalanceBreakdownHeaderView.swift in Sources */,

@@ -10,6 +10,7 @@ import Foundation
 enum Menu: CaseIterable {
     case yourMenoy
     case budgetSetting
+    case payDay
     case balanceBreakDown
     case monthlyRecord
     
@@ -19,6 +20,8 @@ enum Menu: CaseIterable {
             return "あなたの使えるお金"
         case .budgetSetting:
             return "予算設定"
+        case .payDay:
+            return "給料日設定"
         case .balanceBreakDown:
             return "収支内訳"
         case .monthlyRecord:
@@ -32,6 +35,8 @@ enum Menu: CaseIterable {
             return "graph"
         case .budgetSetting:
             return "money"
+        case .payDay:
+            return "setting"
         case .balanceBreakDown:
             return "menu-documents"
         case .monthlyRecord:

@@ -51,6 +51,9 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         case .budgetSetting:
             let budgetVC = storyboard?.instantiateViewController(withIdentifier: "BudgetVC") as! BudgetSettingViewController
             navigationController.pushViewController(budgetVC, animated: true)
+        case .payDay:
+            let payDayVC = storyboard?.instantiateViewController(withIdentifier: "PayDayVC") as! PayDaySettingViewController
+            navigationController.pushViewController(payDayVC, animated: true)
         case .balanceBreakDown:
             let balanceBreakdownVC = storyboard?.instantiateViewController(withIdentifier: "BalanceBreakdownVC") as! BalanceBreakdownViewController
             navigationController.pushViewController(balanceBreakdownVC, animated: true)

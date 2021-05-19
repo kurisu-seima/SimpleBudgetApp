@@ -48,6 +48,19 @@ extension CAGradientLayer {
         return gradientLayer
     }
     
+    func payDaySettingVCLayer(frame: CGRect) -> CAGradientLayer {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [
+            UIColor(red: 247 / 255, green: 183 / 255, blue: 51 / 255, alpha: 1).cgColor,
+            UIColor(red: 230 / 255, green: 92 / 255, blue: 35 / 255, alpha: 1).cgColor,
+]
+        gradientLayer.startPoint = CGPoint.init(x: 0.5, y: 0)
+        gradientLayer.endPoint = CGPoint.init(x: 0.5, y: 1)
+        gradientLayer.frame = frame
+        return gradientLayer
+    }
+    
+    
     func fixedIncomeVCLayer(frame: CGRect) -> CAGradientLayer {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [
