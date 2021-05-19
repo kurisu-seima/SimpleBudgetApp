@@ -29,11 +29,10 @@ extension Date {
     }
     
     var lastDay: Int {
-        let dateNow = Date()
         let calendar = Calendar(identifier: .gregorian)
         var components = DateComponents()
-        components.year = Calendar.current.component(.year, from: dateNow)
-        components.month = Calendar.current.component(.month, from: dateNow) + 1
+        components.year = Calendar.current.component(.year, from: self)
+        components.month = Calendar.current.component(.month, from: self) + 1
         components.day = 0
         let date = calendar.date(from: components)!
         let dayCount = calendar.component(.day, from: date)
