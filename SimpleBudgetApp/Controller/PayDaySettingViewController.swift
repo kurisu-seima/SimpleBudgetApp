@@ -18,6 +18,10 @@ class PayDaySettingViewController: UIViewController {
     
     private let savePaDay = "PayDay"
     
+    let payDay: String {
+       return String(UserDefaults.standard.integer(forKey: savePaDay)) ?? "1"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +31,7 @@ class PayDaySettingViewController: UIViewController {
         super.viewWillAppear(true)
         
         setupView()
+        setupPayDay()
     }
     
     @IBAction func changeButtonDidTapped(_ sender: UIButton) {
@@ -54,19 +59,15 @@ class PayDaySettingViewController: UIViewController {
     }
     
     private func setupPayDay() {
-        //ここに
+        paDayLabel.text = payDay
     }
 }
 
 extension PayDaySettingViewController: InputViewDelegate {
     func didFinish(details: String, amount: String) {
         paDayLabel.text = details
-        
-        //再度更新する際の処理をかく
-
-        //日付は-1の方がいいのか
         UserDefaults.standard.setValue(amount, forKey: savePaDay)
-        payDayNumber.text = amount
+        payDayNumber.text = payDay
     }
     
     func closeInputView() {
