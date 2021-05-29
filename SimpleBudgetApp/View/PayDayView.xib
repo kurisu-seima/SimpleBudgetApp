@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PayDayView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="PIK-zz-oBw">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIW-rL-EFh" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                    <rect key="frame" x="223.5" y="193" width="165.5" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="xYj-Kg-TgS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                    <state key="normal" title="完了">
+                        <color key="titleColor" systemColor="labelColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                            <point key="value" x="0.0" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                            <point key="value" x="1" y="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="0.10000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e2y-Tz-F6h">
+                    <rect key="frame" x="0.0" y="64" width="414" height="99"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECi-ge-6wB">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRv-pY-5H7" userLabel="Center Line">
+                                    <rect key="frame" x="0.0" y="-2" width="414" height="2"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="FoB-bN-Rea"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yq9-4s-BBe" userLabel="Amount ContentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLo-CO-c5v">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTU-TH-f9b">
+                                            <rect key="frame" x="10" y="39.5" width="40" height="20"/>
+                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIA-nl-j98" userLabel="下ライン">
+                                            <rect key="frame" x="0.0" y="97" width="414" height="2"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="2" id="Ac1-0V-bAD"/>
+                                            </constraints>
+                                        </view>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="日付を入力してください" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Run-y7-VLy">
+                                            <rect key="frame" x="60" y="30" width="344" height="37"/>
+                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="99" id="0LV-Yk-53T"/>
+                                        <constraint firstItem="aLo-CO-c5v" firstAttribute="leading" secondItem="Yq9-4s-BBe" secondAttribute="leading" id="Agu-SR-viN"/>
+                                        <constraint firstItem="gTU-TH-f9b" firstAttribute="leading" secondItem="Yq9-4s-BBe" secondAttribute="leading" constant="10" id="NSS-Is-2y4"/>
+                                        <constraint firstAttribute="trailing" secondItem="aLo-CO-c5v" secondAttribute="trailing" id="OD7-Fb-eEG"/>
+                                        <constraint firstAttribute="trailing" secondItem="SIA-nl-j98" secondAttribute="trailing" id="Os8-aY-Me4"/>
+                                        <constraint firstAttribute="bottom" secondItem="SIA-nl-j98" secondAttribute="bottom" id="Pkc-lS-dii"/>
+                                        <constraint firstItem="Run-y7-VLy" firstAttribute="leading" secondItem="gTU-TH-f9b" secondAttribute="trailing" constant="10" id="UgW-2q-MmA"/>
+                                        <constraint firstItem="SIA-nl-j98" firstAttribute="top" secondItem="Run-y7-VLy" secondAttribute="bottom" constant="30" id="cZ3-wV-L6Z"/>
+                                        <constraint firstItem="gTU-TH-f9b" firstAttribute="centerY" secondItem="Yq9-4s-BBe" secondAttribute="centerY" id="cnO-ih-2eY"/>
+                                        <constraint firstAttribute="trailing" secondItem="Run-y7-VLy" secondAttribute="trailing" constant="10" id="ctS-IR-eYR"/>
+                                        <constraint firstItem="SIA-nl-j98" firstAttribute="leading" secondItem="Yq9-4s-BBe" secondAttribute="leading" id="fYf-Pt-Wpc"/>
+                                        <constraint firstItem="aLo-CO-c5v" firstAttribute="top" secondItem="Yq9-4s-BBe" secondAttribute="top" id="qEn-h1-49P"/>
+                                        <constraint firstAttribute="bottom" secondItem="aLo-CO-c5v" secondAttribute="bottom" id="rqg-hA-5UC"/>
+                                        <constraint firstItem="Run-y7-VLy" firstAttribute="top" secondItem="Yq9-4s-BBe" secondAttribute="top" constant="30" id="vDs-5n-BF8"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Yq9-4s-BBe" firstAttribute="top" secondItem="tRv-pY-5H7" secondAttribute="bottom" id="Kzp-Ls-FHb"/>
+                                <constraint firstAttribute="bottom" secondItem="Yq9-4s-BBe" secondAttribute="bottom" id="d8w-o4-Z2p"/>
+                                <constraint firstItem="Yq9-4s-BBe" firstAttribute="centerY" secondItem="ECi-ge-6wB" secondAttribute="centerY" id="h5X-Op-J7t"/>
+                                <constraint firstAttribute="trailing" secondItem="tRv-pY-5H7" secondAttribute="trailing" id="jGG-os-xA2"/>
+                                <constraint firstItem="Yq9-4s-BBe" firstAttribute="leading" secondItem="ECi-ge-6wB" secondAttribute="leading" id="rps-bt-PoB"/>
+                                <constraint firstAttribute="trailing" secondItem="Yq9-4s-BBe" secondAttribute="trailing" id="teL-eO-kzI"/>
+                                <constraint firstItem="tRv-pY-5H7" firstAttribute="leading" secondItem="ECi-ge-6wB" secondAttribute="leading" id="xr3-v8-7oh"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hX-GK-LJN" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                    <rect key="frame" x="25" y="193" width="165.5" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="3kO-09-HzR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                    <state key="normal" title="閉じる">
+                        <color key="titleColor" systemColor="labelColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                            <point key="value" x="0.0" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                            <point key="value" x="1" y="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="0.10000000000000001"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="7O3-w0-H6P"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="7O3-w0-H6P" firstAttribute="trailing" secondItem="NIW-rL-EFh" secondAttribute="trailing" constant="25" id="2Ff-Eb-cn0"/>
+                <constraint firstItem="e2y-Tz-F6h" firstAttribute="centerX" secondItem="PIK-zz-oBw" secondAttribute="centerX" id="5kI-ZI-L8y"/>
+                <constraint firstItem="1hX-GK-LJN" firstAttribute="top" secondItem="e2y-Tz-F6h" secondAttribute="bottom" constant="30" id="9zb-Xu-Jqb"/>
+                <constraint firstItem="1hX-GK-LJN" firstAttribute="width" secondItem="PIK-zz-oBw" secondAttribute="width" multiplier="1:2.5" id="OhJ-M5-5eh"/>
+                <constraint firstItem="1hX-GK-LJN" firstAttribute="leading" secondItem="7O3-w0-H6P" secondAttribute="leading" constant="25" id="Wk2-vW-qNg"/>
+                <constraint firstItem="NIW-rL-EFh" firstAttribute="width" secondItem="PIK-zz-oBw" secondAttribute="width" multiplier="1:2.5" id="X03-ZY-T7d"/>
+                <constraint firstItem="e2y-Tz-F6h" firstAttribute="top" secondItem="7O3-w0-H6P" secondAttribute="top" constant="20" id="d5g-oc-Crh"/>
+                <constraint firstItem="7O3-w0-H6P" firstAttribute="trailing" secondItem="e2y-Tz-F6h" secondAttribute="trailing" id="kfc-kM-pn4"/>
+                <constraint firstItem="NIW-rL-EFh" firstAttribute="top" secondItem="e2y-Tz-F6h" secondAttribute="bottom" constant="30" id="leG-Sb-wUC"/>
+                <constraint firstItem="e2y-Tz-F6h" firstAttribute="leading" secondItem="7O3-w0-H6P" secondAttribute="leading" id="pqS-oR-Qnj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="31.884057971014496" y="51.5625"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="1hX-GK-LJN">
+            <size key="intrinsicContentSize" width="90" height="42"/>
+        </designable>
+        <designable name="NIW-rL-EFh">
+            <size key="intrinsicContentSize" width="60" height="42"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

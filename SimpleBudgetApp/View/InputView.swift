@@ -30,13 +30,13 @@ class InputView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        loadNib()
-        
+        payDayloadNib()
+
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        loadNib()
+        payDayloadNib()
         
         detailsTextField.delegate = self
         amountTextField.delegate = self
@@ -46,6 +46,12 @@ class InputView: UIView {
     
     func loadNib() {
         let view = Bundle.main.loadNibNamed("InputView", owner: self, options: nil)?.first as! UIView
+        view.frame = self.bounds
+        self.addSubview(view)
+    }
+    
+    func payDayloadNib() {
+        let view = Bundle.main.loadNibNamed("PayDayView", owner: self, options: nil)?.first as! UIView
         view.frame = self.bounds
         self.addSubview(view)
     }
