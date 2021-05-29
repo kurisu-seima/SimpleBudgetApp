@@ -19,13 +19,21 @@ class BalanceBreakdownManagementUseCase {
         return Array(repository.dailyIncomeAndExpenditures
                         .filter(NSPredicate(format: "year = %d", Date().year))
                         .filter(NSPredicate(format: "month = %d", Date().month))
+                        .filter(NSPredicate(format: "day = %d", payDay - 1))
+                        .filter(NSPredicate(format: "year = %d", Date().year - 1))
+                        .filter(NSPredicate(format: "month = %d", Date().month - 1))
+                        .filter(NSPredicate(format: "day = %d", payDay...Date().lastDay)))
                         .sorted(byKeyPath: "date", ascending: false))
     }
     
     func getSelectedDailyIncomeAndExpenditures(year: Int, month: Int) -> [DailyIncomeAndExpenditure] {
         let monthly = repository.dailyIncomeAndExpenditures
-            .filter(NSPredicate(format: "year = %d", year))
-            .filter(NSPredicate(format: "month = %d", month))
+            .filter(NSPredicate(format: "year = %d", Date().year))
+            .filter(NSPredicate(format: "month = %d", Date().month))
+            .filter(NSPredicate(format: "day = %d", payDay - 1))
+            .filter(NSPredicate(format: "year = %d", Date().year - 1))
+            .filter(NSPredicate(format: "month = %d", Date().month - 1))
+            .filter(NSPredicate(format: "day = %d", payDay...Date().lastDay)))
             .sorted(byKeyPath: "date", ascending: false)
         return Array(monthly)
     }

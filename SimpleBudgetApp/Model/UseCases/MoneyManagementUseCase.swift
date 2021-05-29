@@ -12,31 +12,48 @@ class MoneyManagementUseCase {
     
     static let shared = MoneyManagementUseCase()
     private let repository = BudgetRepository.shared
+    let payDay = UserDefaults.standard.integer(forKey: "PayDay")
     
     private init() {}
     
     var fixedIncomes: [FixedIncome] {
         return Array(repository.fixedIncomes
                         .filter(NSPredicate(format: "year = %d", Date().year))
-                        .filter(NSPredicate(format: "month = %d", Date().month)))
+                        .filter(NSPredicate(format: "month = %d", Date().month))
+                        .filter(NSPredicate(format: "day = %d", payDay - 1))
+                        .filter(NSPredicate(format: "year = %d", Date().year - 1))
+                        .filter(NSPredicate(format: "month = %d", Date().month - 1))
+                        .filter(NSPredicate(format: "day = %d", payDay...Date().lastDay)))
     }
     
     var fixedSpendings: [FixedSpending] {
         return Array(repository.fixedSpendings
                         .filter(NSPredicate(format: "year = %d", Date().year))
-                        .filter(NSPredicate(format: "month = %d", Date().month)))
+                        .filter(NSPredicate(format: "month = %d", Date().month))
+                        .filter(NSPredicate(format: "day = %d", payDay - 1))
+                        .filter(NSPredicate(format: "year = %d", Date().year - 1))
+                        .filter(NSPredicate(format: "month = %d", Date().month - 1))
+                        .filter(NSPredicate(format: "day = %d", payDay...Date().lastDay)))
     }
     
     var fixedSavings: [FixedSavings] {
         return Array(repository.fixedSavings
                         .filter(NSPredicate(format: "year = %d", Date().year))
-                        .filter(NSPredicate(format: "month = %d", Date().month)))
+                        .filter(NSPredicate(format: "month = %d", Date().month))
+                        .filter(NSPredicate(format: "day = %d", payDay - 1))
+                        .filter(NSPredicate(format: "year = %d", Date().year - 1))
+                        .filter(NSPredicate(format: "month = %d", Date().month - 1))
+                        .filter(NSPredicate(format: "day = %d", payDay...Date().lastDay)))
     }
     
     var dailyIncomeAndExpenditures: [DailyIncomeAndExpenditure] {
         return Array(repository.dailyIncomeAndExpenditures
                         .filter(NSPredicate(format: "year = %d", Date().year))
-                        .filter(NSPredicate(format: "month = %d", Date().month)))
+                        .filter(NSPredicate(format: "month = %d", Date().month))
+                        .filter(NSPredicate(format: "day = %d", payDay - 1))
+                        .filter(NSPredicate(format: "year = %d", Date().year - 1))
+                        .filter(NSPredicate(format: "month = %d", Date().month - 1))
+                        .filter(NSPredicate(format: "day = %d", payDay...Date().lastDay)))
     }
     
     func getTotalAmountOfIncome() -> Int {
@@ -133,8 +150,12 @@ class MoneyManagementUseCase {
         var totals: [Int] = []
         for date in AppSettingUseCase.shared.savedDates.sorted(by: >) {
             let fixedIncomes = Array(repository.fixedIncomes
-                                        .filter(NSPredicate(format: "year = %d", date.year))
-                                        .filter(NSPredicate(format: "month = %d", date.month)))
+                                        .filter(NSPredicate(format: "year = %d", Date().year))
+                                        .filter(NSPredicate(format: "month = %d", Date().month))
+                                        .filter(NSPredicate(format: "day = %d", payDay - 1))
+                                        .filter(NSPredicate(format: "year = %d", Date().year - 1))
+                                        .filter(NSPredicate(format: "month = %d", Date().month - 1))
+                                        .filter(NSPredicate(format: "day = %d", payDay...Date().lastDay)))
             let dailyAmount = fixedIncomes.map { fixedIncome -> Int in
                 guard let fixedIncomeAmount = Int(fixedIncome.amountOfMoney) else {
                     return 0
@@ -151,8 +172,12 @@ class MoneyManagementUseCase {
         var totals: [Int] = []
         for date in AppSettingUseCase.shared.savedDates.sorted(by: >) {
             let fixedSpendings = Array(repository.fixedSpendings
-                                        .filter(NSPredicate(format: "year = %d", date.year))
-                                        .filter(NSPredicate(format: "month = %d", date.month)))
+                                        .filter(NSPredicate(format: "year = %d", Date().year))
+                                        .filter(NSPredicate(format: "month = %d", Date().month))
+                                        .filter(NSPredicate(format: "day = %d", payDay - 1))
+                                        .filter(NSPredicate(format: "year = %d", Date().year - 1))
+                                        .filter(NSPredicate(format: "month = %d", Date().month - 1))
+                                        .filter(NSPredicate(format: "day = %d", payDay...Date().lastDay)))
             let dailyAmount = fixedSpendings.map { fixedSpending -> Int in
                 guard let fixedSpendingAmount = Int(fixedSpending.amountOfMoney) else {
                     return 0
@@ -169,8 +194,12 @@ class MoneyManagementUseCase {
         var totals: [Int] = []
         for date in AppSettingUseCase.shared.savedDates.sorted(by: >) {
             let fixedSavings = Array(repository.fixedSavings
-                                        .filter(NSPredicate(format: "year = %d", date.year))
-                                        .filter(NSPredicate(format: "month = %d", date.month)))
+                                        .filter(NSPredicate(format: "year = %d", Date().year))
+                                        .filter(NSPredicate(format: "month = %d", Date().month))
+                                        .filter(NSPredicate(format: "day = %d", payDay - 1))
+                                        .filter(NSPredicate(format: "year = %d", Date().year - 1))
+                                        .filter(NSPredicate(format: "month = %d", Date().month - 1))
+                                        .filter(NSPredicate(format: "day = %d", payDay...Date().lastDay)))
             let dailyAmount = fixedSavings.map { fixedSavings -> Int in
                 guard let fixedfixedSavingsAmount = Int(fixedSavings.amountOfMoney) else {
                     return 0
@@ -188,8 +217,12 @@ class MoneyManagementUseCase {
         for date in AppSettingUseCase.shared.savedDates.sorted(by: >) {
             var monthly: [Int] = []
             let dailyIncomeAndExpenditures = Array(repository.dailyIncomeAndExpenditures
-                                                    .filter(NSPredicate(format: "year = %d", date.year))
-                                                    .filter(NSPredicate(format: "month = %d", date.month)))
+                                                    .filter(NSPredicate(format: "year = %d", Date().year))
+                                                    .filter(NSPredicate(format: "month = %d", Date().month))
+                                                    .filter(NSPredicate(format: "day = %d", payDay - 1))
+                                                    .filter(NSPredicate(format: "year = %d", Date().year - 1))
+                                                    .filter(NSPredicate(format: "month = %d", Date().month - 1))
+                                                    .filter(NSPredicate(format: "day = %d", payDay...Date().lastDay)))
             dailyIncomeAndExpenditures.forEach { daily in
                 let dailyAmount = daily.incomeAndExpenditures.map { element -> Int in
                     guard let plusOrMinus = IncomeAndExpenditure.PlusOrMinus(rawValue: element.plusOrMinus) else {
@@ -223,8 +256,12 @@ class MoneyManagementUseCase {
         for date in AppSettingUseCase.shared.savedDates.sorted(by: >) {
             var monthly: [Int] = []
             let dailyIncomeAndExpenditures = Array(repository.dailyIncomeAndExpenditures
-                                                    .filter(NSPredicate(format: "year = %d", date.year))
-                                                    .filter(NSPredicate(format: "month = %d", date.month)))
+                                                    .filter(NSPredicate(format: "year = %d", Date().year))
+                                                    .filter(NSPredicate(format: "month = %d", Date().month))
+                                                    .filter(NSPredicate(format: "day = %d", payDay - 1))
+                                                    .filter(NSPredicate(format: "year = %d", Date().year - 1))
+                                                    .filter(NSPredicate(format: "month = %d", Date().month - 1))
+                                                    .filter(NSPredicate(format: "day = %d", payDay...Date().lastDay)))
             dailyIncomeAndExpenditures.forEach { daily in
                 let dailyAmount = daily.incomeAndExpenditures.map { element -> Int in
                     guard let plusOrMinus = IncomeAndExpenditure.PlusOrMinus(rawValue: element.plusOrMinus) else {

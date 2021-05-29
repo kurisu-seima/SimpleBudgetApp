@@ -58,7 +58,6 @@
 		33F47A5F25F0149800E720F9 /* DailyIncomeAndExpenditure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F47A5E25F0149700E720F9 /* DailyIncomeAndExpenditure.swift */; };
 		33FDBA9926553451002FE27C /* PayDaySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDBA9826553451002FE27C /* PayDaySettingViewController.swift */; };
 		8233407E83E150AC8DFCCAF3 /* Pods_SimpleBudgetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C693082D34BD08C937D0898 /* Pods_SimpleBudgetApp.framework */; };
-		A35B980126629BAC007800AB /* PayDayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A35B980026629BAC007800AB /* PayDayView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,7 +115,6 @@
 		33FDBA9826553451002FE27C /* PayDaySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayDaySettingViewController.swift; sourceTree = "<group>"; };
 		6BB2F9C0B73ACA432F6E0E9A /* Pods-SimpleBudgetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleBudgetApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7C693082D34BD08C937D0898 /* Pods_SimpleBudgetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleBudgetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A35B980026629BAC007800AB /* PayDayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayDayView.xib; sourceTree = "<group>"; };
 		FAFFFA5AC302987268AFC317 /* Pods-SimpleBudgetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleBudgetApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -328,7 +326,6 @@
 			children = (
 				33AF6EC826164052005E7D1C /* InputView.swift */,
 				33AF6EC526164025005E7D1C /* InputView.xib */,
-				A35B980026629BAC007800AB /* PayDayView.xib */,
 				33604696260864F100E683D0 /* Animations */,
 				33800DEC25D7CECE002977AF /* Cells */,
 				3328227D2606668D007A487A /* Headers */,
@@ -431,7 +428,6 @@
 			files = (
 				33E4B7F725D0102500A3CD36 /* LaunchScreen.storyboard in Resources */,
 				33AF6EC626164025005E7D1C /* InputView.xib in Resources */,
-				A35B980126629BAC007800AB /* PayDayView.xib in Resources */,
 				33E4B7F425D0102500A3CD36 /* Assets.xcassets in Resources */,
 				33AF6E7A2610DBBA005E7D1C /* MonthlyRecordHeaderView.xib in Resources */,
 				33AF6EB42615B407005E7D1C /* TotalAmountFooterView.xib in Resources */,

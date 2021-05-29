@@ -19,7 +19,7 @@ class PayDaySettingViewController: UIViewController {
     private let savePaDay = "PayDay"
     
     let payDay: String {
-       return String(UserDefaults.standard.integer(forKey: savePaDay)) ?? "1"
+       return String(UserDefaults.standard.integer(forKey: savePaDay))
     }
     
     override func viewDidLoad() {
@@ -65,7 +65,14 @@ class PayDaySettingViewController: UIViewController {
 
 extension PayDaySettingViewController: InputViewDelegate {
     func didFinish(details: String, amount: String) {
-        paDayLabel.text = details
+        guard let number = Int(amount) else {
+            return
+        }
+        
+        guard Date().lastDay > number else {
+            return
+        }
+        
         UserDefaults.standard.setValue(amount, forKey: savePaDay)
         payDayNumber.text = payDay
     }

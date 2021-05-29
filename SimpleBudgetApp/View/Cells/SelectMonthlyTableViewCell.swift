@@ -11,6 +11,12 @@ class SelectMonthlyTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
     
+    private let savePaDay = "PayDay"
+    
+    let payDay: Int {
+       return String(UserDefaults.standard.integer(forKey: savePaDay))
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,7 +28,7 @@ class SelectMonthlyTableViewCell: UITableViewCell {
     }
     
     func setupSelectMonthlyVCCell(date: Date) {
-        dateLabel.text = "\(date.year)年\(date.month)月1日〜\(date.year)年\(date.month)月\(date.lastDay)日"
+        dateLabel.text = "\(date.year)年\(date.month)月\(payDay)日〜\(date.year)年\(date.month)月\(payDay - 1)日"
         self.backgroundColor = UIColor.clear
     }
 }
