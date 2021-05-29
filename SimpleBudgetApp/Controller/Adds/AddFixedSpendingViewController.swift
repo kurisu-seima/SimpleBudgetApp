@@ -37,6 +37,7 @@ class AddFixedSpendingViewController: UIViewController {
         amountSetUp()
         layerColorSetUp()
         spendingTableView.reloadData()
+        self.overrideUserInterfaceStyle = .light
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {

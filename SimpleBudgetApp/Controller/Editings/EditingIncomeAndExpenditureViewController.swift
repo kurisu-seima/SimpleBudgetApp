@@ -43,6 +43,7 @@ class EditingIncomeAndExpenditureViewController: UIViewController {
     }
     
     func setupView() {
+        self.overrideUserInterfaceStyle = .light
         detailsTextField.text = incomeAndExpenditure?.details
         amountTextField.text = incomeAndExpenditure?.amountOfMoney
         self.view.layer.insertSublayer(CAGradientLayer().mainLayer(frame: self.view.frame), at: 0)

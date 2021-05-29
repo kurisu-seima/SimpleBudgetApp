@@ -74,6 +74,7 @@ class MainViewController: UIViewController {
     }
     
     private func setupView() {
+        self.overrideUserInterfaceStyle = .light
         monthlyTextLabel.adjustsFontSizeToFitWidth = true
         monthlyBudgetLabel.adjustsFontSizeToFitWidth = true
         dailyTextLabel.adjustsFontSizeToFitWidth = true

@@ -34,6 +34,7 @@ class EditingFixedSavingsViewController: UIViewController {
     }
     
     private func setupView() {
+        self.overrideUserInterfaceStyle = .light
         detailsTextField.text = fixedSavings?.details
         amountTextField.text = fixedSavings?.amountOfMoney
         self.view.layer.insertSublayer(CAGradientLayer().fixedSavingsVCLayer(frame: self.view.frame), at: 0)

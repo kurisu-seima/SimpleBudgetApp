@@ -34,6 +34,7 @@ class EditingFixedIncomeViewController: UIViewController {
     }
     
     private func setupView() {
+        self.overrideUserInterfaceStyle = .light
         detailsTextField.text = fixedIncome?.details
         amountTextField.text = fixedIncome?.amountOfMoney
         self.view.layer.insertSublayer(CAGradientLayer().fixedIncomeVCLayer(frame: self.view.frame), at: 0)

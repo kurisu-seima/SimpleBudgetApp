@@ -9,9 +9,18 @@ import UIKit
 
 class PayDaySettingViewController: UIViewController {
 
+    @IBOutlet weak var selectArea: InputView!
+    @IBOutlet weak var selectAreaTop: NSLayoutConstraint!
+    @IBOutlet weak var selectAreaHeight: NSLayoutConstraint!
+    @IBOutlet weak var paDayLabel: UILabel!
+    @IBOutlet weak var payDayNumber: UILabel!
+    @IBOutlet weak var changeButton: UIButton!
+    
+    private let savePaDay = "PayDay"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -20,11 +29,56 @@ class PayDaySettingViewController: UIViewController {
         setupView()
     }
     
+    @IBAction func changeButtonDidTapped(_ sender: UIButton) {
+        selectArea.delegate = self
+        selectArea.isHidden = false
+        selectAreaTop.constant = 50
+        selectAreaHeight.constant = 900
+        UIView.animate(withDuration: 0.3) { [self] in
+            guard let view = selectArea.subviews.first else { return }
+            view.alpha = 1
+            paDayLabel.alpha = 0
+            payDayNumber.alpha = 0
+            changeButton.alpha = 0
+            self.view.layoutIfNeeded()
+        }
+    }
+    
     private func setupView() {
+        self.overrideUserInterfaceStyle = .light
         self.view.layer.insertSublayer(CAGradientLayer().payDaySettingVCLayer(frame: self.view.frame), at: 0)
         self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    private func setupPayDay() {
+        //ここに
+    }
+}
+
+extension PayDaySettingViewController: InputViewDelegate {
+    func didFinish(details: String, amount: String) {
+        paDayLabel.text = details
+        
+        //再度更新する際の処理をかく
+
+        //日付は-1の方がいいのか
+        UserDefaults.standard.setValue(amount, forKey: savePaDay)
+        payDayNumber.text = amount
+    }
+    
+    func closeInputView() {
+        selectAreaHeight.constant = 0
+        selectAreaTop.constant = 900
+        UIView.animate(withDuration: 0.3) { [self] in
+            guard let view = selectArea.subviews.first else { return }
+            view.alpha = 0
+            paDayLabel.alpha = 1
+            payDayNumber.alpha = 1
+            changeButton.alpha = 1
+            self.view.layoutIfNeeded()
+        }
     }
 }

@@ -13,10 +13,15 @@ class AppSettingUseCase {
     
     private let startDateKey = "StartDateKey"
     private let saveDateKey = "SaveDateKey"
+    private let savePaDay = "PayDay"
     var startDate: String!
     
     var savedDates: [Date] {
         return UserDefaults.standard.object(forKey: saveDateKey) as! [Date]
+    }
+    
+    var payDay: String {
+        return UserDefaults.standard.string(forKey: savePaDay)!
     }
     
     func sonfigure() {

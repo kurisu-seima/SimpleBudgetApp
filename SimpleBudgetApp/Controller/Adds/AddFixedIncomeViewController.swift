@@ -27,6 +27,7 @@ class AddFixedIncomeViewController: UIViewController {
         
         incomeTableView.dataSource = self
         incomeTableView.delegate = self
+        self.overrideUserInterfaceStyle = .light
     }
     
     override func viewWillAppear(_ animated: Bool) {

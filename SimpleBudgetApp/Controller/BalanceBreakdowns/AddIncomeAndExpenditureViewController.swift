@@ -29,6 +29,7 @@ class AddIncomeAndExpenditureViewController: UIViewController {
     }
     
     private func setupView() {
+        self.overrideUserInterfaceStyle = .light
         self.view.layer.insertSublayer(CAGradientLayer().mainLayer(frame: self.view.frame), at: 0)
         switch inputType {
         case .income:

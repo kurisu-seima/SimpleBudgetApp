@@ -19,6 +19,8 @@ class InputView: UIView {
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var doneButton: DSFloatingButton!
     @IBOutlet weak var closeButton: DSFloatingButton!
+    @IBOutlet weak var detailsLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
     
     var delegate: InputViewDelegate? {
         didSet {
@@ -108,9 +110,22 @@ class InputView: UIView {
             doneButton.gradientEndColor = UIColor().orangeEndColor
             closeButton.gradientStartColor = UIColor().orangeStartColor
             closeButton.gradientEndColor = UIColor().orangeEndColor
+        case is PayDaySettingViewController:
+            setupPayDayInputView()
+            doneButton.gradientStartColor = UIColor().payDayStartColor
+            doneButton.gradientEndColor = UIColor().payDayEndColor
+            closeButton.gradientStartColor = UIColor().payDayStartColor
+            closeButton.gradientEndColor = UIColor().payDayEndColor
         default:
             break
         }
+    }
+    
+    private func setupPayDayInputView() {
+        detailsLabel.text = "メモ"
+        detailsTextField.placeholder = "メモを入力することができます"
+        amountLabel.text = "日付"
+        amountTextField.placeholder = "日付を入力してください"
     }
 }
 

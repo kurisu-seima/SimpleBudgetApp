@@ -39,6 +39,7 @@ class BudgetSettingViewController: UIViewController {
     }
     
     private func setupView() {
+        self.overrideUserInterfaceStyle = .light
         dailyBudgetLabel.text = "¥\(MoneyManagementUseCase.shared.getDailyBudget().numberWithComma())"
         self.view.layer.insertSublayer(CAGradientLayer().budgetVCLayer(frame: self.view.frame), at: 0)
         self.navigationController?.isNavigationBarHidden = false

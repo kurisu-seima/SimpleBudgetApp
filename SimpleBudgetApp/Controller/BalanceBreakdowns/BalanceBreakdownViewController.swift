@@ -50,6 +50,7 @@ class BalanceBreakdownViewController: UIViewController {
     }
     
     private func setupView() {
+        self.overrideUserInterfaceStyle = .light
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(goSelectVC))
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 240 / 255, green: 234 / 255, blue: 220 / 255, alpha: 1)
         self.view.layer.insertSublayer(CAGradientLayer().mainLayer(frame: self.view.frame), at: 0)

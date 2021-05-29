@@ -69,4 +69,12 @@ extension UIColor {
     var orangeEndColor: UIColor {
         return UIColor(red: 255 / 255, green: 130 / 255, blue: 0, alpha: 1)
     }
+    
+    var payDayStartColor: UIColor {
+        return UIColor(red: 247 / 255, green: 183 / 255, blue: 51 / 255, alpha: 1)
+    }
+    
+    var payDayEndColor: UIColor {
+        return UIColor(red: 230 / 255, green: 92 / 255, blue: 35 / 255, alpha: 1)
+    }
 }

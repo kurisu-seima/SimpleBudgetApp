@@ -28,6 +28,7 @@ class AddFixedSavingsViewController: UIViewController {
         
         savingsTableView.delegate = self
         savingsTableView.dataSource = self
+        self.overrideUserInterfaceStyle = .light
     }
     
     override func viewWillAppear(_ animated: Bool) {

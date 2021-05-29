@@ -825,7 +825,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjF-1i-4Hh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjF-1i-4Hh">
                                 <rect key="frame" x="180.5" y="159" width="53" height="40"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="40"/>
                                 <nil key="textColor"/>
@@ -837,16 +837,78 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfY-xo-hBv" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="82" y="269" width="250" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="85q-uE-jR1"/>
+                                    <constraint firstAttribute="height" constant="60" id="eIL-Ro-wkO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <state key="normal" title="変更">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.10000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" red="0.96862745098039216" green="0.71764705882352942" blue="0.20000000000000001" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
+                                        <point key="value" x="0.5" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" red="0.90196078431372551" green="0.36078431372549019" blue="0.13725490196078433" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
+                                        <point key="value" x="0.5" y="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeButtonDidTapped:" destination="vKm-au-1Sl" eventType="touchUpInside" id="2ZK-jD-zrv"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCg-hx-9Ly" customClass="InputView" customModule="SimpleBudgetApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="900" width="414" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="5Ov-1m-MOS"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="c1u-Ab-hCg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Wpn-kb-1tU" firstAttribute="centerX" secondItem="NOp-Vc-lA8" secondAttribute="centerX" id="42L-0e-uVW"/>
+                            <constraint firstItem="CfY-xo-hBv" firstAttribute="centerX" secondItem="NOp-Vc-lA8" secondAttribute="centerX" id="6Wh-eg-Uqn"/>
+                            <constraint firstAttribute="trailing" secondItem="LCg-hx-9Ly" secondAttribute="trailing" id="Evk-F5-h5W"/>
                             <constraint firstItem="rjF-1i-4Hh" firstAttribute="top" secondItem="Wpn-kb-1tU" secondAttribute="bottom" constant="30" id="Wxm-if-w57"/>
                             <constraint firstItem="rjF-1i-4Hh" firstAttribute="centerX" secondItem="NOp-Vc-lA8" secondAttribute="centerX" id="cgF-WE-lz9"/>
+                            <constraint firstItem="LCg-hx-9Ly" firstAttribute="top" secondItem="NOp-Vc-lA8" secondAttribute="top" constant="900" id="imE-ge-aS9"/>
+                            <constraint firstItem="LCg-hx-9Ly" firstAttribute="leading" secondItem="NOp-Vc-lA8" secondAttribute="leading" id="oq2-zc-vqL"/>
+                            <constraint firstItem="CfY-xo-hBv" firstAttribute="top" secondItem="rjF-1i-4Hh" secondAttribute="bottom" constant="70" id="sHw-II-ZoR"/>
                             <constraint firstItem="Wpn-kb-1tU" firstAttribute="top" secondItem="c1u-Ab-hCg" secondAttribute="top" constant="60" id="x67-ii-HkQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="changeButton" destination="CfY-xo-hBv" id="PkG-I8-lWK"/>
+                        <outlet property="paDayLabel" destination="Wpn-kb-1tU" id="axa-sW-DMM"/>
+                        <outlet property="payDayNumber" destination="rjF-1i-4Hh" id="azw-gI-frd"/>
+                        <outlet property="selectArea" destination="LCg-hx-9Ly" id="PVj-X1-Bl6"/>
+                        <outlet property="selectAreaHeight" destination="5Ov-1m-MOS" id="yR4-IH-6od"/>
+                        <outlet property="selectAreaTop" destination="imE-ge-aS9" id="H3t-Ur-O4C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSX-O1-l2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1721,6 +1783,9 @@
             <size key="intrinsicContentSize" width="60" height="42"/>
         </designable>
         <designable name="72q-8c-QmA">
+            <size key="intrinsicContentSize" width="60" height="42"/>
+        </designable>
+        <designable name="CfY-xo-hBv">
             <size key="intrinsicContentSize" width="60" height="42"/>
         </designable>
         <designable name="DR9-Pe-MgH">
