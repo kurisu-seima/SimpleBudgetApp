@@ -864,16 +864,16 @@
                                         <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" red="0.96862745098039216" green="0.71764705882352942" blue="0.20000000000000001" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.96862745098039216" green="0.71764705882352942" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
                                         <point key="value" x="0.5" y="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.90196078431372551" green="0.36078431372549019" blue="0.13725490196078433" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.90196078431372551" green="0.36078431372549019" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
-                                        <point key="value" x="0.5" y="1"/>
+                                        <point key="value" x="1" y="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>

@@ -15,9 +15,7 @@ class PayDaySettingViewController: UIViewController {
     @IBOutlet weak var paDayLabel: UILabel!
     @IBOutlet weak var payDayNumber: UILabel!
     @IBOutlet weak var changeButton: UIButton!
-    
-    private let savePaDay = "PayDay"
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +25,7 @@ class PayDaySettingViewController: UIViewController {
         super.viewWillAppear(true)
         
         setupView()
+        setupPayDay()
     }
     
     @IBAction func changeButtonDidTapped(_ sender: UIButton) {
@@ -54,19 +53,14 @@ class PayDaySettingViewController: UIViewController {
     }
     
     private func setupPayDay() {
-        //ここに
+        payDayNumber.text = AppSettingUseCase.shared.payday
     }
 }
 
 extension PayDaySettingViewController: InputViewDelegate {
     func didFinish(details: String, amount: String) {
-        paDayLabel.text = details
-        
-        //再度更新する際の処理をかく
-
-        //日付は-1の方がいいのか
-        UserDefaults.standard.setValue(amount, forKey: savePaDay)
-        payDayNumber.text = amount
+        AppSettingUseCase.shared.payday = amount
+        setupPayDay()
     }
     
     func closeInputView() {

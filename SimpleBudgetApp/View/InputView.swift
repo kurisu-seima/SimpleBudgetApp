@@ -15,12 +15,18 @@ protocol InputViewDelegate {
 
 class InputView: UIView {
     
+    @IBOutlet weak var topline: UIView!
     @IBOutlet weak var detailsTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var doneButton: DSFloatingButton!
     @IBOutlet weak var closeButton: DSFloatingButton!
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var donButtonTop: NSLayoutConstraint!
+    @IBOutlet weak var closeButtonTop: NSLayoutConstraint!
+    var pickerView = UIPickerView()
+    var days = [Int](1...31)
+    var selectedDay: String?
     
     var delegate: InputViewDelegate? {
         didSet {
@@ -55,6 +61,16 @@ class InputView: UIView {
            !details.isEmpty, !amount.isEmpty, let _ = Int(amount) {
             self.delegate?.didFinish(details: details, amount: amount)
             closeInputView()
+        }
+        
+        switch delegate {
+        case is PayDaySettingViewController:
+            if let payday = amountTextField.text, !payday.isEmpty {
+                delegate?.didFinish(details: "", amount: payday)
+                closeInputView()
+            }
+        default:
+            break
         }
     }
 
@@ -116,16 +132,37 @@ class InputView: UIView {
             doneButton.gradientEndColor = UIColor().payDayEndColor
             closeButton.gradientStartColor = UIColor().payDayStartColor
             closeButton.gradientEndColor = UIColor().payDayEndColor
+            topline.isHidden = true
+            detailsLabel.isHidden = true
+            detailsTextField.isHidden = true
+            donButtonTop.constant = 60
+            closeButtonTop.constant = 60
+            setupPickerView()
         default:
             break
         }
     }
     
     private func setupPayDayInputView() {
-        detailsLabel.text = "メモ"
-        detailsTextField.placeholder = "メモを入力することができます"
-        amountLabel.text = "日付"
-        amountTextField.placeholder = "日付を入力してください"
+        amountLabel.text = "給料日"
+        amountTextField.placeholder = "日付を選択してください"
+    }
+    
+    private func setupPickerView() {
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: 44))
+        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolbar.items = [spaceButton, doneItem]
+        self.amountTextField.inputView = pickerView
+        self.amountTextField.inputAccessoryView = toolbar
+    }
+    
+    @objc func done() {
+        amountTextField.text = selectedDay
+        endEditing(true)
     }
 }
 
@@ -133,5 +170,25 @@ extension InputView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.endEditing(true)
         return false
+    }
+}
+
+extension InputView: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return days.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String(days[row])
+    }
+}
+
+extension InputView: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedDay = String(days[row])
     }
 }
