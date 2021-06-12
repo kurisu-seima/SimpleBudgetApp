@@ -14,6 +14,7 @@ class AppSettingUseCase {
     private let startDateKey = "StartDateKey"
     private let saveDateKey = "SaveDateKey"
     private let savePaydayKey = "PayDayKey"
+    private let savePaydayKey2 = "savePaydayKey2"
     
     var startDate: String!
     
@@ -27,6 +28,19 @@ class AppSettingUseCase {
         }
         set {
             UserDefaults.standard.setValue(newValue, forKey: savePaydayKey)
+        }
+    }
+    
+    var savedPayday: Date {
+        get {
+            if let date = UserDefaults.standard.object(forKey: savePaydayKey2) as? Date {
+                return date
+            } else {
+                return Calendar.current.date(from: DateComponents(timeZone: TimeZone(identifier: "Asia/Tokyo"), year: Date().year, month: Date().month, day: 1))!
+            }
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKeyPath: savePaydayKey2)
         }
     }
     

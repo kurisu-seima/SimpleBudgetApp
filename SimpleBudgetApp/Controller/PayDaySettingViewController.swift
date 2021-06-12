@@ -60,6 +60,11 @@ class PayDaySettingViewController: UIViewController {
 extension PayDaySettingViewController: InputViewDelegate {
     func didFinish(details: String, amount: String) {
         AppSettingUseCase.shared.payday = amount
+        if let date = Calendar.current.date(from: DateComponents(timeZone: TimeZone(secondsFromGMT: 9 * 60 * 60), year: Date().year, month: Date().month, day: Int(amount)!)) {
+            AppSettingUseCase.shared.savedPayday = date
+        } else {
+            AppSettingUseCase.shared.savedPayday = Calendar.current.date(from: DateComponents(timeZone: TimeZone(identifier: "Asia/Tokyo"), year: Date().year, month: Date().month, day: Date().lastDay))!
+        }
         setupPayDay()
     }
     
@@ -76,3 +81,5 @@ extension PayDaySettingViewController: InputViewDelegate {
         }
     }
 }
+
+//let next = calender.date(byAdding: .month, value: 1, to: calender.startOfDay(for: numDate!))

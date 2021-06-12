@@ -32,13 +32,13 @@ enum Menu: CaseIterable {
     var image: String {
         switch self {
         case .yourMenoy:
-            return "graph"
+            return "Graph"
         case .budgetSetting:
             return "money"
         case .payDay:
             return "setting"
         case .balanceBreakDown:
-            return "menu-documents"
+            return "Menu-Documents"
         case .monthlyRecord:
             return "book"
         }

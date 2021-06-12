@@ -29,7 +29,7 @@ extension Date {
     }
     
     var lastDay: Int {
-        let calendar = Calendar(identifier: .gregorian)
+        let calendar = Calendar(identifier: .japanese)
         var components = DateComponents()
         components.year = Calendar.current.component(.year, from: self)
         components.month = Calendar.current.component(.month, from: self) + 1
