@@ -202,14 +202,6 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
-		33A3FC4225F64E65007F00A1 /* Lists */ = {
-			isa = PBXGroup;
-			children = (
-				33BA52E625D36F940095A11F /* Menu.swift */,
-			);
-			path = Lists;
-			sourceTree = "<group>";
-		};
 		33A3FC4325F653DE007F00A1 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,14 +219,6 @@
 				33DCB5B025FB4FE600ACD12E /* AppSettingUseCase.swift */,
 			);
 			path = UseCases;
-			sourceTree = "<group>";
-		};
-		33AF6E912614DF17005E7D1C /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				33043E3E25F73E64001868D5 /* InputType.swift */,
-			);
-			path = Types;
 			sourceTree = "<group>";
 		};
 		33AF6E9A2615916B005E7D1C /* Adds */ = {
@@ -274,6 +258,15 @@
 				33E4B80F25D01B8700A3CD36 /* MonthlyRecordViewController.swift */,
 			);
 			path = MonthlyRecords;
+			sourceTree = "<group>";
+		};
+		33E1D1032691FBDA000D0093 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				33043E3E25F73E64001868D5 /* InputType.swift */,
+				33BA52E625D36F940095A11F /* Menu.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		33E4B7DE25D0102300A3CD36 = {
@@ -317,8 +310,7 @@
 				33A3FC4325F653DE007F00A1 /* Repositories */,
 				33A3FC4525F654FF007F00A1 /* UseCases */,
 				3348BF0025E24413002324EE /* Entities */,
-				33AF6E912614DF17005E7D1C /* Types */,
-				33A3FC4225F64E65007F00A1 /* Lists */,
+				33E1D1032691FBDA000D0093 /* Enums */,
 			);
 			path = Model;
 			sourceTree = "<group>";
