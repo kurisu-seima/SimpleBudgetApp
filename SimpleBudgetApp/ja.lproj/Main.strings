@@ -1,0 +1,183 @@
+
+/* Class = "UIButton"; normalTitle = "追加"; ObjectID = "0R2-Se-3W6"; */
+"0R2-Se-3W6.normalTitle" = "追加";
+
+/* Class = "UILabel"; text = "日付"; ObjectID = "11R-Y7-sQ8"; */
+"11R-Y7-sQ8.text" = "日付";
+
+/* Class = "UILabel"; text = "一ヶ月の貯金額"; ObjectID = "1bV-ow-bqg"; */
+"1bV-ow-bqg.text" = "一ヶ月の貯金額";
+
+/* Class = "UITextField"; placeholder = "詳細を入力してください"; ObjectID = "1nY-Zt-2qY"; */
+"1nY-Zt-2qY.placeholder" = "詳細を入力してください";
+
+/* Class = "UILabel"; text = "金額"; ObjectID = "2It-eg-m66"; */
+"2It-eg-m66.text" = "金額";
+
+/* Class = "UILabel"; text = "¥1,234"; ObjectID = "5CN-c2-Ta2"; */
+"5CN-c2-Ta2.text" = "¥1,234";
+
+/* Class = "UILabel"; text = "固定貯金を編集できます"; ObjectID = "5jb-Jy-jw3"; */
+"5jb-Jy-jw3.text" = "固定貯金を編集できます";
+
+/* Class = "UIButton"; normalTitle = "追加"; ObjectID = "61A-ve-0gv"; */
+"61A-ve-0gv.normalTitle" = "追加";
+
+/* Class = "UIButton"; normalTitle = "完了"; ObjectID = "72q-8c-QmA"; */
+"72q-8c-QmA.normalTitle" = "完了";
+
+/* Class = "UITextField"; placeholder = "金額を入力してください"; ObjectID = "8eG-4v-9j2"; */
+"8eG-4v-9j2.placeholder" = "金額を入力してください";
+
+/* Class = "UITextField"; placeholder = "詳細を入力してください"; ObjectID = "App-9Z-vCc"; */
+"App-9Z-vCc.placeholder" = "詳細を入力してください";
+
+/* Class = "UILabel"; text = "固定貯金"; ObjectID = "BUF-eE-Lqq"; */
+"BUF-eE-Lqq.text" = "固定貯金";
+
+/* Class = "UIButton"; normalTitle = "変更"; ObjectID = "CfY-xo-hBv"; */
+"CfY-xo-hBv.normalTitle" = "変更";
+
+/* Class = "UIButton"; normalTitle = "　固定収入"; ObjectID = "DR9-Pe-MgH"; */
+"DR9-Pe-MgH.normalTitle" = "　固定収入";
+
+/* Class = "UILabel"; text = "詳細"; ObjectID = "G9k-Bi-Z1f"; */
+"G9k-Bi-Z1f.text" = "詳細";
+
+/* Class = "UILabel"; text = "¥10000"; ObjectID = "IpJ-pM-dg1"; */
+"IpJ-pM-dg1.text" = "¥10000";
+
+/* Class = "UILabel"; text = "固定収入を編集できます"; ObjectID = "Jaq-P0-bzF"; */
+"Jaq-P0-bzF.text" = "固定収入を編集できます";
+
+/* Class = "UILabel"; text = "詳細"; ObjectID = "JxO-mK-Gn0"; */
+"JxO-mK-Gn0.text" = "詳細";
+
+/* Class = "UILabel"; text = "固定支出"; ObjectID = "Q7V-Zh-QEh"; */
+"Q7V-Zh-QEh.text" = "固定支出";
+
+/* Class = "UITextField"; placeholder = "金額を入力してください"; ObjectID = "Qik-as-Yzb"; */
+"Qik-as-Yzb.placeholder" = "金額を入力してください";
+
+/* Class = "UIButton"; normalTitle = "完了"; ObjectID = "VU5-tZ-Mby"; */
+"VU5-tZ-Mby.normalTitle" = "完了";
+
+/* Class = "UILabel"; text = "給料日"; ObjectID = "Wpn-kb-1tU"; */
+"Wpn-kb-1tU.text" = "給料日";
+
+/* Class = "UILabel"; text = "一日あたりの予算"; ObjectID = "X6N-H5-cBj"; */
+"X6N-H5-cBj.text" = "一日あたりの予算";
+
+/* Class = "UILabel"; text = "固定支出を編集できます"; ObjectID = "XBe-jV-LLr"; */
+"XBe-jV-LLr.text" = "固定支出を編集できます";
+
+/* Class = "UILabel"; text = "詳細"; ObjectID = "ZCC-yA-fde"; */
+"ZCC-yA-fde.text" = "詳細";
+
+/* Class = "UIButton"; normalTitle = "追加"; ObjectID = "Zzg-A1-vYL"; */
+"Zzg-A1-vYL.normalTitle" = "追加";
+
+/* Class = "UILabel"; text = "あなたの今月の予算"; ObjectID = "a4G-B5-MwA"; */
+"a4G-B5-MwA.text" = "あなたの今月の予算";
+
+/* Class = "UITextField"; placeholder = "詳細を入力してください"; ObjectID = "a6d-aK-oe8"; */
+"a6d-aK-oe8.placeholder" = "詳細を入力してください";
+
+/* Class = "UILabel"; text = "金額"; ObjectID = "ai1-tD-b5V"; */
+"ai1-tD-b5V.text" = "金額";
+
+/* Class = "UILabel"; text = "臨時収入"; ObjectID = "b1V-qt-xnf"; */
+"b1V-qt-xnf.text" = "臨時収入";
+
+/* Class = "UILabel"; text = "詳細"; ObjectID = "bJB-Sz-NQ2"; */
+"bJB-Sz-NQ2.text" = "詳細";
+
+/* Class = "UILabel"; text = "今日使える金額"; ObjectID = "bnZ-zO-PWp"; */
+"bnZ-zO-PWp.text" = "今日使える金額";
+
+/* Class = "UILabel"; text = "¥10000"; ObjectID = "brK-I0-ZPo"; */
+"brK-I0-ZPo.text" = "¥10000";
+
+/* Class = "UIButton"; normalTitle = "完了"; ObjectID = "cKf-je-6da"; */
+"cKf-je-6da.normalTitle" = "完了";
+
+/* Class = "UIButton"; normalTitle = "完了"; ObjectID = "dLZ-Uk-ng0"; */
+"dLZ-Uk-ng0.normalTitle" = "完了";
+
+/* Class = "UILabel"; text = "臨時支出"; ObjectID = "dmn-tv-JxR"; */
+"dmn-tv-JxR.text" = "臨時支出";
+
+/* Class = "UIButton"; normalTitle = "使う"; ObjectID = "ePM-JZ-GSS"; */
+"ePM-JZ-GSS.normalTitle" = "使う";
+
+/* Class = "UILabel"; text = "月選択画面"; ObjectID = "fdv-0N-ohJ"; */
+"fdv-0N-ohJ.text" = "月選択画面";
+
+/* Class = "UIButton"; normalTitle = "　固定貯金"; ObjectID = "fu6-8X-jex"; */
+"fu6-8X-jex.normalTitle" = "　固定貯金";
+
+/* Class = "UILabel"; text = "¥123,456"; ObjectID = "h4l-cJ-P4Z"; */
+"h4l-cJ-P4Z.text" = "¥123,456";
+
+/* Class = "UILabel"; text = "¥12,345"; ObjectID = "h6p-ac-cXm"; */
+"h6p-ac-cXm.text" = "¥12,345";
+
+/* Class = "UIButton"; normalTitle = "　固定支出"; ObjectID = "hlB-aJ-Fmu"; */
+"hlB-aJ-Fmu.normalTitle" = "　固定支出";
+
+/* Class = "UILabel"; text = "¥123,456"; ObjectID = "htT-9m-9Wq"; */
+"htT-9m-9Wq.text" = "¥123,456";
+
+/* Class = "UILabel"; text = "¥10000"; ObjectID = "iAH-aW-IZt"; */
+"iAH-aW-IZt.text" = "¥10000";
+
+/* Class = "UILabel"; text = "¥10000"; ObjectID = "iOd-PM-nrg"; */
+"iOd-PM-nrg.text" = "¥10000";
+
+/* Class = "UITextField"; placeholder = "金額を入力してください"; ObjectID = "isa-1I-CYC"; */
+"isa-1I-CYC.placeholder" = "金額を入力してください";
+
+/* Class = "UILabel"; text = "¥10000"; ObjectID = "j5S-H4-kP0"; */
+"j5S-H4-kP0.text" = "¥10000";
+
+/* Class = "UILabel"; text = "金額"; ObjectID = "kGN-Iq-vJ2"; */
+"kGN-Iq-vJ2.text" = "金額";
+
+/* Class = "UILabel"; text = "臨時収支を編集できます"; ObjectID = "kvh-Z9-6Ex"; */
+"kvh-Z9-6Ex.text" = "臨時収支を編集できます";
+
+/* Class = "UILabel"; text = "臨時の収支を追加できます"; ObjectID = "l1G-wk-lbi"; */
+"l1G-wk-lbi.text" = "臨時の収支を追加できます";
+
+/* Class = "UILabel"; text = "あなたの使えるお金"; ObjectID = "lmC-HW-pcg"; */
+"lmC-HW-pcg.text" = "あなたの使えるお金";
+
+/* Class = "UITextField"; placeholder = "金額を入力してください"; ObjectID = "mm9-X5-kfc"; */
+"mm9-X5-kfc.placeholder" = "金額を入力してください";
+
+/* Class = "UILabel"; text = "¥123,456"; ObjectID = "qEL-ti-bry"; */
+"qEL-ti-bry.text" = "¥123,456";
+
+/* Class = "UILabel"; text = "15"; ObjectID = "rjF-1i-4Hh"; */
+"rjF-1i-4Hh.text" = "15";
+
+/* Class = "UILabel"; text = "一ヶ月の固定収入額"; ObjectID = "sny-6c-xqK"; */
+"sny-6c-xqK.text" = "一ヶ月の固定収入額";
+
+/* Class = "UILabel"; text = "金額"; ObjectID = "tbE-qa-p5D"; */
+"tbE-qa-p5D.text" = "金額";
+
+/* Class = "UILabel"; text = "固定収入"; ObjectID = "wc3-b0-a8n"; */
+"wc3-b0-a8n.text" = "固定収入";
+
+/* Class = "UIButton"; normalTitle = "入れる"; ObjectID = "wnY-FA-BMh"; */
+"wnY-FA-BMh.normalTitle" = "入れる";
+
+/* Class = "UILabel"; text = "¥12,345"; ObjectID = "wo2-eg-wxR"; */
+"wo2-eg-wxR.text" = "¥12,345";
+
+/* Class = "UILabel"; text = "一ヶ月の固定支出額"; ObjectID = "x5V-Bq-QI3"; */
+"x5V-Bq-QI3.text" = "一ヶ月の固定支出額";
+
+/* Class = "UITextField"; placeholder = "詳細を入力してください"; ObjectID = "zEh-sk-dJc"; */
+"zEh-sk-dJc.placeholder" = "詳細を入力してください";

@@ -13,34 +13,87 @@ class MoneyManagementUseCase {
     static let shared = MoneyManagementUseCase()
     private let repository = BudgetRepository.shared
     
+    private let currentDate = AppSettingUseCase.shared.savedPayday
+    private let nextDate = Calendar.current.date(byAdding: .month, value: 1, to: AppSettingUseCase.shared.savedPayday)
+    
     private init() {}
     
     var fixedIncomes: [FixedIncome] {
         return Array(repository.fixedIncomes
                         .filter(NSPredicate(format: "year = %d", Date().year))
-                        .filter(NSPredicate(format: "month = %d", Date().month)))
+                        .filter(NSPredicate(format: "month = %d", currentDate.month))
+                        .filter(NSPredicate(format: "day >= %d", currentDate.day))
+        )
+    }
+    
+    var fixedIncomes2: [FixedIncome] {
+        return Array(repository.fixedIncomes
+                        .filter(NSPredicate(format: "year = %d", Date().year))
+                        .filter(NSPredicate(format: "month = %d", nextDate!.month))
+                        .filter(NSPredicate(format: "day <= %d", nextDate!.day))
+        )
     }
     
     var fixedSpendings: [FixedSpending] {
         return Array(repository.fixedSpendings
                         .filter(NSPredicate(format: "year = %d", Date().year))
-                        .filter(NSPredicate(format: "month = %d", Date().month)))
+                        .filter(NSPredicate(format: "month = %d", currentDate.month))
+                        .filter(NSPredicate(format: "day >= %d", currentDate.day)))
+    }
+    
+    var fixedSpendings2: [FixedSpending] {
+        return Array(repository.fixedSpendings
+                        .filter(NSPredicate(format: "year = %d", Date().year))
+                        .filter(NSPredicate(format: "month = %d", nextDate!.month))
+                        .filter(NSPredicate(format: "day <= %d", nextDate!.day)))
     }
     
     var fixedSavings: [FixedSavings] {
         return Array(repository.fixedSavings
                         .filter(NSPredicate(format: "year = %d", Date().year))
-                        .filter(NSPredicate(format: "month = %d", Date().month)))
+                        .filter(NSPredicate(format: "month = %d", currentDate.month))
+                        .filter(NSPredicate(format: "day >= %d", currentDate.day)))
+    }
+    
+    var fixedSavings2: [FixedSavings] {
+        return Array(repository.fixedSavings
+                        .filter(NSPredicate(format: "year = %d", Date().year))
+                        .filter(NSPredicate(format: "month = %d", nextDate!.month))
+                        .filter(NSPredicate(format: "day <= %d", nextDate!.day)))
     }
     
     var dailyIncomeAndExpenditures: [DailyIncomeAndExpenditure] {
         return Array(repository.dailyIncomeAndExpenditures
                         .filter(NSPredicate(format: "year = %d", Date().year))
-                        .filter(NSPredicate(format: "month = %d", Date().month)))
+                        .filter(NSPredicate(format: "month = %d", currentDate.month))
+                        .filter(NSPredicate(format: "day >= %d", currentDate.day)))
+    }
+    
+    var dailyIncomeAndExpenditures2: [DailyIncomeAndExpenditure] {
+        return Array(repository.dailyIncomeAndExpenditures
+                        .filter(NSPredicate(format: "year = %d", Date().year))
+                        .filter(NSPredicate(format: "month = %d", nextDate!.month))
+                        .filter(NSPredicate(format: "day <= %d", nextDate!.day)))
+    }
+    
+    var totalFixedIncomes: [FixedIncome] {
+        fixedIncomes + fixedIncomes2
+    }
+    
+    var totalFixedSpendings: [FixedSpending] {
+        fixedSpendings + fixedSpendings2
+    }
+    
+    var totalFixedSavings: [FixedSavings] {
+        fixedSavings + fixedSavings2
+    }
+    
+    var totalDailyIncomeAndExpenditures: [DailyIncomeAndExpenditure] {
+        dailyIncomeAndExpenditures + dailyIncomeAndExpenditures2
     }
     
     func getTotalAmountOfIncome() -> Int {
-        return fixedIncomes.map {(element) -> Int in
+        return totalFixedIncomes.map {(element) -> Int in
             guard let amountArray = Int(element.amountOfMoney) else {
                 return 0
             }
@@ -49,7 +102,7 @@ class MoneyManagementUseCase {
     }
     
     func getTotalAmountOfSpending() -> Int {
-        return fixedSpendings.map {(element) -> Int in
+        return totalFixedSpendings.map {(element) -> Int in
             guard let amountArray = Int(element.amountOfMoney) else {
                 return 0
             }
@@ -58,7 +111,7 @@ class MoneyManagementUseCase {
     }
     
     func getTotalAmountOfFixedSavings() -> Int {
-        return fixedSavings.map {(element) -> Int in
+        return totalFixedSavings.map {(element) -> Int in
             guard let amountArray = Int(element.amountOfMoney) else {
                 return 0
             }
@@ -80,7 +133,7 @@ class MoneyManagementUseCase {
     //今日使える予算
     func getTodayBudget() -> Int {
         var totalAmount: Int = 0
-        dailyIncomeAndExpenditures.forEach { daily in
+        totalDailyIncomeAndExpenditures.forEach { daily in
          let dailyAmount = daily.incomeAndExpenditures.map {(element: IncomeAndExpenditure) -> Int in
                 guard let incomeAndExpenditure = IncomeAndExpenditure.PlusOrMinus(rawValue: element.plusOrMinus) else {
                     return 0
@@ -105,7 +158,7 @@ class MoneyManagementUseCase {
     //指定された月の一日の収支の合計
     func getDailyTotalAmounts(dailyIncomeAndExpenditures: [DailyIncomeAndExpenditure]) -> [Int] {
         var dailyTotalAmounts: [Int] = []
-        dailyIncomeAndExpenditures.forEach { daily in
+        totalDailyIncomeAndExpenditures.forEach { daily in
             let total = daily.incomeAndExpenditures.map { (element: IncomeAndExpenditure) -> Int in
                 guard let incomeAndExpenditure = IncomeAndExpenditure.PlusOrMinus(rawValue: element.plusOrMinus) else {
                     return 0

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oKh-mX-N0C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oKh-mX-N0C">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -219,8 +219,10 @@
                     <connections>
                         <outlet property="dailyLimitLabel" destination="h6p-ac-cXm" id="GqI-Qe-uDX"/>
                         <outlet property="dailyTextLabel" destination="bnZ-zO-PWp" id="PLe-3n-yi0"/>
+                        <outlet property="insertButton" destination="wnY-FA-BMh" id="Qe0-Uj-o0O"/>
                         <outlet property="monthlyBudgetLabel" destination="wo2-eg-wxR" id="1ei-GQ-Uu5"/>
                         <outlet property="monthlyTextLabel" destination="a4G-B5-MwA" id="CqW-aF-5Wx"/>
+                        <outlet property="payButton" destination="ePM-JZ-GSS" id="aXA-u9-oxt"/>
                         <outlet property="selectArea" destination="ZNn-it-dai" id="vBC-cw-tVA"/>
                         <outlet property="selectAreaHight" destination="sxh-zb-wNE" id="xrW-h8-tWv"/>
                         <outlet property="selectAreaTop" destination="QtB-59-8XI" id="f3w-p1-QvM"/>
@@ -246,10 +248,10 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuCell" rowHeight="60" id="0WK-az-Ere" customClass="SideMenuCell" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="280" height="60"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="280" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0WK-az-Ere" id="tYu-wv-ShJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="253" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="254.5" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの使えるお金" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmC-HW-pcg">
@@ -537,7 +539,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="XGY-xr-T6S" customClass="ContentsModelTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XGY-xr-T6S" id="Uil-AR-5jd">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -657,7 +659,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="44" id="wRr-SB-nXg" customClass="ContentsModelTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wRr-SB-nXg" id="0eV-Rv-Ugb" customClass="FixedCostTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -727,7 +729,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="XZE-yF-MS1" customClass="SelectMonthlyTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XZE-yF-MS1" id="vaI-RM-heT">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -864,16 +866,16 @@
                                         <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" red="0.96862745098039216" green="0.71764705882352942" blue="0.20000000000000001" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.96862745098039216" green="0.71764705882352942" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientStartPoint">
                                         <point key="value" x="0.5" y="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" red="0.90196078431372551" green="0.36078431372549019" blue="0.13725490196078433" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.90196078431372551" green="0.36078431372549019" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="point" keyPath="gradientEndPoint">
-                                        <point key="value" x="0.5" y="1"/>
+                                        <point key="value" x="1" y="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -927,7 +929,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="Cell" rowHeight="201" id="lz8-fh-duZ" customClass="MonthlyRecordTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="201"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="414" height="201"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lz8-fh-duZ" id="5Ab-mX-4Ol" customClass="FixedCostTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="201"/>
@@ -1063,7 +1065,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="tUP-r0-WiF" customClass="ContentsModelTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tUP-r0-WiF" id="USW-Od-2Hv">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -1227,7 +1229,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="1F3-iX-hUb" customClass="ContentsModelTableViewCell" customModule="SimpleBudgetApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1F3-iX-hUb" id="Fbx-ee-xuE">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>

@@ -113,6 +113,8 @@
 		33E4B81A25D01D6F00A3CD36 /* AddFixedSavingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFixedSavingsViewController.swift; sourceTree = "<group>"; };
 		33F47A5E25F0149700E720F9 /* DailyIncomeAndExpenditure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyIncomeAndExpenditure.swift; sourceTree = "<group>"; };
 		33FDBA9826553451002FE27C /* PayDaySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayDaySettingViewController.swift; sourceTree = "<group>"; };
+		33FDBB07266B49DE002FE27C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		33FDBB08266B49DF002FE27C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6BB2F9C0B73ACA432F6E0E9A /* Pods-SimpleBudgetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleBudgetApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7C693082D34BD08C937D0898 /* Pods_SimpleBudgetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleBudgetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFFFA5AC302987268AFC317 /* Pods-SimpleBudgetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleBudgetApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleBudgetApp/Pods-SimpleBudgetApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,14 +202,6 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
-		33A3FC4225F64E65007F00A1 /* Lists */ = {
-			isa = PBXGroup;
-			children = (
-				33BA52E625D36F940095A11F /* Menu.swift */,
-			);
-			path = Lists;
-			sourceTree = "<group>";
-		};
 		33A3FC4325F653DE007F00A1 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,14 +219,6 @@
 				33DCB5B025FB4FE600ACD12E /* AppSettingUseCase.swift */,
 			);
 			path = UseCases;
-			sourceTree = "<group>";
-		};
-		33AF6E912614DF17005E7D1C /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				33043E3E25F73E64001868D5 /* InputType.swift */,
-			);
-			path = Types;
 			sourceTree = "<group>";
 		};
 		33AF6E9A2615916B005E7D1C /* Adds */ = {
@@ -272,6 +258,15 @@
 				33E4B80F25D01B8700A3CD36 /* MonthlyRecordViewController.swift */,
 			);
 			path = MonthlyRecords;
+			sourceTree = "<group>";
+		};
+		33E1D1032691FBDA000D0093 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				33043E3E25F73E64001868D5 /* InputType.swift */,
+				33BA52E625D36F940095A11F /* Menu.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		33E4B7DE25D0102300A3CD36 = {
@@ -315,8 +310,7 @@
 				33A3FC4325F653DE007F00A1 /* Repositories */,
 				33A3FC4525F654FF007F00A1 /* UseCases */,
 				3348BF0025E24413002324EE /* Entities */,
-				33AF6E912614DF17005E7D1C /* Types */,
-				33A3FC4225F64E65007F00A1 /* Lists */,
+				33E1D1032691FBDA000D0093 /* Enums */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -410,6 +404,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 33E4B7DE25D0102300A3CD36;
 			productRefGroup = 33E4B7E825D0102300A3CD36 /* Products */;
@@ -538,6 +533,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				33E4B7F125D0102400A3CD36 /* Base */,
+				33FDBB07266B49DE002FE27C /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -546,6 +542,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				33E4B7F625D0102500A3CD36 /* Base */,
+				33FDBB08266B49DF002FE27C /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -557,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -618,6 +616,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

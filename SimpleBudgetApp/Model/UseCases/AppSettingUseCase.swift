@@ -13,15 +13,35 @@ class AppSettingUseCase {
     
     private let startDateKey = "StartDateKey"
     private let saveDateKey = "SaveDateKey"
-    private let savePaDay = "PayDay"
+    private let savePaydayKey = "PayDayKey"
+    private let savePaydayKey2 = "savePaydayKey2"
+    
     var startDate: String!
     
     var savedDates: [Date] {
         return UserDefaults.standard.object(forKey: saveDateKey) as! [Date]
     }
     
-    var payDay: String {
-        return UserDefaults.standard.string(forKey: savePaDay)!
+    var payday: String {
+        get {
+            UserDefaults.standard.string(forKey: savePaydayKey) ?? "1"
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: savePaydayKey)
+        }
+    }
+    
+    var savedPayday: Date {
+        get {
+            if let date = UserDefaults.standard.object(forKey: savePaydayKey2) as? Date {
+                return date
+            } else {
+                return Calendar.current.date(from: DateComponents(timeZone: TimeZone(identifier: "Asia/Tokyo"), year: Date().year, month: Date().month, day: 1))!
+            }
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKeyPath: savePaydayKey2)
+        }
     }
     
     func sonfigure() {

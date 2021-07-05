@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,9 +14,12 @@
                 <outlet property="amountLabel" destination="SML-82-ggu" id="vQR-fn-afk"/>
                 <outlet property="amountTextField" destination="3iS-Qv-ozx" id="L0Y-su-3Cz"/>
                 <outlet property="closeButton" destination="pPR-1A-aq2" id="FUC-8S-QlZ"/>
+                <outlet property="closeButtonTop" destination="hbd-hY-eG8" id="Y41-EQ-dnn"/>
                 <outlet property="detailsLabel" destination="3JC-7T-k8P" id="Lat-Xa-cm6"/>
                 <outlet property="detailsTextField" destination="TTL-d5-GDm" id="sCD-uf-RFa"/>
+                <outlet property="donButtonTop" destination="h8s-uF-tzS" id="Yi8-cb-f2P"/>
                 <outlet property="doneButton" destination="zw2-bT-Q4F" id="lk2-t9-ZxX"/>
+                <outlet property="topline" destination="V0I-o5-rli" id="a8Y-cQ-cCL"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

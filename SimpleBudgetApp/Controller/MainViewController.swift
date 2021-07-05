@@ -7,6 +7,7 @@
 
 import UIKit
 import SideMenuSwift
+import DSFloatingButton
 
 class MainViewController: UIViewController {
 
@@ -17,7 +18,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var selectArea: InputView!
     @IBOutlet weak var selectAreaHight: NSLayoutConstraint!
     @IBOutlet weak var selectAreaTop: NSLayoutConstraint!
-
+    @IBOutlet weak var payButton: DSFloatingButton!
+    @IBOutlet weak var insertButton: DSFloatingButton!
+    
     private var inputType: InputType?
     
     override func viewDidLoad() {
@@ -58,6 +61,8 @@ class MainViewController: UIViewController {
             dailyLimitLabel.alpha = 0
             monthlyTextLabel.alpha = 0
             dailyTextLabel.alpha = 0
+            payButton.alpha = 0
+            insertButton.alpha = 0
             view.alpha = 1
             self.view.layoutIfNeeded()
         }
@@ -108,6 +113,8 @@ extension MainViewController: InputViewDelegate {
             dailyLimitLabel.alpha = 1
             monthlyTextLabel.alpha = 1
             dailyTextLabel.alpha = 1
+            payButton.alpha = 1
+            insertButton.alpha = 1
             self.view.layoutIfNeeded()
         }
     }
